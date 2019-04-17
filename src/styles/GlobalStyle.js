@@ -1,7 +1,14 @@
+import styledNormalize from "styled-normalize"
 import { createGlobalStyle } from "styled-components"
 import fonts from "./fonts"
 
 export default createGlobalStyle`
+  ${styledNormalize}
+
+  * {
+    font-family: Brandon;
+  }
+
   @font-face {
     font-family: "Brandon";
     font-style: normal;
