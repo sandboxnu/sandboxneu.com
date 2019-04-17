@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import GlobalStyle from "../styles/GlobalStyle"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,8 +24,9 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <GlobalStyle />
         <div
           style={{
             margin: `0 auto`,
@@ -41,7 +42,7 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
-      </>
+      </div>
     )}
   />
 )
