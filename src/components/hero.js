@@ -1,11 +1,14 @@
 import React from "react"
-import Section from "../styles/Section"
 import styled from "styled-components"
+import Section from "../styles/Section"
 import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const Title = styled.h1`
   font-size: 64px;
+  font-weight: normal;
+  color: #fff;
+  max-width: 550px;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -31,7 +34,9 @@ const Hero = () => (
         fluid={data.placeholderImage.childImageSharp.fluid}
         backgroundColor={`#040e18`}
       >
-        <Title>Helping researchers dig deeper</Title>
+        <Section>
+          <Title>Helping researchers dig deeper</Title>
+        </Section>
       </StyledBackgroundImage>
     )}
   />

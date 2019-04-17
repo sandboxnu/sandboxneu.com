@@ -5,8 +5,9 @@ import fonts from "./fonts"
 export default createGlobalStyle`
   ${styledNormalize}
 
-  * {
+  *, *:before, *:after {
     font-family: Brandon;
+    box-sizing: border-box;
   }
 
   @font-face {
