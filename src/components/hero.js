@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Section from "../styles/Section"
-import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const Title = styled.h1`
@@ -16,8 +15,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   height: 100vh;
 `
 
-const Hero = ({ data }) => {
-  const { frontmatter } = data[0].node
+const Hero = ({ frontmatter }) => {
   const { title, background } = frontmatter
   return (
     <StyledBackgroundImage

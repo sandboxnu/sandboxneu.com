@@ -1,4 +1,4 @@
 ---
-title: 'Helping researchers dig deeper'
-background: './stairs-down.png'
+title: "Helping researchers dig deeper"
+background: "./stairs-down.png"
 ---
