@@ -43,6 +43,10 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  & > div {
+    box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
+  }
 `
 
 const Who = ({ frontmatter }) => {
