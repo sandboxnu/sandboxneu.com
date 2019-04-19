@@ -1,4 +1,0 @@
----
-title: "Helping researchers dig deeper"
-background: "./stairs-down.png"
----

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
 import BackgroundImage from "gatsby-background-image"
@@ -15,8 +16,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   height: 100vh;
 `
 
-const Hero = ({ frontmatter }) => {
-  const { title, background } = frontmatter
+const Hero = ({ title, background }) => {
   return (
     <StyledBackgroundImage
       fluid={background.childImageSharp.fluid}
@@ -27,6 +27,11 @@ const Hero = ({ frontmatter }) => {
       </Section>
     </StyledBackgroundImage>
   )
+}
+
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 }
 
 export default Hero

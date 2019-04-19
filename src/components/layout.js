@@ -22,6 +22,33 @@ const Layout = ({ children }) => (
             title
           }
         }
+        allFooterJson {
+          edges {
+            node {
+              email
+              facebook {
+                url
+                icon {
+                  childImageSharp {
+                    fixed(width: 25) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+              linkedin {
+                url
+                icon {
+                  childImageSharp {
+                    fixed(width: 25) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -29,7 +56,7 @@ const Layout = ({ children }) => (
         <Nav siteTitle={data.site.siteMetadata.title} />
         <GlobalStyle />
         <main>{children}</main>
-        <Footer />
+        <Footer {...data.allFooterJson.edges[0].node} />
       </div>
     )}
   />

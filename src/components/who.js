@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
 import Header from "../styles/Header"
@@ -19,7 +20,7 @@ const HeaderLine = styled(Header)`
   text-align: ${props => props.align};
   & span {
       background-color: white;
-      padding-${props => (props.align == "left" ? "right" : "left")}: 20px;
+      padding-${props => (props.align === "left" ? "right" : "left")}: 20px;
   }
   & :after{
     content:"";
@@ -49,8 +50,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const Who = ({ frontmatter }) => {
-  const { img1, img2, img3, title1, p1, title2, p2 } = frontmatter
+const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
   return (
     <Section>
       <ContainerContainer>
@@ -73,6 +73,16 @@ const Who = ({ frontmatter }) => {
       </ContainerContainer>
     </Section>
   )
+}
+
+Who.propTypes = {
+  img1: PropTypes.object.isRequired,
+  img2: PropTypes.object.isRequired,
+  img3: PropTypes.object.isRequired,
+  title1: PropTypes.string.isRequired,
+  title2: PropTypes.string.isRequired,
+  p1: PropTypes.string.isRequired,
+  p2: PropTypes.string.isRequired,
 }
 
 export default Who

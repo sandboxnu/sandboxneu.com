@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Section from "../styles/Section"
 import Header from "../styles/Header"
 
-const Mission = () => (
+const Mission = ({ title, principles }) => (
   <Section>
     <Header>Ethics as a Mission</Header>
     <p>
@@ -13,5 +14,15 @@ const Mission = () => (
     </p>
   </Section>
 )
+
+Mission.propTypes = {
+  title: PropTypes.string.isRequired,
+  principles: PropTypes.arrayOf(
+    PropTypes.exact({
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+}
 
 export default Mission

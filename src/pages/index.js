@@ -23,66 +23,66 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+    hero: allHeroJson {
       edges {
         node {
-          frontmatter {
-            title
-            background {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
+          title
+          background {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          html
         }
       }
     }
-    who: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/who/" } }) {
+    who: allWhoJson {
       edges {
         node {
-          frontmatter {
-            title1
-            p1
-            title2
-            p2
-            img1 {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            img2 {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            img3 {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
+          title1
+          p1
+          title2
+          p2
+          img1 {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
-          html
+          img2 {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          img3 {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
-    mission: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/mission/" } }
-    ) {
+    mission: allMissionJson {
       edges {
         node {
-          frontmatter {
+          title
+          principles {
             title
+            body
           }
-          html
+        }
+      }
+    }
+    builds: allBuildsJson {
+      edges {
+        node {
+          title
         }
       }
     }

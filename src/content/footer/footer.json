@@ -1,0 +1,11 @@
+{
+  "email": "sandboxneu@gmail.com",
+  "facebook": {
+    "url": "https://www.facebook.com/sandboxneu/",
+    "icon": "./fb.jpg"
+  },
+  "linkedin": {
+    "url": "https://www.linkedin.com/company/sandboxneu/",
+    "icon": "./in.jpg"
+  }
+}

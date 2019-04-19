@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Logo from "./logo"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -15,7 +14,7 @@ const Container = styled.div`
   padding: 4px 20px;
 `
 
-const Logo = styled(Img)`
+const SizedLogo = styled(Logo)`
   height: 40px;
   width: 121px;
 `
@@ -29,31 +28,16 @@ const Button = styled.a`
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #27426C;
+  color: #27426c;
 `
 
 const Nav = ({ siteTitle }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "sandbox-banner.png" }) {
-          childImageSharp {
-            fluid(maxHeight: 40) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Container>
-        <Logo fluid={data.placeholderImage.childImageSharp.fluid} />
-        <ButtonContainer>
-          <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
-        </ButtonContainer>
-      </Container>
-    )}
-  />
+  <Container>
+    <SizedLogo />
+    <ButtonContainer>
+      <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
+    </ButtonContainer>
+  </Container>
 )
 
 Nav.propTypes = {
