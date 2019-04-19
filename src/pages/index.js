@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
     />
     <Hero {...data.hero.edges[0].node} />
     <Who {...data.who.edges[0].node} />
-    <Mission />
+    <Mission {...data.mission.edges[0].node} />
     <Builds />
   </Layout>
 )
