@@ -22,15 +22,15 @@ const Desktop = styled.div`
   }
 `
 
-const ShovelBackground = styled.div`
+const ShovelBackground = styled(Section)`
   background-image: url(${shovel});
   background-position: 50% 100px;
   background-size: 80%;
   background-repeat: no-repeat;
   @media (min-width: 1000px) {
-    background-position: 90% 0;
+    background-position: 100% 5px;
     background-size: contain;
-    padding-bottom: 200px;
+    padding-bottom: 280px;
     margin-bottom: -200px;
   }
 `
@@ -90,32 +90,30 @@ const ImgContainer = styled.div`
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
   return (
     <ShovelBackground>
-      <Section>
-        <Mobile>
-          <HeaderLineBelow>{title1}</HeaderLineBelow>
+      <Mobile>
+        <HeaderLineBelow>{title1}</HeaderLineBelow>
+        <Body>{p1}</Body>
+        <ShadowImg fluid={img1.childImageSharp.fluid} />
+        <HeaderLineBelow>
+          <span>{title2}</span>
+        </HeaderLineBelow>
+        <Body>{p2}</Body>
+        <ShadowImg fluid={img2.childImageSharp.fluid} />
+      </Mobile>
+      <Desktop>
+        <div>
+          <HeaderLineRight>{title1}</HeaderLineRight>
           <Body>{p1}</Body>
-          <ShadowImg fluid={img1.childImageSharp.fluid} />
-          <HeaderLineBelow>
-            <span>{title2}</span>
-          </HeaderLineBelow>
+          <br />
+          <HeaderLineLeft>{title2}</HeaderLineLeft>
           <Body>{p2}</Body>
+        </div>
+        <ImgContainer>
+          <ShadowImg fluid={img1.childImageSharp.fluid} />
           <ShadowImg fluid={img2.childImageSharp.fluid} />
-        </Mobile>
-        <Desktop>
-          <div>
-            <HeaderLineRight>{title1}</HeaderLineRight>
-            <Body>{p1}</Body>
-            <br />
-            <HeaderLineLeft>{title2}</HeaderLineLeft>
-            <Body>{p2}</Body>
-          </div>
-          <ImgContainer>
-            <ShadowImg fluid={img1.childImageSharp.fluid} />
-            <ShadowImg fluid={img2.childImageSharp.fluid} />
-            <ShadowImg fluid={img3.childImageSharp.fluid} />
-          </ImgContainer>
-        </Desktop>
-      </Section>
+          <ShadowImg fluid={img3.childImageSharp.fluid} />
+        </ImgContainer>
+      </Desktop>
     </ShovelBackground>
   )
 }
