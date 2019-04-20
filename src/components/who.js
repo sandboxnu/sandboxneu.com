@@ -6,16 +6,16 @@ import Header from "../styles/Header"
 import Img from "gatsby-image"
 
 const Mobile = styled.div`
-  @media (min-width: 900px) {
+  @media (min-width: 1000px) {
     display: none;
   }
 `
 
 const Desktop = styled.div`
   display: none;
-  @media (min-width: 900px) {
+  @media (min-width: 1000px) {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 400px;
     grid-column-gap: 40px;
   }
 `
@@ -61,13 +61,14 @@ const Body = styled.div`
 
 const ShadowImg = styled(Img)`
   box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-  margin: 40px 10px;
+  margin: 0px 10px;
 `
 
 const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 30px 0px;
 `
 
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
@@ -87,6 +88,7 @@ const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
         <div>
           <HeaderLineRight>{title1}</HeaderLineRight>
           <Body>{p1}</Body>
+          <br/>
           <HeaderLineLeft>{title2}</HeaderLineLeft>
           <Body>{p2}</Body>
         </div>
