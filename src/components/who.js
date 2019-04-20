@@ -5,34 +5,51 @@ import Section from "../styles/Section"
 import Header from "../styles/Header"
 import Img from "gatsby-image"
 
-const Container = styled.div`
-  display: grid;
-  justify-items: center;
+const Mobile = styled.div`
   @media (min-width: 900px) {
+    display: none;
+  }
+`
+
+const Desktop = styled.div`
+  display: none;
+  @media (min-width: 900px) {
+    display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr;
     grid-column-gap: 40px;
   }
 `
 
 const HeaderLine = styled(Header)`
-  position: relative;
-  @media (min-width: 900px) {
-    justify-self: stretch;
-    display: flex;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    & span {
-      order: ${props => (props.align === "left" ? 0 : 1)};
-      margin: 0 10px;
-    }
-    & :after {
-      flex-grow: 1;
-      content: "";
-      border-top: 2px solid #fcbc80;
-      margin: 0 10px;
-    }
+  display: flex;
+  align-items: center;
+  &:after,
+  &:before {
+    content: "";
+    border-top: 2px solid #fcbc80;
+  }
+`
+
+const HeaderLineRight = styled(HeaderLine)`
+  & :after {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+`
+
+const HeaderLineLeft = styled(HeaderLine)`
+  & :before {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+`
+
+const HeaderLineBelow = styled(HeaderLine)`
+  flex-direction: column;
+  & :after {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 200px;
   }
 `
 
@@ -40,36 +57,45 @@ const Body = styled.div`
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
-  @media (min-width: 900px) {
-    grid-column: 1;
-  }
 `
 
 const ShadowImg = styled(Img)`
   box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-  margin: 30px 10px;
-  justify-self: stretch;
-  @media (min-width: 900px) {
-    grid-column: 2;
-  }
+  margin: 40px 10px;
+`
+
+const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
   return (
     <Section>
-      <Container>
-        <HeaderLine align="left">
-          <span>{title1}</span>
-        </HeaderLine>
+      <Mobile>
+        <HeaderLineBelow>{title1}</HeaderLineBelow>
         <Body>{p1}</Body>
         <ShadowImg fluid={img1.childImageSharp.fluid} />
-        <HeaderLine align="right">
+        <HeaderLineBelow>
           <span>{title2}</span>
-        </HeaderLine>
+        </HeaderLineBelow>
         <Body>{p2}</Body>
         <ShadowImg fluid={img2.childImageSharp.fluid} />
-        <ShadowImg fluid={img3.childImageSharp.fluid} />
-      </Container>
+      </Mobile>
+      <Desktop>
+        <div>
+          <HeaderLineRight>{title1}</HeaderLineRight>
+          <Body>{p1}</Body>
+          <HeaderLineLeft>{title2}</HeaderLineLeft>
+          <Body>{p2}</Body>
+        </div>
+        <ImgContainer>
+          <ShadowImg fluid={img1.childImageSharp.fluid} />
+          <ShadowImg fluid={img2.childImageSharp.fluid} />
+          <ShadowImg fluid={img3.childImageSharp.fluid} />
+        </ImgContainer>
+      </Desktop>
     </Section>
   )
 }
