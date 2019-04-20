@@ -25,6 +25,7 @@
     "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
+    "husky": "^1.3.1",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -38,6 +39,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "precommit": "npm run format",
     "now-build": "npm run build"
   },
   "repository": {
