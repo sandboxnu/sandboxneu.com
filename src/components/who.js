@@ -23,6 +23,7 @@ const Desktop = styled.div`
 const HeaderLine = styled(Header)`
   display: flex;
   align-items: center;
+  text-align: center;
   &:after,
   &:before {
     content: "";
@@ -54,7 +55,7 @@ const HeaderLineBelow = styled(HeaderLine)`
 `
 
 const Body = styled.div`
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.5;
   margin-bottom: 20px;
 `
