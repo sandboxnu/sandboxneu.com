@@ -2,7 +2,6 @@ import React from "react"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
 import SquareLogo from "./squareLogo"
 
 const SizedLogo = styled(SquareLogo)`
@@ -10,11 +9,17 @@ const SizedLogo = styled(SquareLogo)`
   width: 121px;
 `
 
+const GrayBackground = styled.div`
+  background: #EAECF0;
+`
+
 const Footer = ({ pages, email, facebook, linkedin }) => (
   <footer>
-    <SizedLogo />
-    <Img fixed={facebook.icon.childImageSharp.fixed} />
-    Footer
+    <GrayBackground>
+      <SizedLogo />
+      <Img fixed={facebook.icon.childImageSharp.fixed} />
+      Footer
+    </GrayBackground>
   </footer>
 )
 
