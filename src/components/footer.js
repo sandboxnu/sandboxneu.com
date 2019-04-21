@@ -4,16 +4,27 @@ import styled from "styled-components"
 import Logo from "./logo"
 import Img from "gatsby-image"
 
+const GrayBackground = styled.div`
+  background: #EAECF0;
+`
+
 const SizedLogo = styled(Logo)`
-  height: 40px;
-  width: 121px;
+  height: 72.24px;
+  width: 236px;
+  position: absolute;
+  left: 9.03%;
+  right: 74.58%;
+  top: 23.75%;
+  bottom: 52.17%;
 `
 
 const Footer = ({ pages, email, facebook, linkedin }) => (
   <footer>
-    <SizedLogo />
-    <Img fixed={facebook.icon.childImageSharp.fixed} />
-    Footer
+    <GrayBackground>
+      <SizedLogo />
+      <Img fixed={facebook.icon.childImageSharp.fixed} />
+      Footer
+    </GrayBackground>
   </footer>
 )
 
