@@ -4,74 +4,117 @@ import styled from "styled-components"
 import Section from "../styles/Section"
 import Header from "../styles/Header"
 import Img from "gatsby-image"
+import shovel from "../images/shovel.svg"
 
-// Probably a better name
-const ContainerContainer = styled.div`
-  display: flex;
+// SVG gets inlined as base64. This is ok because it's only 3 kb
+const Mobile = styled.div`
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `
 
-const TextContainer = styled.div`
-  flex: 3;
-  padding-right: 40px;
+const Desktop = styled.div`
+  display: none;
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-column-gap: 40px;
+  }
+`
+
+const ShovelBackground = styled(Section)`
+  background-image: url(${shovel});
+  background-position: 50% 100px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  @media (min-width: 1000px) {
+    background-position: 100% 5px;
+    background-size: contain;
+    padding-bottom: 280px;
+    margin-bottom: -200px;
+  }
 `
 
 const HeaderLine = styled(Header)`
-  position: relative;
-  text-align: ${props => props.align};
-  & span {
-      background-color: white;
-      padding-${props => (props.align === "left" ? "right" : "left")}: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  &:after,
+  &:before {
+    content: "";
+    border-top: 2px solid #fcbc80;
   }
-  & :after{
-    content:"";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 22px;
-    border-top: 2px solid #FCBC80;
-    z-index: -1;
+`
+
+const HeaderLineRight = styled(HeaderLine)`
+  & :after {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+`
+
+const HeaderLineLeft = styled(HeaderLine)`
+  & :before {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+`
+
+const HeaderLineBelow = styled(HeaderLine)`
+  flex-direction: column;
+  & :after {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 200px;
   }
 `
 
 const Body = styled.div`
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.5;
+  margin-bottom: 20px;
 `
 
-const ImageContainer = styled.div`
-  flex: 2;
+const ShadowImg = styled(Img)`
+  box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
+  margin: 0px 10px;
+`
+
+const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  & > div {
-    box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-  }
+  padding: 30px 0px;
 `
 
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
   return (
-    <Section>
-      <ContainerContainer>
-        <TextContainer>
-          <HeaderLine align="left">
-            <span>{title1}</span>
-          </HeaderLine>
+    <ShovelBackground>
+      <Mobile>
+        <HeaderLineBelow>{title1}</HeaderLineBelow>
+        <Body>{p1}</Body>
+        <ShadowImg fluid={img1.childImageSharp.fluid} />
+        <HeaderLineBelow>
+          <span>{title2}</span>
+        </HeaderLineBelow>
+        <Body>{p2}</Body>
+        <ShadowImg fluid={img2.childImageSharp.fluid} />
+      </Mobile>
+      <Desktop>
+        <div>
+          <HeaderLineRight>{title1}</HeaderLineRight>
           <Body>{p1}</Body>
           <br />
-          <HeaderLine align="right">
-            <span>{title2}</span>
-          </HeaderLine>
+          <HeaderLineLeft>{title2}</HeaderLineLeft>
           <Body>{p2}</Body>
-        </TextContainer>
-        <ImageContainer>
-          <Img fluid={img1.childImageSharp.fluid} />
-          <Img fluid={img2.childImageSharp.fluid} />
-          <Img fluid={img3.childImageSharp.fluid} />
-        </ImageContainer>
-      </ContainerContainer>
-    </Section>
+        </div>
+        <ImgContainer>
+          <ShadowImg fluid={img1.childImageSharp.fluid} />
+          <ShadowImg fluid={img2.childImageSharp.fluid} />
+          <ShadowImg fluid={img3.childImageSharp.fluid} />
+        </ImgContainer>
+      </Desktop>
+    </ShovelBackground>
   )
 }
 

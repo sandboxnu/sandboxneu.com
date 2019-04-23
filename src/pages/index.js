@@ -46,21 +46,21 @@ export const query = graphql`
           p2
           img1 {
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           img2 {
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           img3 {
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid
               }
             }

@@ -56,7 +56,7 @@ const Layout = ({ children }) => (
         <Nav siteTitle={data.site.siteMetadata.title} />
         <GlobalStyle />
         <main>{children}</main>
-        <Footer {...data.allFooterJson.edges[0].node} />
+        <Footer pages={["Home"]} {...data.allFooterJson.edges[0].node} />
       </div>
     )}
   />
