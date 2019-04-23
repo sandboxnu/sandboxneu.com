@@ -16,17 +16,18 @@ const ParagraphContainer = styled.div`
   @media (min-width: 1000px) {
     grid-auto-flow: column;
     grid-column-gap: 100px;
+    grid-auto-columns: 1fr;
   }
 `
 const OrangeHeader = styled(Header)`
-  font-size: 22px;
+  font-size: 1.5em;
   font-weight: 300;
   color: #fcbc80;
 `
 const WhiteParagraph = styled.p`
   color: white;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 1.25em;
 `
 
 const Mission = ({ title, principles }) => (
