@@ -5,7 +5,7 @@ import Section from "../styles/Section"
 import BackgroundImage from "gatsby-background-image"
 
 const Title = styled.h1`
-  font-size: 64px;
+  font-size: 4em;
   font-weight: normal;
   color: #fff;
   max-width: 550px;

@@ -10,6 +10,17 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+
+  html {
+    font-size: 14px;
+  }
+
+  @media (min-width: 480px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
   @font-face {
     font-family: "Brandon";
     font-style: normal;

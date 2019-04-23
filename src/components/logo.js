@@ -9,7 +9,7 @@ const Logo = ({ className, children }) => (
         placeholderImage: file(relativePath: { eq: "sandbox-banner.png" }) {
           childImageSharp {
             fluid(maxHeight: 40) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
