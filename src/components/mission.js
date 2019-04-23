@@ -11,12 +11,11 @@ const WhiteHeader = styled(HeaderLineBelow)`
   color: white;
 `
 const ParagraphContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row-gap: 20px;
   @media (min-width: 1000px) {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px -70px;
+    grid-auto-flow: column;
+    grid-column-gap: 100px;
   }
 `
 const OrangeHeader = styled(Header)`
@@ -29,11 +28,6 @@ const WhiteParagraph = styled.p`
   line-height: 1.5;
   font-size: 20px;
 `
-const PaddedBlurb = styled.div`
-  @media (min-width: 1000px) {
-    padding: 0px 75px;
-  }
-`
 
 const Mission = ({ title, principles }) => (
   <BlueBackground>
@@ -43,10 +37,10 @@ const Mission = ({ title, principles }) => (
       </WhiteHeader>
       <ParagraphContainer>
         {principles.map(p => (
-          <PaddedBlurb>
+          <div>
             <OrangeHeader>{p.title}</OrangeHeader>
             <WhiteParagraph>{p.body}</WhiteParagraph>
-          </PaddedBlurb>
+          </div>
         ))}
       </ParagraphContainer>
     </Section>
