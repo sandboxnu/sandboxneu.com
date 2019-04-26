@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
+import Body from "../styles/Body"
 import {
   HeaderLineBelow,
   HeaderLineLeft,
@@ -37,12 +38,6 @@ const ShovelBackground = styled(Section)`
     padding-bottom: 280px;
     margin-bottom: -200px;
   }
-`
-
-const Body = styled.div`
-  font-size: 1.25em;
-  line-height: 1.5;
-  margin-bottom: 20px;
 `
 
 const ShadowImg = styled(Img)`
