@@ -3,17 +3,17 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
 import BackgroundImage from "gatsby-background-image"
-import Img from "gatsby-background-image"
 import FontAwesome from "react-fontawesome"
+import banner from '../images/sandbox-banner.svg'
 
 const Subtitle = styled.h1`
+  padding-top: 1em;
+  color: #fff;
   font-size: 2.75em;
   font-weight: 500;
-  color: #fff;
   line-height: 1.4;
-  padding-top: 1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  letter-spacing: .15em;
   text-align: center;
 `
 
@@ -22,23 +22,24 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   height: 100vh;
 `
 
-const ImgContainer = styled.div`
-  max-width: 800px;
-  min-height: 300px;
+const ImgContainer = styled.object`
+  max-width: 30em;
   margin: 0 auto;
+  padding: 10em 0 3em;
+  display: block;
 `
 
-const Hero = ({ title, background, banner }) => {
+const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
+
+const Hero = ({ title, background }) => {
   return (
     <StyledBackgroundImage
       fluid={background.childImageSharp.fluid}
       backgroundColor={`#040e18`}
     >
       <Section>
-      <ImgContainer>
-        <Img fluid={banner.childImageSharp.fluid} />
-      </ImgContainer>
-        <Subtitle>Helping researchers dig deeper</Subtitle>
+          <Banner />
+        <Subtitle>{title}</Subtitle>
         <br />
         <FontAwesome name="arrow-down" />
       </Section>

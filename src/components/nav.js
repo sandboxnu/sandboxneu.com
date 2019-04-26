@@ -9,10 +9,12 @@ const Container = styled.nav`
   width: 100%;
   z-index: 100;
   background: rgba(255, 255, 255, 0.9);
-  transition: background .5s;
-  ${ props => props.hideBackground && css`
-    background: rgba(255, 255, 255, 0);
-  `}
+  transition: background 0.5s;
+  ${props =>
+    props.hideBackground &&
+    css`
+      background: rgba(255, 255, 255, 0);
+    `}
 `
 
 const ContentContainer = styled(SectionContent)`
@@ -34,46 +36,46 @@ const Button = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   color: #2a426b;
-  transition: color .5s;
-  ${ props => props.isWhite && css`
-    color: #fff;
-  `}
+  transition: color 0.5s;
+  ${props =>
+    props.isWhite &&
+    css`
+      color: #fff;
+    `}
 `
 
 const Nav = ({ siteTitle }) => {
   const [atTop, setAtTop] = useState(true)
 
-  const handleScroll = (e) => {
+  const handleScroll = e => {
     if (e.pageY > 0 && atTop) {
-      setAtTop(false);
+      setAtTop(false)
     } else if (e.pageY === 0) {
-      setAtTop(true);
+      setAtTop(true)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll)
     handleScroll({ pageY: window.pageYOffset })
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
   return (
-  <Container hideBackground={atTop}>
-    <ContentContainer>
-      <Logo size="3em" color={atTop ? 'white' : 'blue'} />
-      <ButtonContainer>
-        <Button
-          href="https://forms.gle/aZB5fGMEBKB4uDLU7"
-          isWhite={atTop}
-        >
-        Join Us
-        </Button>
-      </ButtonContainer>
-    </ContentContainer>
-  </Container>
-)}
+    <Container hideBackground={atTop}>
+      <ContentContainer>
+        <Logo size="3em" color={atTop ? "white" : "blue"} />
+        <ButtonContainer>
+          <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
+            Join Us
+          </Button>
+        </ButtonContainer>
+      </ContentContainer>
+    </Container>
+  )
+}
 
 Nav.propTypes = {
   siteTitle: PropTypes.string,

@@ -34,13 +34,6 @@ export const query = graphql`
               }
             }
           }
-          banner {
-            childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
