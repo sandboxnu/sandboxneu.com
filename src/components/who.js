@@ -2,7 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
-import Header from "../styles/Header"
+import Body from "../styles/Body"
+import {
+  HeaderLineBelow,
+  HeaderLineLeft,
+  HeaderLineRight,
+} from "../styles/Header"
 import Img from "gatsby-image"
 import shovel from "../images/light_blue_shovel.svg"
 
@@ -33,47 +38,6 @@ const ShovelBackground = styled(Section)`
     padding-bottom: 280px;
     margin-bottom: -200px;
   }
-`
-
-const HeaderLine = styled(Header)`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  &:after,
-  &:before {
-    content: "";
-    border-top: 2px solid #fcbc80;
-  }
-`
-
-const HeaderLineRight = styled(HeaderLine)`
-  & :after {
-    flex-grow: 1;
-    margin-left: 10px;
-  }
-`
-
-const HeaderLineLeft = styled(HeaderLine)`
-  & :before {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-`
-
-const HeaderLineBelow = styled(HeaderLine)`
-  flex-direction: column;
-  & :after {
-    margin-top: 20px;
-    width: 80%;
-    max-width: 200px;
-  }
-`
-
-const Body = styled.div`
-  font-size: 1.25em;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #2a426b;
 `
 
 const ShadowImg = styled(Img)`
