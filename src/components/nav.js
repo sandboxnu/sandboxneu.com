@@ -1,13 +1,18 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Logo from "./logo"
 import { SectionContent } from "../styles/Section"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  transition: background .5s;
+  ${ props => props.hideBackground && css`
+    background: rgba(255, 255, 255, 0);
+  `}
 `
 
 const ContentContainer = styled(SectionContent)`
@@ -28,19 +33,47 @@ const Button = styled.a`
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #2a426b;
+  transition: color .5s;
+  ${ props => props.isWhite && css`
+    color: #fff;
+  `}
 `
 
-const Nav = ({ siteTitle }) => (
-  <Container>
+const Nav = ({ siteTitle }) => {
+  const [atTop, setAtTop] = useState(true)
+
+  const handleScroll = (e) => {
+    if (e.pageY > 0 && atTop) {
+      setAtTop(false);
+    } else if (e.pageY === 0) {
+      setAtTop(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    handleScroll({ pageY: window.pageYOffset })
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
+  return (
+  <Container hideBackground={atTop}>
     <ContentContainer>
-      <Logo size="3em" />
+      <Logo size="3em" color={atTop ? 'white' : 'blue'} />
       <ButtonContainer>
-        <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
+        <Button
+          href="https://forms.gle/aZB5fGMEBKB4uDLU7"
+          isWhite={atTop}
+        >
+        Join Us
+        </Button>
       </ButtonContainer>
     </ContentContainer>
   </Container>
-)
+)}
 
 Nav.propTypes = {
   siteTitle: PropTypes.string,
