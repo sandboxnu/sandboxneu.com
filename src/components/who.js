@@ -4,10 +4,6 @@ import styled from "styled-components"
 import Section from "../styles/Section"
 import Body from "../styles/Body"
 import {
-  Mobile, 
-  Desktop
-} from "../styles/Device"
-import {
   HeaderLineBelow,
   HeaderLineLeft,
   HeaderLineRight,
@@ -16,6 +12,20 @@ import Img from "gatsby-image"
 import shovel from "../images/shovel.svg"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb
+const Mobile = styled.div`
+  @media (min-width: 1000px) {
+    display: none;
+  }
+`
+
+const Desktop = styled.div`
+  display: none;
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-column-gap: 40px;
+  }
+`
 
 const ShovelBackground = styled(Section)`
   background-image: url(${shovel});
