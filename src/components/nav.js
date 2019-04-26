@@ -1,22 +1,22 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo"
+import { SectionContent } from "../styles/Section"
 import styled from "styled-components"
 
-const Container = styled.div`
+const Container = styled.nav`
   position: fixed;
-  height: 48px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 20px;
 `
 
-const SizedLogo = styled(Logo)`
-  height: 40px;
-  width: 121px;
+const ContentContainer = styled(SectionContent)`
+  height: 4em;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
 `
 
 const ButtonContainer = styled.div`
@@ -28,15 +28,17 @@ const Button = styled.a`
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #27426c;
+  color: #fff;
 `
 
 const Nav = ({ siteTitle }) => (
   <Container>
-    <SizedLogo />
-    <ButtonContainer>
-      <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
-    </ButtonContainer>
+    <ContentContainer>
+      <Logo size="3em" />
+      <ButtonContainer>
+        <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
+      </ButtonContainer>
+    </ContentContainer>
   </Container>
 )
 

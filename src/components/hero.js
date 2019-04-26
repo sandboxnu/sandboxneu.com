@@ -3,12 +3,15 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
 import BackgroundImage from "gatsby-background-image"
+import FontAwesome from "react-fontawesome"
 
 const Title = styled.h1`
-  font-size: 4em;
-  font-weight: normal;
+  font-size: 4.5em;
+  font-weight: 500;
   color: #fff;
-  max-width: 550px;
+  max-width: 600px;
+  line-height: 1.4;
+  padding-top: 1em;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -23,7 +26,9 @@ const Hero = ({ title, background }) => {
       backgroundColor={`#040e18`}
     >
       <Section>
-        <Title>{title}</Title>
+        <Title>{title}.</Title>
+        <br />
+        <FontAwesome name="arrow-down" />
       </Section>
     </StyledBackgroundImage>
   )

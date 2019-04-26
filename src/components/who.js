@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Section from "../styles/Section"
 import Header from "../styles/Header"
 import Img from "gatsby-image"
-import shovel from "../images/shovel.svg"
+import shovel from "../images/light_blue_shovel.svg"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb
 const Mobile = styled.div`
@@ -73,6 +73,7 @@ const Body = styled.div`
   font-size: 1.25em;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: #2a426b;
 `
 
 const ShadowImg = styled(Img)`

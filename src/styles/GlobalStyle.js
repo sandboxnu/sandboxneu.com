@@ -53,4 +53,11 @@ export default createGlobalStyle`
     url(${fonts.BrandonRegularItalicWOFF}) format("woff"),
     url(${fonts.BrandonRegularItalicWOFF2}) format("woff2");
   }
+  @font-face {
+    font-family: "Brandon";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BrandonMediumWOFF}) format("woff"), 
+    url(${fonts.BrandonMediumWOFF2}) format("woff2");
+  }
 `
