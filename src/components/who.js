@@ -2,6 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "../styles/Section"
+import Body from "../styles/Body"
+import {
+  Mobile, 
+  Desktop
+} from "../styles/Device"
 import {
   HeaderLineBelow,
   HeaderLineLeft,
@@ -11,20 +16,6 @@ import Img from "gatsby-image"
 import shovel from "../images/shovel.svg"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb
-const Mobile = styled.div`
-  @media (min-width: 1000px) {
-    display: none;
-  }
-`
-
-const Desktop = styled.div`
-  display: none;
-  @media (min-width: 1000px) {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    grid-column-gap: 40px;
-  }
-`
 
 const ShovelBackground = styled(Section)`
   background-image: url(${shovel});
@@ -37,12 +28,6 @@ const ShovelBackground = styled(Section)`
     padding-bottom: 280px;
     margin-bottom: -200px;
   }
-`
-
-const Body = styled.div`
-  font-size: 1.25em;
-  line-height: 1.5;
-  margin-bottom: 20px;
 `
 
 const ShadowImg = styled(Img)`
