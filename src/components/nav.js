@@ -47,17 +47,18 @@ const Button = styled.a`
 const Nav = ({ siteTitle }) => {
   const [atTop, setAtTop] = useState(true)
 
-  const handleScroll = e => {
-    if (e.pageY > 0 && atTop) {
+  const handleScroll = () => {
+    const pageY = document.body.scrollTop || document.documentElement.scrollTop
+    if (pageY > 0 && atTop) {
       setAtTop(false)
-    } else if (e.pageY === 0) {
+    } else if (pageY === 0) {
       setAtTop(true)
     }
   }
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-    handleScroll({ pageY: window.pageYOffset })
+    handleScroll()
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
