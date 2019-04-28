@@ -20,7 +20,7 @@ const CardBG = styled.div`
 `
 
 const Card = styled.div`
-  margin-top: -26px;
+  margin-top: -20px;
   width: 300px;
   height: 300px;
   border-radius: 20px;
@@ -29,10 +29,16 @@ const Card = styled.div`
 
 const CardHeader = styled(Header)`
   padding-top: 45px;
-  font-size: 2em;
+  font-size: 1.7em;
+  @media (min-width: 480px) {
+    font-size: 1.5em;
+  }
   font-weight: 300;
   color: #fcbc80;
   height: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+
 `
 const TagsContainer = styled.div`
   display: flex;
@@ -45,13 +51,17 @@ const TagsContainer = styled.div`
 `
 
 const Tag = styled.div`
+  font-size: 1em;
+  @media (min-width: 480px) {
+    font-size: 0.9em;
+  }
   display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
   padding-right: 7px;
   padding-left: 7px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.2);
   margin-left: 3px;
   margin-right: 3px;
   margin-bottom: 6px;

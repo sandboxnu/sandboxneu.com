@@ -19,10 +19,7 @@ const Builds = ({ title, projects }) => (
     </HeaderLineBelow>
     <ProjectContainer>
       {projects.map(p => (
-            <Project
-              title={p.title}
-              tags={p.tags}
-            />
+        <Project title={p.title} tags={p.tags} />
       ))}
     </ProjectContainer>
   </Section>
