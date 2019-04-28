@@ -8,18 +8,21 @@ import Mission from "../components/mission"
 import Builds from "../components/builds"
 import { graphql } from "gatsby"
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO
-      title="Home"
-      keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
-    />
-    <Hero {...data.hero.edges[0].node} />
-    <Who {...data.who.edges[0].node} />
-    <Mission {...data.mission.edges[0].node} />
-    <Builds />
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
+      <SEO
+        title="Home"
+        keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
+      />
+      <Hero {...data.hero.edges[0].node} />
+      <Who {...data.who.edges[0].node} />
+      <Mission {...data.mission.edges[0].node} />
+      <Builds />
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query IndexQuery {

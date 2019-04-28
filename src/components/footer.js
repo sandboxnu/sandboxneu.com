@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Logo from "./logo"
+import SquareLogo from "./squareLogo"
 import Img from "gatsby-image"
 
-const SizedLogo = styled(Logo)`
+const SizedLogo = styled(SquareLogo)`
   height: 40px;
   width: 121px;
 `

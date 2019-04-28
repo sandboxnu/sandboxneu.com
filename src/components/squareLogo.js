@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const StyledSVG = styled.svg`
@@ -12,37 +13,51 @@ const StyledSVG = styled.svg`
   }
 `
 
-const Logo = ({ size = "20px", color = "white" }) => {
-  let fillColor
-  let shadowColor
-
-  if (color === "white") {
-    fillColor = "#fff"
-    shadowColor = "rgb(227, 231, 236)"
-  } else {
-    fillColor = "#2a426b"
-    shadowColor = "rgb(118, 135, 162)"
+const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
+  const [displayShadow, setDisplayShadow] = useState(false)
+  const fillColor = color === "white" ? "#fff" : "#2a426b"
+  const shadowColor =
+    color === "white" ? "rgb(227, 231, 236)" : "rgb(118, 135, 162)"
+  if (displayShadow !== dropShadow) {
+    if (!displayShadow) {
+      setTimeout(() => setDisplayShadow(dropShadow), 200)
+    } else {
+      setDisplayShadow(dropShadow)
+    }
   }
-
   return (
     <StyledSVG
       width={size}
       height={size}
-      viewBox={`0 0 783 1016`}
+      viewBox={`0 0 783 1070`}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       fillColor={fillColor}
       shadowColor={shadowColor}
     >
       <title>light_blue_shovel</title>
+      <defs>
+        <filter id="dropshadow" height="130%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="30" id="shovelBlur" />
+          <feOffset dx="3" dy="3" result="offsetblur" />
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.5" />
+          </feComponentTransfer>
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
+        filter={displayShadow && "url(#dropshadow)"}
       >
-        <g id="light_blue_shovel" fill-rule="nonzero">
+        <g id="light_blue_shovel" fillRule="nonzero">
           <path
             d="M0.171631,462.446 L0.171631,459.437 C0.171631,455.811 3.66005,450.955 7.21685,449.108 L249.216,320.243 C258.382,315.386 268.984,320.243 268.984,329.955 C268.984,339.668 268.984,336.659 268.984,362.172 C268.984,367.028 265.427,371.269 261.938,373.116 L94.0165,460.599 L261.938,545.073 C265.495,546.92 268.984,551.161 268.984,555.402 C268.984,580.915 268.984,578.521 268.984,587.618 C268.984,597.331 258.382,602.187 249.216,597.331 L7.21685,472.775 C3.66005,470.928 0.171631,466.071 0.171631,462.446 Z"
             id="Path"
@@ -74,4 +89,10 @@ const Logo = ({ size = "20px", color = "white" }) => {
   )
 }
 
-export default Logo
+SquareLogo.propTypes = {
+  size: PropTypes.string,
+  color: PropTypes.string,
+  dropShadow: PropTypes.bool,
+}
+
+export default SquareLogo

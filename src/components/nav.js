@@ -1,19 +1,22 @@
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
-import Logo from "./logo"
-import { SectionContent } from "../styles/Section"
 import styled, { css } from "styled-components"
+
+import SquareLogo from "./squareLogo"
+import { SectionContent } from "../styles/Section"
 
 const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
   background: rgba(255, 255, 255, 0.9);
-  transition: background 0.5s;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
   ${props =>
     props.hideBackground &&
     css`
       background: rgba(255, 255, 255, 0);
+      box-shadow: none;
     `}
 `
 
@@ -36,15 +39,16 @@ const Button = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   color: #2a426b;
-  transition: color 0.5s;
+  transition: color 0.3s, text-shadow 0.3s;
   ${props =>
     props.isWhite &&
     css`
       color: #fff;
+      text-shadow: 0 0 5px #000;
     `}
 `
 
-const Nav = ({ siteTitle }) => {
+const Nav = () => {
   const [atTop, setAtTop] = useState(true)
 
   const handleScroll = () => {
@@ -67,10 +71,14 @@ const Nav = ({ siteTitle }) => {
   return (
     <Container hideBackground={atTop}>
       <ContentContainer>
-        <Logo size="3em" color={atTop ? "white" : "blue"} />
+        <SquareLogo
+          size="3em"
+          color={atTop ? "white" : "blue"}
+          dropShadow={atTop}
+        />
         <ButtonContainer>
           <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
-            Join Us
+            Join
           </Button>
         </ButtonContainer>
       </ContentContainer>
