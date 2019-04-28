@@ -1,17 +1,17 @@
 {
-  "title": "Ethics as a Mission",
+  "title": "Our Core Values",
   "principles": [
     {
-      "title": "Empowerment",
-      "body": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel."
+      "title": "Teamwork",
+      "body": "We firmly believe that together, we can achieve more. Working in teams allows us to pair program and do thorough code reviews to ensure that we are delivering cleaner and more reliable solutions faster than any one of us could on our own."
     },
     {
-      "title": "Passion",
-      "body": "Anyone can paint! If there's a secret to anything, it's practice. If you over-mix it, you just get one dead color."
+      "title": "Excellence",
+      "body": "Our members are hardworking, quick learning programmers and designers. We aim to excel at everything we do, whether it's the software we develop, the relationships we build with clients, or the culture we foster."
     },
     {
-      "title": "Inclusion",
-      "body": "Drop in a fantastic, big ol' mountain. This is the lazy man's way of painting. Wherever you think they should be, then that's exactly where they should be."
+      "title": "Growth",
+      "body": "Students that join us become more experienced, discover their interests within computer science, and share their expertise with one another. We embrace each other's mistakes and find strength in asking each other for help."
     }
   ]
 }
