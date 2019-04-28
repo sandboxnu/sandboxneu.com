@@ -19,7 +19,11 @@ const Builds = ({ title, projects }) => (
     </HeaderLineBelow>
     <ProjectContainer>
       {projects.map(p => (
-        <Project title={p.title} tags={p.tags} />
+        <Project 
+          title={p.title} 
+          tags={p.tags}
+          backgroundImage={p.image}
+        />
       ))}
     </ProjectContainer>
   </Section>
@@ -31,7 +35,7 @@ Builds.propTypes = {
     PropTypes.exact({
       title: PropTypes.string.isRequired,
       tags: PropTypes.array.isRequired,
-      bgImg: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
     })
   ).isRequired,
 }

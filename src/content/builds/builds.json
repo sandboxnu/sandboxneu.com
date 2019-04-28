@@ -3,15 +3,18 @@
   "projects": [
     {
       "title": "Empathic Accuracy",
-      "tags": ["React", "Node.js", "Video", "Emotion", "Psychology"]
+      "tags": ["React", "Node.js", "Video", "Emotion", "Psychology"],
+      "image": "http://www.youandthemat.com/wp-content/uploads/nature-2-26-17.jpg"
     },
     {
       "title": "Allostasis",
-      "tags": ["React", "Node.js", "Allostasis", "Psychology", "Game"]
+      "tags": ["React", "Node.js", "Allostasis", "Psychology", "Game"],
+      "image": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_48980557.jpg?crop=961,0,1928,2571&wid=600&hei=800&scl=3.21375"
     },
     {
       "title": "Predictive Affect",
-      "tags": ["React", "Node.js", "Images", "Psychology"]
+      "tags": ["React", "Node.js", "Images", "Psychology"],
+      "image": "https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     }
   ]
 }

@@ -12,7 +12,6 @@ const CardBG = styled.div`
   transition: 0.5s;
   width: 300px;
   height: 300px;
-  background-image: url("https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_48980557.jpg?crop=961,0,1928,2571&wid=600&hei=800&scl=3.21375");
   text-align: center;
   &:hover {
     transform: translateY(-5px);
@@ -24,7 +23,7 @@ const Card = styled.div`
   width: 300px;
   height: 300px;
   border-radius: 20px;
-  background-color: rgba(42, 66, 107, 0.7);
+  background-color: rgba(42, 66, 107, 0.8);
 `
 
 const CardHeader = styled(Header)`
@@ -97,7 +96,6 @@ class Project extends Component {
     this.state = {
       expandedView: false,
     }
-    this.test = true
   }
 
   changeView = () => {
@@ -117,8 +115,12 @@ class Project extends Component {
   }
 
   renderCard() {
+    var bgImg = {
+      backgroundImage: 'url(' + this.props.backgroundImage + ')'
+  }
+
     return (
-      <CardBG onClick={this.changeView}>
+      <CardBG onClick={this.changeView} style={bgImg}>
         <Card>
           <CardHeader> {this.props.title} </CardHeader>
           {this.renderTags()}
