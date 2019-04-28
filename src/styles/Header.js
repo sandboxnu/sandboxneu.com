@@ -14,21 +14,21 @@ const HeaderLine = styled(Header)`
   &:after,
   &:before {
     content: "";
-    border-top: 2px solid #fcbc80;
+    border-top: 3px solid #fcbc80;
   }
 `
 
 const HeaderLineRight = styled(HeaderLine)`
   & :after {
     flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 `
 
 const HeaderLineLeft = styled(HeaderLine)`
   & :before {
     flex-grow: 1;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 `
 
