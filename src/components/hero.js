@@ -5,6 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import { SB_ORANGE } from "@colors"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
@@ -42,11 +43,13 @@ const StyledFA = styled(FontAwesomeIcon)`
   display: block;
   margin: auto;
   position: relative;
-  transition: top 0.3s;
+  transition: top 0.3s, color 0.3s;
+  color: ${props => props.color};
   top: 0;
-  :hover {
+  &:hover {
     top: 10px;
     cursor: pointer;
+    color: ${SB_ORANGE};
   }
 `
 
@@ -62,9 +65,9 @@ const Arrow = ({ color, size }) => {
   return (
     <StyledFA
       icon={faArrowDown}
-      color={color}
       size={size}
       onClick={scrollToWhoSection}
+      color={color}
     />
   )
 }

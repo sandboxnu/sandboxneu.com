@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+
+import { SB_ORANGE } from "@colors"
 
 const StyledSVG = styled.svg`
   #Path {
@@ -11,13 +13,39 @@ const StyledSVG = styled.svg`
     transition: fill 0.3s;
     fill: ${props => props.shadowColor};
   }
+  ${props =>
+    props.hoverAnimation &&
+    css`
+      &:hover {
+        cursor: pointer;
+        #Path {
+          fill: ${SB_ORANGE};
+        }
+        #Shadow {
+          fill: ${SB_ORANGE};
+        }
+      }
+    `}
 `
 
-const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
+const LinkSVG = props => (
+  <a href={props.href}>
+    <StyledSVG {...props} />
+  </a>
+)
+
+const SquareLogo = ({
+  size = "20px",
+  color = "white",
+  dropShadow = false,
+  hoverAnimation = false,
+  href,
+}) => {
   const [displayShadow, setDisplayShadow] = useState(false)
   const fillColor = color === "white" ? "#fff" : "#2a426b"
   const shadowColor =
     color === "white" ? "rgb(227, 231, 236)" : "rgb(118, 135, 162)"
+
   if (displayShadow !== dropShadow) {
     if (!displayShadow) {
       setTimeout(() => setDisplayShadow(dropShadow), 200)
@@ -25,8 +53,11 @@ const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
       setDisplayShadow(dropShadow)
     }
   }
+
+  const SVGComponent = href ? LinkSVG : StyledSVG
+
   return (
-    <StyledSVG
+    <SVGComponent
       width={size}
       height={size}
       viewBox={`0 0 783 1070`}
@@ -34,6 +65,8 @@ const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
       xmlns="http://www.w3.org/2000/svg"
       fillColor={fillColor}
       shadowColor={shadowColor}
+      hoverAnimation={hoverAnimation}
+      href={href}
     >
       <title>light_blue_shovel</title>
       <defs>
@@ -85,7 +118,7 @@ const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
           />
         </g>
       </g>
-    </StyledSVG>
+    </SVGComponent>
   )
 }
 
@@ -93,6 +126,8 @@ SquareLogo.propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
   dropShadow: PropTypes.bool,
+  hoverAnimation: PropTypes.bool,
+  href: PropTypes.string,
 }
 
 export default SquareLogo

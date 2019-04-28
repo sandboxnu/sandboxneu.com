@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
+import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/Section"
 import SquareLogo from "./squareLogo"
 
@@ -9,7 +10,7 @@ const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 1);
   transition: background 0.3s, box-shadow 0.3s;
   box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
   ${props =>
@@ -36,16 +37,21 @@ const ButtonContainer = styled.div`
 
 const Button = styled.a`
   letter-spacing: 0.15em;
+  line-height: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  color: #2a426b;
-  transition: color 0.3s, text-shadow 0.3s;
+  border-bottom: 1px solid ${SB_ORANGE_RGBA(0)};
+  color: ${SB_NAVY};
+  transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
   ${props =>
     props.isWhite &&
     css`
       color: #fff;
       text-shadow: 0 0 5px #000;
     `}
+  &:hover {
+    border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
+  }
 `
 
 const Nav = () => {
@@ -75,6 +81,8 @@ const Nav = () => {
           size="3em"
           color={atTop ? "white" : "blue"}
           dropShadow={atTop}
+          href="/"
+          hoverAnimation
         />
         <ButtonContainer>
           <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
