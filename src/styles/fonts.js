@@ -3,16 +3,18 @@
 */
 import BrandonBoldTTF from "../fonts/BrandonGrotesqueWeb-Bold.ttf"
 import BrandonBoldWOFF from "../fonts/BrandonGrotesqueWeb-Bold.woff"
-import BrandonBoldWOFF2 from "../fonts/BrandonGrotesqueWeb-Bold.woff"
+import BrandonBoldWOFF2 from "../fonts/BrandonGrotesqueWeb-Bold.woff2"
 import BrandonBoldItalicTTF from "../fonts/BrandonGrotesqueWeb-BoldItalic.ttf"
 import BrandonBoldItalicWOFF from "../fonts/BrandonGrotesqueWeb-BoldItalic.woff"
-import BrandonBoldItalicWOFF2 from "../fonts/BrandonGrotesqueWeb-BoldItalic.woff"
+import BrandonBoldItalicWOFF2 from "../fonts/BrandonGrotesqueWeb-BoldItalic.woff2"
 import BrandonRegularTTF from "../fonts/BrandonGrotesqueWeb-Regular.ttf"
 import BrandonRegularWOFF from "../fonts/BrandonGrotesqueWeb-Regular.woff"
-import BrandonRegularWOFF2 from "../fonts/BrandonGrotesqueWeb-Regular.woff"
+import BrandonRegularWOFF2 from "../fonts/BrandonGrotesqueWeb-Regular.woff2"
 import BrandonRegularItalicTTF from "../fonts/BrandonGrotesqueWeb-RegularItalic.ttf"
 import BrandonRegularItalicWOFF from "../fonts/BrandonGrotesqueWeb-RegularItalic.woff"
-import BrandonRegularItalicWOFF2 from "../fonts/BrandonGrotesqueWeb-RegularItalic.woff"
+import BrandonRegularItalicWOFF2 from "../fonts/BrandonGrotesqueWeb-RegularItalic.woff2"
+import BrandonMediumWOFF from "../fonts/BrandonGrotesqueWeb-Medium.woff"
+import BrandonMediumWOFF2 from "../fonts/BrandonGrotesqueWeb-Medium.woff2"
 
 export default {
   BrandonBoldTTF,
@@ -27,4 +29,6 @@ export default {
   BrandonRegularItalicTTF,
   BrandonRegularItalicWOFF,
   BrandonRegularItalicWOFF2,
+  BrandonMediumWOFF,
+  BrandonMediumWOFF2,
 }

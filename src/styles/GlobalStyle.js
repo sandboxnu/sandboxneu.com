@@ -10,11 +10,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-
-  html {
-    font-size: 14px;
-  }
-
   @media (min-width: 480px) {
     html {
       font-size: 16px;
@@ -52,5 +47,12 @@ export default createGlobalStyle`
     src: url(${fonts.BrandonRegularItalicTTF}) format("truetype"), 
     url(${fonts.BrandonRegularItalicWOFF}) format("woff"),
     url(${fonts.BrandonRegularItalicWOFF2}) format("woff2");
+  }
+  @font-face {
+    font-family: "Brandon";
+    font-style: normal;
+    font-weight: normal;
+    src: url(${fonts.BrandonMediumWOFF}) format("woff"), 
+    url(${fonts.BrandonMediumWOFF2}) format("woff2");
   }
 `

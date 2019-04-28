@@ -1,5 +1,5 @@
 import React from "react"
-import Section from "../styles/Section"
+import Section from "styles/Section"
 
 const Builds = () => (
   <Section>

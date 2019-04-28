@@ -6,12 +6,12 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
-import Nav from "./nav"
-import GlobalStyle from "../styles/GlobalStyle"
 import Footer from "./footer"
+import Nav from "./nav"
+import GlobalStyle from "styles/GlobalStyle"
 
 const Layout = ({ children }) => (
   <StaticQuery
