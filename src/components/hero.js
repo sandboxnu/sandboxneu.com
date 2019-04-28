@@ -7,10 +7,14 @@ import styled from "styled-components"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
+
 const Subtitle = styled.h1`
   padding-top: 1em;
   color: #fff;
-  font-size: 2.5em;
+  font-size: 1.8em;
+  @media (min-width: 1000px) {
+    font-size: 2.2em;
+  }
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.15em;
@@ -25,7 +29,10 @@ const StyledBackgroundImage = styled(BackgroundImage)`
 `
 
 const ImgContainer = styled.object`
-  max-width: 40em;
+  max-width: 15em;
+  @media (min-width: 1000px) {
+    max-width: 30em;
+  }
   margin: 0 auto;
   display: block;
   padding-top: 10vh;
@@ -51,7 +58,7 @@ const Hero = ({ title, background }) => {
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
+  background: PropTypes.object.isRequired,
 }
 
 export default Hero

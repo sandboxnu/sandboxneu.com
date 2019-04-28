@@ -55,7 +55,7 @@ const SquareLogo = ({ size = "20px", color = "white", dropShadow = false }) => {
         strokeWidth="1"
         fill="none"
         fillRule="evenodd"
-        filter={displayShadow && "url(#dropshadow)"}
+        filter={displayShadow ? "url(#dropshadow)" : undefined}
       >
         <g id="light_blue_shovel" fillRule="nonzero">
           <path

@@ -5,11 +5,7 @@ import styled from "styled-components"
 
 import shovel from "images/light_blue_shovel.svg"
 import Body from "styles/Body"
-import {
-  HeaderLineBelow,
-  HeaderLineLeft,
-  HeaderLineRight,
-} from "styles/Header"
+import { HeaderLineBelow, HeaderLineLeft, HeaderLineRight } from "styles/Header"
 import Section from "styles/Section"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb

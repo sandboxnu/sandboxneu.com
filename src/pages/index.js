@@ -1,15 +1,16 @@
 import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Who from "../components/who"
-import Mission from "../components/mission"
-import Builds from "../components/builds"
 import { graphql } from "gatsby"
 
+import Builds from "components/builds"
+import Hero from "components/hero"
+import Layout from "components/layout"
+import Mission from "components/mission"
+import Who from "components/who"
+import SEO from "components/seo"
+
+import 'font-awesome/css/font-awesome.css'
+
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO
