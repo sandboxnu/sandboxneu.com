@@ -53,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git diff --name-only HEAD | grep '.*\\.js' | xargs prettier --write && git diff --cached --name-only | xargs git add"
+      "pre-commit": "git diff --cached --name-only HEAD | grep '.*\\.js' | xargs prettier --write && git diff --cached --name-only HEAD | xargs git add"
     }
   }
 }
