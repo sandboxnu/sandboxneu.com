@@ -1,15 +1,16 @@
 import React from "react"
+import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Section from "../styles/Section"
-import Body from "../styles/Body"
+
+import shovel from "images/light_blue_shovel.svg"
+import Body from "styles/Body"
 import {
   HeaderLineBelow,
   HeaderLineLeft,
   HeaderLineRight,
-} from "../styles/Header"
-import Img from "gatsby-image"
-import shovel from "../images/light_blue_shovel.svg"
+} from "styles/Header"
+import Section from "styles/Section"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb
 const Mobile = styled.div`

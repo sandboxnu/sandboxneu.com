@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Section from "../styles/Section"
+
 import { Header, HeaderLineBelow } from "../styles/Header"
+import Section from "../styles/Section"
 
 const BlueBackground = styled.div`
   background: #2a426b;

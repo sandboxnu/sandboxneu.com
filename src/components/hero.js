@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import FontAwesome from "react-fontawesome"
 import styled from "styled-components"
 
-import Section from "../styles/Section"
-import banner from "../images/sandbox-banner-shadow.svg"
+import banner from "images/sandbox-banner-shadow.svg"
+import Section from "styles/Section"
 
 const Subtitle = styled.h1`
   padding-top: 1em;

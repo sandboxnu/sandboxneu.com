@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
+import { SectionContent } from "styles/Section"
 import SquareLogo from "./squareLogo"
-import { SectionContent } from "../styles/Section"
 
 const Container = styled.nav`
   position: fixed;
