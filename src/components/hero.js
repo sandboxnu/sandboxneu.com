@@ -1,14 +1,15 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
-import FontAwesome from "react-fontawesome"
 import styled from "styled-components"
 
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
 const Subtitle = styled.h1`
-  padding-top: 1em;
+  padding: 1em 0 2em;
   color: #fff;
   font-size: 1.8em;
   @media (min-width: 1000px) {
@@ -37,6 +38,37 @@ const ImgContainer = styled.object`
   padding-top: 10vh;
 `
 
+const StyledFA = styled(FontAwesomeIcon)`
+  display: block;
+  margin: auto;
+  position: relative;
+  transition: top 0.3s;
+  top: 0;
+  :hover {
+    top: 10px;
+    cursor: pointer;
+  }
+`
+
+const Arrow = ({ color, size }) => {
+  const scrollToWhoSection = () => {
+    window.scrollBy({
+      top: document.documentElement.clientHeight,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
+  return (
+    <StyledFA
+      icon={faArrowDown}
+      color={color}
+      size={size}
+      onClick={scrollToWhoSection}
+    />
+  )
+}
+
 const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
 
 const Hero = ({ title, background }) => {
@@ -49,7 +81,7 @@ const Hero = ({ title, background }) => {
         <Banner dropShadow />
         <Subtitle>{title}</Subtitle>
         <br />
-        <FontAwesome name="arrow-down" />
+        <Arrow color="#fff" size="3x" />
       </Section>
     </StyledBackgroundImage>
   )
