@@ -39,7 +39,7 @@ const Mission = ({ title, principles }) => (
       </WhiteHeader>
       <ParagraphContainer>
         {principles.map(p => (
-          <div key={p.title} >
+          <div key={p.title}>
             <OrangeHeader>{p.title}</OrangeHeader>
             <WhiteParagraph>{p.body}</WhiteParagraph>
           </div>

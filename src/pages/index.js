@@ -8,7 +8,7 @@ import Mission from "components/mission"
 import Who from "components/who"
 import SEO from "components/seo"
 
-import 'font-awesome/css/font-awesome.css'
+import "font-awesome/css/font-awesome.css"
 
 const IndexPage = ({ data }) => {
   return (

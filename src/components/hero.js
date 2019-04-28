@@ -7,7 +7,6 @@ import styled from "styled-components"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
-
 const Subtitle = styled.h1`
   padding-top: 1em;
   color: #fff;
