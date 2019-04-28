@@ -5,8 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.0",
-    "font-awesome": "^4.7.0",
     "gatsby": "^2.3.16",
     "gatsby-background-image": "^0.3.4",
     "gatsby-image": "^2.0.37",
@@ -21,7 +23,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.2.0",
     "styled-normalize": "^8.0.6"
@@ -52,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git diff --name-only HEAD | grep '.*\\.js' | xargs prettier --write"
+      "pre-commit": "git diff --name-only HEAD | grep '.*\\.js' | xargs prettier --write && git diff --cached --name-only | xargs git add"
     }
   }
 }
