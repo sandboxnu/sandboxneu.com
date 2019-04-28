@@ -83,7 +83,10 @@ export const query = graphql`
       edges {
         node {
           title
-          p1
+          projects {
+            title
+            tags
+          }
         }
       }
     }

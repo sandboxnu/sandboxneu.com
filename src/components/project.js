@@ -1,15 +1,13 @@
 import { Header } from "../styles/Header"
-import React, { Component } from 'react';
+import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
-
 
 const CardBG = styled.div`
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   transition: 0.5s;
   width: 300px;
@@ -61,84 +59,86 @@ const Tag = styled.div`
   color: white;
 `
 const Button = styled.div`
-    z-index: 999;
-    display:inline-block;
-    border:1px solid;
-    border-radius: 5px;
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    text-align: center;
-    color: white;
-    &:hover {
-      color: #fcbc80;
-    }
-    margin-top: 50px;
-
+  z-index: 999;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: #fcbc80;
+  }
+  margin-top: 50px;
 `
 class Project extends Component {
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-        tags: PropTypes.array.isRequired,
-    };
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    tags: PropTypes.array.isRequired,
+  }
 
-    constructor() {
-      super();
+  constructor() {
+    super()
 
-      this.state = {
-        expandedView: false,
-      };
-      this.test = true;
+    this.state = {
+      expandedView: false,
     }
+    this.test = true
+  }
 
-    changeView = () => {
-      this.setState(prevState => ({
-        expandedView: !prevState.expandedView
-      }));
-    }
-    
-    renderTags() {
-      return (
-        <TagsContainer>
-          {this.props.tags.map(tag => (
-            <Tag>{tag}</Tag>
-          ))}
-        </TagsContainer>
-      )
-    }
+  changeView = () => {
+    this.setState(prevState => ({
+      expandedView: !prevState.expandedView,
+    }))
+  }
 
-    renderCard() {
-      return (
-        <CardBG onClick={this.changeView}> 
-          <Card>
-            <CardHeader> {this.props.title} </CardHeader>
-            {this.renderTags()}
-            <Button onClick={this.changeView}>Details</Button>
-          </Card>
-        </CardBG>
-      );
-    }
+  renderTags() {
+    return (
+      <TagsContainer>
+        {this.props.tags.map(tag => (
+          <Tag>{tag}</Tag>
+        ))}
+      </TagsContainer>
+    )
+  }
 
-    renderExpanded() {
-      return (
-        <CardBG onClick={this.changeView}> 
-          <Card>
-            <CardHeader> {this.props.title} </CardHeader>
-            {this.renderTags()}
-            <span> <Button onClick={this.changeView}>Details</Button> </span>
-          </Card>
-        </CardBG>
-      );
-    }
+  renderCard() {
+    return (
+      <CardBG onClick={this.changeView}>
+        <Card>
+          <CardHeader> {this.props.title} </CardHeader>
+          {this.renderTags()}
+          <Button onClick={this.changeView}>Details</Button>
+        </Card>
+      </CardBG>
+    )
+  }
 
-    render() {
-      if (this.state.expandedView) {
-        return this.renderExpanded();
-      }
-      return this.renderCard();
+  renderExpanded() {
+    return (
+      <CardBG onClick={this.changeView}>
+        <Card>
+          <CardHeader> {this.props.title} </CardHeader>
+          {this.renderTags()}
+          <span>
+            {" "}
+            <Button onClick={this.changeView}>Details</Button>{" "}
+          </span>
+        </Card>
+      </CardBG>
+    )
+  }
+
+  render() {
+    if (this.state.expandedView) {
+      return this.renderExpanded()
     }
+    return this.renderCard()
+  }
 }
 
 export default Project

@@ -1,4 +1,17 @@
 {
   "title": "Sandbox builds...",
-  "p1": "this is just a test"
+  "projects": [
+    {
+      "title": "Empathic Accuracy",
+      "tags": ["React", "Node.js", "Video", "Emotion", "Psychology"]
+    },
+    {
+      "title": "Allostasis",
+      "tags": ["React", "Node.js", "Allostasis", "Psychology", "Game"]
+    },
+    {
+      "title": "Predictive Affect",
+      "tags": ["React", "Node.js", "Images", "Psychology"]
+    }
+  ]
 }
