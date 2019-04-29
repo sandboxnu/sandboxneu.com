@@ -1,20 +1,26 @@
 {
-  "title": "Sandbox builds...",
+  "title": "Our Projects",
   "projects": [
     {
       "title": "Empathic Accuracy",
       "tags": ["React", "Node.js", "Video", "Emotion", "Psychology"],
-      "image": "http://www.youandthemat.com/wp-content/uploads/nature-2-26-17.jpg"
+      "image": "http://www.youandthemat.com/wp-content/uploads/nature-2-26-17.jpg",
+      "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
+      "gitLink": "https://github.com/sandboxneu/empathic-accuracy"
     },
     {
       "title": "Allostasis",
       "tags": ["React", "Node.js", "Allostasis", "Psychology", "Game"],
-      "image": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_48980557.jpg?crop=961,0,1928,2571&wid=600&hei=800&scl=3.21375"
+      "image": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_48980557.jpg?crop=961,0,1928,2571&wid=600&hei=800&scl=3.21375",
+      "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
+      "gitLink": "https://github.com/sandboxneu/allostasis-game"
     },
     {
       "title": "Predictive Affect",
       "tags": ["React", "Node.js", "Images", "Psychology"],
-      "image": "https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "image": "https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
+      "gitLink": "https://github.com/sandboxneu/predictive-affect"
     }
   ]
 }

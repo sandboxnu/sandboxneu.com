@@ -9,7 +9,7 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `
 
 const Builds = ({ title, projects }) => (
@@ -20,10 +20,12 @@ const Builds = ({ title, projects }) => (
     <ProjectContainer>
       {projects.map(p => (
         <Project 
-          title={p.title} 
-          tags={p.tags}
+          title={p.title}
+          tags={p.tags} 
           backgroundImage={p.image}
-        />
+          description={p.description}
+          github = {p.gitLink}
+          />
       ))}
     </ProjectContainer>
   </Section>
@@ -36,6 +38,8 @@ Builds.propTypes = {
       title: PropTypes.string.isRequired,
       tags: PropTypes.array.isRequired,
       image: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      gitLink:PropTypes.string.isRequired,
     })
   ).isRequired,
 }

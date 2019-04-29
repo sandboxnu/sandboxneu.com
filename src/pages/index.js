@@ -87,6 +87,8 @@ export const query = graphql`
             title
             tags
             image
+            description
+            gitLink
           }
         }
       }
