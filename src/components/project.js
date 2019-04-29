@@ -188,9 +188,9 @@ class Project extends Component {
           {this.renderExpanded()}
           {this.renderCard()}
         </div>
-      );
+      )
     }
-    return this.renderCard();
+    return this.renderCard()
   }
 }
 
