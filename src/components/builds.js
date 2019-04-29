@@ -9,7 +9,11 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media (min-width: 1000px) {
+    justify-content: space-between;
+  }
 `
 
 const Builds = ({ title, projects }) => (

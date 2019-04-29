@@ -28,10 +28,7 @@ const Card = styled.div`
 
 const CardHeader = styled(Header)`
   padding-top: 45px;
-  font-size: 1.7em;
-  @media (min-width: 480px) {
-    font-size: 1.5em;
-  }
+  font-size: 1.5em;
   font-weight: 300;
   color: ${SB_ORANGE};
   height: 100px;
@@ -49,10 +46,7 @@ const TagsContainer = styled.div`
 `
 
 const Tag = styled.div`
-  font-size: 1em;
-  @media (min-width: 480px) {
-    font-size: 0.9em;
-  }
+  font-size: 0.9em;
   display: inline-block;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.35);
