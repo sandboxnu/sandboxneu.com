@@ -1,22 +1,33 @@
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import React from "react"
-import Logo from "./logo"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-const Container = styled.div`
+import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
+import { SectionContent } from "styles/Section"
+import SquareLogo from "./squareLogo"
+
+const Container = styled.nav`
   position: fixed;
-  height: 48px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 20px;
+  background: rgba(255, 255, 255, 1);
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
+  ${props =>
+    props.hideBackground &&
+    css`
+      background: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    `}
 `
 
-const SizedLogo = styled(Logo)`
-  height: 40px;
-  width: 121px;
+const ContentContainer = styled(SectionContent)`
+  height: 4em;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
 `
 
 const ButtonContainer = styled.div`
@@ -26,19 +37,62 @@ const ButtonContainer = styled.div`
 
 const Button = styled.a`
   letter-spacing: 0.15em;
+  line-height: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  color: #27426c;
+  border-bottom: 1px solid ${SB_ORANGE_RGBA(0)};
+  color: ${SB_NAVY};
+  transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
+  ${props =>
+    props.isWhite &&
+    css`
+      color: #fff;
+      text-shadow: 0 0 5px #000;
+    `}
+  &:hover {
+    border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
+  }
 `
 
-const Nav = ({ siteTitle }) => (
-  <Container>
-    <SizedLogo />
-    <ButtonContainer>
-      <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7">Join Us</Button>
-    </ButtonContainer>
-  </Container>
-)
+const Nav = () => {
+  const [atTop, setAtTop] = useState(true)
+
+  const handleScroll = () => {
+    const pageY = document.body.scrollTop || document.documentElement.scrollTop
+    if (pageY > 0 && atTop) {
+      setAtTop(false)
+    } else if (pageY === 0) {
+      setAtTop(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    handleScroll()
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  return (
+    <Container hideBackground={atTop}>
+      <ContentContainer>
+        <SquareLogo
+          size="3em"
+          color={atTop ? "white" : "blue"}
+          dropShadow={atTop}
+          href="/"
+          hoverAnimation
+        />
+        <ButtonContainer>
+          <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
+            Join
+          </Button>
+        </ButtonContainer>
+      </ContentContainer>
+    </Container>
+  )
+}
 
 Nav.propTypes = {
   siteTitle: PropTypes.string,

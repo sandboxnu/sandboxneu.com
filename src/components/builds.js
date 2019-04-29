@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Section from "../styles/Section"
 import { HeaderLineBelow } from "../styles/Header"
 import styled from "styled-components"
 import Project from "./project.js"
+import Section from "styles/Section"
 
 const ProjectContainer = styled.div`
   display: flex;
