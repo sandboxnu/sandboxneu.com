@@ -1,8 +1,9 @@
 import { Header, HeaderLineBelow } from "../styles/Header"
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import Body from "../styles/Body.js"
+import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
 const CardBG = styled.div`
   margin-bottom: 20px;
@@ -22,7 +23,7 @@ const Card = styled.div`
   width: 300px;
   height: 300px;
   border-radius: 20px;
-  background-color: rgba(42, 66, 107, 0.8);
+  background-color: ${SB_NAVY_RGBA(0.8)};
 `
 
 const CardHeader = styled(Header)`
@@ -32,7 +33,7 @@ const CardHeader = styled(Header)`
     font-size: 1.5em;
   }
   font-weight: 300;
-  color: #fcbc80;
+  color: ${SB_ORANGE};
   height: 100px;
   margin-left: 20px;
   margin-right: 20px;
@@ -80,7 +81,7 @@ const CardButton = styled.div`
   color: white;
   cursor: pointer;
   ${CardBG}:hover & {
-    color: #fcbc80;
+    color: ${SB_ORANGE};
   }
   margin-top: 50px;
 `
@@ -120,7 +121,7 @@ const ExpandedClose = styled.div`
   cursor: pointer;
   color: gray;
   &:hover {
-    color: #fcbc80;
+    color: ${SB_ORANGE};
   }
 `
 class Project extends Component {
