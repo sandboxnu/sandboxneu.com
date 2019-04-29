@@ -83,7 +83,7 @@ const CardButton = styled.div`
   ${CardBG}:hover & {
     color: ${SB_ORANGE};
   }
-  margin-top: 50px;
+  margin-top: 60px;
 `
 const ExpandedCard = styled.div`
   position: fixed;
@@ -144,6 +144,11 @@ class Project extends Component {
     }))
   }
 
+  openGithub = () => {
+    var win = window.open(this.props.github, "_blank")
+    win.focus()
+  }
+
   renderTags() {
     return (
       <TagsContainer>
@@ -160,7 +165,7 @@ class Project extends Component {
     }
 
     return (
-      <CardBG onClick={this.changeView} style={bgImg}>
+      <CardBG onClick={this.openGithub} style={bgImg}>
         <Card>
           <CardHeader> {this.props.title} </CardHeader>
           {this.renderTags()}
@@ -170,6 +175,7 @@ class Project extends Component {
     )
   }
 
+  // This will need to be further developed later
   renderExpanded() {
     return (
       <Overlay>
