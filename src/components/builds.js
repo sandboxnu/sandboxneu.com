@@ -19,13 +19,13 @@ const Builds = ({ title, projects }) => (
     </HeaderLineBelow>
     <ProjectContainer>
       {projects.map(p => (
-        <Project 
+        <Project
           title={p.title}
-          tags={p.tags} 
+          tags={p.tags}
           backgroundImage={p.image}
           description={p.description}
-          github = {p.gitLink}
-          />
+          github={p.gitLink}
+        />
       ))}
     </ProjectContainer>
   </Section>
@@ -39,7 +39,7 @@ Builds.propTypes = {
       tags: PropTypes.array.isRequired,
       image: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      gitLink:PropTypes.string.isRequired,
+      gitLink: PropTypes.string.isRequired,
     })
   ).isRequired,
 }

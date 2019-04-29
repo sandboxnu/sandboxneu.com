@@ -85,14 +85,14 @@ const CardButton = styled.div`
   margin-top: 50px;
 `
 const ExpandedCard = styled.div`
-  position:fixed;
+  position: fixed;
   border-radius: 10px;
   background: white;
   width: 500px;
   height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
@@ -105,14 +105,14 @@ const Overlay = styled.div`
   height: 100%;
   width: 100%;
   z-index: 99;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
 `
 const ExpandedHeader = styled(HeaderLineBelow)`
   font-size: 1.75em;
 `
 
 const ExpandedClose = styled.div`
-  position:fixed;
+  position: fixed;
   font-size: 2.5em;
   top: -10px;
   right: 5px;
@@ -175,7 +175,7 @@ class Project extends Component {
         <ExpandedCard>
           <ExpandedClose onClick={this.changeView}> x </ExpandedClose>
           <ExpandedHeader> {this.props.title} </ExpandedHeader>
-            <Body> {this.props.description} </Body>
+          <Body> {this.props.description} </Body>
         </ExpandedCard>
       </Overlay>
     )
@@ -190,7 +190,7 @@ class Project extends Component {
         </div>
       );
     }
-    return this.renderCard()
+    return this.renderCard();
   }
 }
 
