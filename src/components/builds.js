@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { HeaderLineBelow } from "../styles/Header"
+import { HeaderLineBelow } from "styles/Header"
 import styled from "styled-components"
 import Project from "./project.js"
 import Section from "styles/Section"
@@ -29,6 +29,7 @@ const Builds = ({ title, projects }) => (
           backgroundImage={p.image}
           description={p.description}
           github={p.gitLink}
+          key={p.title}
         />
       ))}
     </ProjectContainer>

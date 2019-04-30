@@ -2,14 +2,14 @@ import { Header, HeaderLineBelow } from "../styles/Header"
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Body from "../styles/Body.js"
+import Body from "styles/Body"
 import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
 const CardBG = styled.div`
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  transition: 0.5s;
+  transition: 0.3s;
   width: 300px;
   height: 300px;
   text-align: center;
@@ -24,6 +24,7 @@ const Card = styled.div`
   height: 300px;
   border-radius: 20px;
   background-color: ${SB_NAVY_RGBA(0.8)};
+  cursor: pointer;
 `
 
 const CardHeader = styled(Header)`
@@ -50,13 +51,8 @@ const Tag = styled.div`
   display: inline-block;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.35);
-  padding-right: 7px;
-  padding-left: 7px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 3px;
-  margin-right: 3px;
-  margin-bottom: 6px;
+  padding: 5px 7px 5px 7px;
+  margin: 0px 3px 6px 3px;
   text-align: center;
   color: white;
 `
@@ -67,13 +63,14 @@ const CardButton = styled.div`
   border: 1px solid;
   border-radius: 5px;
   box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding: 7px 30px 7px 30px;
   text-align: center;
   color: white;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
   ${CardBG}:hover & {
     color: ${SB_ORANGE};
   }
@@ -88,9 +85,7 @@ const ExpandedCard = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  padding: 0px 30px 30px 30px;
 `
 
 const Overlay = styled.div`
@@ -112,7 +107,6 @@ const ExpandedClose = styled.div`
   top: -10px;
   right: 5px;
   padding: 10px;
-  cursor: pointer;
   color: gray;
   &:hover {
     color: ${SB_ORANGE};
@@ -154,7 +148,7 @@ class Project extends Component {
   }
 
   renderCard() {
-    var bgImg = {
+    const bgImg = {
       backgroundImage: "url(" + this.props.backgroundImage + ")",
     }
 
