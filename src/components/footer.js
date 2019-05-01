@@ -1,18 +1,17 @@
 import React from "react"
-import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import Section from "../styles/Section"
 import styled from "styled-components"
-import SquareLogo from "./squareLogo"
-
-
-const SizedLogo = styled(SquareLogo)`
-  height: 40px;
-  width: 121px;
-`
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebookF,
+  faLinkedin,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
+import banner from "images/sandbox-banner.png"
 
 const GrayBackground = styled.div`
-  background: #EAECF0;
+  background: #eaecf0;
 `
 
 const Navigate = styled.div`
@@ -39,11 +38,23 @@ const SocialSection = styled.div`
   display: flex;
 `
 
-const SocialInfo = ({ info }) => {
+const SocialLogo = styled(FontAwesomeIcon)`
+  color: ${props => props.color};
+`
+
+const SizedLogo = styled.object`
+  height: 40px;
+  width: 121px;
+  color: #2a426b;
+`
+
+const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
+
+const SocialInfo = ({ info, icon }) => {
   return (
     <StyledSocial>
       <a href={info.url}>
-        <Img fixed={info.icon.childImageSharp.fixed} />
+        <SocialLogo icon={icon} color="#2a426b" />
       </a>
     </StyledSocial>
   )
@@ -53,11 +64,11 @@ const StyledSocial = styled.div`
   margin-right: 20px;
 `
 
-const Footer = ({ pages, email, facebook, linkedin }) => (
+const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
   <footer>
     <GrayBackground>
       <FlexSection>
-        <SizedLogo />
+        <FooterLogo />
         <FooterInfo>
           <Navigate>
             <h>NAVIGATE</h>
@@ -67,8 +78,9 @@ const Footer = ({ pages, email, facebook, linkedin }) => (
             <h>CONTACT</h>
             <p>sandboxneu@gmail.com</p>
             <SocialSection>
-              <SocialInfo info={facebook} />
-              <SocialInfo info={linkedin} />
+              <SocialInfo info={facebook} icon={faFacebookF} />
+              <SocialInfo info={linkedin} icon={faLinkedin} />
+              <SocialInfo info={instagram} icon={faInstagram} />
             </SocialSection>
           </Contact>
         </FooterInfo>
@@ -78,13 +90,14 @@ const Footer = ({ pages, email, facebook, linkedin }) => (
 )
 
 const SocialType = PropTypes.exact({
-  icon: PropTypes.object,
+  icon: PropTypes.FontAwesomeIcon,
   url: PropTypes.string,
 })
 
 Footer.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.string).isRequired,
   email: PropTypes.string.isRequired,
+  instagram: SocialType.isRequired,
   facebook: SocialType.isRequired,
   linkedin: SocialType.isRequired,
 }

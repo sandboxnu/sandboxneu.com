@@ -46,6 +46,16 @@ const Layout = ({ children }) => (
                   }
                 }
               }
+              instagram {
+                url
+                icon {
+                  childImageSharp {
+                    fixed(width: 25) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
             }
           }
         }
