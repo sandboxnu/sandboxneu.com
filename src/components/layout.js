@@ -28,33 +28,12 @@ const Layout = ({ children }) => (
               email
               facebook {
                 url
-                icon {
-                  childImageSharp {
-                    fixed(width: 25) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
               }
               linkedin {
                 url
-                icon {
-                  childImageSharp {
-                    fixed(width: 25) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
               }
               instagram {
                 url
-                icon {
-                  childImageSharp {
-                    fixed(width: 25) {
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
-                }
               }
             }
           }

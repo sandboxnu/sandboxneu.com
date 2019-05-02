@@ -1,15 +1,12 @@
 {
   "email": "sandboxneu@gmail.com",
   "facebook": {
-    "url": "https://www.facebook.com/sandboxneu/",
-    "icon": "./fb.jpg"
+    "url": "https://www.facebook.com/sandboxneu/"
   },
   "linkedin": {
-    "url": "https://www.linkedin.com/company/sandboxneu/",
-    "icon": "./in.jpg"
+    "url": "https://www.linkedin.com/company/sandboxneu/"
   },
   "instagram": {
-    "url": "https://www.instagram.com/sandboxneu/",
-    "icon": "./in.jpg"
+    "url": "https://www.instagram.com/sandboxneu/"
   }
 }

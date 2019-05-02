@@ -106,7 +106,6 @@ const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
 )
 
 const SocialType = PropTypes.exact({
-  icon: PropTypes.FontAwesomeIcon,
   url: PropTypes.string,
 })
 
