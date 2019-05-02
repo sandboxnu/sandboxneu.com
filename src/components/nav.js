@@ -40,6 +40,7 @@ const Button = styled.a`
   line-height: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 500;
   border-bottom: 1px solid ${SB_ORANGE_RGBA(0)};
   color: ${SB_NAVY};
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
