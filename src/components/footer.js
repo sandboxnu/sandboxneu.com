@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Section from "/styles/Section"
+import Section from "../styles/Section"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -20,6 +20,7 @@ const Navigate = styled.div`
 `
 
 const Contact = styled.div`
+  padding-right: 30%;
   color: #2a426b;
 `
 
