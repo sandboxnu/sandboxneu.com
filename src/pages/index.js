@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Builds from "components/builds"
 import Hero from "components/hero"
 import Layout from "components/layout"
@@ -18,7 +17,7 @@ const IndexPage = ({ data }) => {
       <Hero {...data.hero.edges[0].node} />
       <Who {...data.who.edges[0].node} />
       <Mission {...data.mission.edges[0].node} />
-      <Builds />
+      <Builds {...data.builds.edges[0].node} />
     </Layout>
   )
 }
@@ -85,6 +84,13 @@ export const query = graphql`
       edges {
         node {
           title
+          projects {
+            title
+            tags
+            image
+            description
+            gitLink
+          }
         }
       }
     }
