@@ -28,10 +28,14 @@ const StyledSVG = styled.svg`
     `}
 `
 
+const LinkSVGWrapper = styled.a`
+  height: ${props => props.height};
+`
+
 const LinkSVG = props => (
-  <a href={props.href}>
+  <LinkSVGWrapper href={props.href} height={props.height}>
     <StyledSVG {...props} />
-  </a>
+  </LinkSVGWrapper>
 )
 
 const SquareLogo = ({
@@ -68,7 +72,7 @@ const SquareLogo = ({
       hoverAnimation={hoverAnimation}
       href={href}
     >
-      <title>light_blue_shovel</title>
+      <title>Sandbox Home</title>
       <defs>
         <filter id="dropshadow" height="130%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="30" id="shovelBlur" />
@@ -90,7 +94,7 @@ const SquareLogo = ({
         fillRule="evenodd"
         filter={displayShadow ? "url(#dropshadow)" : undefined}
       >
-        <g id="light_blue_shovel" fillRule="nonzero">
+        <g id="nav_shovel" fillRule="nonzero">
           <path
             d="M0.171631,462.446 L0.171631,459.437 C0.171631,455.811 3.66005,450.955 7.21685,449.108 L249.216,320.243 C258.382,315.386 268.984,320.243 268.984,329.955 C268.984,339.668 268.984,336.659 268.984,362.172 C268.984,367.028 265.427,371.269 261.938,373.116 L94.0165,460.599 L261.938,545.073 C265.495,546.92 268.984,551.161 268.984,555.402 C268.984,580.915 268.984,578.521 268.984,587.618 C268.984,597.331 258.382,602.187 249.216,597.331 L7.21685,472.775 C3.66005,470.928 0.171631,466.071 0.171631,462.446 Z"
             id="Path"
