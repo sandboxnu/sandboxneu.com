@@ -61,14 +61,12 @@ const SocialInfo = ({ info, icon }) => {
 }
 
 const InfoLink = ({ dest, text }) => {
-  return (
-    <a href={dest}>
-      <StyledLink>{text}</StyledLink>
-    </a>
-  )
+  return <StyledLink href={dest}>{text}</StyledLink>
 }
 
 const StyledLink = styled.div`
+  padding-bottom: 5%;
+  padding-top: 5%;
   text-decoration: none;
   color: #2a426b;
 `
@@ -84,11 +82,12 @@ const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
         <FooterLogo />
         <FooterInfo>
           <Navigate>
-            <p>NAVIGATE</p>
+            <span>NAVIGATE</span>
             <InfoLink dest="/" text="home" />
+            <InfoLink dest="https://forms.gle/aZB5fGMEBKB4uDLU7" text="join" />
           </Navigate>
           <Contact>
-            <p>CONTACT</p>
+            <span>CONTACT</span>
             <InfoLink
               dest="mailto:info@sandboxneu.com"
               text="info@sandboxneu.com"
