@@ -43,6 +43,7 @@ const StyledFA = styled(FontAwesomeIcon)`
   display: block;
   margin: auto;
   position: relative;
+  max-width: ${props => props.cssSize};
   transition: top 0.3s, color 0.3s;
   color: ${props => props.color};
   top: 0;
@@ -53,7 +54,7 @@ const StyledFA = styled(FontAwesomeIcon)`
   }
 `
 
-const Arrow = ({ color, size }) => {
+const Arrow = ({ color, scale }) => {
   const scrollToWhoSection = () => {
     window.scrollBy({
       top: document.documentElement.clientHeight,
@@ -65,7 +66,8 @@ const Arrow = ({ color, size }) => {
   return (
     <StyledFA
       icon={faArrowDown}
-      size={size}
+      size={scale + "x"} // to account for FA using size '3x' to represent '3em'
+      cssSize={scale + "em"} // this two-sizing-props weirdness is a workaround for a FA bug
       onClick={scrollToWhoSection}
       color={color}
     />
@@ -84,7 +86,7 @@ const Hero = ({ title, background }) => {
         <Banner dropShadow />
         <Subtitle>{title}</Subtitle>
         <br />
-        <Arrow color="#fff" size="3x" />
+        <Arrow color="#fff" scale="3" />
       </Section>
     </StyledBackgroundImage>
   )
