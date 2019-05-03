@@ -15,12 +15,11 @@ const GrayBackground = styled.div`
 `
 
 const Navigate = styled.div`
-  padding-right: 30%;
   color: #2a426b;
 `
 
 const Contact = styled.div`
-  padding-right: 30%;
+  padding-left: 30%;
   color: #2a426b;
 `
 
@@ -36,6 +35,7 @@ const FooterInfo = styled.div`
 `
 
 const SocialSection = styled.div`
+  padding-top: 10px;
   display: flex;
 `
 
@@ -66,8 +66,7 @@ const InfoLink = ({ dest, text }) => {
 }
 
 const StyledLink = styled.div`
-  padding-bottom: 5%;
-  padding-top: 5%;
+  padding-top: 10px;
   text-decoration: none;
   color: #2a426b;
 `
