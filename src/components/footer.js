@@ -19,8 +19,12 @@ const Navigate = styled.div`
 `
 
 const Contact = styled.div`
-  padding-left: 30%;
+  padding-left: 10%;
   color: #2a426b;
+
+  @media (min-width: 1000px) {
+    padding-left: 30%;
+  }
 `
 
 const FlexSection = styled(Section)`
