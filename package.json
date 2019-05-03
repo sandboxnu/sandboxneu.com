@@ -12,6 +12,7 @@
     "gatsby": "^2.3.32",
     "gatsby-background-image": "^0.3.4",
     "gatsby-image": "^2.0.37",
+    "gatsby-plugin-amplitude-analytics": "^1.5.0",
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
