@@ -141,7 +141,7 @@ class Project extends Component {
     return (
       <TagsContainer>
         {this.props.tags.map(tag => (
-          <Tag>{tag}</Tag>
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </TagsContainer>
     )
