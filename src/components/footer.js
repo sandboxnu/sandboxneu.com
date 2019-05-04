@@ -22,7 +22,7 @@ const Contact = styled.div`
   padding-left: 10%;
   color: #2a426b;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 750px) {
     padding-left: 30%;
   }
 `
@@ -31,11 +31,15 @@ const FlexSection = styled(Section)`
   padding-top: 50px;
   padding-bottom: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media (min-width: 750px) {
+    justify-content: space-between;
+  }
 `
 const FooterInfo = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const SocialSection = styled.div`
@@ -48,9 +52,14 @@ const SocialLogo = styled(FontAwesomeIcon)`
 `
 
 const SizedLogo = styled.object`
-  height: 40px;
-  width: 121px;
-  color: #2a426b;
+  display: none;
+
+  @media (min-width: 750px) {
+    display: block;
+    height: 40px;
+    width: 121px;
+    color: #2a426b;
+  }
 `
 
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
