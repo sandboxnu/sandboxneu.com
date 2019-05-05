@@ -51,7 +51,7 @@ export default createGlobalStyle`
   @font-face {
     font-family: "Brandon";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     src: url(${fonts.BrandonMediumWOFF}) format("woff"), 
     url(${fonts.BrandonMediumWOFF2}) format("woff2");
   }

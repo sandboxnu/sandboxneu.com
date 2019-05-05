@@ -22,7 +22,7 @@ const ParagraphContainer = styled.div`
 `
 const OrangeHeader = styled(Header)`
   font-size: 1.5em;
-  font-weight: 300;
+  font-weight: 500;
   color: #fcbc80;
 `
 const WhiteParagraph = styled.p`

@@ -1,14 +1,15 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sandbox-home-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The website for Sandbox at Northeastern University",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sandbox <sandboxneu@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "amplitude-js": "^5.2.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.32",
     "gatsby-background-image": "^0.3.4",
