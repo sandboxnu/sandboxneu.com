@@ -4,5 +4,6 @@
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
     ],
-    "regions": ["all"]
+    "regions": ["all"],
+    "alias": "sandboxneu.com"
 }
