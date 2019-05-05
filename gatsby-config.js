@@ -34,15 +34,6 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-amplitude-analytics`,
-      options: {
-        // Specify the API key for your Amplitude Project (required)
-        apiKey: "b03da34a4b82cd670be2217a0d5e0938",
-        // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
-        respectDNT: true,
-      },
-    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
