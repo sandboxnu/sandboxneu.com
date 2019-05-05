@@ -8,6 +8,8 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
+
+import { SB_NAVY } from "@colors"
 import banner from "images/sandbox-banner.png"
 
 const GrayBackground = styled.div`
@@ -15,15 +17,15 @@ const GrayBackground = styled.div`
 `
 
 const Navigate = styled.div`
-  color: #2a426b;
+  color: ${SB_NAVY};
 `
 
 const Contact = styled.div`
-  padding-left: 10%;
-  color: #2a426b;
+  padding-left: 1em;
+  color: ${SB_NAVY};
 
   @media (min-width: 750px) {
-    padding-left: 30%;
+    padding-left: 4em;
   }
 `
 
@@ -58,8 +60,18 @@ const SizedLogo = styled.object`
     display: block;
     height: 40px;
     width: 121px;
-    color: #2a426b;
+    color: ${SB_NAVY};
   }
+`
+
+const StyledLink = styled.div`
+  padding-top: 10px;
+  text-decoration: none;
+  color: ${SB_NAVY};
+`
+
+const StyledSocial = styled.div`
+  margin-right: 20px;
 `
 
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
@@ -68,7 +80,7 @@ const SocialInfo = ({ info, icon }) => {
   return (
     <StyledSocial>
       <a href={info.url}>
-        <SocialLogo icon={icon} color="#2a426b" />
+        <SocialLogo icon={icon} color={SB_NAVY} />
       </a>
     </StyledSocial>
   )
@@ -77,16 +89,6 @@ const SocialInfo = ({ info, icon }) => {
 const InfoLink = ({ dest, text }) => {
   return <StyledLink href={dest}>{text}</StyledLink>
 }
-
-const StyledLink = styled.div`
-  padding-top: 10px;
-  text-decoration: none;
-  color: #2a426b;
-`
-
-const StyledSocial = styled.div`
-  margin-right: 20px;
-`
 
 const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
   <footer>
