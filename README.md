@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://raw.githubusercontent.com/sandboxneu/sandboxneu.com/master/src/images/icon.png" width="60"/>
+    <img alt="Gatsby" src="https://raw.githubusercontent.com/sandboxneu/sandboxneu.com/master/src/images/sandbox-icon.png" width="60"/>
   </a>
 </p>
 <h1 align="center">
