@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { SB_ORANGE } from "@colors"
+import { useAmplitudeLogEvent } from "utils/amplitude"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
@@ -77,6 +78,7 @@ const Arrow = ({ color, scale }) => {
 const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
 
 const Hero = ({ title, background }) => {
+  useAmplitudeLogEvent("Visit homepage")
   return (
     <StyledBackgroundImage
       fluid={background.childImageSharp.fluid}
