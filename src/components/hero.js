@@ -77,8 +77,10 @@ const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
 
 const Hero = ({ title, background }) => {
   useEffect(() => {
-    amplitudeInit()
-    amplitudeLogEvent()
+    if (process.env.NODE_ENV !== "development") {
+      amplitudeInit()
+      amplitudeLogEvent()
+    }
   }, [])
   return (
     <StyledBackgroundImage
