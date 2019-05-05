@@ -79,7 +79,7 @@ const Hero = ({ title, background }) => {
   useEffect(() => {
     if (process.env.NODE_ENV !== "development") {
       amplitudeInit()
-      amplitudeLogEvent()
+      amplitudeLogEvent("Visit homepage")
     }
   }, [])
   return (
