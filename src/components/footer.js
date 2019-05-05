@@ -10,7 +10,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons"
 
-import { SB_NAVY } from "@colors"
+import { SB_NAVY, SB_ORANGE } from "@colors"
 import banner from "images/sandbox-banner.png"
 
 const GrayBackground = styled.div`
@@ -19,6 +19,10 @@ const GrayBackground = styled.div`
 
 const Navigate = styled.div`
   color: ${SB_NAVY};
+`
+
+const Header = styled.span`
+  letter-spacing: 0.15em;
 `
 
 const Contact = styled.div`
@@ -65,14 +69,19 @@ const SizedLogo = styled.object`
   }
 `
 
-const StyledLink = styled.div`
+const StyledSocial = styled.div`
+  margin-right: 20px;
+`
+
+const StyledLink = styled.a`
+  display: block;
   padding-top: 10px;
   text-decoration: none;
   color: ${SB_NAVY};
-`
-
-const StyledSocial = styled.div`
-  margin-right: 20px;
+  transition: color 0.3s;
+  &:hover {
+    color: ${SB_ORANGE};
+  }
 `
 
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
@@ -98,16 +107,13 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
         <FooterLogo />
         <FooterInfo>
           <Navigate>
-            <span>NAVIGATE</span>
+            <Header>NAVIGATE</Header>
             <InfoLink dest="/" text="home" />
             <InfoLink dest="https://forms.gle/aZB5fGMEBKB4uDLU7" text="join" />
           </Navigate>
           <Contact>
-            <span>CONTACT</span>
-            <InfoLink
-              dest="mailto:info@sandboxneu.com"
-              text="info@sandboxneu.com"
-            />
+            <Header>CONTACT</Header>
+            <InfoLink dest={`mailto:${email}`} text="info@sandboxneu.com" />
             <SocialSection>
               <SocialInfo info={facebook} icon={faFacebookF} />
               <SocialInfo info={linkedin} icon={faLinkedin} />

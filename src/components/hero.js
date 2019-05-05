@@ -44,7 +44,7 @@ const StyledFA = styled(FontAwesomeIcon)`
   display: block;
   margin: auto;
   position: relative;
-  max-width: ${props => props.cssSize};
+  max-width: ${props => props.csssize};
   transition: top 0.3s, color 0.3s;
   color: ${props => props.color};
   top: 0;
@@ -68,7 +68,7 @@ const Arrow = ({ color, scale }) => {
     <StyledFA
       icon={faArrowDown}
       size={scale + "x"} // to account for FA using size '3x' to represent '3em'
-      cssSize={scale + "em"} // this two-sizing-props weirdness is a workaround for a FA bug
+      csssize={scale + "em"} // this two-sizing-props weirdness is a workaround for a FA bug
       onClick={scrollToWhoSection}
       color={color}
     />
