@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import a from "amplitude-js/amplitude"
 
 export const amplitudeInit = () => {
@@ -6,4 +7,15 @@ export const amplitudeInit = () => {
 
 export const amplitudeLogEvent = eventName => {
   a.getInstance().logEvent(eventName)
+}
+
+export const useAmplitudeLogEvent = eventName => {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") {
+      amplitudeInit()
+      amplitudeLogEvent(eventName)
+    } else {
+      console.log(`Amplitude event ${eventName} triggered.`)
+    }
+  }, [])
 }

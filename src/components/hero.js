@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { SB_ORANGE } from "@colors"
-import { amplitudeInit, amplitudeLogEvent } from "utils/amplitude"
+import { useAmplitudeLogEvent } from "utils/amplitude"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
@@ -76,12 +76,7 @@ const Arrow = ({ color, size }) => {
 const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
 
 const Hero = ({ title, background }) => {
-  useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
-      amplitudeInit()
-      amplitudeLogEvent("Visit homepage")
-    }
-  }, [])
+  useAmplitudeLogEvent("Visit homepage")
   return (
     <StyledBackgroundImage
       fluid={background.childImageSharp.fluid}
