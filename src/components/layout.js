@@ -35,6 +35,9 @@ const Layout = ({ children }) => (
               instagram {
                 url
               }
+              github {
+                url
+              }
             }
           }
         }

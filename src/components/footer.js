@@ -7,6 +7,7 @@ import {
   faFacebookF,
   faLinkedin,
   faInstagram,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons"
 
 import { SB_NAVY } from "@colors"
@@ -90,7 +91,7 @@ const InfoLink = ({ dest, text }) => {
   return <StyledLink href={dest}>{text}</StyledLink>
 }
 
-const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
+const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
   <footer>
     <GrayBackground>
       <FlexSection>
@@ -111,6 +112,7 @@ const Footer = ({ pages, email, facebook, linkedin, instagram }) => (
               <SocialInfo info={facebook} icon={faFacebookF} />
               <SocialInfo info={linkedin} icon={faLinkedin} />
               <SocialInfo info={instagram} icon={faInstagram} />
+              <SocialInfo info={github} icon={faGithub} />
             </SocialSection>
           </Contact>
         </FooterInfo>
