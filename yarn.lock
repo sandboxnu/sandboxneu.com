@@ -4651,13 +4651,12 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@^0.3.4:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.3.6.tgz#99d7e51c70d6ed858c3b0fc8ef263e5f26a863af"
-  integrity sha512-RHyYfZh6EmIhIo5ii+bVIHoPMsDh4eLSAsH0WFBuCuVXCKyvJND3430CkjRbYkRUmpZLj5KxVl6SkdqNCN4swA==
+gatsby-background-image@0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.2.9.tgz#1e59547398cf3560a510fbbc1220a4388b7ff130"
+  integrity sha512-R93gj+fk9Uhy3bgU6e4sTHcK3ifAQEw1xJxR2EFv3WAWEQfwRqU7YPj0//AeusLsgTbEVDss4QG/KkzoqrmnjA==
   dependencies:
     "@babel/runtime" "^7.4.3"
-    global "^4.3.2"
     prop-types "^15.7.2"
 
 gatsby-cli@^2.5.12:
@@ -5121,7 +5120,7 @@ global-prefix@^1.0.1:
     is-windows "^1.0.1"
     which "^1.2.14"
 
-global@^4.3.0, global@^4.3.2, global@~4.3.0:
+global@^4.3.0, global@~4.3.0:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/global/-/global-4.3.2.tgz#e76989268a6c74c38908b1305b10fc0e394e9d0f"
   integrity sha1-52mJJopsdMOJCLEwWxD8DjlOnQ8=
