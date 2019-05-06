@@ -9,7 +9,7 @@ import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 const CardBG = styled(BackgroundImage)`
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 5px;
   transition: 0.3s;
   width: 300px;
   height: 300px;
@@ -23,7 +23,7 @@ const Card = styled.div`
   margin-top: -20px;
   width: 300px;
   height: 300px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: ${SB_NAVY_RGBA(0.8)};
   cursor: pointer;
 `
