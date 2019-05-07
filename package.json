@@ -12,7 +12,7 @@
     "amplitude-js": "^5.2.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.32",
-    "gatsby-background-image": "0.2.9",
+    "gatsby-background-image": "^0.5.4",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
