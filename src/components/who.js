@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import shovel from "images/light_blue_shovel.svg"
 import Body from "styles/Body"
 import { HeaderLineBelow, HeaderLineLeft, HeaderLineRight } from "styles/Header"
 import Section from "styles/Section"
@@ -24,19 +23,6 @@ const Desktop = styled.div`
   }
 `
 
-const ShovelBackground = styled(Section)`
-  background-image: url(${shovel});
-  background-position: 50% 100px;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  @media (min-width: 1000px) {
-    background-position: 100% 5px;
-    background-size: contain;
-    padding-bottom: 280px;
-    margin-bottom: -200px;
-  }
-`
-
 const ShadowImg = styled(Img)`
   box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
   margin: 0px 10px;
@@ -51,7 +37,7 @@ const ImgContainer = styled.div`
 
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
   return (
-    <ShovelBackground>
+    <Section>
       <Mobile>
         <HeaderLineBelow>{title1}</HeaderLineBelow>
         <Body>{p1}</Body>
@@ -76,7 +62,7 @@ const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
           <ShadowImg fluid={img3.childImageSharp.fluid} />
         </ImgContainer>
       </Desktop>
-    </ShovelBackground>
+    </Section>
   )
 }
 

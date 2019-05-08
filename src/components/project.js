@@ -1,14 +1,15 @@
 import { Header, HeaderLineBelow } from "../styles/Header"
 import React, { Component } from "react"
+import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Body from "styles/Body"
 import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
-const CardBG = styled.div`
+const CardBG = styled(BackgroundImage)`
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 7px;
   transition: 0.3s;
   width: 300px;
   height: 300px;
@@ -22,8 +23,8 @@ const Card = styled.div`
   margin-top: -20px;
   width: 300px;
   height: 300px;
-  border-radius: 20px;
-  background-color: ${SB_NAVY_RGBA(0.8)};
+  border-radius: 7px;
+  background-color: ${SB_NAVY_RGBA(0.85)};
   cursor: pointer;
 `
 
@@ -148,12 +149,14 @@ class Project extends Component {
   }
 
   renderCard() {
-    const bgImg = {
-      backgroundImage: "url(" + this.props.backgroundImage + ")",
-    }
+    const { backgroundImage } = this.props
 
     return (
-      <CardBG onClick={this.openGithub} style={bgImg}>
+      <CardBG
+        onClick={this.openGithub}
+        Tag="div"
+        fluid={backgroundImage.childImageSharp.fluid}
+      >
         <Card>
           <CardHeader> {this.props.title} </CardHeader>
           {this.renderTags()}

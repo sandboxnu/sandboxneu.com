@@ -42,7 +42,7 @@ Builds.propTypes = {
     PropTypes.exact({
       title: PropTypes.string.isRequired,
       tags: PropTypes.array.isRequired,
-      image: PropTypes.string.isRequired,
+      image: PropTypes.object.isRequired,
       description: PropTypes.string.isRequired,
       gitLink: PropTypes.string.isRequired,
     })

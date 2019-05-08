@@ -87,7 +87,13 @@ export const query = graphql`
           projects {
             title
             tags
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             description
             gitLink
           }
