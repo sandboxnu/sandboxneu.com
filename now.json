@@ -5,5 +5,5 @@
         { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
     ],
     "regions": ["all"],
-    "alias": "sandboxneu.com"
+    "alias": "www.sandboxneu.com"
 }
