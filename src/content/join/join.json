@@ -1,0 +1,19 @@
+{
+  "openRoles": [
+    {
+      "name": "Developer",
+      "description": "Our developers are the backbone of our Core team. Each will be assigned to a small AGILE team and work closely with a researcher to complete their project.",
+      "link": "#"
+    },
+    {
+      "name": "Design Lead",
+      "description": "Sandbox is looking for a design lead to work closely with the executive board to further develop our brand identity.",
+      "link": "#"
+    },
+    {
+      "name": "DevOps Lead",
+      "description": "Sandbox is looking for a DevOps lead to work closely with our technical director to make sure environments are properly set up for developers and to abstract away infrastructure to use for multiple projects.",
+      "link": "#"
+    }
+  ]
+}
