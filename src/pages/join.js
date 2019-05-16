@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
 
-const IndexPage = ({ data }) => {
+import Layout from "components/layout"
+import SEO from "components/seo"
+
+const JoinPage = ({ data }) => {
   return (
     <Layout>
       <SEO
@@ -12,9 +14,4 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query IndexQuery {
-  }
-`
-
-export default IndexPage
+export default JoinPage

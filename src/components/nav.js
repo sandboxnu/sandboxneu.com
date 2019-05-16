@@ -86,7 +86,7 @@ const Nav = () => {
           hoverAnimation
         />
         <ButtonContainer>
-          <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
+          <Button href="/join" isWhite={atTop}>
             Join
           </Button>
         </ButtonContainer>
