@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
-import { SB_NAVY } from "@colors"
+import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
 import Buttons from "components/JoinPage/Buttons"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/Section"
+
+export const ROLE_COLOR_MAPPING = {
+  developer: SB_ORANGE,
+  designer: SB_LIGHT_BLUE,
+  devops: SB_YELLOW,
+}
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
@@ -25,6 +31,8 @@ const Subtitle = styled.h3`
 `
 
 const JoinPage = ({ data }) => {
+  const [selectedRole, setSelectedRole] = useState("developer")
+
   return (
     <Layout>
       <SEO
@@ -39,7 +47,11 @@ const JoinPage = ({ data }) => {
           <br />
           Check out our open roles below.
         </Subtitle>
-        <Buttons roles={["Developer", "Designer", "DevOps"]} />
+        <Buttons
+          roles={["developer", "designer", "devops"]}
+          selectedRole={selectedRole}
+          setSelectedRole={setSelectedRole}
+        />
       </BlueFontSection>
     </Layout>
   )
