@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { SB_NAVY, SB_ORANGE } from "@colors"
 import { ROLE_COLOR_MAPPING } from "pages/join"
@@ -36,6 +36,12 @@ const StyledButton = styled.button`
       border-right-width: 0;
     }
   }
+
+  ${props =>
+    !props.selected &&
+    css`
+      cursor: pointer;
+    `}
 `
 
 const Button = ({ name, color, selected, setSelectedRole }) => {
@@ -47,7 +53,7 @@ const Button = ({ name, color, selected, setSelectedRole }) => {
   )
 }
 
-const Buttons = ({ roles, selectedRole }) => {
+const Buttons = ({ roles, selectedRole, setSelectedRole }) => {
   return (
     <ButtonContainer>
       {roles.map(role => {
@@ -56,6 +62,7 @@ const Buttons = ({ roles, selectedRole }) => {
             name={role}
             selected={role === selectedRole}
             color={ROLE_COLOR_MAPPING[role]}
+            setSelectedRole={setSelectedRole}
           />
         )
       })}
