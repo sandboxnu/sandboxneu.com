@@ -59,6 +59,7 @@ const Buttons = ({ roles, selectedRole, setSelectedRole }) => {
       {roles.map(role => {
         return (
           <Button
+            key={role}
             name={role}
             selected={role === selectedRole}
             color={ROLE_COLOR_MAPPING[role]}

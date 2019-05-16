@@ -34,7 +34,7 @@ const JoinPage = ({ data }) => {
   const [selectedRole, setSelectedRole] = useState("developer")
 
   return (
-    <Layout>
+    <Layout page="join">
       <SEO
         title="Home"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}

@@ -10,7 +10,7 @@ import SEO from "components/seo"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout page="index">
       <SEO
         title="Home"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
