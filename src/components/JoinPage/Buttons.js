@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 
-import { SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_NAVY } from "@colors"
 import { ROLE_COLOR_MAPPING } from "pages/join"
 
 const ButtonContainer = styled.div`
@@ -22,10 +22,11 @@ const StyledButton = styled.button`
   font-size: 14px;
   font-weight: 500;
   color: ${props => (props.selected ? "#FFF" : SB_NAVY)};
-  background-color: ${props => (props.selected ? SB_NAVY : SB_ORANGE)};
+  background-color: ${props => (props.selected ? SB_NAVY : props.color)};
   border: 2px solid ${SB_NAVY};
   min-width: 8em;
   padding: 10px 4px;
+  transition: background-color 0.3s, color 0.3s;
 
   :not(:last-child) {
     border-bottom-width: 0;
@@ -62,7 +63,7 @@ const Buttons = ({ roles, selectedRole, setSelectedRole }) => {
             key={role}
             name={role}
             selected={role === selectedRole}
-            color={ROLE_COLOR_MAPPING[role]}
+            color={ROLE_COLOR_MAPPING[selectedRole]}
             setSelectedRole={setSelectedRole}
           />
         )
