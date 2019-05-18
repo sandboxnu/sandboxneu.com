@@ -2,7 +2,23 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
-import { SB_ORANGE } from "@colors"
+import { SB_ORANGE, SB_LIGHT_BLUE, SB_NAVY, SB_YELLOW } from "@colors"
+
+const mapColorToFill = {
+  white: "#fff",
+  lightBlue: SB_LIGHT_BLUE,
+  orange: SB_ORANGE,
+  yellow: SB_YELLOW,
+  navy: SB_NAVY,
+}
+
+const mapColorToAccent = {
+  white: "#fff",
+  blue: "#D7F0F5",
+  orange: "#FDD4AE",
+  yellow: "#FEF1B7",
+  navy: "#7788A2",
+}
 
 const StyledSVG = styled.svg`
   #Path {
@@ -46,9 +62,8 @@ const SquareLogo = ({
   href,
 }) => {
   const [displayShadow, setDisplayShadow] = useState(false)
-  const fillColor = color === "white" ? "#fff" : "#2a426b"
-  const shadowColor =
-    color === "white" ? "rgb(227, 231, 236)" : "rgb(118, 135, 162)"
+  const fillColor = mapColorToFill[color]
+  const shadowColor = mapColorToAccent[color]
 
   if (displayShadow !== dropShadow) {
     if (!displayShadow) {
