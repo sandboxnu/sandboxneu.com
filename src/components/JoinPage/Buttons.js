@@ -2,10 +2,9 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 import { SB_NAVY } from "@colors"
-import { ROLE_COLOR_MAPPING } from "pages/join"
 
 const ButtonContainer = styled.div`
-  margin: 2.7em auto 1em;
+  margin: 2.2em auto 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,19 +12,21 @@ const ButtonContainer = styled.div`
 
   @media (min-width: 360px) {
     flex-direction: row;
+    max-width: 15em;
+    font-size: 1.5em;
   }
 `
 
 const StyledButton = styled.button`
   text-transform: uppercase;
-  line-spacing: 0.15em;
-  font-size: 14px;
+  letter-spacing: 0.15em;
+  font-size: 0.8em;
   font-weight: 500;
   color: ${props => (props.selected ? "#FFF" : SB_NAVY)};
   background-color: ${props => (props.selected ? SB_NAVY : props.color)};
   border: 2px solid ${SB_NAVY};
-  min-width: 8em;
-  padding: 10px 4px;
+  min-width: 10em;
+  padding: 12px 6px;
   transition: background-color 0.3s, color 0.3s;
 
   :not(:last-child) {
@@ -54,7 +55,7 @@ const Button = ({ name, color, selected, setSelectedRole }) => {
   )
 }
 
-const Buttons = ({ roles, selectedRole, setSelectedRole }) => {
+const Buttons = ({ roles, selectedRole, setSelectedRole, color }) => {
   return (
     <ButtonContainer>
       {roles.map(role => {
@@ -63,7 +64,7 @@ const Buttons = ({ roles, selectedRole, setSelectedRole }) => {
             key={role}
             name={role}
             selected={role === selectedRole}
-            color={ROLE_COLOR_MAPPING[selectedRole]}
+            color={color}
             setSelectedRole={setSelectedRole}
           />
         )

@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
 import Buttons from "components/JoinPage/Buttons"
+import JoinContent from "components/JoinPage/JoinContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/Section"
@@ -21,13 +22,21 @@ const Header = styled.h1`
   letter-spacing: 0.15em;
   text-align: center;
   font-weight: 600;
-  font-size: 2.7em;
+  font-size: 2.5em;
+
+  @media (min-width: 1000px) {
+    font-size: 3em;
+  }
 `
 
 const Subtitle = styled.h3`
   text-align: center;
   font-weight: 400;
   line-height: 1.5;
+
+  @media (min-width: 1000px) {
+    font-size: 1.5em;
+  }
 `
 
 const JoinPage = ({ data }) => {
@@ -51,6 +60,11 @@ const JoinPage = ({ data }) => {
           roles={["developer", "designer", "devops"]}
           selectedRole={selectedRole}
           setSelectedRole={setSelectedRole}
+          color={ROLE_COLOR_MAPPING[selectedRole]}
+        />
+        <JoinContent
+          role={selectedRole}
+          color={ROLE_COLOR_MAPPING[selectedRole]}
         />
       </BlueFontSection>
     </Layout>

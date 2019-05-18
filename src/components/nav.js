@@ -80,7 +80,7 @@ const Nav = ({ page }) => {
       <ContentContainer>
         <SquareLogo
           size="3em"
-          color={atTop && page === "index" ? "white" : "navy"}
+          color={atTop && page === "index" ? "#fff" : SB_NAVY}
           dropShadow={atTop && page === "index"}
           href="/"
           hoverAnimation
