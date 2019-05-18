@@ -6,6 +6,7 @@ import Layout from "components/layout"
 import Mission from "components/mission"
 import Who from "components/who"
 import SEO from "components/seo"
+import Testimonial from "components/testimonial"
 
 const IndexPage = ({ data }) => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = ({ data }) => {
       <Who {...data.who.edges[0].node} />
       <Mission {...data.mission.edges[0].node} />
       <Builds {...data.builds.edges[0].node} />
+      <Testimonial />
     </Layout>
   )
 }
