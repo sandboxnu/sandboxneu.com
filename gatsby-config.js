@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Sandbox NEU`,
+    title: `Sandbox`,
     description: `Sandbox is a club at Northeastern University that creates custom software applications for researchers.`,
-    author: `Sandbox Northeastern University`,
+    author: `Sandbox at Northeastern`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
