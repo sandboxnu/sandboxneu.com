@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
@@ -43,7 +43,7 @@ const Subtitle = styled.h3`
 const JoinPage = ({ data }) => {
   const [selectedRole, setSelectedRole] = useState("developer")
   const currentRoleData = data.allMarkdownRemark.edges.find(
-    (roleData) => roleData.node.frontmatter.role === selectedRole
+    roleData => roleData.node.frontmatter.role === selectedRole
   ).node
   return (
     <Layout page="join">
@@ -70,12 +70,12 @@ const JoinPage = ({ data }) => {
           color={ROLE_COLOR_MAPPING[selectedRole]}
           description={currentRoleData.html}
           formLink={currentRoleData.frontmatter.formLink}
+          qualities={currentRoleData.frontmatter.qualities}
         />
       </BlueFontSection>
     </Layout>
   )
 }
-
 
 export const query = graphql`
   query JoinQuery {
