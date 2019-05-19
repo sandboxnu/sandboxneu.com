@@ -5,7 +5,7 @@ qualities:
   - Strives to write clean and reliable code
   - Has finished Fundies 1 (CS2500)
   - Wants to produce deliverables that make a difference in the world of research
-formLink: "https://forms.gle/aZB5fGMEBKB4uDLU7"
+formLink: "https://docs.google.com/forms/d/e/1FAIpQLSe3ulE49perTqrYLuQhgNVxbL-XewFGuuoZznWihIwJ9g1dpA/viewform?usp=sf_link"
 role: developer
 ---
 
