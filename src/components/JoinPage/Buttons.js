@@ -10,7 +10,7 @@ const ButtonContainer = styled.div`
   justify-content: center;
   max-width: 10em;
 
-  @media (min-width: 360px) {
+  @media (min-width: 600px) {
     flex-direction: row;
     max-width: 15em;
     font-size: 1.5em;
@@ -32,7 +32,7 @@ const StyledButton = styled.button`
   :not(:last-child) {
     border-bottom-width: 0;
   }
-  @media (min-width: 360px) {
+  @media (min-width: 600px) {
     border-bottom-width: 2px !important;
     :not(:last-child) {
       border-right-width: 0;
