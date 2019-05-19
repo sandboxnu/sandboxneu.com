@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { lightenDarkenColor } from "@colors"
+import { lightenDarkenColor, SB_NAVY } from "@colors"
 import SquareLogo from "components/squareLogo"
 import { capitalize } from "utils/string"
 
@@ -68,6 +68,24 @@ const Quality = styled.li`
   }
 `
 
+const ApplyButton = styled.button`
+  background-color: ${SB_NAVY};
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  min-width: 8em;
+  padding: 0.7em 0.35em;
+  margin: auto;
+  display: block;
+
+  &:hover {
+    background-color: ${lightenDarkenColor(SB_NAVY, 20)};
+  }
+`
+
 const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
@@ -91,7 +109,7 @@ const QualitiesList = ({ qualities, color }) => {
   )
 }
 
-const JoinContent = ({ color, role, description, qualities }) => {
+const JoinContent = ({ color, role, description, qualities, formLink }) => {
   return (
     <>
       <Wrapper color={color}>
@@ -100,6 +118,7 @@ const JoinContent = ({ color, role, description, qualities }) => {
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
+      <ApplyButton link={formLink}>Apply</ApplyButton>
     </>
   )
 }

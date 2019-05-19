@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 
-import { SB_NAVY } from "@colors"
+import { SB_NAVY, lightenDarkenColor } from "@colors"
 
 const ButtonContainer = styled.div`
   margin: 2.2em auto 1em;
@@ -35,12 +35,12 @@ const StyledButton = styled.button`
   padding: 12px 6px;
   transition: background-color 0.3s, color 0.3s;
 
-  :not(:last-child) {
+  &:not(:last-child) {
     border-bottom-width: 0;
   }
   @media (min-width: 600px) {
     border-bottom-width: 2px !important;
-    :not(:last-child) {
+    &:not(:last-child) {
       border-right-width: 0;
     }
   }
@@ -49,6 +49,9 @@ const StyledButton = styled.button`
     !props.selected &&
     css`
       cursor: pointer;
+      &:hover {
+        background-color: ${props => lightenDarkenColor(props.color, 20)};
+      }
     `}
 `
 
