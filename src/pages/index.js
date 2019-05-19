@@ -20,7 +20,10 @@ const IndexPage = ({ data }) => {
       <Who {...data.who.edges[0].node} />
       <Mission {...data.mission.edges[0].node} />
       <Builds {...data.builds.edges[0].node} />
-      <Testimonial />
+      <Testimonial
+        quote={data.testimonial.edges[0].node.html}
+        {...data.testimonial.edges[0].node.frontmatter}
+      />
     </Layout>
   )
 }
@@ -99,6 +102,19 @@ export const query = graphql`
             }
             description
             gitLink
+          }
+        }
+      }
+    }
+    testimonial: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonial/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            role
+            author
           }
         }
       }

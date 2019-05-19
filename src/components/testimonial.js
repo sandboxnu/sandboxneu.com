@@ -15,28 +15,13 @@ const AuthorInfo = styled(Body)`
   font-style: italic;
 `
 
-const B = styled.span`
-  font-weight: bold;
-`
-
-const I = styled.span`
-  font-style: italic;
-`
-
 const Testimonial = ({ quote, author, role }) => (
   <Section>
     <HeaderLineBelow>Work with us</HeaderLineBelow>
     <Content>
-      <Body>
-        “The <B>brilliant</B> and <B>diligent</B> engineers of Sandbox are,
-        without exaggeration, <B>indispensable</B> to my research. I came to
-        them with a challenging problem, and they delivered a solution that is{" "}
-        <B>twice as professional</B> as I'd hoped, in <B>half the time</B> I'd
-        expected. To any scientists in need of computational expertise:{" "}
-        <I>look no further than Sandbox.</I>”
-      </Body>
-      <AuthorInfo>Dr. David E. Melnikoff</AuthorInfo>
-      <AuthorInfo>Yale University</AuthorInfo>
+      <Body dangerouslySetInnerHTML={{ __html: quote }} />
+      <AuthorInfo>{author}</AuthorInfo>
+      <AuthorInfo>{role}</AuthorInfo>
       <br />
       <Body>
         Think you could take advantage of computation in your research? Please
@@ -45,5 +30,11 @@ const Testimonial = ({ quote, author, role }) => (
     </Content>
   </Section>
 )
+
+Testimonial.propTypes = {
+  quote: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  role: PropTypes.string,
+}
 
 export default Testimonial
