@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import { lightenDarkenColor } from "@colors"
 import SquareLogo from "components/squareLogo"
 import { capitalize } from "utils/string"
 
@@ -45,14 +46,25 @@ const QualitiesHeader = styled.h2`
 
 const QualitiesWrapper = styled.ul`
   margin: 2em auto;
+  padding-right: 40px;
   max-width: 450px;
   font-size: 1.2em;
   line-height: 1.5em;
 `
 
 const Quality = styled.li`
+  list-style-type: none;
   &:before {
-    display: none;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    background-color: ${props => props.color};
+    display: inline-block;
+    position: relative;
+    bottom: 0.15em;
+    right: 0.4em;
+    transition: background-color 0.3s;
   }
 `
 
@@ -65,11 +77,15 @@ const ContentHeader = ({ color, roleName }) => {
   )
 }
 
-const QualitiesList = ({ qualities }) => {
+const QualitiesList = ({ qualities, color }) => {
   return (
     <QualitiesWrapper>
       {qualities.map(quality => {
-        return <Quality key={quality}>{quality}</Quality>
+        return (
+          <Quality key={quality} color={lightenDarkenColor(color, -10)}>
+            {quality}
+          </Quality>
+        )
       })}
     </QualitiesWrapper>
   )
@@ -83,7 +99,7 @@ const JoinContent = ({ color, role, description, qualities }) => {
         <ContentBody dangerouslySetInnerHTML={{ __html: description }} />
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
-      <QualitiesList qualities={qualities} />
+      <QualitiesList qualities={qualities} color={color} />
     </>
   )
 }
