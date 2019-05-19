@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import { lightenDarkenColor, SB_NAVY } from "@colors"
 import SquareLogo from "components/squareLogo"
+import Body from "styles/Body"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
@@ -25,14 +26,6 @@ const ContentHeaderWrapper = styled.h3`
 
 const HeaderText = styled.div`
   font-weight: 500;
-`
-
-const ContentBody = styled.div`
-  line-height: 1.3em;
-  font-size: 1.2em;
-  @media (min-width: 600px) {
-    font-size: 1.3em;
-  }
 `
 
 const QualitiesHeader = styled.h2`
@@ -127,7 +120,7 @@ const JoinContent = ({ color, role, description, qualities, formLink }) => {
     <>
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
-        <ContentBody dangerouslySetInnerHTML={{ __html: description }} />
+        <Body dangerouslySetInnerHTML={{ __html: description }} />
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
