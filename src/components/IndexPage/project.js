@@ -1,4 +1,4 @@
-import { Header, HeaderLineBelow } from "../styles/Header"
+import { Header, HeaderLineBelow } from "styles/Header"
 import React, { Component } from "react"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
