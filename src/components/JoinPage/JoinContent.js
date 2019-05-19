@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   border-left: 6px solid ${props => props.color};
   transition: border-left 0.3s;
   padding-left: 1em;
+  margin: 2em 0;
   @media (min-width: 1000px) {
     padding-left: 1.5em;
     margin: 4em 8em;
@@ -39,17 +40,26 @@ const QualitiesHeader = styled.h2`
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 1.8em;
   max-width: 500px;
   margin: auto;
+
+  @media (min-width: 600px) {
+    font-size: 2em;
+  }
 `
 
 const QualitiesWrapper = styled.ul`
-  margin: 2em auto;
-  padding-right: 40px;
+  margin: 1em auto 2em;
+  padding: 0;
   max-width: 450px;
   font-size: 1.2em;
   line-height: 1.5em;
+
+  @media (min-width: 600px) {
+    font-size: 1.3em;
+    padding: 0 40px;
+  }
 `
 
 const Quality = styled.li`
@@ -68,15 +78,18 @@ const Quality = styled.li`
   }
 `
 
-const ApplyButton = styled.button`
+const ApplyButton = styled.a`
   background-color: ${SB_NAVY};
   transition: background-color 0.3s;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
   letter-spacing: 0.15em;
+  color: #fff;
   font-size: 1.2em;
   border: none;
   cursor: pointer;
-  min-width: 8em;
+  max-width: 8em;
   padding: 0.7em 0.35em;
   margin: auto;
   display: block;
@@ -118,7 +131,7 @@ const JoinContent = ({ color, role, description, qualities, formLink }) => {
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
-      <ApplyButton link={formLink}>Apply</ApplyButton>
+      <ApplyButton href={formLink}>Apply</ApplyButton>
     </>
   )
 }
