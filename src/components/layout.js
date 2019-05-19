@@ -13,7 +13,7 @@ import Footer from "./footer"
 import Nav from "./nav"
 import GlobalStyle from "styles/GlobalStyle"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, page }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -45,7 +45,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <div>
-        <Nav siteTitle={data.site.siteMetadata.title} />
+        <Nav siteTitle={data.site.siteMetadata.title} page={page} />
         <GlobalStyle />
         <main>{children}</main>
         <Footer pages={["Home"]} {...data.allFooterJson.edges[0].node} />

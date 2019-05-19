@@ -55,7 +55,7 @@ const Button = styled.a`
   }
 `
 
-const Nav = () => {
+const Nav = ({ page }) => {
   const [atTop, setAtTop] = useState(true)
 
   const handleScroll = () => {
@@ -76,17 +76,17 @@ const Nav = () => {
   }, [])
 
   return (
-    <Container hideBackground={atTop}>
+    <Container hideBackground={atTop && page === "index"}>
       <ContentContainer>
         <SquareLogo
           size="3em"
-          color={atTop ? "white" : "blue"}
-          dropShadow={atTop}
+          color={atTop && page === "index" ? "#fff" : SB_NAVY}
+          dropShadow={atTop && page === "index"}
           href="/"
           hoverAnimation
         />
         <ButtonContainer>
-          <Button href="https://forms.gle/aZB5fGMEBKB4uDLU7" isWhite={atTop}>
+          <Button href="/join" isWhite={atTop && page === "index"}>
             Join
           </Button>
         </ButtonContainer>

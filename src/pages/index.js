@@ -1,15 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Builds from "components/builds"
-import Hero from "components/hero"
+
+import Builds from "components/IndexPage/builds"
+import Hero from "components/IndexPage/hero"
 import Layout from "components/layout"
-import Mission from "components/mission"
-import Who from "components/who"
+import Mission from "components/IndexPage/mission"
+import Who from "components/IndexPage/who"
 import SEO from "components/seo"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout page="index">
       <SEO
         title="Home"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}

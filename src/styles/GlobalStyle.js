@@ -9,6 +9,8 @@ export default createGlobalStyle`
     font-family: Brandon;
     box-sizing: border-box;
   }
+  
+  font-size: 12px;
 
   @media (min-width: 480px) {
     html {

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Sandbox NEU`,
+    title: `Sandbox`,
     description: `Sandbox is a club at Northeastern University that creates custom software applications for researchers.`,
-    author: `Sandbox Northeastern University`,
+    author: `Sandbox at Northeastern`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +36,7 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
