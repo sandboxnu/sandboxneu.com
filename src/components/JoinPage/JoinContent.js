@@ -2,24 +2,25 @@ import React from "react"
 import styled from "styled-components"
 
 import SquareLogo from "components/squareLogo"
-import Section from "styles/Section"
 import { capitalize } from "utils/string"
 
-const JoinSection = styled(Section)`
-  padding-top: 2em;
+const Wrapper = styled.div`
+  border-left: 6px solid ${props => props.color};
+  transition: border-left 0.3s;
+  padding-left: 1em;
+  @media (min-width: 1000px) {
+    margin: 4em 8em;
+  }
 `
 
 const ContentHeaderWrapper = styled.h3`
   display: flex;
   justify-content: space-between;
   font-size: 2em;
-  border-left: 6px solid ${props => props.color};
-  transition: border-left 0.3s;
 `
 
 const HeaderText = styled.div`
   font-weight: 500;
-  margin-left: 1em;
 `
 
 const ContentHeader = ({ color, roleName }) => {
@@ -31,14 +32,19 @@ const ContentHeader = ({ color, roleName }) => {
   )
 }
 
-const ContentBody = styled.p``
+const ContentBody = styled.div`
+  font-size: 1.2em;
+  @media (min-width: 600px) {
+    font-size: 1.3em;
+  }
+`
 
 const JoinContent = ({ color, role, description }) => {
   return (
-    <JoinSection>
-      <ContentHeader color={color} roleName={role} />
-      <ContentBody description={description} />
-    </JoinSection>
+      <Wrapper color={color}>
+        <ContentHeader color={color} roleName={role} />
+        <ContentBody dangerouslySetInnerHTML={{ __html: description }} />
+      </Wrapper>
   )
 }
 

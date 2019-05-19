@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from 'gatsby'
 import styled from "styled-components"
 
 import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
@@ -11,7 +12,7 @@ import Section from "styles/Section"
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,
   designer: SB_LIGHT_BLUE,
-  devops: SB_YELLOW,
+  devOps: SB_YELLOW,
 }
 
 const BlueFontSection = styled(Section)`
@@ -41,7 +42,9 @@ const Subtitle = styled.h3`
 
 const JoinPage = ({ data }) => {
   const [selectedRole, setSelectedRole] = useState("developer")
-
+  const currentRoleData = data.allMarkdownRemark.edges.find(
+    (roleData) => roleData.node.frontmatter.role === selectedRole
+  ).node
   return (
     <Layout page="join">
       <SEO
@@ -57,7 +60,7 @@ const JoinPage = ({ data }) => {
           Check out our open roles below.
         </Subtitle>
         <Buttons
-          roles={["developer", "designer", "devops"]}
+          roles={["developer", "designer", "devOps"]}
           selectedRole={selectedRole}
           setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
@@ -65,10 +68,30 @@ const JoinPage = ({ data }) => {
         <JoinContent
           role={selectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
+          description={currentRoleData.html}
+          formLink={currentRoleData.frontmatter.formLink}
         />
       </BlueFontSection>
     </Layout>
   )
 }
+
+
+export const query = graphql`
+  query JoinQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/join/" } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            qualities
+            formLink
+            role
+          }
+        }
+      }
+    }
+  }
+`
 
 export default JoinPage

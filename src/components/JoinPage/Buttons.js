@@ -12,6 +12,12 @@ const ButtonContainer = styled.div`
 
   @media (min-width: 600px) {
     flex-direction: row;
+    max-width: 600px;
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
     max-width: 15em;
     font-size: 1.5em;
   }
