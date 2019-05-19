@@ -55,7 +55,7 @@ const QualitiesWrapper = styled.ul`
   }
 `
 
-const Quality = styled.li`
+const QualityItem = styled.li`
   list-style-type: none;
   &:before {
     content: "";
@@ -69,6 +69,10 @@ const Quality = styled.li`
     right: 0.4em;
     transition: background-color 0.3s;
   }
+`
+
+const Quality = styled.div`
+  margin: -1.5em 0 0 0.5em;
 `
 
 const ApplyButton = styled.a`
@@ -106,9 +110,9 @@ const QualitiesList = ({ qualities, color }) => {
     <QualitiesWrapper>
       {qualities.map(quality => {
         return (
-          <Quality key={quality} color={lightenDarkenColor(color, -10)}>
-            {quality}
-          </Quality>
+          <QualityItem key={quality} color={lightenDarkenColor(color, -10)}>
+            <Quality>{quality}</Quality>
+          </QualityItem>
         )
       })}
     </QualitiesWrapper>
