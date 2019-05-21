@@ -5,6 +5,10 @@ import { HeaderLineBelow } from "styles/Header"
 import Section from "styles/Section"
 import styled from "styled-components"
 
+const SectionPad = styled(Section)`
+  padding-top: 0px;
+`
+
 const Content = styled.div`
   max-width: 600px;
   margin: 0px auto;
@@ -16,7 +20,7 @@ const AuthorInfo = styled(Body)`
 `
 
 const Testimonial = ({ quote, author, role }) => (
-  <Section>
+  <SectionPad>
     <HeaderLineBelow>Work with us</HeaderLineBelow>
     <Content>
       <Body dangerouslySetInnerHTML={{ __html: quote }} />
@@ -28,7 +32,7 @@ const Testimonial = ({ quote, author, role }) => (
         reach out to us at research@sandboxneu.com
       </Body>
     </Content>
-  </Section>
+  </SectionPad>
 )
 
 Testimonial.propTypes = {
