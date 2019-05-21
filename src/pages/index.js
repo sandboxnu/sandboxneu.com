@@ -7,7 +7,7 @@ import Layout from "components/layout"
 import Mission from "components/IndexPage/mission"
 import Who from "components/IndexPage/who"
 import SEO from "components/seo"
-import Testimonial from "components/testimonial"
+import Testimonial from "components/IndexPage/testimonial"
 
 const IndexPage = ({ data }) => {
   return (
