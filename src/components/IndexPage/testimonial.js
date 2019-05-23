@@ -21,7 +21,6 @@ const AuthorInfo = styled(Body)`
 
 const Testimonial = ({ quote, author, role }) => (
   <SectionPad>
-    <HeaderLineBelow>Work with us</HeaderLineBelow>
     <Content>
       <Body dangerouslySetInnerHTML={{ __html: quote }} />
       <AuthorInfo>{author}</AuthorInfo>
