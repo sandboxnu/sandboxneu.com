@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Body from "styles/Body"
-import { HeaderLineBelow } from "styles/Header"
+import { lightenDarkenColor, SB_NAVY } from "@colors"
 import Section from "styles/Section"
 import styled from "styled-components"
 
 const SectionPad = styled(Section)`
+  margin-top: -40px;
   padding-top: 0px;
 `
 
@@ -19,6 +20,33 @@ const AuthorInfo = styled(Body)`
   font-style: italic;
 `
 
+const ButtonContainer = styled.div`
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Button = styled.a`
+  background-color: ${SB_NAVY};
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  padding: 0.7em 2em;
+  margin: auto;
+  display: block;
+
+  &:hover {
+    background-color: ${lightenDarkenColor(SB_NAVY, 20)};
+  }
+`
+
 const Testimonial = ({ quote, author, role }) => (
   <SectionPad>
     <Content>
@@ -27,9 +55,13 @@ const Testimonial = ({ quote, author, role }) => (
       <AuthorInfo>{role}</AuthorInfo>
       <br />
       <Body>
-        Think you could take advantage of computation in your research? Please
-        reach out to us at research@sandboxneu.com
+        Think you could take advantage of computation in your research? Email us
+        at <a href="mailto:research@sandboxneu.com">research@sandboxneu.com</a>{" "}
+        or fill out our form - it only takes a few minutes!
       </Body>
+      <ButtonContainer>
+        <Button href="https://forms.gle/1S6R4yxrCLjZe2d19">Work with us</Button>
+      </ButtonContainer>
     </Content>
   </SectionPad>
 )
