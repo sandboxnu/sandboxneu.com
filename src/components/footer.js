@@ -56,6 +56,7 @@ const SocialSection = styled.div`
 
 const SocialLogo = styled(FontAwesomeIcon)`
   color: ${props => props.color};
+  max-width: 14px;
 `
 
 const SizedLogo = styled.object`
