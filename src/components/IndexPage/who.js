@@ -41,11 +41,13 @@ const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
       <Mobile>
         <HeaderLineBelow>{title1}</HeaderLineBelow>
         <Body>{p1}</Body>
+        <br />
         <ShadowImg fluid={img1.childImageSharp.fluid} />
         <HeaderLineBelow>
           <span>{title2}</span>
         </HeaderLineBelow>
         <Body>{p2}</Body>
+        <br />
         <ShadowImg fluid={img2.childImageSharp.fluid} />
       </Mobile>
       <Desktop>
