@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { lightenDarkenColor, SB_NAVY } from "@colors"
 import SquareLogo from "components/squareLogo"
 import Body from "styles/Body"
+import Button from "styles/Button"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
@@ -75,25 +76,8 @@ const Quality = styled.div`
   margin: -1.5em 0 0 0.5em;
 `
 
-const ApplyButton = styled.a`
-  background-color: ${SB_NAVY};
-  transition: background-color 0.3s;
-  text-transform: uppercase;
-  text-decoration: none;
+const ApplyButtonWrapper = styled.div`
   text-align: center;
-  letter-spacing: 0.15em;
-  color: #fff;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-  max-width: 8em;
-  padding: 0.7em 0.35em;
-  margin: auto;
-  display: block;
-
-  &:hover {
-    background-color: ${lightenDarkenColor(SB_NAVY, 20)};
-  }
 `
 
 const ContentHeader = ({ color, roleName }) => {
@@ -128,7 +112,9 @@ const JoinContent = ({ color, role, description, qualities, formLink }) => {
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
-      <ApplyButton href={formLink}>Apply</ApplyButton>
+      <ApplyButtonWrapper>
+        <Button href={formLink}>Apply</Button>
+      </ApplyButtonWrapper>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Body from "styles/Body"
-import { lightenDarkenColor, SB_NAVY } from "@colors"
+import Button from "styles/Button"
 import Section from "styles/Section"
 import styled from "styled-components"
 
@@ -22,29 +22,7 @@ const AuthorInfo = styled(Body)`
 
 const ButtonContainer = styled.div`
   margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const Button = styled.a`
-  background-color: ${SB_NAVY};
-  transition: background-color 0.3s;
-  text-transform: uppercase;
-  text-decoration: none;
   text-align: center;
-  letter-spacing: 0.15em;
-  color: #fff;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-  padding: 0.7em 2em;
-  margin: auto;
-  display: block;
-
-  &:hover {
-    background-color: ${lightenDarkenColor(SB_NAVY, 20)};
-  }
 `
 
 const Testimonial = ({ quote, author, role, email, form }) => (
