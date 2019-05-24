@@ -10,9 +10,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   
-  font-size: 12px;
+  html{
+    font-size: 14px;
+  }
 
-  @media (min-width: 480px) {
+  @media (min-width: 400px) {
     html {
       font-size: 16px;
     }
