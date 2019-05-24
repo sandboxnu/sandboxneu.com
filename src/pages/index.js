@@ -115,6 +115,8 @@ export const query = graphql`
           frontmatter {
             role
             author
+            email
+            form
           }
         }
       }

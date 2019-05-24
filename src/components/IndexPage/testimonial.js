@@ -47,7 +47,7 @@ const Button = styled.a`
   }
 `
 
-const Testimonial = ({ quote, author, role }) => (
+const Testimonial = ({ quote, author, role, email, form }) => (
   <SectionPad>
     <Content>
       <Body dangerouslySetInnerHTML={{ __html: quote }} />
@@ -56,11 +56,11 @@ const Testimonial = ({ quote, author, role }) => (
       <br />
       <Body>
         Think you could take advantage of computation in your research? Email us
-        at <a href="mailto:research@sandboxneu.com">research@sandboxneu.com</a>{" "}
-        or fill out our form - it only takes a few minutes!
+        at <a href={`mailto:${email}`}>{email}</a> or fill out our form - it
+        only takes a few minutes!
       </Body>
       <ButtonContainer>
-        <Button href="https://forms.gle/1S6R4yxrCLjZe2d19">Work with us</Button>
+        <Button href={form}>Work with us</Button>
       </ButtonContainer>
     </Content>
   </SectionPad>
@@ -70,6 +70,8 @@ Testimonial.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   role: PropTypes.string,
+  email: PropTypes.string.isRequired,
+  form: PropTypes.string.isRequired,
 }
 
 export default Testimonial

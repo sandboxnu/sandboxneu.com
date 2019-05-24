@@ -1,6 +1,8 @@
 ---
 author: Dr. David E. Melnikoff
 role: Yale University
+email: research@sandboxneu.com
+form: https://forms.gle/1S6R4yxrCLjZe2d19
 ---
 
 “The **brilliant** and **diligent** engineers of Sandbox are,
