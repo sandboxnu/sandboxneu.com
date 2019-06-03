@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { lightenDarkenColor, SB_NAVY } from "@colors"
+import { lightenDarkenColor } from "@colors"
 import SquareLogo from "components/squareLogo"
 import Body from "styles/Body"
 import Button from "styles/Button"
