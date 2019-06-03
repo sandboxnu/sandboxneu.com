@@ -12,7 +12,7 @@ const TeamPage = ({ data }) => {
         title="Team"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
-      <TeamPhotos photoData={data.allTeamJson.edges[0].node} />
+      <TeamPhotos members={data.allTeamJson.edges[0].node.members} />
     </Layout>
   )
 }
@@ -20,8 +20,8 @@ const TeamPage = ({ data }) => {
 export const profileIcon = graphql`
   fragment profileIcon on File {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 200) {
-        ...GatsbyImageSharpFluid
+      fixed(width: 150, height: 150) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

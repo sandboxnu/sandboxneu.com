@@ -55,7 +55,11 @@ const Button = styled.a`
   }
 
   &:not(:last-child) {
-    margin-right: 2em;
+    margin-right: 1.5em;
+
+    @media (min-width: 600px) {
+      margin-right: 3em;
+    }
   }
 `
 
