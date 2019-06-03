@@ -1,0 +1,52 @@
+{
+  "ryan": {
+    "name": "Ryan Drew",
+    "role": "Executive Director",
+    "profileImage": "./profileImages/ryan.jpg"
+  },
+  "arun": {
+    "name": "Arun Jeevanantham",
+    "role": "Operations Director",
+    "profileImage": "./profileImages/arun.jpg"
+  },
+  "dajin": {
+    "name": "Da-Jin Chu",
+    "role": "Technical Director",
+    "profileImage": "./profileImages/dajin.jpg"
+  },
+  "fiona": {
+    "name": "Fiona Gridley",
+    "role": "Design Lead",
+    "profileImage": "./profileImages/fiona.jpg"
+  },
+  "sarah": {
+    "name": "Sarah Witt",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/sarah.jpg"
+  },
+  "justin": {
+    "name": "Justin Torre",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/justin.jpg"
+  },
+  "tal": {
+    "name": "Tal Usvyatsky",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/tal.jpg"
+  },
+  "dan": {
+    "name": "Dan Krasnonosenkikh",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/dan.jpg"
+  },
+  "alex": {
+    "name": "Alex Takayama",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/alex.jpg"
+  },
+  "jacob": {
+    "name": "Jacob Chvatal",
+    "role": "Core Developer",
+    "profileImage": "./profileImages/jacob.jpg"
+  }
+}
