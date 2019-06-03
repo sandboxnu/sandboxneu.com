@@ -53,6 +53,10 @@ const Button = styled.a`
   &:hover {
     border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
   }
+
+  &:not(:last-child) {
+    margin-right: 2em;
+  }
 `
 
 const Nav = ({ page }) => {
@@ -86,6 +90,9 @@ const Nav = ({ page }) => {
           hoverAnimation
         />
         <ButtonContainer>
+          <Button href="/team" isWhite={atTop && page === "index"}>
+            Team
+          </Button>
           <Button href="/join" isWhite={atTop && page === "index"}>
             Join
           </Button>
