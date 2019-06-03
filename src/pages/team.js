@@ -41,6 +41,83 @@ export const query = graphql`
               ...profileIcon
             }
           }
+          arun {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          dajin {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          fiona {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          sarah {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          justin {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          tal {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          dan {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          karmen {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          jacob {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          cindy {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
+          alex {
+            name
+            role
+            profileImage {
+              ...profileIcon
+            }
+          }
         }
       }
     }
