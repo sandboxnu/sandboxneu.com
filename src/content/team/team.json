@@ -16,6 +16,11 @@
       "profileImage": "./profileImages/dajin.jpg"
     },
     {
+      "name": "Sauharda Rajbhandari",
+      "role": "Marketing Director",
+      "profileImage": "./profileImages/sauharda.jpg"
+    },
+    {
       "name": "Fiona Gridley",
       "role": "Design Lead",
       "profileImage": "./profileImages/fiona.jpg"
@@ -39,6 +44,11 @@
       "name": "Dan Krasnonosenkikh",
       "role": "Core Developer",
       "profileImage": "./profileImages/dan.jpg"
+    },
+    {
+      "name": "Yash Shetty",
+      "role": "Core Developer",
+      "profileImage": "./profileImages/yash.jpg"
     },
     {
       "name": "Karmen Lu",
