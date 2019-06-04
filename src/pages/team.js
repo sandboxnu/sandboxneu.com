@@ -2,10 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import { SB_NAVY } from "@colors"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import TeamPhotos from "components/teamPhotos"
 import Section from "styles/Section"
+
+const BlueFontSection = styled(Section)`
+  color: ${SB_NAVY};
+`
 
 const Header = styled.h1`
   letter-spacing: 0.15em;
@@ -35,11 +40,11 @@ const TeamPage = ({ data }) => {
         title="Team"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
-      <Section>
+      <BlueFontSection>
         <Header>OUR TEAM</Header>
         <Subtitle>Meet the people who make Sandbox outstanding.</Subtitle>
         <TeamPhotos members={data.allTeamJson.edges[0].node.members} />
-      </Section>
+      </BlueFontSection>
     </Layout>
   )
 }

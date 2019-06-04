@@ -4,36 +4,34 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   padding-top: 2em;
-`
-
-const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  &:not(:last-child) {
-    margin-bottom: 6em;
-  }
-
-  &:last-child {
-    justify-content: flex-start;
+  &::after {
+    flex: auto;
+    content: "";
   }
 `
 
 const ProfileWrapper = styled.div`
   text-align: center;
+  padding: 1em 2.5em;
 `
 
 const ProfileName = styled.span`
   display: block;
   font-weight: 500;
   margin: 0.75em 0 0.5em;
+  /* same as width of images coming in from GraphQL */
+  max-width: 150px;
 `
 
 const ProfileRole = styled.span`
   display: block;
   font-weight: 500;
   font-style: italic;
+  /* same as width of images coming in from GraphQL */
+  max-width: 150px;
 `
 
 const ProfileImg = styled(Img)`
@@ -74,23 +72,11 @@ const Profile = ({ member }) => {
   )
 }
 
-const MemberRow = ({ members }) => {
-  return (
-    <Row>
-      {members.map(member => {
-        if (!member) return null
-        return <Profile member={member} key={member.name} />
-      })}
-    </Row>
-  )
-}
-
 const TeamPhotos = ({ members }) => {
-  const memberRows = paginate(members, 4)
   return (
     <Wrapper>
-      {memberRows.map(memberRow => {
-        return <MemberRow members={memberRow} />
+      {members.map(member => {
+        return <Profile member={member} key={member.name} />
       })}
     </Wrapper>
   )
