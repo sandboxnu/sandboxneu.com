@@ -36,7 +36,7 @@ const TeamPage = ({ data }) => {
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
       <Section>
-        <Header>JOIN SANDBOX</Header>
+        <Header>OUR TEAM</Header>
         <Subtitle>Meet the people who make Sandbox outstanding.</Subtitle>
         <TeamPhotos members={data.allTeamJson.edges[0].node.members} />
       </Section>

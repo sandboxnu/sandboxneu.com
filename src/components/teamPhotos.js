@@ -62,7 +62,6 @@ const paginate = (entities, amtPerPage) => {
 }
 
 const Profile = ({ member }) => {
-  console.log(member)
   return (
     <ProfileWrapper>
       <ProfileImg
