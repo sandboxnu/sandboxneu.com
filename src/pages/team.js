@@ -59,10 +59,6 @@ export const profileIcon = graphql`
   }
 `
 
-/*
-FIXME there has got to be a better way to do this, but I don't have
-the time right now to figure out what that is
-*/
 export const query = graphql`
   query TeamQuery {
     allTeamJson {

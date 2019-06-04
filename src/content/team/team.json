@@ -2,17 +2,17 @@
   "members": [
     {
       "name": "Da-Jin Chu",
-      "role": "Technical Director & Co-founder",
+      "role": "Technical Director\n& Co-founder",
       "profileImage": "./profileImages/dajin.jpg"
     },
     {
       "name": "Ryan Drew",
-      "role": "Executive Director & Co-founder",
+      "role": "Executive Director\n& Co-founder",
       "profileImage": "./profileImages/ryan.jpg"
     },
     {
       "name": "Arun Jeevanantham",
-      "role": "Operations Director & Co-founder",
+      "role": "Operations Director\n& Co-founder",
       "profileImage": "./profileImages/arun.jpg"
     },
     {
