@@ -1,6 +1,11 @@
 {
   "members": [
     {
+      "name": "Da-Jin Chu",
+      "role": "Technical Director & Co-founder",
+      "profileImage": "./profileImages/dajin.jpg"
+    },
+    {
       "name": "Ryan Drew",
       "role": "Executive Director & Co-founder",
       "profileImage": "./profileImages/ryan.jpg"
@@ -9,11 +14,6 @@
       "name": "Arun Jeevanantham",
       "role": "Operations Director & Co-founder",
       "profileImage": "./profileImages/arun.jpg"
-    },
-    {
-      "name": "Da-Jin Chu",
-      "role": "Technical Director & Co-founder",
-      "profileImage": "./profileImages/dajin.jpg"
     },
     {
       "name": "Sauharda Rajbhandari",
@@ -26,9 +26,14 @@
       "profileImage": "./profileImages/fiona.jpg"
     },
     {
-      "name": "Sarah Witt",
+      "name": "Dan Krasnonosenkikh",
       "role": "Core Developer",
-      "profileImage": "./profileImages/sarah.jpg"
+      "profileImage": "./profileImages/dan.jpg"
+    },
+    {
+      "name": "Yash Shetty",
+      "role": "Core Developer",
+      "profileImage": "./profileImages/yash.jpg"
     },
     {
       "name": "Justin Torre",
@@ -41,14 +46,14 @@
       "profileImage": "./profileImages/tal.jpg"
     },
     {
-      "name": "Dan Krasnonosenkikh",
+      "name": "Sarah Witt",
       "role": "Core Developer",
-      "profileImage": "./profileImages/dan.jpg"
+      "profileImage": "./profileImages/sarah.jpg"
     },
     {
-      "name": "Yash Shetty",
+      "name": "Jacob Chvatal",
       "role": "Core Developer",
-      "profileImage": "./profileImages/yash.jpg"
+      "profileImage": "./profileImages/jacob.jpg"
     },
     {
       "name": "Karmen Lu",
@@ -64,11 +69,6 @@
       "name": "Alex Takayama",
       "role": "Core Developer",
       "profileImage": "./profileImages/alex.jpg"
-    },
-    {
-      "name": "Jacob Chvatal",
-      "role": "Core Developer",
-      "profileImage": "./profileImages/jacob.jpg"
     }
   ]
 }
