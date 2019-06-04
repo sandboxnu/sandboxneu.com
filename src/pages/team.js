@@ -1,9 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "components/layout"
 import SEO from "components/seo"
 import TeamPhotos from "components/teamPhotos"
+import Section from "styles/Section"
+
+const Header = styled.h1`
+  letter-spacing: 0.15em;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5em;
+
+  @media (min-width: 1000px) {
+    font-size: 3em;
+  }
+`
+
+const Subtitle = styled.h3`
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media (min-width: 1000px) {
+    font-size: 1.5em;
+  }
+`
 
 const TeamPage = ({ data }) => {
   return (
@@ -12,7 +35,11 @@ const TeamPage = ({ data }) => {
         title="Team"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
-      <TeamPhotos members={data.allTeamJson.edges[0].node.members} />
+      <Section>
+        <Header>JOIN SANDBOX</Header>
+        <Subtitle>Meet the people who make Sandbox outstanding.</Subtitle>
+        <TeamPhotos members={data.allTeamJson.edges[0].node.members} />
+      </Section>
     </Layout>
   )
 }
