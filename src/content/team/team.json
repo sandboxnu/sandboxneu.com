@@ -2,17 +2,17 @@
   "members": [
     {
       "name": "Da-Jin Chu",
-      "role": "Technical Director\n& Co-founder",
+      "role": "Technical Director",
       "profileImage": "./profileImages/dajin.jpg"
     },
     {
       "name": "Ryan Drew",
-      "role": "Executive Director\n& Co-founder",
+      "role": "Executive Director",
       "profileImage": "./profileImages/ryan.jpg"
     },
     {
       "name": "Arun Jeevanantham",
-      "role": "Operations Director\n& Co-founder",
+      "role": "Operations Director",
       "profileImage": "./profileImages/arun.jpg"
     },
     {
@@ -27,47 +27,47 @@
     },
     {
       "name": "Dan Krasnonosenkikh",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/dan.jpg"
     },
     {
       "name": "Yash Shetty",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/yash.jpg"
     },
     {
       "name": "Justin Torre",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/justin.jpg"
     },
     {
       "name": "Tal Usvyatsky",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/tal.jpg"
     },
     {
       "name": "Sarah Witt",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/sarah.jpg"
     },
     {
       "name": "Jacob Chvatal",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/jacob.jpg"
     },
     {
       "name": "Karmen Lu",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/karmen.jpg"
     },
     {
       "name": "Cindy Luo",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/cindy.jpg"
     },
     {
       "name": "Alex Takayama",
-      "role": "Core Developer",
+      "role": "Developer",
       "profileImage": "./profileImages/alex.jpg"
     }
   ]
