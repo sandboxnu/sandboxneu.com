@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Da-Jin Chu",
+      "role": "Technical Director",
+      "profileImage": "./profileImages/dajin.jpg"
+    },
+    {
+      "name": "Ryan Drew",
+      "role": "Executive Director",
+      "profileImage": "./profileImages/ryan.jpg"
+    },
+    {
+      "name": "Arun Jeevanantham",
+      "role": "Operations Director",
+      "profileImage": "./profileImages/arun.jpg"
+    },
+    {
+      "name": "Sauharda Rajbhandari",
+      "role": "Marketing Director",
+      "profileImage": "./profileImages/sauharda.jpg"
+    },
+    {
+      "name": "Fiona Gridley",
+      "role": "Design Lead",
+      "profileImage": "./profileImages/fiona.jpg"
+    },
+    {
+      "name": "Dan Krasnonosenkikh",
+      "role": "Developer",
+      "profileImage": "./profileImages/dan.jpg"
+    },
+    {
+      "name": "Yash Shetty",
+      "role": "Developer",
+      "profileImage": "./profileImages/yash.jpg"
+    },
+    {
+      "name": "Justin Torre",
+      "role": "Developer",
+      "profileImage": "./profileImages/justin.jpg"
+    },
+    {
+      "name": "Tal Usvyatsky",
+      "role": "Developer",
+      "profileImage": "./profileImages/tal.jpg"
+    },
+    {
+      "name": "Sarah Witt",
+      "role": "Developer",
+      "profileImage": "./profileImages/sarah.jpg"
+    },
+    {
+      "name": "Jacob Chvatal",
+      "role": "Developer",
+      "profileImage": "./profileImages/jacob.jpg"
+    },
+    {
+      "name": "Karmen Lu",
+      "role": "Developer",
+      "profileImage": "./profileImages/karmen.jpg"
+    },
+    {
+      "name": "Cindy Luo",
+      "role": "Developer",
+      "profileImage": "./profileImages/cindy.jpg"
+    },
+    {
+      "name": "Alex Takayama",
+      "role": "Developer",
+      "profileImage": "./profileImages/alex.jpg"
+    }
+  ]
+}

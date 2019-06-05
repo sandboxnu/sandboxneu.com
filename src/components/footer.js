@@ -110,7 +110,8 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
           <Navigate>
             <Header>NAVIGATE</Header>
             <InfoLink dest="/" text="home" />
-            <InfoLink dest="https://forms.gle/aZB5fGMEBKB4uDLU7" text="join" />
+            <InfoLink dest="/team" text="team" />
+            <InfoLink dest="/join" text="join" />
           </Navigate>
           <Contact>
             <Header>CONTACT</Header>
