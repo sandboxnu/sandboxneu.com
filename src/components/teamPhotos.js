@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
 const ProfileWrapper = styled.div`
   text-align: center;
-  padding: 1em 2.5em;
+  padding: 1.5em 2.5em;
   flex-basis: 100%;
 
   @media (min-width: 600px) {
