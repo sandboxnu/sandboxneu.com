@@ -84,11 +84,13 @@ const Button = styled.a`
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop
     if (pageY > 0 && atTop) {
       setAtTop(false)
+      setHasScrolled(true)
     } else if (pageY === 0) {
       setAtTop(true)
     }
@@ -105,7 +107,7 @@ const Nav = ({ page, pages }) => {
   return (
     <Container
       hideBackground={atTop && page === "index"}
-      fadeIn={page === "index"}
+      fadeIn={!hasScrolled && atTop && page === "index"}
     >
       <ContentContainer>
         <SquareLogo

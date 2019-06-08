@@ -34,12 +34,10 @@ const fadeInSlideUp = keyframes`
     opacity: 0;
     transform: translate(0, 10px);
   }
-  }
 
   100% {
     opacity: 1;
     transform: translate(0, 0);
-  }
   }
 `
 
@@ -83,6 +81,7 @@ const StyledFA = styled(FontAwesomeIcon)`
   max-width: ${props => props.csssize};
   transition: top 0.3s, color 0.3s;
   animation: ${fadeIn} 2.25s;
+  top: 0px;
   color: ${props => props.color};
   &:hover {
     top: 10px;
