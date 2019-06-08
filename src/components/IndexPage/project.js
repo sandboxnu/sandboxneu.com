@@ -7,7 +7,7 @@ import Body from "styles/Body"
 import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
 const CardBG = styled(BackgroundImage)`
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   transition: 0.3s;
@@ -20,7 +20,7 @@ const CardBG = styled(BackgroundImage)`
 `
 
 const Card = styled.div`
-  margin-top: -20px;
+  margin-top: -1.25em;
   width: 300px;
   height: 300px;
   border-radius: 7px;
