@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/Section"
 import SquareLogo from "./squareLogo"
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
 
 const Container = styled.nav`
   position: fixed;
@@ -18,6 +32,11 @@ const Container = styled.nav`
     css`
       background: rgba(255, 255, 255, 0);
       box-shadow: none;
+    `}
+  ${props =>
+    props.fadeIn &&
+    css`
+      animation: ${fadeIn} 2s;
     `}
 `
 
@@ -63,13 +82,15 @@ const Button = styled.a`
   }
 `
 
-const Nav = ({ page }) => {
+const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop
     if (pageY > 0 && atTop) {
       setAtTop(false)
+      setHasScrolled(true)
     } else if (pageY === 0) {
       setAtTop(true)
     }
@@ -84,7 +105,10 @@ const Nav = ({ page }) => {
   }, [])
 
   return (
-    <Container hideBackground={atTop && page === "index"}>
+    <Container
+      hideBackground={atTop && page === "index"}
+      fadeIn={!hasScrolled && atTop && page === "index"}
+    >
       <ContentContainer>
         <SquareLogo
           size="3em"
@@ -94,12 +118,11 @@ const Nav = ({ page }) => {
           hoverAnimation
         />
         <ButtonContainer>
-          <Button href="/team" isWhite={atTop && page === "index"}>
-            Team
-          </Button>
-          <Button href="/join" isWhite={atTop && page === "index"}>
-            Join
-          </Button>
+          {pages.map(p => (
+            <Button href={p.route} isWhite={atTop && page === "index"}>
+              {p.name}
+            </Button>
+          ))}
         </ButtonContainer>
       </ContentContainer>
     </Container>

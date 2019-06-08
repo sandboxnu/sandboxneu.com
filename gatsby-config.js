@@ -3,6 +3,16 @@ module.exports = {
     title: `Sandbox`,
     description: `Sandbox is a club at Northeastern University that creates custom software applications for researchers.`,
     author: `Sandbox at Northeastern`,
+    pages: [
+      {
+        name: "Join",
+        route: "/join",
+      },
+      {
+        name: "Team",
+        route: "/team",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

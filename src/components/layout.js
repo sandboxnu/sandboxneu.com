@@ -20,6 +20,10 @@ const Layout = ({ children, page }) => (
         site {
           siteMetadata {
             title
+            pages {
+              name
+              route
+            }
           }
         }
         allFooterJson {
@@ -45,7 +49,11 @@ const Layout = ({ children, page }) => (
     `}
     render={data => (
       <div>
-        <Nav siteTitle={data.site.siteMetadata.title} page={page} />
+        <Nav
+          siteTitle={data.site.siteMetadata.title}
+          pages={data.site.siteMetadata.pages}
+          page={page}
+        />
         <GlobalStyle />
         <main>{children}</main>
         <Footer pages={["Home"]} {...data.allFooterJson.edges[0].node} />
