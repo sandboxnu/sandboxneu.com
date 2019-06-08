@@ -27,6 +27,7 @@ export default createGlobalStyle`
     src: url(${fonts.BrandonBoldTTF}) format("truetype"), 
     url(${fonts.BrandonBoldWOFF}) format("woff"),
     url(${fonts.BrandonBoldWOFF2}) format("woff2");
+    font-display: fallback;
   }
   @font-face {
     font-family: "Brandon";
@@ -35,6 +36,7 @@ export default createGlobalStyle`
     src: url(${fonts.BrandonBoldItalicTTF}) format("truetype"), 
     url(${fonts.BrandonBoldItalicWOFF}) format("woff"),
     url(${fonts.BrandonBoldItalicWOFF2}) format("woff2");
+    font-display: fallback;
   }
   @font-face {
     font-family: "Brandon";
@@ -43,6 +45,7 @@ export default createGlobalStyle`
     src: url(${fonts.BrandonRegularTTF}) format("truetype"), 
     url(${fonts.BrandonRegularWOFF}) format("woff"),
     url(${fonts.BrandonRegularWOFF2}) format("woff2");
+    font-display: fallback;
   }
   @font-face {
     font-family: "Brandon";
@@ -51,6 +54,7 @@ export default createGlobalStyle`
     src: url(${fonts.BrandonRegularItalicTTF}) format("truetype"), 
     url(${fonts.BrandonRegularItalicWOFF}) format("woff"),
     url(${fonts.BrandonRegularItalicWOFF2}) format("woff2");
+    font-display: fallback;
   }
   @font-face {
     font-family: "Brandon";
@@ -58,5 +62,6 @@ export default createGlobalStyle`
     font-weight: 500;
     src: url(${fonts.BrandonMediumWOFF}) format("woff"), 
     url(${fonts.BrandonMediumWOFF2}) format("woff2");
+    font-display: fallback;
   }
 `
