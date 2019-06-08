@@ -48,7 +48,7 @@ const JoinPage = ({ data }) => {
   return (
     <Layout page="join">
       <SEO
-        title="Home"
+        title="Join"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
       <BlueFontSection>
