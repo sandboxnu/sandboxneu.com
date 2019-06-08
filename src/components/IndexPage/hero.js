@@ -3,14 +3,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import { SB_ORANGE } from "@colors"
 import { useAmplitudeLogEvent } from "utils/amplitude"
 import banner from "images/sandbox-banner-shadow.svg"
 import Section from "styles/Section"
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
+
 const Subtitle = styled.h1`
+  opacity: 1;
   padding: 1em 0 2em;
   color: #fff;
   font-size: 1.8em;
@@ -23,6 +38,7 @@ const Subtitle = styled.h1`
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 7px #111;
+  animation: ${fadeIn} 2s;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -38,6 +54,7 @@ const ImgContainer = styled.object`
   margin: 0 auto;
   display: block;
   padding-top: 10vh;
+  animation: ${fadeIn} 1.5s;
 `
 
 const StyledFA = styled(FontAwesomeIcon)`
@@ -46,6 +63,7 @@ const StyledFA = styled(FontAwesomeIcon)`
   position: relative;
   max-width: ${props => props.csssize};
   transition: top 0.3s, color 0.3s;
+  animation: ${fadeIn} 2.5s;
   color: ${props => props.color};
   top: 0;
   &:hover {
