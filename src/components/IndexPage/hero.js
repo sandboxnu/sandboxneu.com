@@ -24,9 +24,28 @@ const fadeIn = keyframes`
   }
 `
 
+const fadeInSlideUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  }
+`
+
 const Subtitle = styled.h1`
   opacity: 1;
-  padding: 1em 0 2em;
+  padding: 1.2em 0 2.8em;
   color: #fff;
   font-size: 1.8em;
   @media (min-width: 1000px) {
@@ -38,7 +57,7 @@ const Subtitle = styled.h1`
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 7px #111;
-  animation: ${fadeIn} 2s;
+  animation: ${fadeInSlideUp} 1.75s;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -53,8 +72,8 @@ const ImgContainer = styled.object`
   }
   margin: 0 auto;
   display: block;
-  padding-top: 10vh;
-  animation: ${fadeIn} 1.5s;
+  padding-top: 8vh;
+  animation: ${fadeInSlideUp} 1.25s;
 `
 
 const StyledFA = styled(FontAwesomeIcon)`
@@ -63,9 +82,8 @@ const StyledFA = styled(FontAwesomeIcon)`
   position: relative;
   max-width: ${props => props.csssize};
   transition: top 0.3s, color 0.3s;
-  animation: ${fadeIn} 2.5s;
+  animation: ${fadeIn} 2.25s;
   color: ${props => props.color};
-  top: 0;
   &:hover {
     top: 10px;
     cursor: pointer;
