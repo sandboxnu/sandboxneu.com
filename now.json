@@ -1,9 +1,20 @@
 {
-    "version": 2,
-    "name": "sandboxneu.com",
-    "builds": [
-        { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
-    ],
-    "regions": ["all"],
-    "alias": "www.sandboxneu.com"
+  "version": 2,
+  "name": "sandboxneu.com",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/research",
+      "status": 301,
+      "headers": { "Location": "https://forms.gle/1S6R4yxrCLjZe2d19" }
+    }
+  ],
+  "regions": ["all"],
+  "alias": "www.sandboxneu.com"
 }
