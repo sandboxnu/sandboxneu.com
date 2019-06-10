@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Brandon";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BrandonGrotesqueWeb-Bold.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-Bold.woff") format("woff"),
+    url("../fonts/BrandonGrotesqueWeb-Bold.woff") format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Brandon";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff") format("woff"),
+    url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff") format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Brandon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BrandonGrotesqueWeb-Regular.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-Regular.woff") format("woff"),
+    url("../fonts/BrandonGrotesqueWeb-Regular.ttf") format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Brandon";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/BrandonGrotesqueWeb-RegularItalic.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-RegularItalic.woff") format("woff"),
+    url("../fonts/BrandonGrotesqueWeb-RegularItalic.ttf") format("truetype");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Brandon";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/BrandonGrotesqueWeb-Regular.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-Regular.woff") format("woff");
+  font-display: fallback;
+}
