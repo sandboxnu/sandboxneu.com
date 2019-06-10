@@ -38,7 +38,7 @@
   font-family: "Brandon";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/BrandonGrotesqueWeb-Regular.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-Regular.woff") format("woff");
+  src: url("../fonts/BrandonGrotesqueWeb-Medium.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesqueWeb-Medium.woff") format("woff");
   font-display: fallback;
 }
