@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { SB_NAVY, SB_ORANGE } from "@colors"
-import banner from "images/sandbox-banner.png"
+import banner from "images/sandbox-banner-blue.svg"
 
 const GrayBackground = styled.div`
   background: #eaecf0;
