@@ -155,7 +155,7 @@ class Project extends Component {
       <CardBG
         onClick={this.openGithub}
         Tag="div"
-        fluid={backgroundImage.childImageSharp.fluid}
+        fixed={backgroundImage.childImageSharp.fixed}
       >
         <Card>
           <CardHeader> {this.props.title} </CardHeader>
