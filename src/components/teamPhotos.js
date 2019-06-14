@@ -2,6 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import { FadeInSlideUp } from "styles/animations"
+
 const Wrapper = styled.div`
   padding-top: 2em;
   display: flex;
@@ -17,6 +19,8 @@ const ProfileWrapper = styled.div`
   text-align: center;
   padding: 1.5em 2.5em;
   flex-basis: 100%;
+
+  animation: ${props => FadeInSlideUp(props.percent)} 1.75s;
 
   @media (min-width: 600px) {
     flex-basis: 50%;
@@ -52,9 +56,9 @@ const ProfileImg = styled(Img)`
   border-radius: 50%;
 `
 
-const Profile = ({ member }) => {
+const Profile = ({ member, percent }) => {
   return (
-    <ProfileWrapper>
+    <ProfileWrapper percent={percent}>
       <ProfileImg
         fixed={member.profileImage.childImageSharp.fixed}
         alt={member.name}
@@ -68,8 +72,14 @@ const Profile = ({ member }) => {
 const TeamPhotos = ({ members }) => {
   return (
     <Wrapper>
-      {members.map(member => {
-        return <Profile member={member} key={member.name} />
+      {members.map((member, i) => {
+        return (
+          <Profile
+            member={member}
+            key={member.name}
+            percent={i / members.length}
+          />
+        )
       })}
     </Wrapper>
   )
