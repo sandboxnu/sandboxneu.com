@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Body from "styles/Body"
-import Button from "styles/Button"
-import Section from "styles/Section"
 import styled from "styled-components"
+
+import Body from "styles/components/Body"
+import Button from "styles/components/Button"
+import Section from "styles/components/Section"
 
 const SectionPad = styled(Section)`
   margin-top: -40px;

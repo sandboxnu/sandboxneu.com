@@ -6,7 +6,7 @@ import { SB_NAVY } from "@colors"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import TeamPhotos from "components/teamPhotos"
-import Section from "styles/Section"
+import Section from "styles/components/Section"
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};

@@ -7,7 +7,7 @@ import Buttons from "components/JoinPage/Buttons"
 import JoinContent from "components/JoinPage/JoinContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
-import Section from "styles/Section"
+import Section from "styles/components/Section"
 
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,

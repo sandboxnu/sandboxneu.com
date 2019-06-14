@@ -3,9 +3,13 @@ import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Body from "styles/Body"
-import { HeaderLineBelow, HeaderLineLeft, HeaderLineRight } from "styles/Header"
-import Section from "styles/Section"
+import Body from "styles/components/Body"
+import {
+  HeaderLineBelow,
+  HeaderLineLeft,
+  HeaderLineRight,
+} from "styles/components/Header"
+import Section from "styles/components/Section"
 
 // SVG gets inlined as base64. This is ok because it's only 3 kb
 const Mobile = styled.div`

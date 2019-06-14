@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled, { css, keyframes } from "styled-components"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
-import { SectionContent } from "styles/Section"
+import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
 const fadeIn = keyframes`

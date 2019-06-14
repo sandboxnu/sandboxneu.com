@@ -8,7 +8,7 @@ import styled, { keyframes } from "styled-components"
 import { SB_ORANGE } from "@colors"
 import { useAmplitudeLogEvent } from "utils/amplitude"
 import banner from "images/sandbox-banner-shadow.svg"
-import Section from "styles/Section"
+import Section from "styles/components/Section"
 
 const fadeIn = keyframes`
   0% {

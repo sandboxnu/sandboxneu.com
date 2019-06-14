@@ -1,9 +1,10 @@
-import { Header, HeaderLineBelow } from "styles/Header"
 import React, { Component } from "react"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Body from "styles/Body"
+
+import { Header, HeaderLineBelow } from "styles/components/Header"
+import Body from "styles/components/Body"
 import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
 const CardBG = styled(BackgroundImage)`
