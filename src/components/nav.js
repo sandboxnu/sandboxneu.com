@@ -119,7 +119,11 @@ const Nav = ({ page, pages }) => {
         />
         <ButtonContainer>
           {pages.map(p => (
-            <Button href={p.route} isWhite={atTop && page === "index"}>
+            <Button
+              href={p.route}
+              isWhite={atTop && page === "index"}
+              key={p.name}
+            >
               {p.name}
             </Button>
           ))}
