@@ -20,7 +20,7 @@ const ProfileWrapper = styled.div`
   padding: 1.5em 2.5em;
   flex-basis: 100%;
 
-  animation: ${props => FadeInSlideUp(props.percent)} 1.75s;
+  animation: ${props => FadeInSlideUp(props.percent, "15px", true)} 1.75s;
 
   @media (min-width: 600px) {
     flex-basis: 50%;
