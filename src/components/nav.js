@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled, { css, keyframes } from "styled-components"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
-import { SectionContent } from "styles/Section"
+import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
 const fadeIn = keyframes`
@@ -119,7 +119,11 @@ const Nav = ({ page, pages }) => {
         />
         <ButtonContainer>
           {pages.map(p => (
-            <Button href={p.route} isWhite={atTop && page === "index"}>
+            <Button
+              href={p.route}
+              isWhite={atTop && page === "index"}
+              key={p.name}
+            >
               {p.name}
             </Button>
           ))}

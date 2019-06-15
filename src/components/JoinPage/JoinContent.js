@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 import { lightenDarkenColor } from "@colors"
 import SquareLogo from "components/squareLogo"
-import Body from "styles/Body"
-import Button from "styles/Button"
+import Body from "styles/components/Body"
+import Button from "styles/components/Button"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
