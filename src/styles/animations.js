@@ -25,8 +25,6 @@ export const FadeInSlideUp = (
     lowPercent = percent - percentOfTotal
   }
 
-  const midPercent = percent - percentOfTotal / 2
-
   return keyframes`
     0% {
       opacity: 0;
@@ -36,11 +34,6 @@ export const FadeInSlideUp = (
     ${Math.round((lowPercent * 0.9 + delay) * 100)}% {
       opacity: 0;
       transform: translate(0, ${slideLength});
-    }
-
-    ${Math.round((midPercent * 0.9 + delay) * 100)}% {
-      opacity: 0;
-      transform: translate(0, ${slideLength * 0.3});
     }
 
     ${Math.round((percent * 0.9 + delay) * 100)}% {
