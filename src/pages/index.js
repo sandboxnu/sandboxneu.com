@@ -36,7 +36,7 @@ export const query = graphql`
           title
           background {
             childImageSharp {
-              fluid(maxWidth: 3000, quality: 90) {
+              fluid(maxWidth: 300) {
                 ...GatsbyImageSharpFluid
               }
             }
