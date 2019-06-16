@@ -29,14 +29,14 @@ const Desktop = styled.div`
 
 const ShadowImg = styled(Img)`
   box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-  margin: 0px 10px;
+  margin: 0 10px;
 `
 
 const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 0px;
+  padding: 30px 0 0;
 `
 
 const Who = ({ img1, img2, img3, title1, p1, title2, p2 }) => {
