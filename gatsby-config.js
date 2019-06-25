@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Sandbox`,
-    description: `Sandbox is a club at Northeastern University that creates custom software applications for researchers.`,
+    description: `Sandbox is a student organization at Northeastern University that creates custom software applications for researchers.`,
     author: `Sandbox at Northeastern`,
     pages: [
       {

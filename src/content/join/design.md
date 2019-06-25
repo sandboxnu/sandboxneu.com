@@ -7,6 +7,6 @@ formLink: "https://docs.google.com/forms/d/e/1FAIpQLSci8o8K8I4szGhfdqiJ5sAfB9NHg
 role: designer
 ---
 
-We’re looking for a lead designer to build up our brand identity as the club expands its presence in the Northeastern community. As design lead, you’ll work closely with our Marketing Director and Executive Director to create branded materials across our website, social media, apparel, and posters. You’ll also work alongside our Core team and the researchers to craft excellent user experiences in the software applications that we build. 
+We’re looking for a lead designer to build up our brand identity as the Sandbox expands its presence in the Northeastern community. As design lead, you’ll work closely with our Marketing Director and Executive Director to create branded materials across our website, social media, apparel, and posters. You’ll also work alongside our Core team and the researchers to craft excellent user experiences in the software applications that we build. 
 
-You’ll be part of a rapidly growing club with an opportunity to leave a significant and lasting impact on our brand. You’ll join our community of talented and motivated members, in addition to building connections with the research community at Northeastern.
+You’ll be part of a rapidly growing student organization with an opportunity to leave a significant and lasting impact on our brand. You’ll join our community of talented and motivated members, in addition to building connections with the research community at Northeastern.
