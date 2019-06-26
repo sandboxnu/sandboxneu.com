@@ -54,8 +54,8 @@ const JoinPage = ({ data }) => {
       <BlueFontSection>
         <Header>JOIN SANDBOX</Header>
         <Subtitle>
-          The Sandbox Core team is currently accepting applications for summer
-          and fall.
+          The Sandbox team is currently accepting applications for summer and
+          fall.
           <br />
           Check out our open roles below.
         </Subtitle>
