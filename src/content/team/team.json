@@ -31,6 +31,11 @@
       "profileImage": "./profileImages/dan.jpg"
     },
     {
+      "name": "Karmen Lu",
+      "role": "Developer",
+      "profileImage": "./profileImages/karmen.jpg"
+    },
+    {
       "name": "Yash Shetty",
       "role": "Developer",
       "profileImage": "./profileImages/yash.jpg"
@@ -54,11 +59,6 @@
       "name": "Jacob Chvatal",
       "role": "Developer",
       "profileImage": "./profileImages/jacob.jpg"
-    },
-    {
-      "name": "Karmen Lu",
-      "role": "Developer",
-      "profileImage": "./profileImages/karmen.jpg"
     },
     {
       "name": "Cindy Luo",
