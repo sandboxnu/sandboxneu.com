@@ -1,6 +1,10 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { SB_NAVY } from "@colors"
 
 import { FadeInSlideUp } from "styles/animations"
 
@@ -14,7 +18,6 @@ const Wrapper = styled.div`
     flex: auto;
   }
 `
-
 const ProfileWrapper = styled.div`
   text-align: center;
   padding: 1.5em 2.5em;
@@ -56,7 +59,28 @@ const ProfileImg = styled(Img)`
   border-radius: 50%;
 `
 
+const ProfileIcon = ({ dest, icon }) => {
+  return (
+    <a href={dest}>
+      <StyledIcon icon={icon} color={SB_NAVY} />
+    </a>
+  )
+}
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  color: ${props => props.color};
+  margin: 0rem 0.5rem 0rem 0.5rem;
+`
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+
 const Profile = ({ member, percent }) => {
+  console.log(member.name)
+  console.log(member.email)
   return (
     <ProfileWrapper percent={percent}>
       <ProfileImg
@@ -65,6 +89,10 @@ const Profile = ({ member, percent }) => {
       />
       <ProfileName>{member.name}</ProfileName>
       <ProfileRole>{member.role}</ProfileRole>
+      <IconWrapper>
+        <ProfileIcon dest={`mailto:${member.email}`} icon={faEnvelope} />
+        <ProfileIcon dest={member.linkedIn} icon={faLinkedinIn} />
+      </IconWrapper>
     </ProfileWrapper>
   )
 }
