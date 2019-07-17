@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     flex: auto;
   }
 `
+
 const ProfileWrapper = styled.div`
   text-align: center;
   padding: 1.5em 2.5em;
@@ -57,20 +58,21 @@ const ProfileRole = styled.span`
 
 const ProfileImg = styled(Img)`
   border-radius: 50%;
-  transition: all ease-in 150ms;
+  transition: filter ease-in 200ms;
+  /* This avoids hover issue on safari. */
+  transform: scale(1);
 `
 
 const ProfileImgWrapper = styled.div`
   position: relative;
-  width: min-content;
-  margin: auto;
 
-  &:hover .profileImg {
-    filter: blur(2px) grayscale(100%);
-  }
-
-  &:hover .iconWrapper {
-    display: block;
+  @media (min-width: 1000px) {
+    &:hover .profileImg {
+      filter: blur(1.5px);
+    }
+    &:hover .web {
+      display: block;
+    }
   }
 `
 
@@ -84,23 +86,55 @@ const ProfileIcon = ({ dest, icon }) => {
 
 const StyledIcon = styled(FontAwesomeIcon)`
   color: ${props => props.color};
-  font-size: 20px;
-  margin: 0rem 0.5rem 0rem 0.5rem;
+  margin: 0.3rem 0.5rem 0rem 0.5rem;
+
+  @media (max-width: 999px) {
+    font-size: 1rem;
+  }
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+  }
 `
 
 const IconWrapper = styled.div`
   display: flex;
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  filter: none;
+  flex-wrap: wrap;
   justify-content: center;
-  transition: all ease-in 2s;
+  /* same as width of images coming in from GraphQL */
+  max-width: 150px;
+  margin: auto;
+
+  @media (max-width: 999px) {
+    &.web {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &.web {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    &.mobile {
+      display: none;
+    }
+  }
 `
 
 const Profile = ({ member, percent }) => {
+  // Prevents repetitive code by storing content in one place.
+  const iconContent = (
+    <>
+      <ProfileIcon
+        dest={`mailto:${member.socialMedia.email}`}
+        icon={faEnvelope}
+      />
+      <ProfileIcon dest={member.socialMedia.linkedIn} icon={faLinkedinIn} />
+    </>
+  )
   return (
     <ProfileWrapper percent={percent}>
       <ProfileImgWrapper>
@@ -109,13 +143,11 @@ const Profile = ({ member, percent }) => {
           fixed={member.profileImage.childImageSharp.fixed}
           alt={member.name}
         />
-        <IconWrapper className="iconWrapper">
-          <ProfileIcon dest={`mailto:${member.email}`} icon={faEnvelope} />
-          <ProfileIcon dest={member.linkedIn} icon={faLinkedinIn} />
-        </IconWrapper>
+        <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
       <ProfileName>{member.name}</ProfileName>
       <ProfileRole>{member.role}</ProfileRole>
+      <IconWrapper className="iconWrapper mobile">{iconContent}</IconWrapper>
     </ProfileWrapper>
   )
 }

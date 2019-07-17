@@ -70,8 +70,10 @@ export const query = graphql`
             profileImage {
               ...profileIcon
             }
-            email
-            linkedIn
+            socialMedia {
+              email
+              linkedIn
+            }
           }
         }
       }
