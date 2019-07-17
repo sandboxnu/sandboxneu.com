@@ -5,6 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { SB_NAVY } from "@colors"
+import MediaQuery from "react-responsive"
 
 import { FadeInSlideUp } from "styles/animations"
 
@@ -57,10 +58,7 @@ const ProfileRole = styled.span`
 `
 
 const ProfileImg = styled(Img)`
-  border-radius: 50%;
   transition: filter ease-in 200ms;
-  /* This avoids hover issue on safari. */
-  transform: scale(1);
 `
 
 const ProfileImgWrapper = styled.div`
@@ -79,7 +77,12 @@ const ProfileImgWrapper = styled.div`
 const ProfileIcon = ({ dest, icon }) => {
   return (
     <a href={dest} target="_blank">
-      <StyledIcon icon={icon} color={SB_NAVY} />
+      <MediaQuery maxDeviceWidth={999}>
+        <StyledIcon icon={icon} color={SB_NAVY} />
+      </MediaQuery>
+      <MediaQuery minDeviceWidth={1000}>
+        <StyledIcon icon={icon} color={"white"} />
+      </MediaQuery>
     </a>
   )
 }
