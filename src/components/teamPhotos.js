@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { SB_NAVY } from "@colors"
+import { SB_NAVY, SB_ORANGE } from "@colors"
 import MediaQuery from "react-responsive"
 
 import { FadeInSlideUp } from "styles/animations"
@@ -53,19 +53,23 @@ const ProfileRole = styled.span`
   font-weight: 500;
   font-style: italic;
   white-space: pre-line;
+  padding: 0em 0 0.5em;
+
   /* same as width of images coming in from GraphQL */
   max-width: 150px;
 `
 
 const ProfileImg = styled(Img)`
-  transition: filter ease-in 200ms;
+  picture img {
+    transition: filter ease-in 200ms !important;
+  }
 `
 
 const ProfileImgWrapper = styled.div`
   position: relative;
 
   @media (min-width: 1000px) {
-    &:hover .profileImg {
+    &:hover img {
       filter: blur(1.5px);
     }
     &:hover .web {
@@ -90,12 +94,15 @@ const ProfileIcon = ({ dest, icon }) => {
 const StyledIcon = styled(FontAwesomeIcon)`
   color: ${props => props.color};
   margin: 0.3rem 0.5rem 0rem 0.5rem;
+  transition: color 150ms;
 
-  @media (max-width: 999px) {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
   @media (min-width: 1000px) {
     font-size: 1.5rem;
+
+    &:hover {
+      color: ${SB_ORANGE};
+    }
   }
 `
 
@@ -107,10 +114,8 @@ const IconWrapper = styled.div`
   max-width: 150px;
   margin: auto;
 
-  @media (max-width: 999px) {
-    &.web {
-      display: none;
-    }
+  &.web {
+    display: none;
   }
 
   @media (min-width: 1000px) {
@@ -142,7 +147,7 @@ const Profile = ({ member, percent }) => {
     <ProfileWrapper percent={percent}>
       <ProfileImgWrapper>
         <ProfileImg
-          className="profileImg"
+          style={{ overflow: "visible" }}
           fixed={member.profileImage.childImageSharp.fixed}
           alt={member.name}
         />
