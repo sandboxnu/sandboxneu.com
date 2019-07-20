@@ -57,6 +57,11 @@ const SocialSection = styled.div`
 const SocialLogo = styled(FontAwesomeIcon)`
   color: ${props => props.color};
   max-width: 14px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: ${SB_ORANGE};
+  }
 `
 
 const SizedLogo = styled.object`
