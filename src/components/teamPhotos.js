@@ -5,7 +5,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { SB_NAVY, SB_ORANGE } from "@colors"
-import MediaQuery from "react-responsive"
 
 import { FadeInSlideUp } from "styles/animations"
 
@@ -81,24 +80,20 @@ const ProfileImgWrapper = styled.div`
 const ProfileIcon = ({ dest, icon }) => {
   return (
     <a href={dest} target="_blank">
-      <MediaQuery maxDeviceWidth={999}>
-        <StyledIcon icon={icon} color={SB_NAVY} />
-      </MediaQuery>
-      <MediaQuery minDeviceWidth={1000}>
-        <StyledIcon icon={icon} color={"white"} />
-      </MediaQuery>
+      <StyledIcon icon={icon} color={"white"} mobileColor={SB_NAVY} />
     </a>
   )
 }
 
 const StyledIcon = styled(FontAwesomeIcon)`
-  color: ${props => props.color};
+  color: ${props => props.mobileColor};
   margin: 0.3rem 0.5rem 0rem 0.5rem;
   transition: color 150ms;
 
   font-size: 1rem;
   @media (min-width: 1000px) {
     font-size: 1.5rem;
+    color: ${props => props.color};
 
     &:hover {
       color: ${SB_ORANGE};
