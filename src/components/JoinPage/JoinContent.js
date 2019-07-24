@@ -122,7 +122,7 @@ const JoinContent = ({
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
         <Body dangerouslySetInnerHTML={{ __html: description }} />
-        <ItalicText>Application closes {closeDate}</ItalicText>
+        {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
