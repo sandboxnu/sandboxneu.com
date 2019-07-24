@@ -71,6 +71,7 @@ const JoinPage = ({ data }) => {
           description={currentRoleData.html}
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}
+          closeDate={currentRoleData.frontmatter.closeDate}
         />
       </BlueFontSection>
     </Layout>
@@ -87,6 +88,7 @@ export const query = graphql`
             qualities
             formLink
             role
+            closeDate
           }
         }
       }

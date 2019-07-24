@@ -80,6 +80,12 @@ const ApplyButtonWrapper = styled.div`
   text-align: center;
 `
 
+const ItalicText = styled.div`
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 15px 0;
+`
+
 const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
@@ -103,12 +109,20 @@ const QualitiesList = ({ qualities, color }) => {
   )
 }
 
-const JoinContent = ({ color, role, description, qualities, formLink }) => {
+const JoinContent = ({
+  color,
+  role,
+  description,
+  qualities,
+  formLink,
+  closeDate,
+}) => {
   return (
     <>
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
         <Body dangerouslySetInnerHTML={{ __html: description }} />
+        {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
