@@ -109,7 +109,7 @@ const QualitiesList = ({ qualities, color }) => {
   )
 }
 
-const JoinContent = ({
+const ApplyContent = ({
   color,
   role,
   description,
@@ -133,4 +133,4 @@ const JoinContent = ({
   )
 }
 
-export default JoinContent
+export default ApplyContent
