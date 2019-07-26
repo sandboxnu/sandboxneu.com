@@ -79,7 +79,7 @@ const ProfileImgWrapper = styled.div`
 
 const ProfileIcon = ({ dest, icon }) => {
   return (
-    <a href={dest} target="_blank">
+    <a href={dest} target="_blank" rel="noopener noreferrer">
       <StyledIcon icon={icon} color={"white"} mobileColor={SB_NAVY} />
     </a>
   )
