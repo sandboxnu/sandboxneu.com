@@ -5,8 +5,8 @@ module.exports = {
     author: `Sandbox at Northeastern`,
     pages: [
       {
-        name: "Join",
-        route: "/join",
+        name: "Apply",
+        route: "/apply",
       },
       {
         name: "Team",
