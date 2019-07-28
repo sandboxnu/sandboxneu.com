@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
-import Buttons from "components/JoinPage/Buttons"
-import JoinContent from "components/JoinPage/JoinContent"
+import Buttons from "components/ApplyPage/Buttons"
+import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
@@ -40,19 +40,19 @@ const Subtitle = styled.h3`
   }
 `
 
-const JoinPage = ({ data }) => {
+const ApplyPage = ({ data }) => {
   const [selectedRole, setSelectedRole] = useState("developer")
   const currentRoleData = data.allMarkdownRemark.edges.find(
     roleData => roleData.node.frontmatter.role === selectedRole
   ).node
   return (
-    <Layout page="join">
+    <Layout page="apply">
       <SEO
-        title="Join"
+        title="Apply"
         keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
       />
       <BlueFontSection>
-        <Header>JOIN SANDBOX</Header>
+        <Header>APPLY TO SANDBOX</Header>
         <Subtitle>
           The Sandbox team is currently accepting applications for summer and
           fall.
@@ -65,7 +65,7 @@ const JoinPage = ({ data }) => {
           setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
         />
-        <JoinContent
+        <ApplyContent
           role={selectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
           description={currentRoleData.html}
@@ -79,8 +79,8 @@ const JoinPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query JoinQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/join/" } }) {
+  query ApplyQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
       edges {
         node {
           html
@@ -96,4 +96,4 @@ export const query = graphql`
   }
 `
 
-export default JoinPage
+export default ApplyPage
