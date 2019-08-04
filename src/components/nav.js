@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled, { css, keyframes } from "styled-components"
+import { useAmplitudeLogEvent } from "utils/amplitude"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
@@ -85,6 +86,7 @@ const Button = styled.a`
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
+  useAmplitudeLogEvent("Visit", { page: page })
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop

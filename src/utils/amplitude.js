@@ -11,13 +11,16 @@ export const amplitudeLogEvent = (eventName, props) => {
   a.getInstance().logEvent(eventName, props)
 }
 
-export const useAmplitudeLogEvent = eventName => {
+export const useAmplitudeLogEvent = (eventName, props) => {
   useEffect(() => {
     if (process.env.NODE_ENV !== "development") {
       amplitudeInit()
-      amplitudeLogEvent(eventName, { hostname: window.location.hostname })
+      amplitudeLogEvent(eventName, {
+        ...props,
+        hostname: window.location.hostname,
+      })
     } else {
-      console.log(`Amplitude event ${eventName} triggered.`)
+      console.log(`Amplitude event ${eventName} triggered with props:`, props)
     }
   }, [])
 }
