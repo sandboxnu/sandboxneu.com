@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -12,7 +12,7 @@ import Section from "styles/components/Section"
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,
   designer: SB_LIGHT_BLUE,
-  devOps: SB_YELLOW,
+  devops: SB_YELLOW,
 }
 
 const BlueFontSection = styled(Section)`
@@ -40,11 +40,10 @@ const Subtitle = styled.h3`
   }
 `
 
-const ApplyPage = ({ data }) => {
-  const [selectedRole, setSelectedRole] = useState("developer")
-  const currentRoleData = data.allMarkdownRemark.edges.find(
-    roleData => roleData.node.frontmatter.role === selectedRole
-  ).node
+const ApplyPage = ({ data, pageContext }) => {
+  const currentRoleData = data.markdownRemark
+  const selectedRole = currentRoleData.frontmatter.role
+  const allRoles = pageContext.roles
   return (
     <Layout page="apply">
       <SEO
@@ -60,9 +59,8 @@ const ApplyPage = ({ data }) => {
           Check out our open roles below.
         </Subtitle>
         <Buttons
-          roles={["developer", "designer", "devOps"]}
+          roles={allRoles}
           selectedRole={selectedRole}
-          setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
         />
         <ApplyContent
@@ -78,19 +76,15 @@ const ApplyPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query ApplyQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
-      edges {
-        node {
-          html
-          frontmatter {
-            qualities
-            formLink
-            role
-            closeDate
-          }
-        }
+export const pageQuery = graphql`
+  query($role: String!) {
+    markdownRemark(frontmatter: { role: { eq: $role } }) {
+      html
+      frontmatter {
+        qualities
+        formLink
+        role
+        closeDate
       }
     }
   }

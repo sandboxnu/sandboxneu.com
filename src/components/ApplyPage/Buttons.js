@@ -2,6 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 import { SB_NAVY, lightenDarkenColor } from "@colors"
+import { Link } from "gatsby"
 
 const ButtonContainer = styled.div`
   margin: 2.2em auto 1em;
@@ -23,7 +24,9 @@ const ButtonContainer = styled.div`
   }
 `
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.8em;
@@ -55,16 +58,21 @@ const StyledButton = styled.button`
     `}
 `
 
-const Button = ({ name, color, selected, setSelectedRole }) => {
-  const onClick = () => setSelectedRole(name)
+const Button = ({ name, color, selected }) => {
+  const onClick = () => console.log(name)
   return (
-    <StyledButton color={color} selected={selected} onClick={onClick}>
+    <StyledButton
+      to={`/apply/${name}`}
+      color={color}
+      selected={selected}
+      onClick={onClick}
+    >
       {name}
     </StyledButton>
   )
 }
 
-const Buttons = ({ roles, selectedRole, setSelectedRole, color }) => {
+const Buttons = ({ roles, selectedRole, color }) => {
   return (
     <ButtonContainer>
       {roles.map(role => {
@@ -74,7 +82,6 @@ const Buttons = ({ roles, selectedRole, setSelectedRole, color }) => {
             name={role}
             selected={role === selectedRole}
             color={color}
-            setSelectedRole={setSelectedRole}
           />
         )
       })}
