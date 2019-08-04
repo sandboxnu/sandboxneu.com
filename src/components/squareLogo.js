@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
 import { SB_ORANGE, SB_LIGHT_BLUE, SB_NAVY, SB_YELLOW } from "@colors"
+import { Link } from "gatsby"
 
 const mapColorToAccent = {
   "#fff": "#E3E6EC",
@@ -36,12 +37,12 @@ const StyledSVG = styled.svg`
     `}
 `
 
-const LinkSVGWrapper = styled.a`
+const LinkSVGWrapper = styled(Link)`
   height: ${props => props.height};
 `
 
 const LinkSVG = props => (
-  <LinkSVGWrapper href={props.href} height={props.height}>
+  <LinkSVGWrapper to={props.to} height={props.height}>
     <StyledSVG {...props} />
   </LinkSVGWrapper>
 )
@@ -51,7 +52,7 @@ const SquareLogo = ({
   color = "#fff",
   dropShadow = false,
   hoverAnimation = false,
-  href,
+  to,
 }) => {
   const [displayShadow, setDisplayShadow] = useState(false)
   const shadowColor = mapColorToAccent[color]
@@ -64,7 +65,7 @@ const SquareLogo = ({
     }
   }
 
-  const SVGComponent = href ? LinkSVG : StyledSVG
+  const SVGComponent = to ? LinkSVG : StyledSVG
 
   return (
     <SVGComponent
@@ -76,7 +77,7 @@ const SquareLogo = ({
       fillColor={color}
       shadowColor={shadowColor}
       hoverAnimation={hoverAnimation}
-      href={href}
+      to={to}
     >
       <title>Sandbox Home</title>
       <defs>
@@ -137,7 +138,7 @@ SquareLogo.propTypes = {
   color: PropTypes.string,
   dropShadow: PropTypes.bool,
   hoverAnimation: PropTypes.bool,
-  href: PropTypes.string,
+  to: PropTypes.string,
 }
 
 export default SquareLogo

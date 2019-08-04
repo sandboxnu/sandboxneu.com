@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled, { css, keyframes } from "styled-components"
 
@@ -54,7 +55,7 @@ const ButtonContainer = styled.div`
   align-items: center;
 `
 
-const Button = styled.a`
+const Button = styled(Link)`
   letter-spacing: 0.15em;
   line-height: inherit;
   text-transform: uppercase;
@@ -114,13 +115,13 @@ const Nav = ({ page, pages }) => {
           size="3em"
           color={atTop && page === "index" ? "#fff" : SB_NAVY}
           dropShadow={atTop && page === "index"}
-          href="/"
+          to="/"
           hoverAnimation
         />
         <ButtonContainer>
           {pages.map(p => (
             <Button
-              href={p.route}
+              to={p.route}
               isWhite={atTop && page === "index"}
               key={p.name}
             >
