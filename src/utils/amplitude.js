@@ -7,10 +7,10 @@ export const amplitudeInit = () => {
   })
 }
 
-export const amplitudeLogEvent = (eventName, props) => {
+export const amplitudeLogEvent = (eventName, props = {}) => {
   if (process.env.NODE_ENV !== "development") {
     amplitudeInit()
-    amplitudeLogEvent(eventName, {
+    a.getInstance().logEvent(eventName, {
       ...props,
       hostname: window.location.hostname,
     })
