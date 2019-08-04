@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -8,6 +8,7 @@ import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
+import { amplitudeLogEvent } from "utils/amplitude"
 
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,
@@ -42,6 +43,11 @@ const Subtitle = styled.h3`
 
 const ApplyPage = ({ data }) => {
   const [selectedRole, setSelectedRole] = useState("developer")
+
+  useEffect(() => {
+    amplitudeLogEvent("Visit", { page: `apply#${selectedRole}` })
+  }, [selectedRole])
+
   const currentRoleData = data.allMarkdownRemark.edges.find(
     roleData => roleData.node.frontmatter.role === selectedRole
   ).node
