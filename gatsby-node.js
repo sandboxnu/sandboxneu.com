@@ -30,6 +30,7 @@ exports.createPages = ({ actions, graphql }) => {
     const roles = result.data.allMarkdownRemark.edges.map(
       ({ node }) => node.frontmatter.role
     )
+    roles.sort()
     createPage({
       path: "/apply/",
       component: applyTemplate,

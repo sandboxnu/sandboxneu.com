@@ -24,7 +24,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-const StyledButton = styled(Link)`
+const StyledButton = styled.button`
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -58,21 +58,19 @@ const StyledButton = styled(Link)`
     `}
 `
 
-const Button = ({ name, color, selected }) => {
-  const onClick = () => console.log(name)
+const Button = ({ name, color, selected, setSelectedRole }) => {
+  const onClick = () => {
+    window.history.pushState(null, "", `/apply/${name}/`)
+    setSelectedRole(name)
+  }
   return (
-    <StyledButton
-      to={`/apply/${name}`}
-      color={color}
-      selected={selected}
-      onClick={onClick}
-    >
+    <StyledButton color={color} selected={selected} onClick={onClick}>
       {name}
     </StyledButton>
   )
 }
 
-const Buttons = ({ roles, selectedRole, color }) => {
+const Buttons = ({ roles, selectedRole, setSelectedRole, color }) => {
   return (
     <ButtonContainer>
       {roles.map(role => {
@@ -82,6 +80,7 @@ const Buttons = ({ roles, selectedRole, color }) => {
             name={role}
             selected={role === selectedRole}
             color={color}
+            setSelectedRole={setSelectedRole}
           />
         )
       })}

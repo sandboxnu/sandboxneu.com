@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -41,9 +41,11 @@ const Subtitle = styled.h3`
 `
 
 const ApplyPage = ({ data, pageContext }) => {
-  const currentRoleData = data.markdownRemark
-  const selectedRole = currentRoleData.frontmatter.role
+  const [selectedRole, setSelectedRole] = useState(pageContext.role)
   const allRoles = pageContext.roles
+  const currentRoleData = data.allMarkdownRemark.edges.find(
+    roleData => roleData.node.frontmatter.role === selectedRole
+  ).node
   return (
     <Layout page="apply">
       <SEO
@@ -61,6 +63,7 @@ const ApplyPage = ({ data, pageContext }) => {
         <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
+          setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
         />
         <ApplyContent
@@ -77,14 +80,18 @@ const ApplyPage = ({ data, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-  query($role: String!) {
-    markdownRemark(frontmatter: { role: { eq: $role } }) {
-      html
-      frontmatter {
-        qualities
-        formLink
-        role
-        closeDate
+  query ApplyQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            qualities
+            formLink
+            role
+            closeDate
+          }
+        }
       }
     }
   }
