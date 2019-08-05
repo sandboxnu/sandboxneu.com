@@ -24,6 +24,8 @@ const ButtonContainer = styled.div`
 `
 
 const StyledButton = styled.button`
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.8em;
@@ -56,7 +58,10 @@ const StyledButton = styled.button`
 `
 
 const Button = ({ name, color, selected, setSelectedRole }) => {
-  const onClick = () => setSelectedRole(name)
+  const onClick = () => {
+    window.history.pushState(null, "", `/apply/${name}/`)
+    setSelectedRole(name)
+  }
   return (
     <StyledButton color={color} selected={selected} onClick={onClick}>
       {name}

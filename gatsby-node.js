@@ -8,6 +8,44 @@
 
 var path = require("path")
 
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+  const applyTemplate = path.resolve(`src/templates/apply.js`)
+  return graphql(`
+    {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
+        edges {
+          node {
+            frontmatter {
+              role
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+    const roles = result.data.allMarkdownRemark.edges.map(
+      ({ node }) => node.frontmatter.role
+    )
+    roles.sort()
+    createPage({
+      path: "/apply/",
+      component: applyTemplate,
+      context: { role: roles[0], roles: roles },
+    })
+    return roles.forEach(role => {
+      createPage({
+        path: `/apply/${role}/`,
+        component: applyTemplate,
+        context: { role: role, roles: roles },
+      })
+    })
+  })
+}
+
 exports.onCreateWebpackConfig = ({
   stage,
   getConfig,

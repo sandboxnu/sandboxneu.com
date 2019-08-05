@@ -12,7 +12,7 @@ import Section from "styles/components/Section"
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,
   designer: SB_LIGHT_BLUE,
-  devOps: SB_YELLOW,
+  devops: SB_YELLOW,
 }
 
 const BlueFontSection = styled(Section)`
@@ -40,8 +40,9 @@ const Subtitle = styled.h3`
   }
 `
 
-const ApplyPage = ({ data }) => {
-  const [selectedRole, setSelectedRole] = useState("developer")
+const ApplyPage = ({ data, pageContext }) => {
+  const [selectedRole, setSelectedRole] = useState(pageContext.role)
+  const allRoles = pageContext.roles
   const currentRoleData = data.allMarkdownRemark.edges.find(
     roleData => roleData.node.frontmatter.role === selectedRole
   ).node
@@ -60,7 +61,7 @@ const ApplyPage = ({ data }) => {
           Check out our open roles below.
         </Subtitle>
         <Buttons
-          roles={["developer", "designer", "devOps"]}
+          roles={allRoles}
           selectedRole={selectedRole}
           setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
@@ -78,7 +79,7 @@ const ApplyPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
+export const pageQuery = graphql`
   query ApplyQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
       edges {

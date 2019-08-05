@@ -5,7 +5,7 @@ qualities:
   - Has a desire to deploy scalable, accessible applications
   - Wants to use software to help advance research
 formLink: "https://docs.google.com/forms/d/e/1FAIpQLSfSujdwPQCK6CKwfC9E56J_36IcPgAfbgHSSNgBBwtXqwRvRA/viewform?usp=sf_link"
-role: devOps
+role: devops
 closeDate: August 7th (rolling)
 ---
 
