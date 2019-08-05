@@ -7,20 +7,6 @@ import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
-
 const Container = styled.nav`
   position: fixed;
   width: 100%;
@@ -33,11 +19,6 @@ const Container = styled.nav`
     css`
       background: rgba(255, 255, 255, 0);
       box-shadow: none;
-    `}
-  ${props =>
-    props.fadeIn &&
-    css`
-      animation: ${fadeIn} 2s;
     `}
 `
 
@@ -85,13 +66,11 @@ const Button = styled(Link)`
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
-  const [hasScrolled, setHasScrolled] = useState(false)
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop
     if (pageY > 0 && atTop) {
       setAtTop(false)
-      setHasScrolled(true)
     } else if (pageY === 0) {
       setAtTop(true)
     }
@@ -106,10 +85,7 @@ const Nav = ({ page, pages }) => {
   }, [])
 
   return (
-    <Container
-      hideBackground={atTop && page === "index"}
-      fadeIn={!hasScrolled && atTop && page === "index"}
-    >
+    <Container hideBackground={atTop && page === "index"}>
       <ContentContainer>
         <SquareLogo
           size="3em"
