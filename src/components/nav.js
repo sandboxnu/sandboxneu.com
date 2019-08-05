@@ -1,25 +1,12 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import styled, { css, keyframes } from "styled-components"
-import { useAmplitudeLogEvent } from "utils/amplitude"
+import styled, { css } from "styled-components"
+import { amplitudeLogEvent } from "utils/amplitude"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
 
 const Container = styled.nav`
   position: fixed;
@@ -33,11 +20,6 @@ const Container = styled.nav`
     css`
       background: rgba(255, 255, 255, 0);
       box-shadow: none;
-    `}
-  ${props =>
-    props.fadeIn &&
-    css`
-      animation: ${fadeIn} 2s;
     `}
 `
 
@@ -55,13 +37,13 @@ const ButtonContainer = styled.div`
   align-items: center;
 `
 
-const Button = styled.a`
+const Button = styled(Link)`
   letter-spacing: 0.15em;
   line-height: inherit;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid ${SB_ORANGE_RGBA(0)};
+  border-bottom: 2px solid ${SB_ORANGE_RGBA(0)};
   color: ${SB_NAVY};
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
   ${props =>
@@ -85,14 +67,14 @@ const Button = styled.a`
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
-  const [hasScrolled, setHasScrolled] = useState(false)
-  useAmplitudeLogEvent("Visit", { page: page })
+  useEffect(() => {
+    amplitudeLogEvent("Page load", { page: page })
+  }, [])
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop
     if (pageY > 0 && atTop) {
       setAtTop(false)
-      setHasScrolled(true)
     } else if (pageY === 0) {
       setAtTop(true)
     }
@@ -107,22 +89,19 @@ const Nav = ({ page, pages }) => {
   }, [])
 
   return (
-    <Container
-      hideBackground={atTop && page === "index"}
-      fadeIn={!hasScrolled && atTop && page === "index"}
-    >
+    <Container hideBackground={atTop && page === "index"}>
       <ContentContainer>
         <SquareLogo
           size="3em"
           color={atTop && page === "index" ? "#fff" : SB_NAVY}
           dropShadow={atTop && page === "index"}
-          href="/"
+          to="/"
           hoverAnimation
         />
         <ButtonContainer>
           {pages.map(p => (
             <Button
-              href={p.route}
+              to={p.route}
               isWhite={atTop && page === "index"}
               key={p.name}
             >
