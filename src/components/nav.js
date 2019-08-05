@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import styled, { css, keyframes } from "styled-components"
+import styled, { css } from "styled-components"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
@@ -42,7 +42,7 @@ const Button = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid ${SB_ORANGE_RGBA(0)};
+  border-bottom: 2px solid ${SB_ORANGE_RGBA(0)};
   color: ${SB_NAVY};
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
   ${props =>

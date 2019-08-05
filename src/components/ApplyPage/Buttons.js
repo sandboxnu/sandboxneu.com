@@ -2,7 +2,6 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 import { SB_NAVY, lightenDarkenColor } from "@colors"
-import { Link } from "gatsby"
 
 const ButtonContainer = styled.div`
   margin: 2.2em auto 1em;
