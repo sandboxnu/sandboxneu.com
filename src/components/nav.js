@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
-import { amplitudeLogEvent } from "utils/amplitude"
+import { useAmplitudeLogEvent } from "utils/amplitude"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
@@ -67,9 +67,7 @@ const Button = styled(Link)`
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
-  useEffect(() => {
-    amplitudeLogEvent("Page load", { page: page })
-  }, [])
+  useAmplitudeLogEvent("Page load", { page: page })
 
   const handleScroll = () => {
     const pageY = document.body.scrollTop || document.documentElement.scrollTop
