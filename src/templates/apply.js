@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import { amplitudeLogEvent } from "utils/amplitude"
 
 import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_YELLOW } from "@colors"
 import Buttons from "components/ApplyPage/Buttons"
@@ -46,6 +47,10 @@ const ApplyPage = ({ data, pageContext }) => {
   const currentRoleData = data.allMarkdownRemark.edges.find(
     roleData => roleData.node.frontmatter.role === selectedRole
   ).node
+
+  useEffect(() => {
+    amplitudeLogEvent("View role", { role: selectedRole })
+  }, [selectedRole])
   return (
     <Layout page="apply">
       <SEO

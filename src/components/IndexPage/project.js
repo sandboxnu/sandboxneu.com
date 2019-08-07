@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import { Header, HeaderLineBelow } from "styles/components/Header"
 import Body from "styles/components/Body"
+import { amplitudeLogEvent } from "utils/amplitude"
 import { SB_ORANGE, SB_NAVY_RGBA } from "@colors"
 
 const CardBG = styled(BackgroundImage)`
@@ -135,6 +136,7 @@ class Project extends Component {
   }
 
   openGithub = () => {
+    amplitudeLogEvent("click projet", { project: this.props.title })
     var win = window.open(this.props.github, "_blank")
     win.focus()
   }
