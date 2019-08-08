@@ -7,7 +7,7 @@ qualities:
   - Wants to produce deliverables that make a difference in the world of research
 formLink: "https://docs.google.com/forms/d/e/1FAIpQLSe3ulE49perTqrYLuQhgNVxbL-XewFGuuoZznWihIwJ9g1dpA/viewform?usp=sf_link"
 role: developer
-closeDate: July 31st
+closeDate: null
 ---
 
 We’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to come make some amazing software with us. As a developer, you’ll join a small Agile team and work on a practical software project that will make a significant impact on the work of researchers. Potential projects include web/mobile apps, web scrapers, data processing, and data visualization for professors and PhD students at Northeastern, Yale, and other universities. 

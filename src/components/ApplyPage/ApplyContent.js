@@ -127,7 +127,7 @@ const ApplyContent = ({
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
       <ApplyButtonWrapper>
-        <Button href={formLink}>Apply</Button>
+        <Button href={formLink}>{closeDate ? "Apply" : "Sign Up"}</Button>
       </ApplyButtonWrapper>
     </>
   )
