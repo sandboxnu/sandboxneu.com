@@ -46,6 +46,21 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
+/* explicitly tell Gatsby about the closeDate field
+ (this allows closeDate to be null in every node) */
+exports.sourceNodes = ({ actions, schema }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type MarkdownRemarkFrontmatter {
+      closeDate: String
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: MarkdownRemarkFrontmatter
+    }
+  `)
+}
+
 exports.onCreateWebpackConfig = ({
   stage,
   getConfig,
