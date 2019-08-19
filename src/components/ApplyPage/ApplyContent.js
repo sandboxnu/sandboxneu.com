@@ -86,6 +86,13 @@ const ItalicText = styled.div`
   margin: 15px 0;
 `
 
+const ApplicationClosedMessage = styled.div`
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 1.5;
+  margin: 1em auto;
+`
+
 const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
@@ -126,6 +133,13 @@ const ApplyContent = ({
       </Wrapper>
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
+      {!closeDate && (
+        <ApplicationClosedMessage>
+          <strong>Application is currently closed.</strong>
+          <br />
+          Sign up for our mailing list to be notified when it reopens.
+        </ApplicationClosedMessage>
+      )}
       <ApplyButtonWrapper>
         <Button href={formLink}>{closeDate ? "Apply" : "Sign Up"}</Button>
       </ApplyButtonWrapper>
