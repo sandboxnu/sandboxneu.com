@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useMemo } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
@@ -59,12 +59,7 @@ const ApplyPage = ({ data, pageContext }) => {
       />
       <BlueFontSection>
         <Header>APPLY TO SANDBOX</Header>
-        <Subtitle>
-          The Sandbox team is currently accepting applications for summer and
-          fall.
-          <br />
-          Check out our open roles below.
-        </Subtitle>
+        <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
         <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
