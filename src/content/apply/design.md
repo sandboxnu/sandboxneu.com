@@ -3,7 +3,7 @@ qualities:
   - Has a passion for creating brand identity
   - Is experienced with graphic design, including tools like the Adobe suite, Figma, etc.
   - Wants to create applications that both look great and have an intuitive user experience
-formLink: "https://docs.google.com/forms/d/e/1FAIpQLSci8o8K8I4szGhfdqiJ5sAfB9NHgdv6JGixMNy7lV9aW0EjqA/viewform?usp=sf_link"
+formLink: "http://eepurl.com/gyY5lz"
 role: designer
 closeDate: null
 ---
