@@ -6,7 +6,7 @@ qualities:
   - Wants to use software to help advance research
 formLink: "http://eepurl.com/gyY5lz"
 role: devops
-closeDate: null
+closeDate: ""
 ---
 
 We’re looking for a developer operations lead to revamp our server infrastructure, improve our continuous integration and deployment system, and overall accelerate our pace of software development. This role is very flexible, and you’ll work closely with our Technical Director to find where your skills and interests are needed most. Your work will have a real impact on the work of researchers, and you’ll get practical experience building out infrastructure in a fast moving, production environment. 
