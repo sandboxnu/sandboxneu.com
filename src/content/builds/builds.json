@@ -6,21 +6,21 @@
       "tags": ["React", "Node.js", "Video", "Emotion", "Psychology"],
       "image": "./empathic.jpg",
       "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
-      "gitLink": "https://github.com/sandboxneu/empathic-accuracy"
+      "gitLink": "https://github.com/sandboxnu/empathic-accuracy"
     },
     {
       "title": "Allostasis Game",
       "tags": ["React", "Node.js", "Behavior Modeling", "Psychology"],
       "image": "./allo.jpg",
       "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
-      "gitLink": "https://github.com/sandboxneu/allostasis-game"
+      "gitLink": "https://github.com/sandboxnu/allostasis-game"
     },
     {
       "title": "Predictive Affect",
       "tags": ["JavaScript", "Node.js", "Images", "Psychology"],
       "image": "./praff.jpg",
       "description": "We're ready to get serious with this. Just let it work around and play. Everybody should paint what they see and what they feel.",
-      "gitLink": "https://github.com/sandboxneu/predictive-affect"
+      "gitLink": "https://github.com/sandboxnu/predictive-affect"
     }
   ]
 }
