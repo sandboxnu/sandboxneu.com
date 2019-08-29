@@ -13,6 +13,8 @@ module.exports = {
         route: "/team",
       },
     ],
+    siteUrl: "https://sandboxneu.com",
+    image: "/stairs-down.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
