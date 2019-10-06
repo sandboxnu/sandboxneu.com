@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sandbox`,
+    title: `Sandbox | Northeastern's Student-Led Software Consultancy`,
     description: `Sandbox is a student organization at Northeastern University that creates custom software applications for researchers.`,
     author: `Sandbox at Northeastern`,
     pages: [
@@ -14,7 +14,15 @@ module.exports = {
       },
     ],
     siteUrl: "https://sandboxneu.com",
-    image: "/stairs-down.png",
+    image: "/stairs-down.png", // For embeds
+    keywords: [
+      `sandbox`,
+      `neu`,
+      `nu`,
+      `northeastern`,
+      `university`,
+      `software`,
+    ], // SEO
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

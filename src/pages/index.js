@@ -12,10 +12,7 @@ import Testimonial from "components/IndexPage/testimonial"
 const IndexPage = ({ data }) => {
   return (
     <Layout page="index">
-      <SEO
-        title="Home"
-        keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
-      />
+      <SEO />
       <Hero {...data.hero.edges[0].node} />
       <Who {...data.who.edges[0].node} />
       <Mission {...data.mission.edges[0].node} />

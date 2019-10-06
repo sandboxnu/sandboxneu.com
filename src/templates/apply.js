@@ -53,10 +53,7 @@ const ApplyPage = ({ data, pageContext }) => {
   }, [selectedRole])
   return (
     <Layout page="apply">
-      <SEO
-        title="Apply"
-        keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
-      />
+      <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <Header>APPLY TO SANDBOX</Header>
         <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
