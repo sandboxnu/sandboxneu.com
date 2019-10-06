@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Sandbox | Northeastern's Student-Led Software Consultancy`,
-    description: `Sandbox is a student organization at Northeastern University that creates custom software applications for researchers.`,
+    description: `Sandbox aims to unleash the power of software for researchers and students.`,
     author: `Sandbox at Northeastern`,
     pages: [
       {
