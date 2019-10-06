@@ -2,14 +2,14 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
-import { SB_ORANGE, SB_LIGHT_BLUE, SB_NAVY, SB_YELLOW } from "@colors"
+import { SB_ORANGE, SB_LIGHT_BLUE, SB_NAVY, SB_SALMON } from "@colors"
 import { Link } from "gatsby"
 
 const mapColorToAccent = {
   "#fff": "#E3E6EC",
   [SB_LIGHT_BLUE]: "#D7F0F5",
   [SB_ORANGE]: "#FDD4AE",
-  [SB_YELLOW]: "#FEF1B7",
+  [SB_SALMON]: "#FEF1B7",
   [SB_NAVY]: "#7788A2",
 }
 
