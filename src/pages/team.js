@@ -36,10 +36,7 @@ const Subtitle = styled.h3`
 const TeamPage = ({ data }) => {
   return (
     <Layout page="team">
-      <SEO
-        title="Team"
-        keywords={[`sandbox`, `neu`, `northeastern`, `university`]}
-      />
+      <SEO title="Team" keywords={[`team`, `members`]} />
       <BlueFontSection>
         <Header>OUR TEAM</Header>
         <Subtitle>Meet the people who make Sandbox outstanding.</Subtitle>

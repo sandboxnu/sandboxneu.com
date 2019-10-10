@@ -2,12 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import { SB_NAVY, SB_ORANGE } from "@colors"
 import { Header, HeaderLineBelow } from "styles/components/Header"
 import Section from "styles/components/Section"
 
 const BlueBackground = styled.div`
-  background: #2a426b;
+  background: ${SB_NAVY};
 `
+
 const WhiteHeader = styled(HeaderLineBelow)`
   color: white;
 `
@@ -23,7 +25,7 @@ const ParagraphContainer = styled.div`
 const OrangeHeader = styled(Header)`
   font-size: 1.5em;
   font-weight: 500;
-  color: #fcbc80;
+  color: ${SB_ORANGE};
 `
 const WhiteParagraph = styled.p`
   color: white;
