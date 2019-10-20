@@ -7,6 +7,8 @@ import { useAmplitudeLogEvent } from "utils/amplitude"
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const Container = styled.nav`
   position: fixed;
@@ -43,6 +45,8 @@ const Button = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  margin: 0rem;
   border-bottom: 2px solid ${SB_ORANGE_RGBA(0)};
   color: ${SB_NAVY};
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
@@ -55,18 +59,27 @@ const Button = styled(Link)`
   &:hover {
     border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
   }
-
-  &:not(:last-child) {
-    margin-right: 1.5em;
-
-    @media (min-width: 600px) {
-      margin-right: 3em;
-    }
-  }
 `
 
+const BurgerBars = styled(FontAwesomeIcon)`
+  display: inline;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+`
+const BurgerBox = styled.div`
+  display: inline;
+  position: absolute;
+  width: 100%;
+  right: 0rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+`
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
+
+  const [toggleOpen, setToggleOpen] = useState(false)
+
   useAmplitudeLogEvent("Page load", { page: page })
 
   const handleScroll = () => {
@@ -78,6 +91,11 @@ const Nav = ({ page, pages }) => {
     }
   }
 
+  const handleClick = () => {
+    console.log("Click!: " + toggleOpen)
+    setToggleOpen(!toggleOpen)
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     handleScroll()
@@ -85,6 +103,13 @@ const Nav = ({ page, pages }) => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
+  const fakePages = [
+    { route: null, name: "Apple" },
+    { route: null, name: "Bobs" },
+    { route: null, name: "Crisps" },
+    { route: null, name: "Dogs" },
+  ]
 
   return (
     <Container hideBackground={atTop && page === "index"}>
@@ -96,17 +121,31 @@ const Nav = ({ page, pages }) => {
           to="/"
           hoverAnimation
         />
-        <ButtonContainer>
-          {pages.map(p => (
-            <Button
-              to={p.route}
-              isWhite={atTop && page === "index"}
-              key={p.name}
-            >
-              {p.name}
-            </Button>
-          ))}
-        </ButtonContainer>
+
+        <BurgerBox>
+          <BurgerBars
+            icon={faBars}
+            onClick={handleClick}
+            color={atTop && page === "index" ? "#fff" : SB_NAVY}
+            size={"1x"}
+          />
+          {toggleOpen ? (
+            <ul>
+              {" "}
+              {fakePages.map(p => (
+                <Button
+                  to={p.route}
+                  isWhite={atTop && page === "index"}
+                  key={p.name}
+                >
+                  {p.name}
+                </Button>
+              ))}
+            </ul>
+          ) : (
+            <span>Closed</span>
+          )}
+        </BurgerBox>
       </ContentContainer>
     </Container>
   )
