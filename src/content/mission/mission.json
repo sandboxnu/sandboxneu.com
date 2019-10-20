@@ -2,16 +2,16 @@
   "title": "Our Core Values",
   "principles": [
     {
-      "title": "Teamwork",
-      "body": "We firmly believe that together, we can achieve more. Working in teams allows us to pair program and do thorough code reviews to ensure that we are delivering cleaner and more reliable solutions faster than any one of us could on our own."
+      "title": "Be Kind",
+      "body": "We see kindness as the first step in building an inclusive, supportive, and productive culture. We believe in giving kind and constructive feedback and don't tolerate brilliant jerks."
     },
     {
-      "title": "Excellence",
-      "body": "Our members are hardworking, quick learning programmers and designers. We aim to excel at everything we do, whether it's the software we develop, the relationships we build with clients, or the culture we foster."
+      "title": "Learn Together",
+      "body": "We aim to get smarter together through every project we do, and seek projects that can help us grow. We pair program frequently and stop to teach one another new things, even if it slows us down."
     },
     {
-      "title": "Growth",
-      "body": "Students that join us become more experienced, discover their interests within computer science, and share their expertise with one another. We embrace each other's mistakes and find strength in asking each other for help."
+      "title": "Make an Impact",
+      "body": "We build projects that make a real impact on our clients and their work. With a pragmatic attitude towards software development, we're able to deliver solutions that are put into use."
     }
   ]
 }
