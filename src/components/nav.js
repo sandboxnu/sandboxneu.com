@@ -8,6 +8,9 @@ import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+
 const Container = styled.nav`
   position: fixed;
   width: 100%;
@@ -20,6 +23,11 @@ const Container = styled.nav`
     css`
       background: rgba(255, 255, 255, 0);
       box-shadow: none;
+    `}
+  ${props =>
+    props.mobileExpand &&
+    css`
+      height: 100%;
     `}
 `
 
@@ -35,6 +43,25 @@ const ContentContainer = styled(SectionContent)`
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
+
+  @media (max-width: 601px) {
+    visibility: hidden;
+  }
+`
+const MobileBox = styled.div`
+  display: block;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  ${props =>
+    !props.mobileExpand &&
+    css`
+      height: 0%;
+      visibility: hidden;
+    `}
 `
 
 const Button = styled(Link)`
@@ -63,10 +90,31 @@ const Button = styled(Link)`
       margin-right: 3em;
     }
   }
+  ${props =>
+    props.isMobile &&
+    css`
+      text-align: center;
+      display: block;
+      padding: 2em;
+      align: center;
+    `}
 `
+const BurgerBars = styled(FontAwesomeIcon)`
+  display: inline;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: {
+    attop&& page === "index" ? "#fff" : SB_NAVY;
+  }
 
+  @media (min-width: 600px) {
+    visibility: hidden;
+  }
+`
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
+  const [open, setOpen] = useState(false)
   useAmplitudeLogEvent("Page load", { page: page })
 
   const handleScroll = () => {
@@ -78,6 +126,11 @@ const Nav = ({ page, pages }) => {
     }
   }
 
+  const handleClick = () => {
+    console.log("Click!: " + open)
+    setOpen(!open)
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     handleScroll()
@@ -86,8 +139,45 @@ const Nav = ({ page, pages }) => {
     }
   }, [])
 
+  const fakePages = [
+    { route: null, name: "Apple" },
+    { route: null, name: "Bobs" },
+    { route: null, name: "Crisps" },
+    { route: null, name: "Dogs" },
+  ]
+
+  function desktop() {
+    return (
+      <ButtonContainer>
+        {pages.map(p => (
+          <Button to={p.route} isWhite={atTop && page === "index"} key={p.name}>
+            {p.name}
+          </Button>
+        ))}
+      </ButtonContainer>
+    )
+  }
+
+  function mobile() {
+    return (
+      <MobileBox mobileExpand={open}>
+        {pages.map(p => (
+          <Button
+            to={p.route}
+            isWhite={atTop && page === "index"}
+            key={p.name}
+            isMobile={open}
+          >
+            {p.name}
+          </Button>
+        ))}
+      </MobileBox>
+    )
+  }
+
   return (
-    <Container hideBackground={atTop && page === "index"}>
+    <Container mobileExpand={open} hideBackground={atTop && page === "index"}>
+      {mobile()}
       <ContentContainer>
         <SquareLogo
           size="3em"
@@ -96,17 +186,8 @@ const Nav = ({ page, pages }) => {
           to="/"
           hoverAnimation
         />
-        <ButtonContainer>
-          {pages.map(p => (
-            <Button
-              to={p.route}
-              isWhite={atTop && page === "index"}
-              key={p.name}
-            >
-              {p.name}
-            </Button>
-          ))}
-        </ButtonContainer>
+        {desktop()}
+        <BurgerBars icon={faBars} onClick={handleClick} size={"1x"} />
       </ContentContainer>
     </Container>
   )
