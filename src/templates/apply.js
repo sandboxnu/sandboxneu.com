@@ -20,7 +20,19 @@ export const ROLE_COLOR_MAPPING = {
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
-  height: 75vh;
+  padding-bottom: 50px;
+
+  @media (min-height: 750px) {
+    padding-bottom: 150px;
+  }
+
+  @media (min-height: 1000px) {
+    padding-bottom: 300px;
+  }
+
+  @media (min-height: 1350px) {
+    padding-bottom: 600px;
+  }
 `
 
 const Header = styled.h1`
@@ -46,7 +58,6 @@ const Subtitle = styled.h3`
 
 const CenteredContent = styled.div`
   text-align: center;
-  margin: auto;
 `
 
 const ApplyPage = ({ data, pageContext }) => {
