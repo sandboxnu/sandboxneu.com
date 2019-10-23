@@ -21,18 +21,7 @@ export const ROLE_COLOR_MAPPING = {
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
   padding-bottom: 50px;
-
-  @media (min-height: 750px) {
-    padding-bottom: 150px;
-  }
-
-  @media (min-height: 1000px) {
-    padding-bottom: 300px;
-  }
-
-  @media (min-height: 1350px) {
-    padding-bottom: 600px;
-  }
+  min-height: 75vh;
 `
 
 const Header = styled.h1`
