@@ -9,6 +9,8 @@ import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
+import Button from "styles/components/Button"
+import Countdown from "components/countdown"
 
 export const ROLE_COLOR_MAPPING = {
   developer: SB_ORANGE,
@@ -18,6 +20,7 @@ export const ROLE_COLOR_MAPPING = {
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
+  height: 75vh;
 `
 
 const Header = styled.h1`
@@ -41,22 +44,37 @@ const Subtitle = styled.h3`
   }
 `
 
-const ApplyPage = ({ data, pageContext }) => {
-  const [selectedRole, setSelectedRole] = useState(pageContext.role)
-  const allRoles = pageContext.roles
-  const currentRoleData = data.allMarkdownRemark.edges.find(
-    roleData => roleData.node.frontmatter.role === selectedRole
-  ).node
+const CenteredContent = styled.div`
+  text-align: center;
+  margin: auto;
+`
 
-  useEffect(() => {
-    amplitudeLogEvent("View role", { role: selectedRole })
-  }, [selectedRole])
+const ApplyPage = ({ data, pageContext }) => {
+  // const [selectedRole, setSelectedRole] = useState(pageContext.role)
+  // const allRoles = pageContext.roles
+  // const currentRoleData = data.allMarkdownRemark.edges.find(
+  //   roleData => roleData.node.frontmatter.role === selectedRole
+  // ).node
+
+  // // useEffect(() => {
+  // //   amplitudeLogEvent("View role", { role: selectedRole })
+  // // }, [selectedRole])
+
+  let date = new Date(1572044400000)
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <Header>APPLY TO SANDBOX</Header>
-        <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
+        <Subtitle>Applications for all roles opening on 10/25!</Subtitle>
+        <CenteredContent>
+          <Countdown date={date.toString()}></Countdown>
+          <Button href={"http://eepurl.com/gyY5lz"}>Notify Me!</Button>
+          <p>
+            Sign up for the mailing list to be notified when applications open!
+          </p>
+        </CenteredContent>
+        {/* <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
         <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
@@ -70,7 +88,7 @@ const ApplyPage = ({ data, pageContext }) => {
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}
           closeDate={currentRoleData.frontmatter.closeDate}
-        />
+        /> */}
       </BlueFontSection>
     </Layout>
   )
