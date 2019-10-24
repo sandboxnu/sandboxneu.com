@@ -15,18 +15,18 @@ const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.3);
   transition: background 0.3s, box-shadow 0.3s;
   box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
   ${props =>
     props.hideBackground &&
     css`
-      background: rgba(255, 255, 255, 0);
       box-shadow: none;
     `}
   ${props =>
     props.mobileExpand &&
     css`
+      background: rgba(255, 255, 255, 0.3);
       height: 100%;
     `}
 `
@@ -55,6 +55,7 @@ const MobileBox = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
+  text-color: white;
 
   ${props =>
     !props.mobileExpand &&
@@ -83,13 +84,17 @@ const Button = styled(Link)`
     border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
   }
 
-  &:not(:last-child) {
-    margin-right: 1.5em;
+  ${props =>
+    !props.isMobile &&
+    css`
+      &:not(:last-child) {
+        margin-right: 1.5em;
 
-    @media (min-width: 600px) {
-      margin-right: 3em;
-    }
-  }
+        @media (min-width: 600px) {
+          margin-right: 3em;
+        }
+      }
+    `}
   ${props =>
     props.isMobile &&
     css`
@@ -102,11 +107,9 @@ const Button = styled(Link)`
 const BurgerBars = styled(FontAwesomeIcon)`
   display: inline;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
-  color: {
-    attop&& page === "index" ? "#fff" : SB_NAVY;
-  }
+  right: 25px;
+  color: ${props => props.color};
+  size: 2em;
 
   @media (min-width: 600px) {
     visibility: hidden;
@@ -187,7 +190,12 @@ const Nav = ({ page, pages }) => {
           hoverAnimation
         />
         {desktop()}
-        <BurgerBars icon={faBars} onClick={handleClick} size={"1x"} />
+        <BurgerBars
+          icon={faBars}
+          onClick={handleClick}
+          size={"1x"}
+          color={atTop && page === "index" ? "white" : SB_NAVY}
+        />
       </ContentContainer>
     </Container>
   )
