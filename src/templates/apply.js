@@ -9,8 +9,6 @@ import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
-import Button from "styles/components/Button"
-import Countdown from "components/countdown"
 
 export const ROLE_COLOR_MAPPING = {
   designer: SB_ORANGE,
