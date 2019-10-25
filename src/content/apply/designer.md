@@ -3,6 +3,10 @@ qualities:
   - Has a passion for creating brand identity
   - Is experienced with graphic design, including tools like the Adobe suite, Figma, etc.
   - Wants to create applications that both look great and have an intuitive user experience
+  - Loves to learn
+  - Works well in teams
+  - Is kind
+  - Can commit to 10 hours a week
 formLink: "https://forms.gle/A6EtMdaQsCwN3y536"
 role: designer
 closeDate: "November 8th at 11:59pm"

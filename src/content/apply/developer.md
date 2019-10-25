@@ -4,9 +4,9 @@ qualities:
   - Works well in teams
   - Motivated to write clean and reliable code
   - Wants to make an impact
-  - Can communicate well
   - Values teaching others
   - Is kind
+  - Can commit to 10 hours a week
 formLink: "https://forms.gle/xp75o6zoGZktYg7DA"
 role: developer
 closeDate: "November 8th at 11:59pm"
