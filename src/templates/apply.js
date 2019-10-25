@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
 
-import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_SALMON } from "@colors"
+import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE } from "@colors"
 import Buttons from "components/ApplyPage/Buttons"
 import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
@@ -13,9 +13,8 @@ import Button from "styles/components/Button"
 import Countdown from "components/countdown"
 
 export const ROLE_COLOR_MAPPING = {
-  developer: SB_ORANGE,
-  designer: SB_LIGHT_BLUE,
-  devops: SB_SALMON,
+  designer: SB_ORANGE,
+  developer: SB_LIGHT_BLUE,
 }
 
 const BlueFontSection = styled(Section)`
@@ -68,7 +67,7 @@ const ApplyPage = ({ data, pageContext }) => {
         <Header>APPLY TO SANDBOX</Header>
         <Subtitle>Applications for all roles opening on 10/25!</Subtitle>
         <CenteredContent>
-          <Countdown date={date.toString()}></Countdown>
+          <Countdown date={date.toString()} />
           <Button href={"http://eepurl.com/gyY5lz"}>Notify Me!</Button>
           <p>
             Sign up for the mailing list to be notified when applications open!
