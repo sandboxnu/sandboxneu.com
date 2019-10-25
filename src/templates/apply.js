@@ -49,31 +49,22 @@ const CenteredContent = styled.div`
 `
 
 const ApplyPage = ({ data, pageContext }) => {
-  // const [selectedRole, setSelectedRole] = useState(pageContext.role)
-  // const allRoles = pageContext.roles
-  // const currentRoleData = data.allMarkdownRemark.edges.find(
-  //   roleData => roleData.node.frontmatter.role === selectedRole
-  // ).node
+  const [selectedRole, setSelectedRole] = useState(pageContext.role)
+  const allRoles = pageContext.roles
+  const currentRoleData = data.allMarkdownRemark.edges.find(
+    roleData => roleData.node.frontmatter.role === selectedRole
+  ).node
 
-  // // useEffect(() => {
-  // //   amplitudeLogEvent("View role", { role: selectedRole })
-  // // }, [selectedRole])
+  useEffect(() => {
+    amplitudeLogEvent("View role", { role: selectedRole })
+  }, [selectedRole])
 
-  let date = new Date(1572044400000)
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <Header>APPLY TO SANDBOX</Header>
-        <Subtitle>Applications for all roles opening on 10/25!</Subtitle>
-        <CenteredContent>
-          <Countdown date={date.toString()} />
-          <Button href={"http://eepurl.com/gyY5lz"}>Notify Me!</Button>
-          <p>
-            Sign up for the mailing list to be notified when applications open!
-          </p>
-        </CenteredContent>
-        {/* <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
+        <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
         <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
@@ -87,7 +78,7 @@ const ApplyPage = ({ data, pageContext }) => {
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}
           closeDate={currentRoleData.frontmatter.closeDate}
-        /> */}
+        />
       </BlueFontSection>
     </Layout>
   )
