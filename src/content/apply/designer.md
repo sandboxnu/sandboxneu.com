@@ -18,4 +18,4 @@ We're looking for designers to build our brand and design stunning user experien
 
 You’ll be part of a rapidly growing student organization with an opportunity to leave a significant and lasting impact. We welcome you to apply for the brand team, UX team, or both.
 
-
+__Priority Deadline: November 1__

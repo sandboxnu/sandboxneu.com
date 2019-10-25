@@ -17,3 +17,5 @@ Sandbox is Northeastern’s student led software consultancy and aims to unleash
 We’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to come make some amazing software with us.
 
 You’ll be part of a rapidly growing student organization with a wealth of leadership and project management opportunities. You’ll also learn and grow with our community of talented and motivated members, in addition to building connections with the research community at Northeastern.
+
+__Priority Deadline: November 1__

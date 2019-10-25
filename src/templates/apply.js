@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
 
-import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Buttons from "components/ApplyPage/Buttons"
 import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
@@ -11,8 +11,8 @@ import SEO from "components/seo"
 import Section from "styles/components/Section"
 
 export const ROLE_COLOR_MAPPING = {
-  designer: SB_ORANGE,
-  developer: SB_LIGHT_BLUE,
+  designer: SB_SALMON,
+  developer: SB_ORANGE,
 }
 
 const BlueFontSection = styled(Section)`
