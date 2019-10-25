@@ -60,7 +60,7 @@ const ApplyPage = ({ data, pageContext }) => {
   // //   amplitudeLogEvent("View role", { role: selectedRole })
   // // }, [selectedRole])
 
-  let date = new Date(1572044400000)
+  let date = new Date(1572012000000)
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
@@ -68,7 +68,7 @@ const ApplyPage = ({ data, pageContext }) => {
         <Header>APPLY TO SANDBOX</Header>
         <Subtitle>Applications for all roles opening on 10/25!</Subtitle>
         <CenteredContent>
-          <Countdown date={date.toString()}></Countdown>
+          <Countdown date={date.toString()} />
           <Button href={"http://eepurl.com/gyY5lz"}>Notify Me!</Button>
           <p>
             Sign up for the mailing list to be notified when applications open!
