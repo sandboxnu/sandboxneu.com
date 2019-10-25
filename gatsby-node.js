@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
     createPage({
       path: "/apply/",
       component: applyTemplate,
-      context: { role: roles[0], roles: roles },
+      context: { role: roles[1], roles: roles },
     })
     return roles.forEach(role => {
       createPage({
