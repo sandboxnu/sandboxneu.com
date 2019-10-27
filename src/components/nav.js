@@ -9,7 +9,7 @@ import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const Container = styled.nav`
   position: fixed;
@@ -56,12 +56,14 @@ const MobileBox = styled.div`
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
   text-color: white;
+  padding: 50% 0 50% 0%;
 
   ${props =>
     !props.mobileExpand &&
     css`
       height: 0%;
       visibility: hidden;
+      padding: 0;
     `}
 `
 
@@ -164,13 +166,14 @@ const Nav = ({ page, pages }) => {
   function mobile() {
     return (
       <MobileBox mobileExpand={open}>
+        <BurgerBars
+          icon={faTimes}
+          onClick={handleClick}
+          size={"1x"}
+          color={"white"}
+        />
         {pages.map(p => (
-          <Button
-            to={p.route}
-            isWhite={atTop && page === "index"}
-            key={p.name}
-            isMobile={open}
-          >
+          <Button to={p.route} isWhite={true} key={p.name} isMobile={open}>
             {p.name}
           </Button>
         ))}
