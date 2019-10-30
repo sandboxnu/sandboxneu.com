@@ -99,9 +99,10 @@ const SideButton = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  padding: 2em;
+  font-size: 2em;
+  padding: 1.5em;
   margin: 0.5em;
-  height: 10%;
+  height: 50%;
 `
 
 const Button = styled(Link)`
