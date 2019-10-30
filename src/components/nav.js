@@ -11,23 +11,25 @@ import SquareLogo from "./squareLogo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
+const WrapperDiv = styled.nav`
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+  position: relative;
+`
+
 const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 1);
   transition: background 0.3s, box-shadow 0.3s;
   box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
   ${props =>
-    props.hideBackground &&
+    (props.hideBackground || props.isSideOpen) &&
     css`
+      background: rgba(255, 255, 255, 0);
       box-shadow: none;
-    `}
-  ${props =>
-    props.mobileExpand &&
-    css`
-      background: rgba(255, 255, 255, 0.3);
-      height: 100%;
     `}
 `
 
@@ -43,28 +45,63 @@ const ContentContainer = styled(SectionContent)`
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
 
-  @media (max-width: 601px) {
+  @media (max-width: 600px) {
     visibility: hidden;
   }
 `
-const MobileBox = styled.div`
-  display: block;
-  align-items: center;
-  width: 100%;
+
+const SideContainer = styled.div`
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.5);
-  text-color: white;
-  padding: 50% 0 50% 0%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(255, 255, 255, 0.5);
+  ${props =>
+    !props.isOpen &&
+    css`
+      width: 0%;
+    `}
+`
+
+const SideNavBar = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: ${SB_NAVY};
+  z-index: 200;
+  margin: 0 0 0 12em;
+  height: 100%;
+  @media (min-width: 600px) {
+    visibility: hidden;
+  }
 
   ${props =>
-    !props.mobileExpand &&
+    !props.isOpen &&
     css`
-      height: 0%;
       visibility: hidden;
-      padding: 0;
     `}
+`
+
+const SideButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align: center;
+  padding: 50% 0%;
+  margin: 2em;
+  height: 100%;
+  width: 80%;
+  background-color: ${SB_NAVY};
+`
+
+const SideButton = styled(Link)`
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2em;
+  margin: 0.5em;
+  height: 10%;
 `
 
 const Button = styled(Link)`
@@ -85,28 +122,15 @@ const Button = styled(Link)`
   &:hover {
     border-bottom: 2px solid ${SB_ORANGE_RGBA(1)};
   }
-
-  ${props =>
-    !props.isMobile &&
-    css`
-      &:not(:last-child) {
-        margin-right: 1.5em;
-
-        @media (min-width: 600px) {
-          margin-right: 3em;
-        }
-      }
-    `}
-  ${props =>
-    props.isMobile &&
-    css`
-      text-align: center;
-      display: block;
-      padding: 2em;
-      align: center;
-    `}
+  &:not(:last-child) {
+    margin-right: 1.5em;
+    @media (min-width: 600px) {
+      margin-right: 3em;
+    }
+  }
 `
-const BurgerBars = styled(FontAwesomeIcon)`
+
+const StyledMobileOnlyIcon = styled(FontAwesomeIcon)`
   display: inline;
   position: absolute;
   right: 25px;
@@ -117,9 +141,11 @@ const BurgerBars = styled(FontAwesomeIcon)`
     visibility: hidden;
   }
 `
+
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
-  const [open, setOpen] = useState(false)
+  const [sideOpen, setSideOpen] = useState(false)
+
   useAmplitudeLogEvent("Page load", { page: page })
 
   const handleScroll = () => {
@@ -131,9 +157,8 @@ const Nav = ({ page, pages }) => {
     }
   }
 
-  const handleClick = () => {
-    console.log("Click!: " + open)
-    setOpen(!open)
+  const handleBurgerClick = () => {
+    setSideOpen(!sideOpen)
   }
 
   useEffect(() => {
@@ -144,63 +169,57 @@ const Nav = ({ page, pages }) => {
     }
   }, [])
 
-  const fakePages = [
-    { route: null, name: "Apple" },
-    { route: null, name: "Bobs" },
-    { route: null, name: "Crisps" },
-    { route: null, name: "Dogs" },
-  ]
-
-  function desktop() {
+  function burgerButton() {
     return (
-      <ButtonContainer>
-        {pages.map(p => (
-          <Button to={p.route} isWhite={atTop && page === "index"} key={p.name}>
-            {p.name}
-          </Button>
-        ))}
-      </ButtonContainer>
-    )
-  }
-
-  function mobile() {
-    return (
-      <MobileBox mobileExpand={open}>
-        <BurgerBars
-          icon={faTimes}
-          onClick={handleClick}
-          size={"1x"}
-          color={"white"}
-        />
-        {pages.map(p => (
-          <Button to={p.route} isWhite={true} key={p.name} isMobile={open}>
-            {p.name}
-          </Button>
-        ))}
-      </MobileBox>
+      <StyledMobileOnlyIcon
+        icon={sideOpen ? faTimes : faBars}
+        onClick={handleBurgerClick}
+        size={"1x"}
+        color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
+      />
     )
   }
 
   return (
-    <Container mobileExpand={open} hideBackground={atTop && page === "index"}>
-      {mobile()}
-      <ContentContainer>
-        <SquareLogo
-          size="3em"
-          color={atTop && page === "index" ? "#fff" : SB_NAVY}
-          dropShadow={atTop && page === "index"}
-          to="/"
-          hoverAnimation
-        />
-        {desktop()}
-        <BurgerBars
-          icon={faBars}
-          onClick={handleClick}
-          size={"1x"}
-          color={atTop && page === "index" ? "white" : SB_NAVY}
-        />
-      </ContentContainer>
-    </Container>
+    <WrapperDiv isOpen={sideOpen}>
+      <SideContainer isOpen={sideOpen}>
+        <SideNavBar isOpen={sideOpen}>
+          <SideButtonContainer>
+            {pages.map(p => (
+              <SideButton to={p.route} key={p.name}>
+                {p.name}
+              </SideButton>
+            ))}
+          </SideButtonContainer>
+        </SideNavBar>
+      </SideContainer>
+      <Container
+        isSideOpen={sideOpen}
+        hideBackground={atTop && page === "index"}
+      >
+        <ContentContainer>
+          <SquareLogo
+            size="3em"
+            color={atTop && page === "index" ? "#fff" : SB_NAVY}
+            dropShadow={atTop && page === "index"}
+            to="/"
+            hoverAnimation
+          />
+          {burgerButton()}
+          <ButtonContainer>
+            {pages.map(p => (
+              <Button
+                to={p.route}
+                isWhite={atTop && page === "index"}
+                key={p.name}
+              >
+                {p.name}
+              </Button>
+            ))}
+          </ButtonContainer>
+        </ContentContainer>
+      </Container>
+    </WrapperDiv>
   )
 }
 
