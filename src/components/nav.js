@@ -99,10 +99,9 @@ const SideButton = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  font-size: 2em;
-  padding: 1.5em;
+  font-size: 1.5em;
+  padding: 1em 1.5em;
   margin: 0.5em;
-  height: 50%;
 `
 
 const Button = styled(Link)`
@@ -136,7 +135,6 @@ const StyledMobileOnlyIcon = styled(FontAwesomeIcon)`
   position: absolute;
   right: 25px;
   color: ${props => props.color};
-  size: 2em;
 
   @media (min-width: 600px) {
     visibility: hidden;
@@ -175,7 +173,7 @@ const Nav = ({ page, pages }) => {
       <StyledMobileOnlyIcon
         icon={sideOpen ? faTimes : faBars}
         onClick={handleBurgerClick}
-        size={"1x"}
+        size={"2x"}
         color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
       />
     )

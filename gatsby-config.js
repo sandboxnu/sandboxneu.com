@@ -5,6 +5,10 @@ module.exports = {
     author: `Sandbox at Northeastern`,
     pages: [
       {
+        name: "Home",
+        route: "/",
+      },
+      {
         name: "Apply",
         route: "/apply",
       },
