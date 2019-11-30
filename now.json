@@ -16,5 +16,5 @@
     }
   ],
   "regions": ["all"],
-  "alias": "www.sandboxneu.com"
+  "alias": ["www.sandboxneu.com", "www.sandboxnu.com"]
 }
