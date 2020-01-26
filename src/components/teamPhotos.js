@@ -61,6 +61,7 @@ const ProfileRole = styled.span`
 const ProfileImg = styled(Img)`
   picture img {
     transition: filter ease-in 200ms !important;
+    border-radius: 50%;
   }
 `
 
