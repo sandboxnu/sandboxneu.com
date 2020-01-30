@@ -61,12 +61,24 @@ const ProfileRole = styled.span`
 const ProfileImg = styled(Img)`
   picture img {
     transition: filter ease-in 200ms !important;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 `
 
 const ProfileImgWrapper = styled.div`
   position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 11%;
+    top: 5%;
+    border-radius: 100%;
+    width: 80%;
+    height: 90%;
+    box-shadow: 0px 0px 0px 2000px white;
+  }
 
   @media (min-width: 1000px) {
     &:hover img {
