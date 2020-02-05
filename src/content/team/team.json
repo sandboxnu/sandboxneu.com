@@ -109,21 +109,21 @@
       }
     },
     {
-      "name": "Fiona Gridley",
-      "role": "Design Lead",
-      "profileImage": "./profileImages/fiona.png",
-      "socialMedia": {
-        "email": "gridley.f@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/"
-      }
-    },
-    {
       "name": "Catherine Titcomb",
       "role": "Head of Brand",
       "profileImage": "./profileImages/catherine.png",
       "socialMedia": {
         "email": "titcomb.c@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/"
+      }
+    },
+    {
+      "name": "Fiona Gridley",
+      "role": "Design Lead",
+      "profileImage": "./profileImages/fiona.png",
+      "socialMedia": {
+        "email": "gridley.f@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/"
       }
     },
     {
@@ -154,7 +154,7 @@
       }
     },
     {
-      "name": "Cassie",
+      "name": "Cassandra Harbour",
       "role": "Developer",
       "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
