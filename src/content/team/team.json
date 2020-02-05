@@ -19,15 +19,6 @@
       }
     },
     {
-      "name": "Sauharda Rajbhandari",
-      "role": "Operations Director",
-      "profileImage": "./profileImages/sauharda.png",
-      "socialMedia": {
-        "email": "rajbhandari.sa@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/"
-      }
-    },
-    {
       "name": "Emily Pillay",
       "role": "Marketing & Events Director",
       "profileImage": "./profileImages/emily.png",
@@ -43,6 +34,15 @@
       "socialMedia": {
         "email": "takayama.a@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/alexander-takayama-748909a8/"
+      }
+    },
+    {
+      "name": "Sauharda Rajbhandari",
+      "role": "Operations Director",
+      "profileImage": "./profileImages/sauharda.png",
+      "socialMedia": {
+        "email": "rajbhandari.sa@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/"
       }
     },
     {
