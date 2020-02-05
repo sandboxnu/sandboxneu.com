@@ -235,6 +235,15 @@
       }
     },
     {
+      "name": "Edward Li",
+      "role": "Developer",
+      "profileImage": "./profileImages/eddy.png",
+      "socialMedia": {
+        "email": "li.edwa@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/eddy-li/"
+      }
+    },
+    {
       "name": "Krish Sharma",
       "role": "Developer",
       "profileImage": "./profileImages/krish.png",
@@ -268,6 +277,15 @@
       "socialMedia": {
         "email": "floody.o@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/olivia-floody-a7b5a4154"
+      }
+    },
+    {
+      "name": "Justine Torre",
+      "role": "Developer",
+      "profileImage": "./profileImages/justin.png",
+      "socialMedia": {
+        "email": "",
+        "linkedIn": ""
       }
     },
     {
