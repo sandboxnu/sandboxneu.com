@@ -46,30 +46,39 @@
       }
     },
     {
-      "name": "Fiona Gridley",
-      "role": "Design Lead",
-      "profileImage": "./profileImages/fiona.png",
-      "socialMedia": {
-        "email": "gridley.f@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/"
-      }
-    },
-    {
-      "name": "Karmen Lu",
-      "role": "Developer",
-      "profileImage": "./profileImages/karmen.png",
-      "socialMedia": {
-        "email": "lu.kar@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/karmen-lu/"
-      }
-    },
-    {
       "name": "Yash Shetty",
       "role": "Team Lead - GraduateNU",
       "profileImage": "./profileImages/yash.png",
       "socialMedia": {
         "email": "shetty.y@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/yash-shetty-431996141/"
+      }
+    },
+    {
+      "name": "Will Stenzel",
+      "role": "Team Lead - Khoury Office Hours App",
+      "profileImage": "./profileImages/will.png",
+      "socialMedia": {
+        "email": "stenzel.w@husky.neu.edu",
+        "linkedIn": ""
+      }
+    },
+    {
+      "name": "Mitch Gamburg",
+      "role": "Team Lead - SearchNEU",
+      "profileImage": "./profileImages/mitch.png",
+      "socialMedia": {
+        "email": "gamburg.m@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/mitchell-gamburg-6691a569/"
+      }
+    },
+    {
+      "name": "Aislin Black",
+      "role": "Team Lead - Cheminformatics",
+      "profileImage": "./profileImages/aislin.png",
+      "socialMedia": {
+        "email": "black.a@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/aislin-black-0b6b64180"
       }
     },
     {
@@ -100,21 +109,21 @@
       }
     },
     {
-      "name": "Amiel Monasterial",
-      "role": "Developer",
-      "profileImage": "./profileImages/amiel.png",
+      "name": "Fiona Gridley",
+      "role": "Design Lead",
+      "profileImage": "./profileImages/fiona.png",
       "socialMedia": {
-        "email": "amielmon@gmail.com",
-        "linkedIn": "https://www.linkedin.com/in/amielmon/"
+        "email": "gridley.f@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/"
       }
     },
     {
-      "name": "Arkin Mukherjee",
-      "role": "Developer",
-      "profileImage": "./profileImages/arkin.png",
+      "name": "Catherine Titcomb",
+      "role": "Head of Brand",
+      "profileImage": "./profileImages/catherine.png",
       "socialMedia": {
-        "email": "mukherjee.ar@husky.neu.edu",
-        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
+        "email": "titcomb.c@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/"
       }
     },
     {
@@ -127,21 +136,30 @@
       }
     },
     {
+      "name": "Karmen Lu",
+      "role": "Developer",
+      "profileImage": "./profileImages/karmen.png",
+      "socialMedia": {
+        "email": "lu.kar@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/karmen-lu/"
+      }
+    },
+    {
+      "name": "Arkin Mukherjee",
+      "role": "Developer",
+      "profileImage": "./profileImages/arkin.png",
+      "socialMedia": {
+        "email": "mukherjee.ar@husky.neu.edu",
+        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
+      }
+    },
+    {
       "name": "Cassie",
       "role": "Developer",
       "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
         "email": "",
         "linkedIn": ""
-      }
-    },
-    {
-      "name": "Catherine Titcomb",
-      "role": "Head of Brand",
-      "profileImage": "./profileImages/catherine.png",
-      "socialMedia": {
-        "email": "titcomb.c@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/"
       }
     },
     {
@@ -235,15 +253,6 @@
       }
     },
     {
-      "name": "Mitch Gamburg",
-      "role": "Developer",
-      "profileImage": "./profileImages/mitch.png",
-      "socialMedia": {
-        "email": "gamburg.m@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/mitchell-gamburg-6691a569/"
-      }
-    },
-    {
       "name": "Nathan Cunningham",
       "role": "Developer",
       "profileImage": "./profileImages/nathan.png",
@@ -298,12 +307,12 @@
       }
     },
     {
-      "name": "Will Stenzel",
+      "name": "Amiel Monasterial",
       "role": "Developer",
-      "profileImage": "./profileImages/will.png",
+      "profileImage": "./profileImages/amiel.png",
       "socialMedia": {
-        "email": "stenzel.w@husky.neu.edu",
-        "linkedIn": ""
+        "email": "amielmon@gmail.com",
+        "linkedIn": "https://www.linkedin.com/in/amielmon/"
       }
     }
   ]
