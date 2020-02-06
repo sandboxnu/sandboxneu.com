@@ -128,14 +128,16 @@ const IconWrapper = styled.div`
 `
 
 const Profile = ({ member, percent }) => {
+  console.log("member")
+  console.log(member)
+  const { name, team, socialMedia } = member
+  const { email, linkedIn } = socialMedia
+  const { name: teamName, role } = team
   // Prevents repetitive code by storing content in one place.
   const iconContent = (
     <>
-      <ProfileIcon
-        dest={`mailto:${member.socialMedia.email}`}
-        icon={faEnvelope}
-      />
-      <ProfileIcon dest={member.socialMedia.linkedIn} icon={faLinkedinIn} />
+      <ProfileIcon dest={`mailto:${email}`} icon={faEnvelope} />
+      <ProfileIcon dest={linkedIn} icon={faLinkedinIn} />
     </>
   )
   return (
@@ -145,12 +147,12 @@ const Profile = ({ member, percent }) => {
           style={{ overflow: "visible" }}
           loading="eager"
           fixed={member.profileImage.childImageSharp.fixed}
-          alt={member.name}
+          alt={name}
         />
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
-      <ProfileName>{member.name}</ProfileName>
-      <ProfileRole>{member.role}</ProfileRole>
+      <ProfileName>{name}</ProfileName>
+      <ProfileRole>{`${teamName} ${role}`}</ProfileRole>
       <IconWrapper className="iconWrapper mobile">{iconContent}</IconWrapper>
     </ProfileWrapper>
   )
