@@ -60,7 +60,7 @@
       "profileImage": "./profileImages/will.png",
       "socialMedia": {
         "email": "stenzel.w@husky.neu.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/company/sandboxnu/"
       }
     },
     {
@@ -172,7 +172,7 @@
       }
     },
     {
-      "name": "Daniel Wang",
+      "name": "Daniel (Zefeng) Wang",
       "role": "Developer",
       "profileImage": "./profileImages/daniel.png",
       "socialMedia": {
@@ -235,7 +235,7 @@
       }
     },
     {
-      "name": "Edward Li",
+      "name": "Edward (Eddy) Li",
       "role": "Developer",
       "profileImage": "./profileImages/eddy.png",
       "socialMedia": {
@@ -266,8 +266,8 @@
       "role": "Developer",
       "profileImage": "./profileImages/nathan.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "cunningham.wil@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/"
       }
     },
     {
