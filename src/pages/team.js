@@ -63,7 +63,10 @@ export const query = graphql`
         node {
           members {
             name
-            role
+            team {
+              name
+              role
+            }
             profileImage {
               ...profileIcon
             }
