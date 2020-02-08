@@ -57,7 +57,8 @@
       "profileImage": "./profileImages/sauharda.png",
       "socialMedia": {
         "email": "rajbhandari.sa@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/"
+        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/",
+        "portfolio": "https://www.sauhardar.com/"
       }
     },
     {
@@ -249,7 +250,7 @@
       "profileImage": "./profileImages/eirean.png",
       "socialMedia": {
         "email": "co.e@huksy.neu.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/eirean-c-324b741a1/"
       }
     },
     {
@@ -272,8 +273,8 @@
       },
       "profileImage": "./profileImages/iman.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "iman.moreira99@gmail.com",
+        "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
       }
     },
     {
@@ -284,8 +285,9 @@
       },
       "profileImage": "./profileImages/jose.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "saravia.jo@husky.neu.edu",
+        "linkedIn": "",
+        "portfolio": "https://www.josesaravia.design/"
       }
     },
     {
@@ -369,119 +371,11 @@
       "profileImage": "./profileImages/olivia.png",
       "socialMedia": {
         "email": "mukherjee.ar@husky.neu.edu",
-        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
-      }
-    },
-    {
-      "name": "Cassandra Harbour",
-      "team": {
-        "name": "Cheminformatics",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/cassie.png",
-      "socialMedia": {
-        "email": "",
         "linkedIn": ""
       }
     },
     {
-      "name": "Christopher Myers",
-      "team": {
-        "name": "PharmD Tracker",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/chris.png",
-      "socialMedia": {
-        "email": "chessmyers@aol.com",
-        "linkedIn": "https://www.linkedin.com/in/c-t-myers/"
-      }
-    },
-    {
-      "name": "Daniel (Zefeng) Wang",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/daniel.png",
-      "socialMedia": {
-        "email": "wang.zef@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/"
-      }
-    },
-    {
-      "name": "Eirean Co",
-      "team": {
-        "name": "PharmD Tracker",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/eirean.png",
-      "socialMedia": {
-        "email": "co.e@huksy.neu.edu",
-        "linkedIn": ""
-      }
-    },
-    {
-      "name": "Eliza Huang",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/eliza.png",
-      "socialMedia": {
-        "email": "huang.zij@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/lizzij/"
-      }
-    },
-    {
-      "name": "Iman Moreira",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/iman.png",
-      "socialMedia": {
-        "email": "",
-        "linkedIn": ""
-      }
-    },
-    {
-      "name": "Jose Savaria",
-      "team": {
-        "name": "Design",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/jose.png",
-      "socialMedia": {
-        "email": "",
-        "linkedIn": ""
-      }
-    },
-    {
-      "name": "Justine Luo",
-      "team": {
-        "name": "Visualizer",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/justine.png",
-      "socialMedia": {
-        "email": "luo.jus@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/justine-luo/"
-      }
-    },
-    {
-      "name": "Kevin Cam",
-      "team": {
-        "name": "PharmD Tracker",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/kevin.png",
-      "socialMedia": {
-        "email": "cam.k@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
-      }
-    },
-    {
-      "name": "Justine Torre",
+      "name": "Justin Torre",
       "team": {
         "name": "Visualizer",
         "role": "Developer"

@@ -4,7 +4,8 @@ import styled from "styled-components"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_NAVY, SB_ORANGE, SB_SALMON } from "@colors"
+import _ from "lodash"
 
 import { FadeInSlideUp } from "styles/animations"
 
@@ -128,16 +129,17 @@ const IconWrapper = styled.div`
 `
 
 const Profile = ({ member, percent }) => {
-  console.log("member")
   console.log(member)
   const { name, team, socialMedia } = member
-  const { email, linkedIn } = socialMedia
+  const { email, linkedIn, portfolio } = socialMedia
   const { name: teamName, role } = team
   // Prevents repetitive code by storing content in one place.
+  console.log(portfolio)
   const iconContent = (
     <>
       <ProfileIcon dest={`mailto:${email}`} icon={faEnvelope} />
       <ProfileIcon dest={linkedIn} icon={faLinkedinIn} />
+      {portfolio ? <ProfileIcon dest={portfolio} icon={faLinkedinIn} /> : null}
     </>
   )
   return (
@@ -152,21 +154,45 @@ const Profile = ({ member, percent }) => {
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
       <ProfileName>{name}</ProfileName>
-      <ProfileRole>{`${teamName} ${role}`}</ProfileRole>
+      <ProfileRole>{role}</ProfileRole>
       <IconWrapper className="iconWrapper mobile">{iconContent}</IconWrapper>
     </ProfileWrapper>
   )
 }
 
+const Section = ({ teamMembers, title, length }) => {
+  return (
+    <div style={{ width: "100%" }}>
+      <h1 style={{ fontStyle: "italic", color: SB_SALMON, fontSize: "3rem" }}>
+        {" "}
+        {title}{" "}
+      </h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {teamMembers.map((member, i) => {
+          return (
+            <Profile member={member} key={member.name} percent={i / length} />
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+const groupMembers = members => {
+  const grouped = _.groupBy(members, "team.name")
+  return grouped
+}
+
 const TeamPhotos = ({ members }) => {
+  const teams = groupMembers(members)
   return (
     <Wrapper>
-      {members.map((member, i) => {
+      {Object.keys(teams).map(group => {
         return (
-          <Profile
-            member={member}
-            key={member.name}
-            percent={i / members.length}
+          <Section
+            teamMembers={teams[group]}
+            title={group}
+            length={members.length}
           />
         )
       })}
