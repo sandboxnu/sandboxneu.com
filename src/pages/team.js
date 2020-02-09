@@ -13,7 +13,9 @@ const BlueFontSection = styled(Section)`
 `
 
 const Header = styled.h1`
-  letter-spacing: 0.15em;
+  font-style: italic;
+  font-stretch: expanded;
+  /* letter-spacing: 0.15em; */
   text-align: center;
   font-weight: 600;
   font-size: 2.5em;
@@ -73,6 +75,7 @@ export const query = graphql`
             socialMedia {
               email
               linkedIn
+              portfolio
             }
           }
         }

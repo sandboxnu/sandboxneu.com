@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { SB_NAVY, SB_ORANGE, SB_SALMON } from "@colors"
@@ -139,7 +139,7 @@ const Profile = ({ member, percent }) => {
     <>
       <ProfileIcon dest={`mailto:${email}`} icon={faEnvelope} />
       <ProfileIcon dest={linkedIn} icon={faLinkedinIn} />
-      {portfolio ? <ProfileIcon dest={portfolio} icon={faLinkedinIn} /> : null}
+      {portfolio ? <ProfileIcon dest={portfolio} icon={faLink} /> : null}
     </>
   )
   return (
@@ -163,9 +163,9 @@ const Profile = ({ member, percent }) => {
 const Section = ({ teamMembers, title, length }) => {
   return (
     <div style={{ width: "100%" }}>
-      <h1 style={{ fontStyle: "italic", color: SB_SALMON, fontSize: "3rem" }}>
+      <h1 style={{ fontStyle: "italic", color: SB_SALMON }}>
         {" "}
-        {title}{" "}
+        {title.toUpperCase()}{" "}
       </h1>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {teamMembers.map((member, i) => {
