@@ -131,7 +131,8 @@
       "profileImage": "./profileImages/jacob.png",
       "socialMedia": {
         "email": "chvatal.j@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/jacob-chvatal/"
+        "linkedIn": "https://www.linkedin.com/in/jacob-chvatal/",
+        "portfolio": "http://chvatal.com/"
       }
     },
     {
@@ -155,7 +156,8 @@
       "profileImage": "./profileImages/catherine.png",
       "socialMedia": {
         "email": "titcomb.c@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/"
+        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/",
+        "portfolio": "http://catherinetitcomb.com/"
       }
     },
     {
@@ -239,7 +241,8 @@
       "profileImage": "./profileImages/daniel.png",
       "socialMedia": {
         "email": "wang.zef@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/"
+        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/",
+        "portfolio": "https://github.com/zefwang"
       }
     },
     {
@@ -360,7 +363,8 @@
       "profileImage": "./profileImages/nathan.png",
       "socialMedia": {
         "email": "cunningham.wil@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/"
+        "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/",
+        "portfolio": "http://defwilliam.com/"
       }
     },
     {
