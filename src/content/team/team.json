@@ -176,8 +176,8 @@
       },
       "profileImage": "./profileImages/iman.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "moreira.i@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
       }
     },
     {
@@ -190,18 +190,6 @@
       "socialMedia": {
         "email": "cunningham.wil@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/"
-      }
-    },
-    {
-      "name": "Iman Moreira",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/iman.png",
-      "socialMedia": {
-        "email": "",
-        "linkedIn": ""
       }
     },
     {
@@ -296,7 +284,7 @@
       },
       "profileImage": "./profileImages/amiel.png",
       "socialMedia": {
-        "email": "amielmon@gmail.com",
+        "email": "monasterial.a@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/amielmon/"
       }
     },
@@ -320,7 +308,7 @@
       },
       "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
-        "email": "",
+        "email": "harbour.c@husky.neu.edu",
         "linkedIn": ""
       }
     },
@@ -332,7 +320,7 @@
       },
       "profileImage": "./profileImages/jose.png",
       "socialMedia": {
-        "email": "",
+        "email": "saravia.jo@husky.neu.edu",
         "linkedIn": ""
       }
     },
@@ -351,13 +339,13 @@
     {
       "name": "Eirean Co",
       "team": {
-        "name": "Cheminformatics",
-        "role": "PharmD Tracker"
+        "name": "PharmD Tracker",
+        "role": "Developer"
       },
       "profileImage": "./profileImages/eirean.png",
       "socialMedia": {
         "email": "co.e@huksy.neu.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/eirean-c-324b741a1/"
       }
     },
     {
@@ -392,8 +380,8 @@
       },
       "profileImage": "./profileImages/mike.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "sarfaty.m@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/mikesarfaty/"
       }
     },
     {
@@ -440,8 +428,8 @@
       },
       "profileImage": "./profileImages/justin.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "torre.ju@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/justintorre/"
       }
     },
     {
