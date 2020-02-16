@@ -5,14 +5,18 @@
     {
       "src": "package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "public" }
+      "config": {
+        "distDir": "public"
+      }
     }
   ],
   "routes": [
     {
       "src": "/research",
       "status": 301,
-      "headers": { "Location": "https://forms.gle/1S6R4yxrCLjZe2d19" }
+      "headers": {
+        "Location": "https://forms.gle/1S6R4yxrCLjZe2d19"
+      }
     }
   ],
   "alias": ["www.sandboxnu.com"]
