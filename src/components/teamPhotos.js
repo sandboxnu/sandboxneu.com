@@ -128,12 +128,38 @@ const IconWrapper = styled.div`
   }
 `
 
+const StyledTeamName = styled.h1`
+  font-size: 2.5em;
+  font-style: italic;
+  color: ${SB_SALMON};
+  margin-left: 50;
+  text-align: center;
+
+  @media (min-width: 1000px) {
+    margin-left: 5%;
+    text-align: left;
+  }
+`
+
+const TeamNameWrapper = styled.div`
+  @media (max-width: 999px) {
+    display: flex;
+    justify-content: center;
+  }
+`
+
+const TeamMembersWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 999px) {
+    justify-content: center;
+  }
+`
+
 const Profile = ({ member, percent }) => {
-  console.log(member)
   const { name, team, socialMedia } = member
   const { email, linkedIn, portfolio } = socialMedia
   const { name: teamName, role } = team
-  // Prevents repetitive code by storing content in one place.
   console.log(portfolio)
   const iconContent = (
     <>
@@ -160,20 +186,25 @@ const Profile = ({ member, percent }) => {
   )
 }
 
+const TeamName = ({ title }) => {
+  return (
+    <TeamNameWrapper>
+      <StyledTeamName>{title.toUpperCase()}</StyledTeamName>
+    </TeamNameWrapper>
+  )
+}
+
 const Section = ({ teamMembers, title, length }) => {
   return (
     <div style={{ width: "100%" }}>
-      <h1 style={{ fontStyle: "italic", color: SB_SALMON }}>
-        {" "}
-        {title.toUpperCase()}{" "}
-      </h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <TeamName title={title} />
+      <TeamMembersWrapper>
         {teamMembers.map((member, i) => {
           return (
             <Profile member={member} key={member.name} percent={i / length} />
           )
         })}
-      </div>
+      </TeamMembersWrapper>
     </div>
   )
 }

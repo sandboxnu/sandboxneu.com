@@ -63,6 +63,19 @@
       }
     },
     {
+      "name": "Catherine Titcomb",
+      "team": {
+        "name": "Brand",
+        "role": "Head of Brand"
+      },
+      "profileImage": "./profileImages/catherine.png",
+      "socialMedia": {
+        "email": "titcomb.c@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/",
+        "portfolio": "http://catherinetitcomb.com/"
+      }
+    },
+    {
       "name": "Yash Shetty",
       "team": {
         "name": "GraduateNU",
@@ -148,23 +161,10 @@
       }
     },
     {
-      "name": "Catherine Titcomb",
-      "team": {
-        "name": "Design",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/catherine.png",
-      "socialMedia": {
-        "email": "titcomb.c@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/",
-        "portfolio": "http://catherinetitcomb.com/"
-      }
-    },
-    {
       "name": "Fiona Gridley",
       "team": {
-        "name": "Design",
-        "role": "Head of Design"
+        "name": "GraduateNU",
+        "role": "Designer"
       },
       "profileImage": "./profileImages/fiona.png",
       "socialMedia": {
@@ -175,7 +175,7 @@
     {
       "name": "Rebekah Johnson",
       "team": {
-        "name": "Design",
+        "name": "SearchNEU",
         "role": "Designer"
       },
       "profileImage": "./profileImages/becca.png",
@@ -221,6 +221,19 @@
       }
     },
     {
+      "name": "Jose Savaria",
+      "team": {
+        "name": "PharmD Tracker",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/jose.png",
+      "socialMedia": {
+        "email": "saravia.jo@husky.neu.edu",
+        "linkedIn": "",
+        "portfolio": "https://www.josesaravia.design/"
+      }
+    },
+    {
       "name": "Christopher Myers",
       "team": {
         "name": "PharmD Tracker",
@@ -248,8 +261,8 @@
     {
       "name": "Eirean Co",
       "team": {
-        "name": "Cheminformatics",
-        "role": "PharmD Tracker"
+        "name": "PharmD Tracker",
+        "role": "Developer"
       },
       "profileImage": "./profileImages/eirean.png",
       "socialMedia": {
@@ -279,19 +292,6 @@
       "socialMedia": {
         "email": "iman.moreira99@gmail.com",
         "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
-      }
-    },
-    {
-      "name": "Jose Savaria",
-      "team": {
-        "name": "Design",
-        "role": "Designer"
-      },
-      "profileImage": "./profileImages/jose.png",
-      "socialMedia": {
-        "email": "saravia.jo@husky.neu.edu",
-        "linkedIn": "",
-        "portfolio": "https://www.josesaravia.design/"
       }
     },
     {
