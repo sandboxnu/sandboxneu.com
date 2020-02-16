@@ -152,7 +152,7 @@ const TeamMembersWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   @media (max-width: 999px) {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 `
 
