@@ -152,7 +152,8 @@ const Profile = ({ member, percent }) => {
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
       <ProfileName>{name}</ProfileName>
-      <ProfileRole>{`${teamName} ${role}`}</ProfileRole>
+      <ProfileRole>{teamName}</ProfileRole>
+      <ProfileRole>{role}</ProfileRole>
       <IconWrapper className="iconWrapper mobile">{iconContent}</IconWrapper>
     </ProfileWrapper>
   )
