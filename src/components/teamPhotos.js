@@ -128,8 +128,6 @@ const IconWrapper = styled.div`
 `
 
 const Profile = ({ member, percent }) => {
-  console.log("member")
-  console.log(member)
   const { name, team, socialMedia } = member
   const { email, linkedIn } = socialMedia
   const { name: teamName, role } = team
