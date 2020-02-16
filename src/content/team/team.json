@@ -216,8 +216,8 @@
       },
       "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "harbour.c@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/company/sandboxnu/"
       }
     },
     {
@@ -290,7 +290,7 @@
       },
       "profileImage": "./profileImages/iman.png",
       "socialMedia": {
-        "email": "iman.moreira99@gmail.com",
+        "email": "moreira.i@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
       }
     },
@@ -350,8 +350,8 @@
       },
       "profileImage": "./profileImages/mike.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "https://www.linkedin.com/in/mikesarfaty/",
+        "linkedIn": "sarfaty.m@husky.neu.edu"
       }
     },
     {
@@ -375,8 +375,8 @@
       },
       "profileImage": "./profileImages/olivia.png",
       "socialMedia": {
-        "email": "mukherjee.ar@husky.neu.edu",
-        "linkedIn": ""
+        "email": "floody.o@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/olivia-floody-a7b5a4154"
       }
     },
     {
@@ -387,8 +387,8 @@
       },
       "profileImage": "./profileImages/justin.png",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "torre.ju@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/justintorre/"
       }
     },
     {
@@ -447,7 +447,7 @@
       },
       "profileImage": "./profileImages/amiel.png",
       "socialMedia": {
-        "email": "amielmon@gmail.com",
+        "email": "monasterial.a@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/amielmon/"
       }
     }
