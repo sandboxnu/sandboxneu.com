@@ -160,7 +160,6 @@ const Profile = ({ member, percent }) => {
   const { name, team, socialMedia } = member
   const { email, linkedIn, portfolio } = socialMedia
   const { name: teamName, role } = team
-  console.log(portfolio)
   const iconContent = (
     <>
       <ProfileIcon dest={`mailto:${email}`} icon={faEnvelope} />
