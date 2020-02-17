@@ -21,7 +21,8 @@
       "profileImage": "./profileImages/dajin.png",
       "socialMedia": {
         "email": "chu.daj@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/dajinchu/"
+        "linkedIn": "https://www.linkedin.com/in/dajinchu/",
+        "portfolio": "https://dajin.dev/"
       }
     },
     {
@@ -57,7 +58,21 @@
       "profileImage": "./profileImages/sauharda.png",
       "socialMedia": {
         "email": "rajbhandari.sa@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/"
+        "linkedIn": "https://www.linkedin.com/in/sauhardarajbhandari/",
+        "portfolio": "https://www.sauhardar.com/"
+      }
+    },
+    {
+      "name": "Catherine Titcomb",
+      "team": {
+        "name": "Brand",
+        "role": "Head of Brand"
+      },
+      "profileImage": "./profileImages/catherine.png",
+      "socialMedia": {
+        "email": "titcomb.c@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/",
+        "portfolio": "http://catherinetitcomb.com/"
       }
     },
     {
@@ -123,13 +138,14 @@
     {
       "name": "Jacob Chvatal",
       "team": {
-        "name": "ELISA",
+        "name": "Elisa",
         "role": "Team Lead"
       },
       "profileImage": "./profileImages/jacob.png",
       "socialMedia": {
         "email": "chvatal.j@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/jacob-chvatal/"
+        "linkedIn": "https://www.linkedin.com/in/jacob-chvatal/",
+        "portfolio": "http://chvatal.com/"
       }
     },
     {
@@ -145,18 +161,6 @@
       }
     },
     {
-      "name": "Catherine Titcomb",
-      "team": {
-        "name": "Brand",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/catherine.png",
-      "socialMedia": {
-        "email": "titcomb.c@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/catherinetitcomb/"
-      }
-    },
-    {
       "name": "Fiona Gridley",
       "team": {
         "name": "GraduateNU",
@@ -166,66 +170,6 @@
       "socialMedia": {
         "email": "gridley.f@husky.neu.edu",
         "linkedIn": "https://www.linkedin.com/in/fiona-gridley/"
-      }
-    },
-    {
-      "name": "Iman Moreira",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/iman.png",
-      "socialMedia": {
-        "email": "moreira.i@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
-      }
-    },
-    {
-      "name": "Nathan Cunningham",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/nathan.png",
-      "socialMedia": {
-        "email": "cunningham.wil@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/"
-      }
-    },
-    {
-      "name": "Stanley Liu",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/stanley.png",
-      "socialMedia": {
-        "email": "liu.sta@husky.neu.edu",
-        "linkedIn": "http://linkedin.com/in/stanleyspliu"
-      }
-    },
-    {
-      "name": "Sam Xifaras",
-      "team": {
-        "name": "Khoury Office Hours App",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/sam.png",
-      "socialMedia": {
-        "email": "xifaras.s@husky.neu.edu",
-        "linkedIn": "https://linkedin.com/in/samxifaras"
-      }
-    },
-    {
-      "name": "Olivia Floody",
-      "team": {
-        "name": "Khoury Office Hours App",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/olivia.png",
-      "socialMedia": {
-        "email": "mukherjee.ar@husky.neu.edu",
-        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
       }
     },
     {
@@ -241,54 +185,6 @@
       }
     },
     {
-      "name": "Daniel (Zefeng) Wang",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/daniel.png",
-      "socialMedia": {
-        "email": "wang.zef@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/"
-      }
-    },
-    {
-      "name": "Eliza Huang",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/eliza.png",
-      "socialMedia": {
-        "email": "huang.zij@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/lizzij/"
-      }
-    },
-    {
-      "name": "Edward (Eddy) Li",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/eddy.png",
-      "socialMedia": {
-        "email": "li.edwa@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/eddy-li/"
-      }
-    },
-    {
-      "name": "Amiel Monasterial",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/amiel.png",
-      "socialMedia": {
-        "email": "monasterial.a@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/amielmon/"
-      }
-    },
-    {
       "name": "Karmen Lu",
       "team": {
         "name": "Cheminformatics",
@@ -301,6 +197,18 @@
       }
     },
     {
+      "name": "Arkin Mukherjee",
+      "team": {
+        "name": "Elisa",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/arkin.png",
+      "socialMedia": {
+        "email": "mukherjee.ar@husky.neu.edu",
+        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
+      }
+    },
+    {
       "name": "Cassandra Harbour",
       "team": {
         "name": "Cheminformatics",
@@ -309,7 +217,7 @@
       "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
         "email": "harbour.c@husky.neu.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/company/sandboxnu/"
       }
     },
     {
@@ -321,7 +229,8 @@
       "profileImage": "./profileImages/jose.png",
       "socialMedia": {
         "email": "saravia.jo@husky.neu.edu",
-        "linkedIn": ""
+        "linkedIn": "",
+        "portfolio": "https://www.josesaravia.design/"
       }
     },
     {
@@ -337,6 +246,19 @@
       }
     },
     {
+      "name": "Daniel (Zefeng) Wang",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/daniel.png",
+      "socialMedia": {
+        "email": "wang.zef@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/",
+        "portfolio": "https://github.com/zefwang"
+      }
+    },
+    {
       "name": "Eirean Co",
       "team": {
         "name": "PharmD Tracker",
@@ -349,63 +271,27 @@
       }
     },
     {
-      "name": "Kevin Cam",
+      "name": "Eliza Huang",
       "team": {
-        "name": "PharmD Tracker",
+        "name": "SearchNEU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/kevin.png",
+      "profileImage": "./profileImages/eliza.png",
       "socialMedia": {
-        "email": "cam.k@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
+        "email": "huang.zij@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/lizzij/"
       }
     },
     {
-      "name": "Sophie Crennan",
+      "name": "Iman Moreira",
       "team": {
-        "name": "PharmD Tracker",
+        "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/sophie.png",
+      "profileImage": "./profileImages/iman.png",
       "socialMedia": {
-        "email": "crennan.s@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/sophiacrennan/"
-      }
-    },
-    {
-      "name": "Mike Sarfaty",
-      "team": {
-        "name": "ELISA",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/mike.png",
-      "socialMedia": {
-        "email": "sarfaty.m@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/mikesarfaty/"
-      }
-    },
-    {
-      "name": "Arkin Mukherjee",
-      "team": {
-        "name": "ELISA",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/arkin.png",
-      "socialMedia": {
-        "email": "mukherjee.ar@husky.neu.edu",
-        "linkedIn": "http://linkedin.com/in/arkinmukherjee"
-      }
-    },
-    {
-      "name": "Puneet Johal",
-      "team": {
-        "name": "ELISA",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/puneet.png",
-      "socialMedia": {
-        "email": "johal.p@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+        "email": "moreira.i@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/iman-moreira/"
       }
     },
     {
@@ -421,15 +307,27 @@
       }
     },
     {
-      "name": "Justin Torre",
+      "name": "Kevin Cam",
       "team": {
-        "name": "Visualizer",
+        "name": "PharmD Tracker",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/justin.png",
+      "profileImage": "./profileImages/kevin.png",
       "socialMedia": {
-        "email": "torre.ju@husky.neu.edu",
-        "linkedIn": "https://www.linkedin.com/in/justintorre/"
+        "email": "cam.k@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
+      }
+    },
+    {
+      "name": "Edward (Eddy) Li",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/eddy.png",
+      "socialMedia": {
+        "email": "li.edwa@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/eddy-li/"
       }
     },
     {
@@ -442,6 +340,115 @@
       "socialMedia": {
         "email": "sharma.kri@husky.neu.edu",
         "linkedIn": "http://linkedin.com/in/krish-sharma"
+      }
+    },
+    {
+      "name": "Mike Sarfaty",
+      "team": {
+        "name": "Elisa",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/mike.png",
+      "socialMedia": {
+        "email": "https://www.linkedin.com/in/mikesarfaty/",
+        "linkedIn": "sarfaty.m@husky.neu.edu"
+      }
+    },
+    {
+      "name": "Nathan Cunningham",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/nathan.png",
+      "socialMedia": {
+        "email": "cunningham.wil@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/william-cunningham-612b5b14b/",
+        "portfolio": "http://defwilliam.com/"
+      }
+    },
+    {
+      "name": "Olivia Floody",
+      "team": {
+        "name": "Khoury Office Hours App",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/olivia.png",
+      "socialMedia": {
+        "email": "floody.o@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/olivia-floody-a7b5a4154"
+      }
+    },
+    {
+      "name": "Justin Torre",
+      "team": {
+        "name": "Visualizer",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/justin.png",
+      "socialMedia": {
+        "email": "torre.ju@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/justintorre/"
+      }
+    },
+    {
+      "name": "Puneet Johal",
+      "team": {
+        "name": "Elisa",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/puneet.png",
+      "socialMedia": {
+        "email": "johal.p@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+      }
+    },
+    {
+      "name": "Sam Xifaras",
+      "team": {
+        "name": "Khoury Office Hours App",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/sam.png",
+      "socialMedia": {
+        "email": "xifaras.s@husky.neu.edu",
+        "linkedIn": "https://linkedin.com/in/samxifaras"
+      }
+    },
+    {
+      "name": "Sophie Crennan",
+      "team": {
+        "name": "PharmD Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/sophie.png",
+      "socialMedia": {
+        "email": "crennan.s@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/sophiacrennan/"
+      }
+    },
+    {
+      "name": "Stanley Liu",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/stanley.png",
+      "socialMedia": {
+        "email": "liu.sta@husky.neu.edu",
+        "linkedIn": "http://linkedin.com/in/stanleyspliu"
+      }
+    },
+    {
+      "name": "Amiel Monasterial",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/amiel.png",
+      "socialMedia": {
+        "email": "monasterial.a@husky.neu.edu",
+        "linkedIn": "https://www.linkedin.com/in/amielmon/"
       }
     }
   ]

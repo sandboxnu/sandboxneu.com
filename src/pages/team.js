@@ -13,7 +13,9 @@ const BlueFontSection = styled(Section)`
 `
 
 const Header = styled.h1`
-  letter-spacing: 0.15em;
+  font-style: italic;
+  font-stretch: expanded;
+  /* letter-spacing: 0.15em; */
   text-align: center;
   font-weight: 600;
   font-size: 2.5em;
@@ -49,7 +51,7 @@ const TeamPage = ({ data }) => {
 export const profileIcon = graphql`
   fragment profileIcon on File {
     childImageSharp {
-      fixed(width: 150, height: 150, quality: 90) {
+      fixed(width: 175, height: 175, quality: 90) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -73,6 +75,7 @@ export const query = graphql`
             socialMedia {
               email
               linkedIn
+              portfolio
             }
           }
         }
