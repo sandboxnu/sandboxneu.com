@@ -151,7 +151,7 @@ const TeamNameWrapper = styled.div`
 const TeamMembersWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 999px) {
+  @media (max-width: 1080px) {
     justify-content: space-evenly;
   }
 `
