@@ -17,6 +17,13 @@
       "headers": {
         "Location": "https://forms.gle/1S6R4yxrCLjZe2d19"
       }
+    },
+    {
+      "src": "/work-with-us",
+      "status": 301,
+      "headers": {
+        "Location": "https://medium.com/@dajinchu/how-sandbox-can-help-researchers-b5dbddeecf14"
+      }
     }
   ],
   "alias": ["www.sandboxnu.com"]
