@@ -106,6 +106,10 @@ const InfoLink = ({ dest, text }) => {
   return <StyledLink href={dest}>{text}</StyledLink>
 }
 
+const Zeit = styled.div`
+  margin-top: 20px;
+`
+
 const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
   <footer>
     <GrayBackground>
@@ -127,6 +131,9 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
               <SocialInfo info={instagram} icon={faInstagram} />
               <SocialInfo info={github} icon={faGithub} />
             </SocialSection>
+            <Zeit>
+              Hosted by <a href="https://zeit.co">Zeit Now</a>
+            </Zeit>
           </Contact>
         </FooterInfo>
       </FlexSection>
