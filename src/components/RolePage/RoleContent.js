@@ -116,7 +116,7 @@ const QualitiesList = ({ qualities, color }) => {
   )
 }
 
-const ApplyContent = ({
+const RoleContent = ({
   color,
   role,
   description,
@@ -147,4 +147,4 @@ const ApplyContent = ({
   )
 }
 
-export default ApplyContent
+export default RoleContent

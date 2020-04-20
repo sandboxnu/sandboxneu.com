@@ -4,11 +4,12 @@ import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
-import Buttons from "components/ApplyPage/Buttons"
-import ApplyContent from "components/ApplyPage/ApplyContent"
+import RoleContent from "components/RolePage/RoleContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
+
+import { capitalize } from "utils/string"
 
 export const ROLE_COLOR_MAPPING = {
   designer: SB_SALMON,
@@ -46,7 +47,7 @@ const CenteredContent = styled.div`
   text-align: center;
 `
 
-const ApplyPage = ({ data, pageContext }) => {
+const RolePage = ({ data, pageContext }) => {
   const [selectedRole, setSelectedRole] = useState(pageContext.role)
   const allRoles = pageContext.roles
   const currentRoleData = data.allMarkdownRemark.edges.find(
@@ -61,15 +62,17 @@ const ApplyPage = ({ data, pageContext }) => {
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
-        <Header>APPLY TO SANDBOX</Header>
-        <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
-        <Buttons
+        <Header>{selectedRole.toUpperCase()}</Header>
+        <Subtitle>
+          Read more about Sandbox's {selectedRole} opportunities below.
+        </Subtitle>
+        {/* <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
           setSelectedRole={setSelectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
-        />
-        <ApplyContent
+        /> */}
+        <RoleContent
           role={selectedRole}
           color={ROLE_COLOR_MAPPING[selectedRole]}
           description={currentRoleData.html}
@@ -83,7 +86,7 @@ const ApplyPage = ({ data, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-  query ApplyQuery {
+  query RoleQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
       edges {
         node {
@@ -100,4 +103,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default ApplyPage
+export default RolePage

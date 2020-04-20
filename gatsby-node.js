@@ -10,12 +10,15 @@ var path = require("path")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const applyTemplate = path.resolve(`src/templates/apply.js`)
+  const applyTemplate = path.resolve(`src/templates/role.js`)
   return graphql(`
     {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
               role
             }
@@ -30,20 +33,30 @@ exports.createPages = ({ actions, graphql }) => {
     const roles = result.data.allMarkdownRemark.edges.map(
       ({ node }) => node.frontmatter.role
     )
-    roles.sort()
-    createPage({
-      path: "/apply/",
-      component: applyTemplate,
-      context: { role: roles[1], roles: roles },
-    })
-    return roles.forEach(role => {
+    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: `/apply/${role}/`,
+        path: node.fields.slug,
         component: applyTemplate,
-        context: { role: role, roles: roles },
+        context: {
+          role: node.frontmatter.role,
+          roles: roles,
+        },
       })
     })
   })
+}
+
+const { createFilePath } = require(`gatsby-source-filesystem`)
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
 }
 
 exports.onCreateWebpackConfig = ({
