@@ -132,7 +132,7 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
               <SocialInfo info={github} icon={faGithub} />
             </SocialSection>
             <Zeit>
-              Hosted by <a href="https://zeit.co">Zeit Now</a>
+              Hosted by <a href="https://vercel.com">Vercel</a>
             </Zeit>
           </Contact>
         </FooterInfo>
