@@ -55,6 +55,7 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          subtitle
           applicationStatus
         }
       }

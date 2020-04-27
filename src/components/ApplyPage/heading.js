@@ -20,6 +20,18 @@ const Header = styled.h1`
 `
 
 const Subtitle = styled.h3`
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  letter-spacing: 0.05em;
+
+  @media (min-width: 1000px) {
+    font-size: 1.5em;
+  }
+`
+
+const AppStatus = styled.h3`
   text-align: center;
   font-weight: 400;
   line-height: 1.5;
@@ -32,8 +44,8 @@ const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
   padding-bottom: 1em;
   margin-bottom: 10px;
-  min-height: 33vh;
-  height: 33vh
+  min-height: 25vh;
+  height: 25vh
   display: inline-block;
 
   @media (min-width: 1000px) {
@@ -42,10 +54,11 @@ const BlueFontSection = styled(Section)`
   }
 `
 
-const Heading = ({ title, applicationStatus }) => (
+const Heading = ({ title, subtitle, applicationStatus }) => (
   <BlueFontSection>
     <Header>{title}</Header>
-    <Subtitle>{applicationStatus}</Subtitle>
+    <Subtitle>{subtitle}</Subtitle>
+    <AppStatus>{applicationStatus}</AppStatus>
   </BlueFontSection>
 )
 
