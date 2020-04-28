@@ -6,14 +6,14 @@ import Section from "styles/components/Section"
 import { HeaderLine, Header } from "styles/components/Header"
 
 const OrangeHeader = styled(Header)`
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 500;
   color: ${SB_ORANGE};
 `
 const BlueParagraph = styled.p`
   color: ${SB_NAVY};
   line-height: 1.5;
-  font-size: 1.25em;
+  font-size: 1.3em;
 `
 const ParagraphContainer = styled.div`
   display: grid;

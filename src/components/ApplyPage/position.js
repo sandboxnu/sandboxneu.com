@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
+import Body from "styles/components/Body"
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
@@ -20,7 +21,7 @@ const BlueFontSection = styled(Section)`
     height: 15em;
   }
 `
-const Description = styled.span`
+const Description = styled(Body)`
   padding-top: 1em;
 `
 
