@@ -10,12 +10,10 @@ import Body from "styles/components/Body"
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
   padding-bottom: 50px;
-  min-height: 20vh;
-  height: 20em;
   display: flex;
   flex-direction: column;
   font-size: 1.25em;
-  padding: 2em 2em;
+  padding: 1em 2em;
 
   @media (min-width: 1000px) {
     height: 15em;
@@ -23,16 +21,22 @@ const BlueFontSection = styled(Section)`
 `
 const Description = styled(Body)`
   padding-top: 1em;
+  margin-bottom: 1em;
+
+  @media (min-width: 1000px) {
+    height: 15em;
+    margin-bottom: 0em;
+  }
 `
 
 const ApplyButton = styled(Link)`
   width: fit-content;
   text-decoration: none;
-  font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: 2px solid white;
   color: ${SB_NAVY};
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
+
   &:hover {
     border-bottom: 2px solid ${SB_NAVY};
   }
@@ -57,9 +61,11 @@ const Position = ({ fields, frontmatter }) => (
   <BlueFontSection>
     <HeadingContainer>
       <Header>{frontmatter.role}</Header>
-      <ApplyButton to={fields.slug}>apply</ApplyButton>
     </HeadingContainer>
-    <Description>{frontmatter.description}</Description>
+    <Description>
+      {frontmatter.description}
+      <ApplyButton to={fields.slug}> Click here to read more.</ApplyButton>
+    </Description>
   </BlueFontSection>
 )
 
