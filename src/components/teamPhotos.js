@@ -1,10 +1,11 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_NAVY, SB_ORANGE, SB_SALMON } from "@colors"
+import _ from "lodash"
 
 import { FadeInSlideUp } from "styles/animations"
 
@@ -127,15 +128,43 @@ const IconWrapper = styled.div`
   }
 `
 
+const StyledTeamName = styled.h1`
+  font-size: 2.5em;
+  font-style: italic;
+  color: ${SB_SALMON};
+  margin-left: 50;
+  text-align: center;
+
+  @media (min-width: 1000px) {
+    margin-left: 5%;
+    text-align: left;
+  }
+`
+
+const TeamNameWrapper = styled.div`
+  @media (max-width: 999px) {
+    display: flex;
+    justify-content: center;
+  }
+`
+
+const TeamMembersWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 1083px) {
+    justify-content: space-evenly;
+  }
+`
+
 const Profile = ({ member, percent }) => {
-  // Prevents repetitive code by storing content in one place.
+  const { name, team, socialMedia } = member
+  const { email, linkedIn, portfolio } = socialMedia
+  const { name: teamName, role } = team
   const iconContent = (
     <>
-      <ProfileIcon
-        dest={`mailto:${member.socialMedia.email}`}
-        icon={faEnvelope}
-      />
-      <ProfileIcon dest={member.socialMedia.linkedIn} icon={faLinkedinIn} />
+      <ProfileIcon dest={`mailto:${email}`} icon={faEnvelope} />
+      <ProfileIcon dest={linkedIn} icon={faLinkedinIn} />
+      {portfolio ? <ProfileIcon dest={portfolio} icon={faLink} /> : null}
     </>
   )
   return (
@@ -143,27 +172,57 @@ const Profile = ({ member, percent }) => {
       <ProfileImgWrapper>
         <ProfileImg
           style={{ overflow: "visible" }}
+          loading="eager"
           fixed={member.profileImage.childImageSharp.fixed}
-          alt={member.name}
+          alt={name}
         />
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
-      <ProfileName>{member.name}</ProfileName>
-      <ProfileRole>{member.role}</ProfileRole>
+      <ProfileName>{name}</ProfileName>
+      <ProfileRole>{role}</ProfileRole>
       <IconWrapper className="iconWrapper mobile">{iconContent}</IconWrapper>
     </ProfileWrapper>
   )
 }
 
+const TeamName = ({ title }) => {
+  return (
+    <TeamNameWrapper>
+      <StyledTeamName>{title.toUpperCase()}</StyledTeamName>
+    </TeamNameWrapper>
+  )
+}
+
+const Section = ({ teamMembers, title, length }) => {
+  return (
+    <div style={{ width: "100%" }}>
+      <TeamName title={title} />
+      <TeamMembersWrapper>
+        {teamMembers.map((member, i) => {
+          return (
+            <Profile member={member} key={member.name} percent={i / length} />
+          )
+        })}
+      </TeamMembersWrapper>
+    </div>
+  )
+}
+
+const groupMembers = members => {
+  const grouped = _.groupBy(members, "team.name")
+  return grouped
+}
+
 const TeamPhotos = ({ members }) => {
+  const teams = groupMembers(members)
   return (
     <Wrapper>
-      {members.map((member, i) => {
+      {Object.keys(teams).map(group => {
         return (
-          <Profile
-            member={member}
-            key={member.name}
-            percent={i / members.length}
+          <Section
+            teamMembers={teams[group]}
+            title={group}
+            length={members.length}
           />
         )
       })}

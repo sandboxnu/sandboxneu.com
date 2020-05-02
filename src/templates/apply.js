@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
 
-import { SB_LIGHT_BLUE, SB_NAVY, SB_ORANGE, SB_SALMON } from "@colors"
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Buttons from "components/ApplyPage/Buttons"
 import ApplyContent from "components/ApplyPage/ApplyContent"
 import Layout from "components/layout"
@@ -11,13 +11,14 @@ import SEO from "components/seo"
 import Section from "styles/components/Section"
 
 export const ROLE_COLOR_MAPPING = {
+  designer: SB_SALMON,
   developer: SB_ORANGE,
-  designer: SB_LIGHT_BLUE,
-  devops: SB_SALMON,
 }
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
+  padding-bottom: 50px;
+  min-height: 75vh;
 `
 
 const Header = styled.h1`
@@ -41,6 +42,10 @@ const Subtitle = styled.h3`
   }
 `
 
+const CenteredContent = styled.div`
+  text-align: center;
+`
+
 const ApplyPage = ({ data, pageContext }) => {
   const [selectedRole, setSelectedRole] = useState(pageContext.role)
   const allRoles = pageContext.roles
@@ -51,6 +56,7 @@ const ApplyPage = ({ data, pageContext }) => {
   useEffect(() => {
     amplitudeLogEvent("View role", { role: selectedRole })
   }, [selectedRole])
+
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />

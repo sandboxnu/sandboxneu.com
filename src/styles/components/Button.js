@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import { lightenDarkenColor, SB_NAVY } from "@colors"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-const Button = styled.a`
+const Button = styled(OutboundLink)`
   background-color: ${SB_NAVY};
   transition: background-color 0.3s;
   text-transform: uppercase;
