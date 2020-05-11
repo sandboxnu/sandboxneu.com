@@ -68,9 +68,6 @@ const BreadcrumbSection = styled.span`
     margin-left: 63px;
   }
 `
-const CenteredContent = styled.div`
-  text-align: center;
-`
 
 const SectionLine = styled.span`
   color: ${SB_ORANGE};
@@ -127,7 +124,7 @@ const RolePage = ({ data, pageContext }) => {
         /> */}
         <RoleContent
           role={selectedRole}
-          color={ROLE_COLOR_MAPPING[selectedRole]}
+          color={SB_ORANGE}
           description={currentRoleData.html}
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}

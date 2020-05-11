@@ -1,12 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
-import Body from "styles/components/Body"
 
 const DoubleQuote = styled.span`
   z-index: -1;
@@ -175,6 +173,14 @@ const Testimonial = ({ quote, member, title, semester, image }) => {
       </Info>
     </Container>
   )
+}
+
+Testimonial.propTypes = {
+  quote: PropTypes.string.isRequired,
+  member: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  semester: PropTypes.string.isRequired,
+  image: PropTypes.instanceOf(Img),
 }
 
 export default Testimonial

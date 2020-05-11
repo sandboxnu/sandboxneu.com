@@ -9,14 +9,12 @@ import Body from "styles/components/Body"
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
+  display: block;
   font-size: 1.25em;
   padding: 1em 2em;
 
   @media (min-width: 1000px) {
-    height: 15em;
+    height: 18em;
   }
 `
 const Description = styled(Body)`
@@ -37,6 +35,7 @@ const ApplyButton = styled(Link)`
   text-decoration: underline;
   font-size: 21px;
   font-weight: 600;
+  margin-top: 0.5em;
 `
 const Header = styled.h2`
   letter-spacing: 0.15em;

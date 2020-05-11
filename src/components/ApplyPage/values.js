@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
-import { HeaderLine, Header } from "styles/components/Header"
+import { Header } from "styles/components/Header"
 
 const OrangeHeader = styled(Header)`
   font-size: 1.7em;
@@ -14,23 +14,20 @@ const BlueParagraph = styled.p`
   color: ${SB_NAVY};
   line-height: 1.5;
   font-size: 1.3em;
+  margin-bottom: 0px;
 `
 const ParagraphContainer = styled.div`
   display: grid;
   grid-row-gap: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   @media (min-width: 1000px) {
     grid-auto-flow: column;
     grid-column-gap: 100px;
     grid-auto-columns: 1fr;
+    margin-bottom: 48px;
   }
-`
-
-const SectionLine = styled(HeaderLine)`
-  color: ${SB_ORANGE};
-  border-top: 3px solid;
-  margin-top: 1em;
 `
 
 const Heading = styled.h1`
@@ -45,18 +42,18 @@ const Heading = styled.h1`
 
   @media (min-width: 1000px) {
     font-size: 3em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
   }
 `
 
 const PadlessSection = styled(Section)`
   padding-bottom: 0em;
-  padding-top: 0.5em;
+  padding-top: 0em;
 `
 
 const Values = ({ title, principles }) => (
   <PadlessSection>
-    {/* <SectionLine /> */}
     <Heading>our values</Heading>
     <ParagraphContainer>
       {principles.map(p => (
@@ -66,7 +63,6 @@ const Values = ({ title, principles }) => (
         </div>
       ))}
     </ParagraphContainer>
-    {/* <SectionLine /> */}
   </PadlessSection>
 )
 

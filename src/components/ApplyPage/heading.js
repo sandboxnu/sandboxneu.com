@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
@@ -105,8 +104,12 @@ const AppStatusDiv = styled.div`
   }
 `
 
+const PaddedDiv = styled.div`
+  padding-bottom: 48px;
+`
+
 const Heading = ({ title, subtitle, applicationStatus }) => (
-  <div>
+  <PaddedDiv>
     <BlueFontSection>
       <Header>{title}</Header>
       <Subtitle>{subtitle}</Subtitle>
@@ -125,7 +128,7 @@ const Heading = ({ title, subtitle, applicationStatus }) => (
         Apply
       </Button>
     </AppStatusDiv>
-  </div>
+  </PaddedDiv>
 )
 
 Heading.propTypes = {

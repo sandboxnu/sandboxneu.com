@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 
 import Values from "../components/ApplyPage/values"
-import Testimonial from "../components/ApplyPage/testimonial"
 import Showcase from "../components/ApplyPage/showcase"
 import Position from "../components/ApplyPage/position"
 import Heading from "../components/ApplyPage/heading"
@@ -23,7 +22,6 @@ const Header = styled.h1`
 
   @media (min-width: 1000px) {
     font-size: 3em;
-    margin-bottom: 1em;
   }
 `
 
@@ -40,21 +38,27 @@ const ParagraphContainer = styled.div`
 const Container = styled.div`
   margin: 0 auto;
   padding 0em 5em;
+  margin-top: 3em;
 `
 
 const SectionLine = styled.span`
   color: ${SB_ORANGE};
   border-top: 3px solid;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  display: grid;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
   content: none;
-  margin-left: 8em;
-  margin-right: 8em;
+  width: 500px;
+  margin: 0 auto;
 
   @media (min-width: 1000px) {
-    margin-left: 13em;
-    margin-right: 13em;
+    width: 800px;
+  }
+
+  @media (min-width: 1160px) {
+    width: 1000px;
+    min-width: 850px;
   }
 `
 
@@ -67,8 +71,10 @@ const ApplyPage = ({ data }) => {
       <SEO title="Apply" keywords={[`application`]} />
       <Heading {...data.apply.edges[0].node} />
       <Container>
+        <SectionLine />
         <Values {...data.values.edges[0].node} />
         <SectionLine />
+        <Header>Semester Highlights</Header>
         <Showcase />
         <SectionLine />
         <Header id="open-positions">Open Positions</Header>
