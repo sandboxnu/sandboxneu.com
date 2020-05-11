@@ -58,6 +58,8 @@ const BlueFontSection = styled(Section)`
   min-height: 25vh;
   height: 25vh
   display: inline-block;
+  padding-left: 0px;
+  padding-right: 0px;
 
   @media (min-width: 1000px) {
     min-height: 20vh;
@@ -96,6 +98,7 @@ const AppStatusDiv = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 
   @media (min-width: 1000px) {
     flex-direction: row;
@@ -103,22 +106,26 @@ const AppStatusDiv = styled.div`
 `
 
 const Heading = ({ title, subtitle, applicationStatus }) => (
-  <BlueFontSection>
-    <Header>{title}</Header>
-    <Subtitle>{subtitle}</Subtitle>
+  <div>
+    <BlueFontSection>
+      <Header>{title}</Header>
+      <Subtitle>{subtitle}</Subtitle>
+    </BlueFontSection>
     <AppStatusDiv>
       <AppStatus>{applicationStatus}</AppStatus>
       <Button
-        onClick={() =>
-          document
-            .getElementById("open-positions")
-            .scrollIntoView({ behavior: "smooth" })
-        }
+        onClick={() => {
+          const ref = document.getElementById("open-positions")
+          ref.scrollIntoView(true)
+
+          const scrollHeight = window.scrollY - 110
+          window.scrollTo({ top: scrollHeight, behavior: "smooth" })
+        }}
       >
         Apply
       </Button>
     </AppStatusDiv>
-  </BlueFontSection>
+  </div>
 )
 
 Heading.propTypes = {

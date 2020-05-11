@@ -33,26 +33,6 @@ const SectionLine = styled(HeaderLine)`
   margin-top: 1em;
 `
 
-const PadLessSection = styled(Section)`
-  padding: 1em 2em;
-  @media (min-width: 1000px) {
-    padding-bottom: 0em;
-  }
-`
-const TestHeader = styled.h1`
-  font-style: italic;
-  color: #e8f0ff;
-  font-stretch: expanded;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  font-size: 12.5em;
-  margin-bottom: 0.5em;
-  position: absolute;
-  top: 400px;
-  margin-top: 29px;
-`
-
 const Heading = styled.h1`
   font-style: italic;
   font-stretch: expanded;
@@ -69,9 +49,14 @@ const Heading = styled.h1`
   }
 `
 
+const PadlessSection = styled(Section)`
+  padding-bottom: 0em;
+  padding-top: 0.5em;
+`
+
 const Values = ({ title, principles }) => (
-  <PadLessSection>
-    <SectionLine />
+  <PadlessSection>
+    {/* <SectionLine /> */}
     <Heading>our values</Heading>
     <ParagraphContainer>
       {principles.map(p => (
@@ -81,8 +66,8 @@ const Values = ({ title, principles }) => (
         </div>
       ))}
     </ParagraphContainer>
-    <SectionLine />
-  </PadLessSection>
+    {/* <SectionLine /> */}
+  </PadlessSection>
 )
 
 Values.propTypes = {

@@ -8,7 +8,7 @@ import Button from "styles/components/Button"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
-  border-left: 6px solid ${props => props.color};
+  border-left: 3px solid ${props => props.color};
   transition: border-left 0.3s;
   padding-left: 1em;
   margin: 2em 0;
@@ -97,7 +97,6 @@ const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
       <HeaderText color={color}>{capitalize(roleName)}</HeaderText>
-      <SquareLogo size={"2em"} color={color} />
     </ContentHeaderWrapper>
   )
 }

@@ -9,8 +9,7 @@ import RoleContent from "components/RolePage/RoleContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
-
-import { capitalize } from "utils/string"
+import Testimonoial from "../components/ApplyPage/testimonial"
 
 export const ROLE_COLOR_MAPPING = {
   designer: SB_SALMON,
@@ -38,6 +37,7 @@ const Subtitle = styled.h3`
   text-align: center;
   font-weight: 400;
   line-height: 1.5;
+  margin-bottom: 2em;
 
   @media (min-width: 1000px) {
     font-size: 1.5em;
@@ -55,7 +55,7 @@ const Breadcrumb = styled(Link)`
   }
 `
 const BreadcrumbSection = styled.span`
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-top: 30px;
@@ -68,9 +68,24 @@ const BreadcrumbSection = styled.span`
     margin-left: 63px;
   }
 `
-
 const CenteredContent = styled.div`
   text-align: center;
+`
+
+const SectionLine = styled.span`
+  color: ${SB_ORANGE};
+  border-top: 3px solid;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  display: grid;
+  content: none;
+  margin-left: 10em;
+  margin-right: 10em;
+
+  @media (min-width: 1000px) {
+    margin-left: 17em;
+    margin-right: 17em;
+  }
 `
 
 const RolePage = ({ data, pageContext }) => {
@@ -95,6 +110,15 @@ const RolePage = ({ data, pageContext }) => {
         <Subtitle>
           Read more about Sandbox's {selectedRole} opportunities below.
         </Subtitle>
+        <SectionLine />
+        <Testimonoial
+          quote={currentRoleData.frontmatter.quote}
+          member={currentRoleData.frontmatter.quoteMember}
+          title={currentRoleData.frontmatter.quoteMemberTitle}
+          semester={currentRoleData.frontmatter.quoteMemberSemester}
+          image={currentRoleData.frontmatter.quoteImage}
+        />
+        <SectionLine />
         {/* <Buttons
           roles={allRoles}
           selectedRole={selectedRole}
@@ -125,6 +149,17 @@ export const pageQuery = graphql`
             formLink
             role
             closeDate
+            quote
+            quoteMember
+            quoteMemberTitle
+            quoteMemberSemester
+            quoteImage {
+              childImageSharp {
+                fixed(width: 200, height: 200, quality: 90) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

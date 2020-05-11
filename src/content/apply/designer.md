@@ -11,6 +11,11 @@ formLink: "http://eepurl.com/gyY5lz"
 role: designer
 description: "Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study)."
 closeDate: ""
+quote: "This was my first out-of-classroom experience working with design. I switched from CS to CS and design just last spring, so this was my first time being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
+quoteMember: "Rebekah Johnson"
+quoteMemberTitle: "UX Designer, SearchNEU"
+quoteMemberSemester: "Spring 2020"
+quoteImage: ../team/profileImages/becca.png
 ---
 
 Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study).

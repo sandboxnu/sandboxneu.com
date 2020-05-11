@@ -11,6 +11,11 @@ formLink: "http://eepurl.com/gyY5lz"
 role: developer
 description: "Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study)."
 closeDate: ""
+quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
+quoteMember: "Sauharda Rajbhandari"
+quoteMemberTitle: "Sandbox Operations Director"
+quoteMemberSemester: "Spring 2020"
+quoteImage: ../team/profileImages/sauharda.png
 ---
 
 Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study).

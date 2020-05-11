@@ -31,15 +31,12 @@ const Description = styled(Body)`
 
 const ApplyButton = styled(Link)`
   width: fit-content;
-  text-decoration: none;
-  font-weight: 500;
   border-bottom: 2px solid white;
   color: ${SB_NAVY};
-  transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
-
-  &:hover {
-    border-bottom: 2px solid ${SB_NAVY};
-  }
+  display: block;
+  text-decoration: underline;
+  font-size: 21px;
+  font-weight: 600;
 `
 const Header = styled.h2`
   letter-spacing: 0.15em;
@@ -57,10 +54,35 @@ const HeadingContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const Button = styled(Link)`
+  background-color: ${SB_ORANGE};
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+
+  font-stretch: expanded;
+  font-style: italic;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  padding: 7px 25px;
+  margin-bottom: 1em;
+  margin-left: 2em;
+
+  @media (min-width: 1000px) {
+    margin-bottom: 0px;
+  }
+`
+
 const Position = ({ fields, frontmatter }) => (
   <BlueFontSection>
     <HeadingContainer>
       <Header>{frontmatter.role}</Header>
+      <Button to={fields.slug}>Apply</Button>
     </HeadingContainer>
     <Description>
       {frontmatter.description}
@@ -68,11 +90,5 @@ const Position = ({ fields, frontmatter }) => (
     </Description>
   </BlueFontSection>
 )
-
-Position.propTypes = {
-  role: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-}
 
 export default Position

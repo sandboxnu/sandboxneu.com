@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 
 import Values from "../components/ApplyPage/values"
+import Testimonial from "../components/ApplyPage/testimonial"
 import Showcase from "../components/ApplyPage/showcase"
 import Position from "../components/ApplyPage/position"
 import Heading from "../components/ApplyPage/heading"
@@ -22,6 +23,7 @@ const Header = styled.h1`
 
   @media (min-width: 1000px) {
     font-size: 3em;
+    margin-bottom: 1em;
   }
 `
 
@@ -35,29 +37,25 @@ const ParagraphContainer = styled.div`
   }
 `
 
-const ShowcaseVideo = styled.div`
-  display:
-  position: relative;
-  width: 100vw;
-  height: 10vh;
+const Container = styled.div`
+  margin: 0 auto;
+  padding 0em 5em;
 `
 
-const ExHeader = styled.h1`
-  font-style: italic;
-  color: #e8f0ff;
-  font-stretch: expanded;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  font-size: 12.5em;
-  margin-bottom: 0.5em;
-  position: absolute;
-  top: 800px;
-  margin-top: 29px;
-`
+const SectionLine = styled.span`
+  color: ${SB_ORANGE};
+  border-top: 3px solid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: grid;
+  content: none;
+  margin-left: 8em;
+  margin-right: 8em;
 
-const ExperienceSection = styled.div`
-  margin-top: 130px;
+  @media (min-width: 1000px) {
+    margin-left: 13em;
+    margin-right: 13em;
+  }
 `
 
 const ApplyPage = ({ data }) => {
@@ -68,10 +66,14 @@ const ApplyPage = ({ data }) => {
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
       <Heading {...data.apply.edges[0].node} />
-      <Values {...data.values.edges[0].node} />
-      <Showcase />
-      <Header id="open-positions">Open Positions</Header>
-      <ParagraphContainer>{positions}</ParagraphContainer>
+      <Container>
+        <Values {...data.values.edges[0].node} />
+        <SectionLine />
+        <Showcase />
+        <SectionLine />
+        <Header id="open-positions">Open Positions</Header>
+        <ParagraphContainer>{positions}</ParagraphContainer>
+      </Container>
     </Layout>
   )
 }

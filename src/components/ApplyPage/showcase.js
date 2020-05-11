@@ -9,10 +9,15 @@ import { SB_LIGHT_BLUE } from "../../styles/colors"
 const ShowcaseVideo = styled.iframe`
   margin-top: 20px;
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 600px;
 `
 
-const PadLessSection = styled(Section)`
-  padding: 1em 2em;
+const StyledSection = styled(Section)`
+  padding-top: 0em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,19 +27,6 @@ const PadLessSection = styled(Section)`
     padding-top: 0em;
     padding-bottom: 0em;
   }
-`
-const TestHeader = styled.h1`
-  font-style: italic;
-  color: #e8f0ff;
-  font-stretch: expanded;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  font-size: 10.5em;
-  margin-bottom: 0.5em;
-  position: absolute;
-  top: 850px;
-  margin-top: 29px;
 `
 
 const Header = styled.h1`
@@ -52,17 +44,28 @@ const Header = styled.h1`
   }
 `
 
-const SectionLine = styled(HeaderLine)`
+const SectionLine = styled.span`
   color: ${SB_ORANGE};
   border-top: 3px solid;
   margin-top: 1em;
+  margin-bottom: 0em;
   display: grid;
+  content: none;
   width: -webkit-fill-available;
 `
 
+const BlueParagraph = styled.p`
+  color: ${SB_NAVY};
+  line-height: 1.5;
+  font-size: 1.2em;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 0;
+  text-align: center;
+`
+
 const Showcase = () => (
-  <PadLessSection>
-    {/* <TestHeader>highlights</TestHeader> */}
+  <StyledSection>
     <Header>Semester highlights</Header>
     <ShowcaseVideo
       width="560"
@@ -72,8 +75,14 @@ const Showcase = () => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
-    <SectionLine />
-  </PadLessSection>
+    <BlueParagraph>
+      For the Spring 2020 semester, our members have been working hard on seven
+      different projects: Cheminformatics, Visualizer, SearchNEU, Khoury Office
+      Hours, Pharm D Tracker, and ELISA. Check out all the amazing work they
+      have done!
+    </BlueParagraph>
+    {/* <SectionLine></SectionLine> */}
+  </StyledSection>
 )
 
 export default Showcase
