@@ -3,23 +3,24 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 
-import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_SALMON, SB_NAVY, SB_ORANGE, lightenDarkenColor } from "@colors"
 import Section from "styles/components/Section"
 import Body from "styles/components/Body"
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
   display: block;
-  font-size: 1.25em;
+  font-size: 20px;
   padding: 1em 2em;
 
   @media (min-width: 1000px) {
-    height: 18em;
+    height: 15em;
   }
 `
 const Description = styled(Body)`
   padding-top: 1em;
   margin-bottom: 1em;
+  font-size: 20px;
 
   @media (min-width: 1000px) {
     height: 15em;
@@ -27,15 +28,15 @@ const Description = styled(Body)`
   }
 `
 
-const ApplyButton = styled(Link)`
+const ReadMore = styled(Link)`
   width: fit-content;
   border-bottom: 2px solid white;
   color: ${SB_NAVY};
   display: block;
   text-decoration: underline;
-  font-size: 21px;
   font-weight: 600;
   margin-top: 0.5em;
+  font-size: 20px;
 `
 const Header = styled.h2`
   letter-spacing: 0.15em;
@@ -46,6 +47,10 @@ const Header = styled.h2`
   margin: 0;
   margin-right: 15px;
   color: ${SB_SALMON};
+
+  @media (max-width: 600px) {
+    margin-right: 2em;
+  }
 `
 
 const HeadingContainer = styled.div`
@@ -72,6 +77,16 @@ const Button = styled(Link)`
   margin-bottom: 1em;
   margin-left: 2em;
 
+  &:hover {
+    background-color: ${lightenDarkenColor(SB_ORANGE, 20)};
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 1em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+  }
+
   @media (min-width: 1000px) {
     margin-bottom: 0px;
   }
@@ -85,7 +100,7 @@ const Position = ({ fields, frontmatter }) => (
     </HeadingContainer>
     <Description>
       {frontmatter.description}
-      <ApplyButton to={fields.slug}> Click here to read more.</ApplyButton>
+      <ReadMore to={fields.slug}> Click here to read more.</ReadMore>
     </Description>
   </BlueFontSection>
 )

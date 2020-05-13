@@ -5,7 +5,7 @@ import Section from "styles/components/Section"
 
 const ShowcaseVideo = styled.iframe`
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   width: 100%;
   max-width: 600px;
 `
@@ -33,11 +33,13 @@ const BlueParagraph = styled.p`
   width: 100%;
   max-width: 600px;
   margin-top: 0;
+  margin-bottom: 0px;
   text-align: center;
 `
 
 const Showcase = () => (
   <StyledSection>
+    <BlueParagraph>Check out the work we've done this semester!</BlueParagraph>
     <ShowcaseVideo
       width="560"
       height="315"
@@ -46,7 +48,6 @@ const Showcase = () => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
-    <BlueParagraph>Check out the work we've done this semester!</BlueParagraph>
   </StyledSection>
 )
 

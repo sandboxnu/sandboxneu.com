@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 import { lightenDarkenColor } from "@colors"
-import SquareLogo from "components/squareLogo"
 import Body from "styles/components/Body"
 import Button from "styles/components/Button"
+import Testimonial from "../ApplyPage/testimonial"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
@@ -122,6 +122,11 @@ const RoleContent = ({
   qualities,
   formLink,
   closeDate,
+  quote,
+  member,
+  title,
+  semester,
+  image,
 }) => {
   return (
     <>
@@ -130,6 +135,13 @@ const RoleContent = ({
         <Body dangerouslySetInnerHTML={{ __html: description }} />
         {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
+      <Testimonial
+        quote={quote}
+        member={member}
+        title={title}
+        semester={semester}
+        image={image}
+      />
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
       {!closeDate && (

@@ -9,7 +9,6 @@ import RoleContent from "components/RolePage/RoleContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
-import Testimonoial from "../components/ApplyPage/testimonial"
 
 export const ROLE_COLOR_MAPPING = {
   designer: SB_SALMON,
@@ -63,25 +62,9 @@ const BreadcrumbSection = styled.span`
   display: block;
 
   @media (min-width: 1000px) {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 0px;
     margin-left: 63px;
-  }
-`
-
-const SectionLine = styled.span`
-  color: ${SB_ORANGE};
-  border-top: 3px solid;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  display: grid;
-  content: none;
-  margin-left: 10em;
-  margin-right: 10em;
-
-  @media (min-width: 1000px) {
-    margin-left: 17em;
-    margin-right: 17em;
   }
 `
 
@@ -107,21 +90,6 @@ const RolePage = ({ data, pageContext }) => {
         <Subtitle>
           Read more about Sandbox's {selectedRole} opportunities below.
         </Subtitle>
-        <SectionLine />
-        <Testimonoial
-          quote={currentRoleData.frontmatter.quote}
-          member={currentRoleData.frontmatter.quoteMember}
-          title={currentRoleData.frontmatter.quoteMemberTitle}
-          semester={currentRoleData.frontmatter.quoteMemberSemester}
-          image={currentRoleData.frontmatter.quoteImage}
-        />
-        <SectionLine />
-        {/* <Buttons
-          roles={allRoles}
-          selectedRole={selectedRole}
-          setSelectedRole={setSelectedRole}
-          color={ROLE_COLOR_MAPPING[selectedRole]}
-        /> */}
         <RoleContent
           role={selectedRole}
           color={SB_ORANGE}
@@ -129,6 +97,11 @@ const RolePage = ({ data, pageContext }) => {
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}
           closeDate={currentRoleData.frontmatter.closeDate}
+          quote={currentRoleData.frontmatter.quote}
+          member={currentRoleData.frontmatter.quoteMember}
+          title={currentRoleData.frontmatter.quoteMemberTitle}
+          semester={currentRoleData.frontmatter.quoteMemberSemester}
+          image={currentRoleData.frontmatter.quoteImage}
         />
       </BlueFontSection>
     </Layout>

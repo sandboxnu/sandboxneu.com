@@ -11,7 +11,10 @@ const DoubleQuote = styled.span`
   color: #ffcfc9;
   font-family: Alfa Slab One;
   font-style: normal;
-  font-size: 5em;
+  font-size: 8em;
+  position: absolute;
+  top: 310px;
+  left: 80px;
 
   @media (min-width: 600px) {
     grid-column-start: c0;
@@ -19,6 +22,9 @@ const DoubleQuote = styled.span`
     grid-row-start: r0;
     grid-row-end: r1;
     font-size: 7em;
+    position: static;
+    top: auto;
+    left: auto;
   }
 
   @media (min-width: 1000px) {
@@ -28,6 +34,9 @@ const DoubleQuote = styled.span`
     grid-row-end: r1;
     font-size: 8em;
     padding-left: 20px;
+    position: static;
+    top: auto;
+    left: auto;
   }
 `
 
@@ -62,6 +71,10 @@ const Container = styled(Section)`
 const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
+  grid-column-start: c0;
+  grid-column-end: c1;
+  grid-row-start: r1;
+  grid-row-end: r2;
 
   @media (min-width: 600px) {
     grid-column-start: c0;
@@ -87,6 +100,10 @@ const Info = styled.p`
   letter-spacing: 0.15;
   font-size: 1em;
   align-items: center;
+  grid-column-start: c0;
+  grid-column-end: c1;
+  grid-row-start: r2;
+  grid-row-end: r3;
 
   @media (min-width: 600px) {
     grid-column-start: c1;
@@ -118,6 +135,11 @@ const Quote = styled.h3`
   padding-top: 0px;
   margin-top: 0px;
   text-align: center;
+  grid-column-start: c0;
+  grid-column-end: c1;
+  grid-row-start: r0;
+  grid-row-end: r1;
+  position: relative;
 
   @media (min-width: 600px) {
     grid-column-start: c0;
@@ -128,6 +150,7 @@ const Quote = styled.h3`
     padding-left: 15px;
     padding-top: 42px;
     text-align: left;
+    position: static;
   }
 
   @media (min-width: 1000px) {
@@ -140,6 +163,7 @@ const Quote = styled.h3`
     grid-row-start: r0;
     grid-row-end: r2;
     text-align: left;
+    position: static;
   }
 `
 

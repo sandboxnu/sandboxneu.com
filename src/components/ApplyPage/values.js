@@ -13,7 +13,7 @@ const OrangeHeader = styled(Header)`
 const BlueParagraph = styled.p`
   color: ${SB_NAVY};
   line-height: 1.5;
-  font-size: 1.3em;
+  font-size: 20px;
   margin-bottom: 0px;
 `
 const ParagraphContainer = styled.div`
@@ -26,7 +26,7 @@ const ParagraphContainer = styled.div`
     grid-auto-flow: column;
     grid-column-gap: 100px;
     grid-auto-columns: 1fr;
-    margin-bottom: 48px;
+    margin-bottom: 70px;
   }
 `
 
@@ -43,7 +43,7 @@ const Heading = styled.h1`
   @media (min-width: 1000px) {
     font-size: 3em;
     margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin-top: 70px;
   }
 `
 

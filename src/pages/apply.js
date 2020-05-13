@@ -22,6 +22,7 @@ const Header = styled.h1`
 
   @media (min-width: 1000px) {
     font-size: 3em;
+    margin-top: 70px;
   }
 `
 
@@ -44,13 +45,15 @@ const Container = styled.div`
 const SectionLine = styled.span`
   color: ${SB_ORANGE};
   border-top: 3px solid;
-  margin-top: 24px;
-  margin-bottom: 24px;
   display: block;
   text-align: center;
   content: none;
   width: 500px;
   margin: 0 auto;
+
+  @media (max-width: 650px) {
+    width: 50vw;
+  }
 
   @media (min-width: 1000px) {
     width: 800px;
