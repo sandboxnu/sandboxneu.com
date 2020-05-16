@@ -19,6 +19,12 @@ const Wrapper = styled.div`
   }
 `
 
+const StyledBody = styled(Body)`
+  a {
+    color: ${SB_NAVY};
+  }
+`
+
 const ContentHeaderWrapper = styled.h3`
   display: flex;
   justify-content: space-between;
@@ -96,22 +102,6 @@ const ApplicationClosedMessage = styled.div`
   margin: 1em auto;
 `
 
-const ArticleLink = styled.h2`
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  font-size: 1em;
-  max-width: 500px;
-  margin: auto;
-  line-height: 1.5;
-  color: ${SB_SALMON};
-
-  a {
-    color: ${SB_SALMON};
-  }
-`
-
 const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
@@ -146,13 +136,12 @@ const RoleContent = ({
   title,
   semester,
   image,
-  articleLink,
 }) => {
   return (
     <>
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
-        <Body dangerouslySetInnerHTML={{ __html: description }} />
+        <StyledBody dangerouslySetInnerHTML={{ __html: description }} />
         {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
       <Testimonial
@@ -164,11 +153,6 @@ const RoleContent = ({
       />
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
-      <ArticleLink>
-        Interested in learning more about what is like to be a Sandbox {role}?
-        Check out&nbsp;
-        <a href={articleLink}>this article</a>
-      </ArticleLink>
       {!closeDate && (
         <ApplicationClosedMessage>
           <strong>Application is currently closed.</strong>

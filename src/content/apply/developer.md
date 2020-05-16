@@ -15,15 +15,17 @@ quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
 quoteMemberSemester: "Spring 2020"
 quoteImage: ../team/profileImages/sauharda.png
-articleLink: "https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710"
+
 ---
 
-Sandbox is a Northeastern’s student-led software consultancy and aims to unleash the power of student driven software. Not only do we engineer solutions to accelerate our clients' research but also do we develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU.
+Sandbox is a Northeastern’s student-led software consultancy and aims to unleash the power of student driven software. Not only do we engineer solutions to accelerate our clients' research but also do we develop in-house tools for the Northeastern community, such as [searchneu.com](https://searchneu.com) and [GraduateNU](https://graduatenu.com).
 
 You’ll be part of a rapidly growing student organization with a wealth of leadership and project management opportunities. You’ll also learn and grow with our community of talented and motivated members, in addition to building connections with the research community at Northeastern.
 
 There will be two rounds for the interview. Each round will be divided into three tracks: a fundies track, an Algo track, and a Webdev track. Although these tracks are ordered by difficulty, we will match you to the right challenge ability in order for you to best showcase your by skill set. However, no matter which coding challenge you receive, we will treat them the same :D
 
 Nevertheless, it is likely that you would use other resources to assist you to finish your challenges. But that's okay! We hope you will learn and have fun during the learning process :)
+
+[Learn more about the Sandbox developer experience!](https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710)
 
 __Applications are closed, sign up for the mailing list to be notified when applications open again!__
