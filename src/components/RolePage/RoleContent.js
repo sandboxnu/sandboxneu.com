@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import { lightenDarkenColor } from "@colors"
 import Body from "styles/components/Body"
 import Button from "styles/components/Button"
@@ -49,10 +50,12 @@ const QualitiesWrapper = styled.ul`
   max-width: 450px;
   font-size: 1.2em;
   line-height: 1.5em;
+  margin-left: 50px;
 
   @media (min-width: 600px) {
     font-size: 1.3em;
     padding: 0 40px;
+    margin: 1em auto 2em;
   }
 `
 
@@ -93,6 +96,22 @@ const ApplicationClosedMessage = styled.div`
   margin: 1em auto;
 `
 
+const ArticleLink = styled.h2`
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1em;
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.5;
+  color: ${SB_SALMON};
+
+  a {
+    color: ${SB_SALMON};
+  }
+`
+
 const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
@@ -127,6 +146,7 @@ const RoleContent = ({
   title,
   semester,
   image,
+  articleLink,
 }) => {
   return (
     <>
@@ -144,6 +164,11 @@ const RoleContent = ({
       />
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
+      <ArticleLink>
+        Interested in learning more about what is like to be a Sandbox {role}?
+        Check out&nbsp;
+        <a href={articleLink}>this article</a>
+      </ArticleLink>
       {!closeDate && (
         <ApplicationClosedMessage>
           <strong>Application is currently closed.</strong>

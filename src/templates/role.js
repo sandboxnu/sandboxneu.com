@@ -102,6 +102,7 @@ const RolePage = ({ data, pageContext }) => {
           title={currentRoleData.frontmatter.quoteMemberTitle}
           semester={currentRoleData.frontmatter.quoteMemberSemester}
           image={currentRoleData.frontmatter.quoteImage}
+          articleLink={currentRoleData.frontmatter.articleLink}
         />
       </BlueFontSection>
     </Layout>
@@ -130,6 +131,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            articleLink
           }
         }
       }

@@ -13,8 +13,7 @@ const DoubleQuote = styled.span`
   font-style: normal;
   font-size: 8em;
   position: absolute;
-  top: 310px;
-  left: 80px;
+  visibility: hidden;
 
   @media (min-width: 600px) {
     grid-column-start: c0;
@@ -25,6 +24,7 @@ const DoubleQuote = styled.span`
     position: static;
     top: auto;
     left: auto;
+    visibility: visible;
   }
 
   @media (min-width: 1000px) {
@@ -37,6 +37,7 @@ const DoubleQuote = styled.span`
     position: static;
     top: auto;
     left: auto;
+    visibility: visible;
   }
 `
 

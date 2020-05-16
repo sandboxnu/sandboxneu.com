@@ -1,27 +1,29 @@
 ---
 qualities:
-  - Loves to learn
-  - Works well in teams
-  - Motivated to write clean and reliable code
-  - Wants to make an impact
-  - Values teaching others
-  - Is kind
-  - Can commit to 10 hours a week
+  - open to new learning experiences
+  - work well and be collaborative in teams
+  - eager to make an impact on the community
+  - be kind to each other
+  - take on leadership role to help out teammates
+  - be able to commit up to 10 hours a week
 formLink: "http://eepurl.com/gyY5lz"
 role: developer
-description: "Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study)."
+description: "As Sandbox developers, we work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
 closeDate: ""
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
 quoteMemberSemester: "Spring 2020"
 quoteImage: ../team/profileImages/sauharda.png
+articleLink: "https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710"
 ---
 
-Sandbox is Northeastern’s student led software consultancy and aims to unleash the power of software for researchers and students. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study).
-
-We’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to come make some amazing software with us.
+Sandbox is a Northeastern’s student-led software consultancy and aims to unleash the power of student driven software. Not only do we engineer solutions to accelerate our clients' research but also do we develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU.
 
 You’ll be part of a rapidly growing student organization with a wealth of leadership and project management opportunities. You’ll also learn and grow with our community of talented and motivated members, in addition to building connections with the research community at Northeastern.
+
+There will be two rounds for the interview. Each round will be divided into three tracks: a fundies track, an Algo track, and a Webdev track. Although these tracks are ordered by difficulty, we will match you to the right challenge ability in order for you to best showcase your by skill set. However, no matter which coding challenge you receive, we will treat them the same :D
+
+Nevertheless, it is likely that you would use other resources to assist you to finish your challenges. But that's okay! We hope you will learn and have fun during the learning process :)
 
 __Applications are closed, sign up for the mailing list to be notified when applications open again!__
