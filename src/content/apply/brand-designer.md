@@ -21,6 +21,6 @@ Sandbox is Northeastern’s student led software consultancy that aims to unleas
 
 We're looking for brand designers to help us launch our latest initiative, Oasis, a software incubator created to help students get hands-on experience building software projects. Oasis is launching this Fall with support and excitement from students, mentors, and Khoury College. 
 
-You'll have the opportunity to build out the Oasis brand identity from the ground up, creating materials for our website, social media, apparel, and posters. Additionally, you’ll be part of a rapidly growing student organization with an opportunity to leave a significant and lasting impact.
+As a brand designer, you'll have the choice to work on the Sandbox brand or join the Oasis team to build out the Oasis brand identity from the ground up, creating materials for our website, social media, apparel, and posters. Additionally, you’ll be part of a rapidly growing student organization with an opportunity to leave a significant and lasting impact.
 
 [Meet our Spring 2020 designers and learn more about their Sandbox experience!](https://medium.com/sandboxnu/sandbox-designers-in-their-own-words-127667f6ca6c)
