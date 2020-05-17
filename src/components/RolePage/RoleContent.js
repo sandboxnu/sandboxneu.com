@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import { lightenDarkenColor } from "@colors"
 import Body from "styles/components/Body"
 import Button from "styles/components/Button"
@@ -15,6 +16,12 @@ const Wrapper = styled.div`
   @media (min-width: 1000px) {
     padding-left: 1.5em;
     margin: 4em 8em;
+  }
+`
+
+const StyledBody = styled(Body)`
+  a {
+    color: ${SB_NAVY};
   }
 `
 
@@ -49,10 +56,12 @@ const QualitiesWrapper = styled.ul`
   max-width: 450px;
   font-size: 1.2em;
   line-height: 1.5em;
+  margin-left: 50px;
 
   @media (min-width: 600px) {
     font-size: 1.3em;
     padding: 0 40px;
+    margin: 1em auto 2em;
   }
 `
 
@@ -132,7 +141,7 @@ const RoleContent = ({
     <>
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
-        <Body dangerouslySetInnerHTML={{ __html: description }} />
+        <StyledBody dangerouslySetInnerHTML={{ __html: description }} />
         {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
       <Testimonial
