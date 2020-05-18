@@ -2,13 +2,17 @@
 qualities:
   - Is experienced with graphic design, including tools like Figma, etc.
   - Wants to create applications that both look great and have an intuitive user experience
+  - Has good user empathy
   - Loves to learn
   - Works well in teams
   - Is kind
   - Can commit to 10 hours a week
 formLink: "https://forms.gle/DMfyuEmdzHrM9j776"
 role: UX Designer
-description: "Sandbox is Northeastern’s student led software consultancy that aims to unleash the power of student-driven software. Our clients are scientists in a wide range of disciplines, and we engineer solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as searchneu.com and GraduateNU (a tool to help students build a plan of study)."
+description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
+isVisible: true
+isOpen: true
+openDate: ""
 closeDate: June 1st
 quote: "This was my first out-of-classroom experience being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
 quoteMember: "Rebekah Johnson"

@@ -8,7 +8,10 @@ qualities:
   - be able to commit up to 10 hours a week
 formLink: "http://eepurl.com/gyY5lz"
 role: developer
-description: "As Sandbox developers, we work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
+description: "We're looking for developers to work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
+isVisible: true
+isOpen: false
+openDate: June 2nd
 closeDate: ""
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
@@ -28,4 +31,4 @@ Nevertheless, it is likely that you would use other resources to assist you to f
 
 [Learn more about the Sandbox developer experience!](https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710)
 
-__Applications are closed, sign up for the mailing list to be notified when applications open again!__
+__Applications will open June 2nd!__

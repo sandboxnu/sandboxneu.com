@@ -66,9 +66,11 @@ const SectionLine = styled.span`
 `
 
 const ApplyPage = ({ data }) => {
-  const positions = data.positions.edges.map(edge => (
-    <Position {...edge.node} />
-  ))
+  const positions = data.positions.edges
+    .map(e => e.node)
+    .filter(node => node.frontmatter.isVisible)
+    .sort((a, b) => b.frontmatter.isOpen) // put open positions on top
+    .map(node => <Position {...node} />)
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
@@ -120,6 +122,9 @@ export const pageQuery = graphql`
           frontmatter {
             role
             description
+            isVisible
+            isOpen
+            openDate
           }
         }
       }
