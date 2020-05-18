@@ -136,6 +136,8 @@ const RoleContent = ({
   title,
   semester,
   image,
+  isOpen,
+  openDate,
 }) => {
   return (
     <>
@@ -153,16 +155,30 @@ const RoleContent = ({
       />
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
-      {!closeDate && (
+      {isOpen && (
+        <ApplyButtonWrapper>
+          <Button href={formLink}>Apply</Button>
+        </ApplyButtonWrapper>
+      )}
+      {!isOpen && openDate && (
         <ApplicationClosedMessage>
-          <strong>Application is currently closed.</strong>
-          <br />
-          Sign up for our mailing list to be notified when it reopens.
+          <strong>Application will open {openDate}.</strong>
         </ApplicationClosedMessage>
       )}
-      <ApplyButtonWrapper>
-        <Button href={formLink}>{closeDate ? "Apply" : "Sign Up"}</Button>
-      </ApplyButtonWrapper>
+      {!isOpen && !openDate && (
+        <>
+          <ApplicationClosedMessage>
+            <strong>Application is currently closed.</strong>
+            <br />
+            <div>
+              Sign up for our mailing list to be notified when it reopens.
+            </div>
+          </ApplicationClosedMessage>
+          <ApplyButtonWrapper>
+            <Button href={formLink}>{isOpen ? "Apply" : "Sign Up"}</Button>
+          </ApplyButtonWrapper>
+        </>
+      )}
     </>
   )
 }
