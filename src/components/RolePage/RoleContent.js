@@ -1,20 +1,27 @@
 import React from "react"
 import styled from "styled-components"
 
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import { lightenDarkenColor } from "@colors"
-import SquareLogo from "components/squareLogo"
 import Body from "styles/components/Body"
 import Button from "styles/components/Button"
+import Testimonial from "../ApplyPage/testimonial"
 import { capitalize } from "utils/string"
 
 const Wrapper = styled.div`
-  border-left: 6px solid ${props => props.color};
+  border-left: 3px solid ${props => props.color};
   transition: border-left 0.3s;
   padding-left: 1em;
   margin: 2em 0;
   @media (min-width: 1000px) {
     padding-left: 1.5em;
     margin: 4em 8em;
+  }
+`
+
+const StyledBody = styled(Body)`
+  a {
+    color: ${SB_NAVY};
   }
 `
 
@@ -49,10 +56,12 @@ const QualitiesWrapper = styled.ul`
   max-width: 450px;
   font-size: 1.2em;
   line-height: 1.5em;
+  margin-left: 50px;
 
   @media (min-width: 600px) {
     font-size: 1.3em;
     padding: 0 40px;
+    margin: 1em auto 2em;
   }
 `
 
@@ -97,7 +106,6 @@ const ContentHeader = ({ color, roleName }) => {
   return (
     <ContentHeaderWrapper color={color}>
       <HeaderText color={color}>{capitalize(roleName)}</HeaderText>
-      <SquareLogo size={"2em"} color={color} />
     </ContentHeaderWrapper>
   )
 }
@@ -116,35 +124,63 @@ const QualitiesList = ({ qualities, color }) => {
   )
 }
 
-const ApplyContent = ({
+const RoleContent = ({
   color,
   role,
   description,
   qualities,
   formLink,
   closeDate,
+  quote,
+  member,
+  title,
+  semester,
+  image,
+  isOpen,
+  openDate,
 }) => {
   return (
     <>
       <Wrapper color={color}>
         <ContentHeader color={color} roleName={role} />
-        <Body dangerouslySetInnerHTML={{ __html: description }} />
+        <StyledBody dangerouslySetInnerHTML={{ __html: description }} />
         {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
+      <Testimonial
+        quote={quote}
+        member={member}
+        title={title}
+        semester={semester}
+        image={image}
+      />
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
-      {!closeDate && (
+      {isOpen && (
+        <ApplyButtonWrapper>
+          <Button href={formLink}>Apply</Button>
+        </ApplyButtonWrapper>
+      )}
+      {!isOpen && openDate && (
         <ApplicationClosedMessage>
-          <strong>Application is currently closed.</strong>
-          <br />
-          Sign up for our mailing list to be notified when it reopens.
+          <strong>Application will open {openDate}.</strong>
         </ApplicationClosedMessage>
       )}
-      <ApplyButtonWrapper>
-        <Button href={formLink}>{closeDate ? "Apply" : "Sign Up"}</Button>
-      </ApplyButtonWrapper>
+      {!isOpen && !openDate && (
+        <>
+          <ApplicationClosedMessage>
+            <strong>Application is currently closed.</strong>
+            <br />
+            <div>
+              Sign up for our mailing list to be notified when it reopens.
+            </div>
+          </ApplicationClosedMessage>
+          <ApplyButtonWrapper>
+            <Button href={formLink}>{isOpen ? "Apply" : "Sign Up"}</Button>
+          </ApplyButtonWrapper>
+        </>
+      )}
     </>
   )
 }
 
-export default ApplyContent
+export default RoleContent

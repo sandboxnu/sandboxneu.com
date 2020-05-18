@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { amplitudeLogEvent } from "utils/amplitude"
+import { Link } from "gatsby"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
-import Buttons from "components/ApplyPage/Buttons"
-import ApplyContent from "components/ApplyPage/ApplyContent"
+import RoleContent from "components/RolePage/RoleContent"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
@@ -36,17 +36,39 @@ const Subtitle = styled.h3`
   text-align: center;
   font-weight: 400;
   line-height: 1.5;
+  margin-bottom: 2em;
 
   @media (min-width: 1000px) {
     font-size: 1.5em;
   }
 `
 
-const CenteredContent = styled.div`
-  text-align: center;
+const Breadcrumb = styled(Link)`
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  color: ${SB_NAVY};
+  transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
+  &:hover {
+    border-bottom: 2px solid ${SB_NAVY};
+  }
+`
+const BreadcrumbSection = styled.span`
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 30px;
+  margin-bottom: 55px;
+  display: block;
+
+  @media (min-width: 1000px) {
+    font-size: 1em;
+    margin-bottom: 0px;
+    margin-left: 63px;
+  }
 `
 
-const ApplyPage = ({ data, pageContext }) => {
+const RolePage = ({ data, pageContext }) => {
   const [selectedRole, setSelectedRole] = useState(pageContext.role)
   const allRoles = pageContext.roles
   const currentRoleData = data.allMarkdownRemark.edges.find(
@@ -61,21 +83,27 @@ const ApplyPage = ({ data, pageContext }) => {
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
-        <Header>APPLY TO SANDBOX</Header>
-        <Subtitle>Read more about Sandbox's opportunities below.</Subtitle>
-        <Buttons
-          roles={allRoles}
-          selectedRole={selectedRole}
-          setSelectedRole={setSelectedRole}
-          color={ROLE_COLOR_MAPPING[selectedRole]}
-        />
-        <ApplyContent
+        <BreadcrumbSection>
+          <Breadcrumb to="/apply">apply</Breadcrumb> > {selectedRole}
+        </BreadcrumbSection>
+        <Header>{selectedRole.toUpperCase()}</Header>
+        <Subtitle>
+          Read more about Sandbox's {selectedRole} opportunities below.
+        </Subtitle>
+        <RoleContent
           role={selectedRole}
-          color={ROLE_COLOR_MAPPING[selectedRole]}
+          color={SB_ORANGE}
           description={currentRoleData.html}
           formLink={currentRoleData.frontmatter.formLink}
           qualities={currentRoleData.frontmatter.qualities}
           closeDate={currentRoleData.frontmatter.closeDate}
+          quote={currentRoleData.frontmatter.quote}
+          member={currentRoleData.frontmatter.quoteMember}
+          title={currentRoleData.frontmatter.quoteMemberTitle}
+          semester={currentRoleData.frontmatter.quoteMemberSemester}
+          image={currentRoleData.frontmatter.quoteImage}
+          isOpen={currentRoleData.frontmatter.isOpen}
+          openDate={currentRoleData.frontmatter.openDate}
         />
       </BlueFontSection>
     </Layout>
@@ -83,7 +111,7 @@ const ApplyPage = ({ data, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-  query ApplyQuery {
+  query RoleQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
       edges {
         node {
@@ -92,7 +120,20 @@ export const pageQuery = graphql`
             qualities
             formLink
             role
+            isOpen
+            openDate
             closeDate
+            quote
+            quoteMember
+            quoteMemberTitle
+            quoteMemberSemester
+            quoteImage {
+              childImageSharp {
+                fixed(width: 200, height: 200, quality: 90) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
@@ -100,4 +141,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default ApplyPage
+export default RolePage
