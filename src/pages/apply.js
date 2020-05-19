@@ -69,7 +69,7 @@ const ApplyPage = ({ data }) => {
   const positions = data.positions.edges
     .map(e => e.node)
     .filter(node => node.frontmatter.isVisible)
-    .sort((a, b) => b.frontmatter.isOpen) // put open positions on top
+    .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
     .map(node => <Position {...node} />)
   return (
     <Layout page="apply">
