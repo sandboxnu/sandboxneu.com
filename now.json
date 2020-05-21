@@ -12,6 +12,13 @@
   ],
   "routes": [
     {
+      "src": "/apply/designer",
+      "status": 301,
+      "headers": {
+        "Location": "https://www.sandboxnu.com/apply"
+      }
+    },
+    {
       "src": "/research",
       "status": 301,
       "headers": {
