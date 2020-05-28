@@ -20,7 +20,7 @@ const ParagraphContainer = styled.div`
   display: grid;
   grid-row-gap: 20px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 
   @media (min-width: 1000px) {
     grid-auto-flow: column;
