@@ -13,7 +13,7 @@ description: We're looking for UX designers to join our project teams and make d
 isVisible: true
 isOpen: true
 openDate: ""
-closeDate: June 1st
+closeDate: June 20th
 quote: "This was my first out-of-classroom experience being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
 quoteMember: "Rebekah Johnson"
 quoteMemberTitle: "UX Designer, SearchNEU"
