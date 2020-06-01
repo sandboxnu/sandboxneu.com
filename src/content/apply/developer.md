@@ -4,7 +4,7 @@ qualities:
   - Works well on collaborative teams
   - Eager to make an impact on the community
   - Is kind
-  - Takes on leadership to help out teammates
+  - Takes on leadership role to help out teammates
   - Can commit to 10 hours a week
 formLink: "https://forms.gle/VN9u9yMYGCnCc7Gg9"
 role: developer
@@ -12,7 +12,7 @@ description: "We're looking for developers to work on research projects with res
 isVisible: true
 isOpen: true
 openDate: ""
-closeDate: "June 20th"
+closeDate: "tetatively on June 20th"
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
