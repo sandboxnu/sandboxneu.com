@@ -5,9 +5,13 @@ import Section from "styles/components/Section"
 
 const ShowcaseVideo = styled.iframe`
   margin-top: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   width: 100%;
   max-width: 600px;
+
+  @media (min-width: 1000px) {
+    margin-bottom: 70px;
+  }
 `
 
 const StyledSection = styled(Section)`

@@ -49,13 +49,17 @@ const Header = styled.h2`
   color: ${SB_SALMON};
 
   @media (max-width: 600px) {
-    margin-right: 2em;
+    font-size: 24px;
   }
 `
 
 const HeadingContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 660px) {
+    display: block;
+  }
 `
 
 const Button = styled(Link)`
@@ -81,7 +85,7 @@ const Button = styled(Link)`
     background-color: ${lightenDarkenColor(SB_ORANGE, 20)};
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 660px) {
     margin-top: 1em;
     margin-left: 0em;
     margin-bottom: 0em;

@@ -37,9 +37,13 @@ const ParagraphContainer = styled.div`
 `
 
 const Container = styled.div`
-  margin: 0 auto;
-  padding 0em 5em;
-  margin-top: 3em;
+margin: 0 auto;
+padding: 0em 1em;
+margin-top: 3em;
+@media (min-width: 1000px) {
+  padding: 0em 5em;
+  text-align: center:
+}  
 `
 
 const SectionLine = styled.span`
@@ -52,7 +56,7 @@ const SectionLine = styled.span`
   margin: 0 auto;
 
   @media (max-width: 650px) {
-    width: 50vw;
+    display: none;
   }
 
   @media (min-width: 1000px) {
