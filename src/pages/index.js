@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Builds from "components/IndexPage/builds"
 import Hero from "components/IndexPage/hero"
-import Layout from "components/layout"
-import Mission from "components/IndexPage/mission"
+import Layout from "components/PageLayout/layout"
+import Values from "components/IndexPage/values"
 import Who from "components/IndexPage/who"
 import SEO from "components/seo"
 import Testimonial from "components/IndexPage/testimonial"
@@ -15,12 +14,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero {...data.hero.edges[0].node} />
       <Who {...data.who.edges[0].node} />
-      <Mission {...data.mission.edges[0].node} />
-      <Builds {...data.builds.edges[0].node} />
-      <Testimonial
-        quote={data.testimonial.edges[0].node.html}
-        {...data.testimonial.edges[0].node.frontmatter}
-      />
+      <Values {...data.values.edges[0].node} />
     </Layout>
   )
 }
@@ -48,57 +42,16 @@ export const query = graphql`
           p1
           title2
           p2
-          img1 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          img2 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          img3 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
-    mission: allMissionJson {
+    values: allValuesJson {
       edges {
         node {
           title
           principles {
             title
             body
-          }
-        }
-      }
-    }
-    builds: allBuildsJson {
-      edges {
-        node {
-          title
-          projects {
-            title
-            tags
-            image {
-              childImageSharp {
-                fixed(width: 300) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-            description
-            gitLink
           }
         }
       }

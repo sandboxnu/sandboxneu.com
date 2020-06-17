@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "colors"
 import Section from "styles/components/Section"
 import { Header } from "styles/components/Header"
 

@@ -9,6 +9,14 @@ module.exports = {
         route: "/",
       },
       {
+        name: "About",
+        route: "/about",
+      },
+      {
+        name: "Portfolio",
+        route: "/portfolio",
+      },
+      {
         name: "Apply",
         route: "/apply",
       },

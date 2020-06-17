@@ -6,14 +6,9 @@ import { Link } from "gatsby"
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import RoleContent from "components/RolePage/RoleContent"
-import Layout from "components/layout"
+import Layout from "components/PageLayout/layout"
 import SEO from "components/seo"
 import Section from "styles/components/Section"
-
-export const ROLE_COLOR_MAPPING = {
-  designer: SB_SALMON,
-  developer: SB_ORANGE,
-}
 
 const BlueFontSection = styled(Section)`
   color: ${SB_NAVY};
@@ -69,8 +64,7 @@ const BreadcrumbSection = styled.span`
 `
 
 const RolePage = ({ data, pageContext }) => {
-  const [selectedRole, setSelectedRole] = useState(pageContext.role)
-  const allRoles = pageContext.roles
+  const selectedRole = pageContext.role
   const currentRoleData = data.allMarkdownRemark.edges.find(
     roleData => roleData.node.frontmatter.role === selectedRole
   ).node
@@ -84,7 +78,7 @@ const RolePage = ({ data, pageContext }) => {
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <BreadcrumbSection>
-          <Breadcrumb to="/apply">apply</Breadcrumb> > {selectedRole}
+          <Breadcrumb to="/apply">apply</Breadcrumb> {selectedRole}
         </BreadcrumbSection>
         <Header>{selectedRole.toUpperCase()}</Header>
         <Subtitle>
