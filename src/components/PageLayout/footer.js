@@ -119,8 +119,10 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
           <Navigate>
             <Header>NAVIGATE</Header>
             <InfoLink dest="/" text="home" />
-            <InfoLink dest="/team" text="team" />
+            <InfoLink dest="/about" text="about" />
+            <InfoLink dest="/portfolio" text="portfolio" />
             <InfoLink dest="/apply" text="apply" />
+            <InfoLink dest="/team" text="team" />
           </Navigate>
           <Contact>
             <Header>CONTACT</Header>

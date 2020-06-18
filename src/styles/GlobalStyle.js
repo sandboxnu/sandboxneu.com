@@ -19,3 +19,6 @@ export default createGlobalStyle`
     }
   }
 `
+// FONTS
+export const primaryFont = "Brandon"
+export const accentFont = "monospace"

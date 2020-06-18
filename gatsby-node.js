@@ -90,6 +90,7 @@ exports.onCreateWebpackConfig = ({
         styles: path.resolve(__dirname, "src/styles/"),
         utils: path.resolve(__dirname, "src/utils/"),
         ["@colors"]: path.resolve(__dirname, "src/styles/colors"),
+        ["@global"]: path.resolve(__dirname, "src/styles/GlobalStyle"),
       },
     },
   })

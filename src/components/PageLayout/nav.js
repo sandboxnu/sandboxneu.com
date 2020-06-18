@@ -5,6 +5,7 @@ import styled, { css } from "styled-components"
 import { useAmplitudeLogEvent } from "utils/amplitude"
 
 import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
+import { accentFont } from "@global"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
@@ -107,7 +108,8 @@ const SideButton = styled(Link)`
 const Button = styled(Link)`
   letter-spacing: 0.15em;
   line-height: inherit;
-  text-transform: uppercase;
+  font-family: ${accentFont};
+  text-transform: lowercase;
   text-decoration: none;
   font-weight: 500;
   border-bottom: 2px solid ${SB_ORANGE_RGBA(0)};
