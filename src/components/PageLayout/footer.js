@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faInstagram,
   faGithub,
+  faSlack,
 } from "@fortawesome/free-brands-svg-icons"
 
 import { SB_NAVY, SB_ORANGE } from "@colors"
@@ -110,7 +111,15 @@ const Zeit = styled.div`
   margin-top: 20px;
 `
 
-const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
+const Footer = ({
+  pages,
+  email,
+  facebook,
+  linkedin,
+  instagram,
+  github,
+  slack,
+}) => (
   <footer>
     <GrayBackground>
       <FlexSection>
@@ -132,6 +141,7 @@ const Footer = ({ pages, email, facebook, linkedin, instagram, github }) => (
               <SocialInfo info={linkedin} icon={faLinkedin} />
               <SocialInfo info={instagram} icon={faInstagram} />
               <SocialInfo info={github} icon={faGithub} />
+              <SocialInfo info={slack} icon={faSlack} />
             </SocialSection>
             <Zeit>
               Hosted by{" "}
@@ -154,6 +164,7 @@ Footer.propTypes = {
   instagram: SocialType.isRequired,
   facebook: SocialType.isRequired,
   linkedin: SocialType.isRequired,
+  slack: SocialType.isRequired,
 }
 
 export default Footer

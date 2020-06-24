@@ -42,6 +42,9 @@ const Layout = ({ children, page }) => (
               github {
                 url
               }
+              slack {
+                url
+              }
             }
           }
         }
