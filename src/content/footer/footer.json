@@ -1,7 +1,7 @@
 {
   "email": "sandboxneu@gmail.com",
   "facebook": {
-    "url": "https://www.facebook.com/sandboxneu/"
+    "url": "https://www.facebook.com/sandboxnu/"
   },
   "linkedin": {
     "url": "https://www.linkedin.com/company/sandboxneu/"
@@ -11,5 +11,8 @@
   },
   "github": {
     "url": "https://github.com/sandboxnu"
+  },
+  "slack": {
+    "url": "https://sandboxcommunity.slack.com/join/shared_invite/zt-f8rhhx05-WZy5aERp6jU0ImF35GaPWw#/"
   }
 }
