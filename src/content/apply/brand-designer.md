@@ -12,7 +12,7 @@ description: We're looking for brand designers to build out the Sandbox brand an
 isVisible: true
 isOpen: true
 openDate: May 18th
-closeDate: June 27th
+closeDate: July 10th
 quote: "Sandbox is a great place to be a designer because right now the design team is so small…. It’s really awesome as a designer to have that experience of really being in charge and owning your projects."
 quoteMember: "Catherine Titcomb"
 quoteMemberTitle: "Head of Brand"
