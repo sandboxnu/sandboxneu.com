@@ -19,6 +19,7 @@ const Mobile = styled.div`
 
 const Desktop = styled.div`
   display: none;
+  padding: 0 150px;
   @media (min-width: 1000px) {
     display: block;
   }
