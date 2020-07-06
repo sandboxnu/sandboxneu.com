@@ -2,43 +2,107 @@
   font-family: "Brandon";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/BrandonGrotesqueWeb-Bold.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-Bold.woff") format("woff"),
-    url("../fonts/BrandonGrotesqueWeb-Bold.woff") format("truetype");
+  src: url("../fonts/Brandon/BrandonGrotesqueWeb-Bold.woff2") format("woff2"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-Bold.woff") format("woff"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-Bold.woff") format("truetype");
   font-display: fallback;
 }
 @font-face {
   font-family: "Brandon";
   font-style: italic;
   font-weight: 700;
-  src: url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff") format("woff"),
-    url("../fonts/BrandonGrotesqueWeb-BoldItalic.woff") format("truetype");
+  src: url("../fonts/Brandon/BrandonGrotesqueWeb-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-BoldItalic.woff") format("woff"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-BoldItalic.woff") format("truetype");
   font-display: fallback;
 }
 @font-face {
   font-family: "Brandon";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/BrandonGrotesqueWeb-Regular.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-Regular.woff") format("woff"),
-    url("../fonts/BrandonGrotesqueWeb-Regular.ttf") format("truetype");
+  src: url("../fonts/Brandon/BrandonGrotesqueWeb-Regular.woff2") format("woff2"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-Regular.woff") format("woff"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-Regular.ttf") format("truetype");
   font-display: fallback;
 }
 @font-face {
   font-family: "Brandon";
   font-style: italic;
   font-weight: normal;
-  src: url("../fonts/BrandonGrotesqueWeb-RegularItalic.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-RegularItalic.woff") format("woff"),
-    url("../fonts/BrandonGrotesqueWeb-RegularItalic.ttf") format("truetype");
+  src: url("../fonts/Brandon/BrandonGrotesqueWeb-RegularItalic.woff2") format("woff2"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-RegularItalic.woff") format("woff"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-RegularItalic.ttf") format("truetype");
   font-display: fallback;
 }
 @font-face {
   font-family: "Brandon";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/BrandonGrotesqueWeb-Medium.woff2") format("woff2"),
-    url("../fonts/BrandonGrotesqueWeb-Medium.woff") format("woff");
+  src: url("../fonts/Brandon/BrandonGrotesqueWeb-Medium.woff2") format("woff2"),
+    url("../fonts/Brandon/BrandonGrotesqueWeb-Medium.woff") format("woff");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/OpenSans/OpenSans-Italic.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
   font-display: fallback;
 }
