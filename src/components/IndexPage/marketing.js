@@ -8,10 +8,14 @@ const MainMarketingContainer = styled.div`
   width: 350px;
   background: ${SB_NAVY_RGBA(0.75)};
   display: inline-block;
-  margin-left: 200px;
+  padding: 48px 48px 48px 16px;
 `
 
-const ContentContainer = styled.div``
+const ContentContainer = styled.div`
+  &:first-child {
+    margin-bottom: 48px;
+  }
+`
 
 const ContentHeader = styled.div`
   font-family: Montserrat;
@@ -22,15 +26,17 @@ const ContentHeader = styled.div`
   color: white;
 `
 
-const EventText = styled.p`
+const EventText = styled.span`
   font-family: Open Sans;
   font-size: 18px;
   line-height: 25px;
   color: ${SB_ORANGE};
+  display: inline-block;
 `
 
 const PostLink = styled.a`
   font-family: Open Sans;
+  text-decoration: none;
   font-size: 18px;
   line-height: 25px;
   color: ${SB_ORANGE};
