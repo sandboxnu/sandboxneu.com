@@ -6,6 +6,7 @@ import Layout from "components/PageLayout/layout"
 import Values from "components/IndexPage/values"
 import Who from "components/IndexPage/who"
 import SEO from "components/seo"
+import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
 
 const IndexPage = ({ data }) => {
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
     <Layout page="index">
       <SEO />
       <Hero {...data.hero.edges[0].node} />
+      <Marketing {...data.marketing.edges[0].node} />
       <Who {...data.who.edges[0].node} />
       <Values {...data.values.edges[0].node} />
     </Layout>
@@ -31,6 +33,23 @@ export const query = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+          }
+        }
+      }
+    }
+    marketing: allMarketingJson {
+      edges {
+        node {
+          event {
+            date
+            time
+            location
+            title
+          }
+          post {
+            title
+            author
+            url
           }
         }
       }
