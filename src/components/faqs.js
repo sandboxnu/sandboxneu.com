@@ -11,7 +11,7 @@ const SingleFAQ = styled.div``
 
 const Answer = styled.span``
 
-const FAQ = ({ faqs }) => (
+const FAQs = ({ faqs }) => (
   <Section>
     <Title>FAQ</Title>
     {faqs.map(f => (
@@ -23,7 +23,7 @@ const FAQ = ({ faqs }) => (
   </Section>
 )
 
-FAQ.propTypes = {
+FAQs.propTypes = {
   faqs: PropTypes.arrayOf(
     PropTypes.exact({
       question: PropTypes.string.isRequired,
@@ -32,4 +32,4 @@ FAQ.propTypes = {
   ).isRequired,
 }
 
-export default FAQ
+export default FAQs

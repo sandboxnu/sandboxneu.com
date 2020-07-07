@@ -7,7 +7,7 @@ import Values from "components/IndexPage/values"
 import Who from "components/IndexPage/who"
 import SEO from "components/seo"
 import Testimonial from "components/IndexPage/testimonial"
-import FAQ from "components/faq"
+import FAQs from "components/faqs"
 
 const IndexPage = ({ data }) => {
   return (
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       <Hero {...data.hero.edges[0].node} />
       <Who {...data.who.edges[0].node} />
       <Values {...data.values.edges[0].node} />
-      <FAQ {...data.faqs.edges[0].node} />
+      <FAQs {...data.faqs.edges[0].node} />
     </Layout>
   )
 }
@@ -73,7 +73,7 @@ export const query = graphql`
         }
       }
     }
-    faqs: allFaqJson {
+    faqs: allFaqsJson {
       edges {
         node {
           faqs {
