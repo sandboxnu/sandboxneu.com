@@ -8,6 +8,7 @@ import Who from "components/IndexPage/who"
 import SEO from "components/seo"
 import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
+import FAQs from "components/faqs"
 
 const IndexPage = ({ data }) => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = ({ data }) => {
       <Marketing {...data.marketing.edges[0].node} />
       <Who {...data.who.edges[0].node} />
       <Values {...data.values.edges[0].node} />
+      <FAQs {...data.faqs.edges[0].node} />
     </Layout>
   )
 }
@@ -86,6 +88,16 @@ export const query = graphql`
             author
             email
             form
+          }
+        }
+      }
+    }
+    faqs: allFaqsJson {
+      edges {
+        node {
+          faqs {
+            question
+            answer
           }
         }
       }
