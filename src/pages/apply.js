@@ -86,7 +86,7 @@ const ApplyPage = ({ data }) => {
         <Header>Semester Highlights</Header>
         <Showcase />
         <SectionLine />
-        <Header id="open-positions">Open Positions</Header>
+        <Header id="open-positions">Positions</Header>
         <ParagraphContainer>{positions}</ParagraphContainer>
       </Container>
     </Layout>
@@ -101,6 +101,7 @@ export const pageQuery = graphql`
           title
           subtitle
           applicationStatus
+          isBannerVisible
         }
       }
     }
