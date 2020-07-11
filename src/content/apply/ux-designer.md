@@ -8,6 +8,7 @@ qualities:
   - Is kind
   - Can commit to 10 hours a week
 formLink: "https://forms.gle/DMfyuEmdzHrM9j776"
+mailLink:  "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true

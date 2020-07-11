@@ -101,7 +101,8 @@ const Position = ({ fields, frontmatter }) => (
     <HeadingContainer>
       <Header>{frontmatter.role}</Header>
       <Button to={fields.slug}>
-        {frontmatter.isOpen ? "Apply" : `opens ${frontmatter.openDate}`}
+        {frontmatter.isOpen ? "Apply" : `closed`}
+        {/* {frontmatter.isOpen ? "Apply" : `opens ${frontmatter.openDate}`} */}
       </Button>
     </HeadingContainer>
     <Description>

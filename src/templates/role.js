@@ -84,7 +84,7 @@ const RolePage = ({ data, pageContext }) => {
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <BreadcrumbSection>
-          <Breadcrumb to="/apply">apply</Breadcrumb> > {selectedRole}
+          <Breadcrumb to="/apply">apply</Breadcrumb> &gt; {selectedRole}
         </BreadcrumbSection>
         <Header>{selectedRole.toUpperCase()}</Header>
         <Subtitle>
@@ -104,6 +104,7 @@ const RolePage = ({ data, pageContext }) => {
           image={currentRoleData.frontmatter.quoteImage}
           isOpen={currentRoleData.frontmatter.isOpen}
           openDate={currentRoleData.frontmatter.openDate}
+          mailLink={currentRoleData.frontmatter.mailLink}
         />
       </BlueFontSection>
     </Layout>
@@ -119,6 +120,7 @@ export const pageQuery = graphql`
           frontmatter {
             qualities
             formLink
+            mailLink
             role
             isOpen
             openDate
