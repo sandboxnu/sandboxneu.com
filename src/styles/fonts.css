@@ -111,6 +111,6 @@
   font-family: "Andale Mono";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/AndaleMono//AndaleMo.ttf") format("truetype");
+  src: url("../fonts/AndaleMono/AndaleMo.ttf") format("truetype");
   font-display: fallback;
 }
