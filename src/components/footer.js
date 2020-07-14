@@ -22,11 +22,12 @@ const Navigate = styled.div`
 `
 
 const Header = styled.span`
+  font-size: 1.25em;
   letter-spacing: 0.15em;
 `
 
 const Contact = styled.div`
-  padding-left: 1em;
+  padding-left: 2em;
   color: ${SB_NAVY};
 
   @media (min-width: 750px) {
@@ -50,7 +51,6 @@ const FooterInfo = styled.div`
 `
 
 const SocialSection = styled.div`
-  padding-top: 10px;
   display: flex;
 `
 
@@ -76,13 +76,18 @@ const SizedLogo = styled.object`
 `
 
 const StyledSocial = styled.div`
-  margin-right: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
 `
 
 const StyledLink = styled.a`
   display: block;
+  height: 48px;
   padding-top: 10px;
   text-decoration: none;
+  font-size: 1.25em;
   color: ${SB_NAVY};
   transition: color 0.3s;
   &:hover {
@@ -96,7 +101,7 @@ const SocialInfo = ({ info, icon }) => {
   return (
     <StyledSocial>
       <a href={info.url}>
-        <SocialLogo icon={icon} color={SB_NAVY} />
+        <SocialLogo icon={icon} color={SB_NAVY} size="lg" />
       </a>
     </StyledSocial>
   )
