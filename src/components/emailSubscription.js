@@ -79,12 +79,8 @@ const EmailSubscription = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log("sending...")
     addToMailchimp(email).then(data => {
       setResult(data)
-      console.log(
-        "data result: " + data.result + "\n data message: " + data.msg
-      )
     })
   }
 
