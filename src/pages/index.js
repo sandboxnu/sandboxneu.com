@@ -9,6 +9,7 @@ import SEO from "components/seo"
 import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
 import FAQs from "components/faqs"
+import EmailSubscription from "../components/emailSubscription"
 
 const IndexPage = ({ data }) => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero {...data.hero.edges[0].node} />
       <Marketing {...data.marketing.edges[0].node} />
+      <EmailSubscription />
       <Who {...data.who.edges[0].node} />
       <Values {...data.values.edges[0].node} />
       <FAQs {...data.faqs.edges[0].node} />
