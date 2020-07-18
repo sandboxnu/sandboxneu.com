@@ -106,3 +106,11 @@
   src: url("../fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
   font-display: fallback;
 }
+
+@font-face {
+  font-family: "Andale Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/AndaleMono/AndaleMo.ttf") format("truetype");
+  font-display: fallback;
+}
