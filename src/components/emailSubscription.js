@@ -18,6 +18,7 @@ const InputField = styled.input`
     background-color: ${SB_SALMON_RGBA(0.5)} !important;
     width: 500px;
     padding: 5px 10px;
+    font-family: Andale Mono, monospace;
 
     &::placeholder {
         color: white;
@@ -34,10 +35,11 @@ const Submit = styled.button`
   background-color: ${SB_SALMON};
   border: 3px solid #fa8072;
   border-left: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   font-style: italic;
   transition: background 0.2s ease-out;
+  font-size: 18px;
 
   &:hover {
     background-color: ${lightenDarkenColor(SB_SALMON, 30)};
@@ -60,6 +62,7 @@ const Response = styled.span`
   width: fit-content;
   border-radius: 5px;
   margin-top: 4px;
+  font-size: 18px;
 
   & > a {
     color: white;
