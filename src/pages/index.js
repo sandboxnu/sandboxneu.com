@@ -10,6 +10,7 @@ import SEO from "components/seo"
 import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
 import FAQs from "components/faqs"
+import EmailSubscription from "../components/emailSubscription"
 import Banner from "styles/components/Banner"
 
 const JoinBannerContent = styled.div`
@@ -34,6 +35,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero {...data.hero.edges[0].node} />
       <Marketing {...data.marketing.edges[0].node} />
+      <EmailSubscription />
       <Who {...data.who.edges[0].node} />
       <Banner>
         UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
