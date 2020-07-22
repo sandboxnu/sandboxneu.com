@@ -33,7 +33,7 @@ const Submit = styled.button`
   display: inline-block;
   color: white;
   background-color: ${SB_SALMON};
-  border: 3px solid #fa8072;
+  border: 3px solid ${SB_SALMON};
   border-left: none;
   padding-top: 4px;
   padding-bottom: 4px;
