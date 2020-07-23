@@ -12,6 +12,8 @@ import Testimonial from "components/IndexPage/testimonial"
 import FAQs from "components/faqs"
 import EmailSubscription from "../components/emailSubscription"
 import Banner from "styles/components/Banner"
+import Card from "components/card"
+import { SB_ORANGE, SB_SALMON } from "@colors"
 
 const JoinBannerContent = styled.div`
   & > div {
@@ -29,6 +31,21 @@ const EmailBannerContent = styled.div`
   //TO-DO: Styles when email component added
 `
 
+const CardLayout = styled.div`
+  // Use grid for this
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  & div {
+    margin-bottom: 200px;
+  }
+`
+const Test = styled.div`
+  width: 100%;
+  height: 100%;
+  color: green;
+`
+
 const IndexPage = ({ data }) => {
   return (
     <Layout page="index">
@@ -40,6 +57,24 @@ const IndexPage = ({ data }) => {
       <Banner>
         UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
       </Banner>
+      <CardLayout>
+        <Card
+          color={SB_SALMON}
+          linkSrc={"mailto:info@sandboxneu.com"}
+          linkText={"work with us >"}
+          title={"WORK WITH US"}
+          isSpotlight={false}
+        >
+          <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
+        </Card>
+        <Card
+          color={SB_ORANGE}
+          linkSrc={"https://oasis.sandboxnu.com/"}
+          linkText={"learn more about oasis >"}
+          title={"OASIS"}
+          isSpotlight={false}
+        />
+      </CardLayout>
       <Values {...data.values.edges[0].node} />
       <Banner>
         <EmailBannerContent>
