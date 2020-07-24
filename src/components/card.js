@@ -16,14 +16,25 @@ const Title = styled.span`
   font-style: italic;
   font-weight: bold;
   font-size: 50px;
-  top: -30px;
+  top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
   background: white;
   left: ${({ color }) => color === "#FA8072" && `5%`};
   right: ${({ color }) => color === "#FEB729" && `5%`};
   padding: 0 10px;
+  width: ${({ isSpotlight }) => isSpotlight && `min-content`};
+  max-width: 80%;
 `
 
-const SpotlightTitle = styled.div``
+const SpotlightText = styled.span`
+  color: ${({ color }) => color};
+  font-family: Andale Mono;
+  font-size: 20px;
+  right: 5%;
+  top: -13px;
+  padding: 0 10px;
+  background: white;
+  position: absolute;
+`
 
 const Link = styled.a`
   position: absolute;
@@ -45,14 +56,12 @@ const Link = styled.a`
 const Card = ({ children, title, linkText, linkSrc, color, isSpotlight }) => {
   return (
     <Container color={color}>
-      {isSpotlight ? (
-        <SpotlightTitle color={color}>
-          <span>project spotlight</span>
-          <span>{title}</span>
-        </SpotlightTitle>
-      ) : (
-        <Title color={color}>{title}</Title>
+      {isSpotlight && (
+        <SpotlightText color={color}>project spotlight</SpotlightText>
       )}
+      <Title color={color} isSpotlight={isSpotlight}>
+        {title}
+      </Title>
       <Link href={linkSrc} color={color}>
         {linkText}
       </Link>

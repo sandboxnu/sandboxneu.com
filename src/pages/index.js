@@ -68,12 +68,30 @@ const IndexPage = ({ data }) => {
           <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
         </Card>
         <Card
+          color={SB_SALMON}
+          linkSrc={"/apply"}
+          linkText={"apply here >"}
+          title={"JOIN THE TEAM"}
+          isSpotlight={false}
+        >
+          JOIN THE TEAM
+        </Card>
+        <Card
           color={SB_ORANGE}
           linkSrc={"https://oasis.sandboxnu.com/"}
           linkText={"learn more about oasis >"}
           title={"OASIS"}
           isSpotlight={false}
         />
+        <Card
+          color={SB_ORANGE}
+          linkSrc={"/portfolio"}
+          linkText={"work with us >"}
+          title={"PHARMD TRACKER"}
+          isSpotlight={true}
+        >
+          <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
+        </Card>
       </CardLayout>
       <Values {...data.values.edges[0].node} />
       <Banner>
