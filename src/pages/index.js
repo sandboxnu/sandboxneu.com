@@ -23,8 +23,6 @@ const JoinBannerContent = styled.div`
     font-family: Andale Mono, monospace;
     font-size: 15px;
     line-height: 16px;
-    font-weight: normal;
-    font-style: normal;
   }
 `
 const EmailBannerContent = styled.div`
@@ -32,18 +30,64 @@ const EmailBannerContent = styled.div`
 `
 
 const CardLayout = styled.div`
-  // Use grid for this
   padding: 60px;
   display: flex;
+  justify-content: flex-end;
+`
+const CardsLeft = styled.div`
+  padding: 24px;
+  display: flex;
   flex-direction: column;
-  & div {
-    margin-bottom: 200px;
+  & > div:first-child {
+    margin-bottom: 72px;
   }
 `
-const Test = styled.div`
-  width: 100%;
-  height: 100%;
-  color: green;
+const CardsRight = styled.div`
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  & > div:first-child {
+    margin-bottom: 72px;
+  }
+`
+const WorkWithUs = styled.div`
+  font-family: Open Sans;
+  font-size: 15px;
+  line-height: 20px;
+  display: inline-block;
+  margin: 70px 20px 60px 20px;
+  width: 490px;
+`
+const JoinTheTeam = styled.div`
+  line-height: 20px;
+  display: flex;
+  margin: 50px 20px 50px 20px;
+  width: fit-content;
+`
+const JoinTheTeamText = styled.div`
+  font-family: Open Sans;
+  font-size: 15px;
+  margin-right: 24px;
+  width: 325px;
+`
+const JoinTheTeamImage = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & > div {
+    border-radius: 50%;
+    height: 108px;
+    width: 108px;
+    background: green;
+    margin-bottom: 16px;
+  }
+  & > span {
+    white-space: nowrap;
+    font-family: Open Sans;
+    font-size: 10px;
+  }
 `
 
 const IndexPage = ({ data }) => {
@@ -58,46 +102,62 @@ const IndexPage = ({ data }) => {
         UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
       </Banner>
       <CardLayout>
-        <Card
-          color={SB_SALMON}
-          linkSrc={"mailto:info@sandboxneu.com"}
-          linkText={"work with us >"}
-          title={"WORK WITH US"}
-          titleAlign={"left"}
-          isSpotlight={false}
-        >
-          {data.infoCards.edges[0].node.cards[0].copy}
-        </Card>
-        <Card
-          color={SB_SALMON}
-          linkSrc={"/apply"}
-          linkText={"apply here >"}
-          title={"JOIN THE TEAM"}
-          titleAlign={"left"}
-          isSpotlight={false}
-        >
-          {data.infoCards.edges[0].node.cards[1].copy}
-        </Card>
-        <Card
-          color={SB_ORANGE}
-          linkSrc={"https://oasis.sandboxnu.com/"}
-          linkText={"learn more about oasis >"}
-          title={"OASIS"}
-          titleAlign={"right"}
-          isSpotlight={false}
-        >
-          {data.infoCards.edges[0].node.cards[2].copy}
-        </Card>
-        <Card
-          color={SB_ORANGE}
-          linkSrc={"/portfolio"}
-          linkText={"work with us >"}
-          title={"PHARMD TRACKER"}
-          titleAlign={"right"}
-          isSpotlight={true}
-        >
-          {data.infoCards.edges[0].node.cards[3].copy}
-        </Card>
+        <CardsLeft>
+          <Card
+            color={SB_SALMON}
+            linkSrc={"mailto:info@sandboxneu.com"}
+            linkText={"work with us >"}
+            title={"WORK WITH US"}
+            titleAlign={"left"}
+            isSpotlight={false}
+          >
+            <WorkWithUs>
+              {data.infoCards.edges[0].node.cards[0].copy}
+            </WorkWithUs>
+          </Card>
+          <Card
+            color={SB_SALMON}
+            linkSrc={"/apply"}
+            linkText={"apply here >"}
+            title={"JOIN THE TEAM"}
+            titleAlign={"left"}
+            isSpotlight={false}
+          >
+            <JoinTheTeam>
+              <JoinTheTeamText>
+                {data.infoCards.edges[0].node.cards[1].copy}
+              </JoinTheTeamText>
+              <JoinTheTeamImage>
+                <div>
+                  <img />
+                </div>
+                <span>{"Jane Doe, Sandbox developer"}</span>
+              </JoinTheTeamImage>
+            </JoinTheTeam>
+          </Card>
+        </CardsLeft>
+        <CardsRight>
+          <Card
+            color={SB_ORANGE}
+            linkSrc={"https://oasis.sandboxnu.com/"}
+            linkText={"learn more about oasis >"}
+            title={"OASIS"}
+            titleAlign={"right"}
+            isSpotlight={false}
+          >
+            {data.infoCards.edges[0].node.cards[2].copy}
+          </Card>
+          <Card
+            color={SB_ORANGE}
+            linkSrc={"/portfolio"}
+            linkText={"work with us >"}
+            title={"PHARMD TRACKER"}
+            titleAlign={"right"}
+            isSpotlight={true}
+          >
+            {data.infoCards.edges[0].node.cards[3].copy}
+          </Card>
+        </CardsRight>
       </CardLayout>
       <Values {...data.values.edges[0].node} />
       <Banner>
