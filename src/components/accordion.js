@@ -17,6 +17,7 @@ const Answer = styled.span`
 
 const StyledAccordion = styled.div`
   background-color: ${SB_LIGHT_YELLOW};
+  border: solid 1px #fff;
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
