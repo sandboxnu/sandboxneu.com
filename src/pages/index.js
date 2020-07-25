@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
           titleAlign={"left"}
           isSpotlight={false}
         >
-          <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
+          {data.infoCards.edges[0].node.cards[0].copy}
         </Card>
         <Card
           color={SB_SALMON}
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
           titleAlign={"left"}
           isSpotlight={false}
         >
-          JOIN THE TEAM
+          {data.infoCards.edges[0].node.cards[1].copy}
         </Card>
         <Card
           color={SB_ORANGE}
@@ -85,7 +85,9 @@ const IndexPage = ({ data }) => {
           title={"OASIS"}
           titleAlign={"right"}
           isSpotlight={false}
-        />
+        >
+          {data.infoCards.edges[0].node.cards[2].copy}
+        </Card>
         <Card
           color={SB_ORANGE}
           linkSrc={"/portfolio"}
@@ -94,7 +96,7 @@ const IndexPage = ({ data }) => {
           titleAlign={"right"}
           isSpotlight={true}
         >
-          <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
+          {data.infoCards.edges[0].node.cards[3].copy}
         </Card>
       </CardLayout>
       <Values {...data.values.edges[0].node} />
@@ -189,6 +191,15 @@ export const query = graphql`
           faqs {
             question
             answer
+          }
+        }
+      }
+    }
+    infoCards: allInfoCardsJson {
+      edges {
+        node {
+          cards {
+            copy
           }
         }
       }

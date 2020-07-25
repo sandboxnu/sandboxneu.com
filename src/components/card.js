@@ -70,9 +70,11 @@ const Card = ({
       <Title color={color} isSpotlight={isSpotlight} titleAlign={titleAlign}>
         {title}
       </Title>
-      <Link href={linkSrc} color={color}>
-        {linkText}
-      </Link>
+      {linkSrc && linkText && (
+        <Link href={linkSrc} color={color}>
+          {linkText}
+        </Link>
+      )}
       {children}
     </Container>
   )
