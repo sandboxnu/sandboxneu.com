@@ -18,8 +18,8 @@ const Title = styled.span`
   font-size: 50px;
   top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
   background: white;
-  left: ${({ color }) => color === "#FA8072" && `5%`};
-  right: ${({ color }) => color === "#FEB729" && `5%`};
+  left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
+  right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
   padding: 0 10px;
   width: ${({ isSpotlight }) => isSpotlight && `min-content`};
   max-width: 80%;
@@ -53,13 +53,21 @@ const Link = styled.a`
   }
 `
 
-const Card = ({ children, title, linkText, linkSrc, color, isSpotlight }) => {
+const Card = ({
+  children,
+  title,
+  titleAlign,
+  linkText,
+  linkSrc,
+  color,
+  isSpotlight,
+}) => {
   return (
     <Container color={color}>
       {isSpotlight && (
         <SpotlightText color={color}>project spotlight</SpotlightText>
       )}
-      <Title color={color} isSpotlight={isSpotlight}>
+      <Title color={color} isSpotlight={isSpotlight} titleAlign={titleAlign}>
         {title}
       </Title>
       <Link href={linkSrc} color={color}>

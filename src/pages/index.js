@@ -63,6 +63,7 @@ const IndexPage = ({ data }) => {
           linkSrc={"mailto:info@sandboxneu.com"}
           linkText={"work with us >"}
           title={"WORK WITH US"}
+          titleAlign={"left"}
           isSpotlight={false}
         >
           <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
@@ -72,6 +73,7 @@ const IndexPage = ({ data }) => {
           linkSrc={"/apply"}
           linkText={"apply here >"}
           title={"JOIN THE TEAM"}
+          titleAlign={"left"}
           isSpotlight={false}
         >
           JOIN THE TEAM
@@ -81,6 +83,7 @@ const IndexPage = ({ data }) => {
           linkSrc={"https://oasis.sandboxnu.com/"}
           linkText={"learn more about oasis >"}
           title={"OASIS"}
+          titleAlign={"right"}
           isSpotlight={false}
         />
         <Card
@@ -88,6 +91,7 @@ const IndexPage = ({ data }) => {
           linkSrc={"/portfolio"}
           linkText={"work with us >"}
           title={"PHARMD TRACKER"}
+          titleAlign={"right"}
           isSpotlight={true}
         >
           <Test>I love Bugsnax. Bugsnax is my favorite game</Test>
