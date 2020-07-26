@@ -11,8 +11,15 @@ import {
   faSlack,
 } from "@fortawesome/free-brands-svg-icons"
 
-import { SB_NAVY, SB_ORANGE } from "@colors"
+import {
+  SB_NAVY,
+  SB_ORANGE,
+  SB_NAVY_RGBA,
+  SB_LIGHT_GREY,
+  lightenDarkenColor,
+} from "@colors"
 import banner from "images/sandbox-banner-blue.svg"
+import EmailSubscription from "../emailSubscription"
 
 const GrayBackground = styled.div`
   background: #eaecf0;
@@ -91,6 +98,45 @@ const StyledLink = styled.a`
   }
 `
 
+const MailingListWrapper = styled.div`
+  display: none;
+
+  @media (min-width: 1000px) {
+    display: block;
+    padding-left: 64px;
+
+    * > input {
+      border: 3px solid ${SB_NAVY};
+      font-size: 12px;
+      width: 300px;
+    }
+
+    * > button {
+      background-color: ${SB_NAVY};
+      border: 3px solid ${SB_NAVY};
+      border-left: none;
+      font-size: 14px;
+      padding-top: 2px;
+      padding-bottom: 5px;
+
+      &:hover {
+        background-color: ${lightenDarkenColor(SB_NAVY, 30)};
+      }
+    }
+
+    * > span {
+      font-size: 14px;
+      max-width: 300px;
+    }
+  }
+`
+
+const MailingListHeader = styled(Header)`
+  padding-bottom: 10px;
+  display: block;
+  color: ${SB_NAVY};
+`
+
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
 
 const SocialInfo = ({ info, icon }) => {
@@ -148,6 +194,10 @@ const Footer = ({
               <a href="https://vercel.com?utm_source=sandbox">Vercel</a>
             </Zeit>
           </Contact>
+          <MailingListWrapper>
+            <MailingListHeader>SUBSCRIBE TO OUR MAILING LIST</MailingListHeader>
+            <EmailSubscription inputBG={SB_LIGHT_GREY} inputColor={SB_NAVY} />
+          </MailingListWrapper>
         </FooterInfo>
       </FlexSection>
     </GrayBackground>

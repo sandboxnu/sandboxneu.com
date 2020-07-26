@@ -12,16 +12,16 @@ import {
 
 const Form = styled.form``
 const InputField = styled.input`
-    color: white !important;
+    color: ${props => props.inputColor} !important;
     display: inline-block;
     border: 3px solid ${SB_SALMON};
-    background-color: ${SB_SALMON_RGBA(0.5)} !important;
+    background-color: ${props => props.inputBG} !important;
     width: 500px;
     padding: 5px 10px;
     font-family: Andale Mono, monospace;
 
     &::placeholder {
-        color: white;
+        color: ${props => props.inputColor};
     }
 
     &:focus {
@@ -33,7 +33,7 @@ const Submit = styled.button`
   display: inline-block;
   color: white;
   background-color: ${SB_SALMON};
-  border: 3px solid #fa8072;
+  border: 3px solid ${SB_SALMON};
   border-left: none;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -69,7 +69,7 @@ const Response = styled.span`
   }
 `
 
-const EmailSubscription = () => {
+const EmailSubscription = ({ inputBG, inputColor }) => {
   const [email, setEmail] = useState("")
   const [result, setResult] = useState("")
 
@@ -91,7 +91,9 @@ const EmailSubscription = () => {
         id="mail"
         name="email"
         onChange={handleEmailChange}
-        placeholder="subscribe to our mailing list"
+        placeholder="example@mail.com"
+        inputBG={inputBG}
+        inputColor={inputColor}
         required
       />
       <Submit type="submit">subscribe</Submit>
