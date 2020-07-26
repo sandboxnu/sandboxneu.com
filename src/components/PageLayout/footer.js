@@ -11,7 +11,13 @@ import {
   faSlack,
 } from "@fortawesome/free-brands-svg-icons"
 
-import { SB_NAVY, SB_ORANGE, SB_NAVY_RGBA, lightenDarkenColor } from "@colors"
+import {
+  SB_NAVY,
+  SB_ORANGE,
+  SB_NAVY_RGBA,
+  SB_LIGHT_GREY,
+  lightenDarkenColor,
+} from "@colors"
 import banner from "images/sandbox-banner-blue.svg"
 import EmailSubscription from "../emailSubscription"
 
@@ -101,7 +107,6 @@ const MailingListWrapper = styled.div`
 
     * > input {
       border: 3px solid ${SB_NAVY};
-      background-color: ${SB_NAVY_RGBA(0.5)} !important;
       font-size: 12px;
       width: 300px;
     }
@@ -129,6 +134,7 @@ const MailingListWrapper = styled.div`
 const MailingListHeader = styled(Header)`
   padding-bottom: 10px;
   display: block;
+  color: ${SB_NAVY};
 `
 
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
@@ -190,7 +196,7 @@ const Footer = ({
           </Contact>
           <MailingListWrapper>
             <MailingListHeader>SUBSCRIBE TO OUR MAILING LIST</MailingListHeader>
-            <EmailSubscription />
+            <EmailSubscription inputBG={SB_LIGHT_GREY} inputColor={SB_NAVY} />
           </MailingListWrapper>
         </FooterInfo>
       </FlexSection>
