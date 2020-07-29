@@ -1,27 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "styles/components/Section"
 
-const Title = styled.span``
+import { SB_Light_ORANGE } from "@colors"
+import Accordion from "./accordion"
 
-const Question = styled.span``
+const Title = styled.div`
+  color: ${SB_Light_ORANGE};
+  font-family: Brandon;
+  font-weight: 600;
+  font-size: 50px;
+  font-style: italic;
+  margin-bottom: 25px;
+`
 
-const SingleFAQ = styled.div``
-
-const Answer = styled.span``
-
-const FAQs = ({ faqs }) => (
-  <Section>
-    <Title>FAQ</Title>
-    {faqs.map(f => (
-      <SingleFAQ key={f.question}>
-        <Question>{f.question}</Question>
-        <Answer>{f.answer}</Answer>
-      </SingleFAQ>
-    ))}
-  </Section>
-)
+const FAQs = ({ faqs }) => {
+  return (
+    <Section>
+      <Title>FAQ</Title>
+      {faqs.map(f => {
+        return <Accordion question={f.question} answer={f.answer} />
+      })}
+    </Section>
+  )
+}
 
 FAQs.propTypes = {
   faqs: PropTypes.arrayOf(

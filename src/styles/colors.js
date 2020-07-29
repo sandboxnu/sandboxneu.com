@@ -8,16 +8,18 @@ export const SB_NAVY = "#2A426B"
 export const SB_ORANGE = "#FEB729"
 export const SB_SALMON = "#FA8072"
 export const SB_LIGHT_NAVY = "#B2B9C4"
-export const SB_Light_ORANGE = "#FFE9C0"
+export const SB_Light_ORANGE = "#FEB429"
 export const SB_LIGHT_SALMON = "#FED9D5"
+export const SB_LIGHT_YELLOW = "#FFE9C0"
 export const SB_LIGHT_GREY = "#EAECF0"
 
 export const SB_NAVY_RGBA = a => `rgba(42, 66, 107, ${a})`
 export const SB_ORANGE_RGBA = a => `rgba(254, 183, 41, ${a})`
 export const SB_SALMON_RGBA = a => `rgba(250, 128, 114, ${a})`
 export const SB_LIGHT_NAVY_RGBA = a => `rgba(178, 185, 196, ${a})`
-export const SB_LIGHT_ORANGE_RGBA = a => `rgba(255, 233, 192, ${a})`
+export const SB_LIGHT_ORANGE_RGBA = a => `rgba(254, 180, 41, ${a})`
 export const SB_LIGHT_SALMON_RGBA = a => `rgba(254, 217, 213, ${a})`
+export const SB_LIGHT_YELLOW_RGBA = a => `rgba(255, 233, 192, ${a})`
 export const SB_LIGHT_GREY_RGBA = a => `rgba(234, 236, 240, ${a})`
 
 // https://css-tricks.com/snippets/javascript/lighten-darken-color/
