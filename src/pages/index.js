@@ -13,6 +13,8 @@ import FAQs from "components/faqs"
 import EmailSubscription from "../components/emailSubscription"
 import Banner from "styles/components/Banner"
 import Card from "components/card"
+import pills from "images/pharmd-pills.svg"
+import github from "images/github.svg"
 import { SB_ORANGE, SB_SALMON } from "@colors"
 
 const JoinBannerContent = styled.div`
@@ -30,9 +32,9 @@ const EmailBannerContent = styled.div`
 `
 
 const CardLayout = styled.div`
-  padding: 60px;
+  padding: 60px 120px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `
 const CardsLeft = styled.div`
   padding: 24px;
@@ -48,6 +50,7 @@ const CardsRight = styled.div`
   flex-direction: column;
   margin-top: 200px;
   & > div:first-child {
+    height: 318px;
     margin-bottom: 72px;
   }
 `
@@ -80,7 +83,7 @@ const JoinTheTeamImage = styled.div`
     border-radius: 50%;
     height: 108px;
     width: 108px;
-    background: green;
+    background: rgba(196, 196, 196, 0.5);
     margin-bottom: 16px;
   }
   & > span {
@@ -88,6 +91,23 @@ const JoinTheTeamImage = styled.div`
     font-family: Open Sans;
     font-size: 10px;
   }
+`
+
+const PharmDPills = styled.img`
+  position: relative;
+  top: -50%;
+  left: 47%;
+`
+
+const PharmDContent = styled.div`
+  display: inline-block;
+  position: relative;
+  top: 20%;
+  width: 50%;
+`
+const PharmDText = styled.div`
+  font-family: Open Sans;
+  font-size: 15px;
 `
 
 const IndexPage = ({ data }) => {
@@ -131,7 +151,7 @@ const IndexPage = ({ data }) => {
                 <div>
                   <img />
                 </div>
-                <span>{"Jane Doe, Sandbox developer"}</span>
+                <span>Jane Doe, Sandbox developer</span>
               </JoinTheTeamImage>
             </JoinTheTeam>
           </Card>
@@ -139,21 +159,29 @@ const IndexPage = ({ data }) => {
         <CardsRight>
           <Card
             color={SB_ORANGE}
-            linkSrc={"https://oasis.sandboxnu.com/"}
-            linkText={"learn more about oasis >"}
-            title={"OASIS"}
-            titleAlign={"right"}
-            isSpotlight={false}
-          >
-            {data.infoCards.edges[0].node.cards[2].copy}
-          </Card>
-          <Card
-            color={SB_ORANGE}
             linkSrc={"/portfolio"}
             linkText={"work with us >"}
             title={"PHARMD TRACKER"}
             titleAlign={"right"}
             isSpotlight={true}
+          >
+            <PharmDContent>
+              <a href="https://github.com/sandboxnu/pharmd-tracker">
+                <img src={github} />
+              </a>
+              <PharmDText>
+                {data.infoCards.edges[0].node.cards[2].copy}
+              </PharmDText>
+            </PharmDContent>
+            <PharmDPills src={pills} />
+          </Card>
+          <Card
+            color={SB_ORANGE}
+            linkSrc={"https://oasis.sandboxnu.com/"}
+            linkText={"learn more about oasis >"}
+            title={"OASIS"}
+            titleAlign={"right"}
+            isSpotlight={false}
           >
             {data.infoCards.edges[0].node.cards[3].copy}
           </Card>
