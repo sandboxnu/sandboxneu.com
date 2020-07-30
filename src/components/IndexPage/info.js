@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Card from "components/card"
 import pills from "images/pharmd-pills.svg"
 import github from "images/github.svg"
+import tree from "images/oasis-logo.png"
 
 import { SB_ORANGE, SB_SALMON } from "@colors"
 
@@ -19,7 +20,7 @@ const CardsLeft = styled.div`
   display: flex;
   flex-direction: column;
   & > div:first-child {
-    margin-bottom: 72px;
+    margin-bottom: 80px;
   }
 `
 const CardsRight = styled.div`
@@ -29,7 +30,11 @@ const CardsRight = styled.div`
   margin-top: 200px;
   & > div:first-child {
     height: 318px;
-    margin-bottom: 72px;
+    width: 542px;
+    margin-bottom: 80px;
+  }
+  & > div:nth-child(2) {
+    height: 310px;
   }
 `
 const WorkWithUs = styled.div`
@@ -41,14 +46,14 @@ const WorkWithUs = styled.div`
   width: 490px;
 `
 const JoinTheTeam = styled.div`
-  line-height: 20px;
   display: flex;
-  margin: 50px 20px 50px 20px;
+  margin: 40px 22px 22px;
   width: fit-content;
 `
 const JoinTheTeamText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
+  line-height: 20px;
   margin-right: 24px;
   width: 325px;
 `
@@ -73,16 +78,33 @@ const JoinTheTeamImage = styled.div`
 
 const PharmDPills = styled.img`
   position: absolute;
-  right: -9%;
-  bottom: 11%;
+  right: -15%;
+  bottom: 8%;
 `
 
 const PharmDContent = styled.div`
-  width: 450px;
+  width: 230px;
+  position: relative;
+  top: 100px;
 `
 const PharmDText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
+  line-height: 20px;
+`
+const OasisText = styled.p`
+  font-family: Open Sans;
+  font-size: 15px;
+  line-height: 20px;
+  width: 488px;
+`
+const OasisContent = styled.div`
+  margin-top: 30px;
+`
+const OasisLogo = styled.img`
+  position: absolute;
+  top: 95px;
+  left: -20px;
 `
 
 const Info = ({ collaborate, join, spotlight, oasis }) => {
@@ -91,9 +113,9 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
       <CardsLeft>
         <Card
           color={SB_SALMON}
-          linkSrc={"mailto:info@sandboxneu.com"}
-          linkText={"work with us >"}
-          title={"WORK WITH US"}
+          linkSrc={collaborate.linkSrc}
+          linkText={collaborate.linkText}
+          title={collaborate.title}
           titleAlign={"left"}
           isSpotlight={false}
         >
@@ -101,9 +123,9 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         </Card>
         <Card
           color={SB_SALMON}
-          linkSrc={"/apply"}
-          linkText={"apply here >"}
-          title={"JOIN THE TEAM"}
+          linkSrc={join.linkSrc}
+          linkText={join.linkText}
+          title={join.title}
           titleAlign={"left"}
           isSpotlight={false}
         >
@@ -111,9 +133,9 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             <JoinTheTeamText>{join.copy}</JoinTheTeamText>
             <JoinTheTeamImage>
               <div>
-                <img />
+                <img src={join.imgSrc} />
               </div>
-              <span>Jane Doe, Sandbox developer</span>
+              <span>{`${join.name}, Sandbox developer`}</span>
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>
@@ -121,14 +143,14 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
       <CardsRight>
         <Card
           color={SB_ORANGE}
-          linkSrc={"/portfolio"}
-          linkText={"work with us >"}
-          title={"PHARMD TRACKER"}
+          linkSrc={spotlight.linkSrc}
+          linkText={spotlight.linkText}
+          title={spotlight.title}
           titleAlign={"right"}
           isSpotlight={true}
         >
           <PharmDContent>
-            <a href="https://github.com/sandboxnu/pharmd-tracker">
+            <a href={spotlight.repoLink}>
               <img src={github} />
             </a>
             <PharmDText>{spotlight.copy}</PharmDText>
@@ -137,12 +159,18 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         </Card>
         <Card
           color={SB_ORANGE}
-          linkSrc={"https://oasis.sandboxnu.com/"}
-          linkText={"learn more about oasis >"}
-          title={"OASIS"}
+          linkSrc={oasis.linkSrc}
+          linkText={oasis.linkText}
+          title={oasis.title}
           titleAlign={"right"}
           isSpotlight={false}
-        />
+        >
+          <OasisContent>
+            <OasisText>{oasis.copy1}</OasisText>
+            <OasisText>{oasis.copy2}</OasisText>
+          </OasisContent>
+          <OasisLogo src={tree} />
+        </Card>
       </CardsRight>
     </CardLayout>
   )

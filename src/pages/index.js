@@ -140,18 +140,30 @@ export const query = graphql`
       edges {
         node {
           collaborate {
+            title
+            linkText
+            linkSrc
             copy
           }
           join {
+            title
+            linkText
+            linkSrc
             imgSrc
             name
             copy
           }
           spotlight {
+            title
+            linkText
+            linkSrc
             repoLink
             copy
           }
           oasis {
+            title
+            linkText
+            linkSrc
             copy1
             copy2
           }

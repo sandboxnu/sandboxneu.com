@@ -5,8 +5,6 @@ const Container = styled.div`
   border: 3px solid;
   width: fit-content;
   height: fit-content;
-  min-height: 300px;
-  min-width: 500px;
   position: relative;
   border-color: ${({ color }) => color};
   padding: 25px;
