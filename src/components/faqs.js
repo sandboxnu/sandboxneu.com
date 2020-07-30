@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "styles/components/Section"
 
-import { SB_Light_ORANGE } from "@colors"
+import { SB_LIGHT_ORANGE } from "@colors"
 import Accordion from "./accordion"
 
 const Title = styled.div`
-  color: ${SB_Light_ORANGE};
+  color: ${SB_LIGHT_ORANGE};
   font-family: Brandon;
   font-weight: 600;
   font-size: 50px;
