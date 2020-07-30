@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -78,5 +79,14 @@ const Card = ({
       {children}
     </Container>
   )
+}
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleAlign: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
+  linkSrc: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  isSpotlight: PropTypes.bool.isRequired,
 }
 export default Card

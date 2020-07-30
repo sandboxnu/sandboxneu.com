@@ -149,7 +149,6 @@ export const query = graphql`
             title
             linkText
             linkSrc
-            imgSrc
             name
             copy
           }

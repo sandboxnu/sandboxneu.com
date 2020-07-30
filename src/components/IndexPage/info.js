@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Card from "components/card"
+import mitch from "content/team/profileImages/mitch.png"
 import pills from "images/pharmd-pills.svg"
 import github from "images/github.svg"
 import tree from "images/oasis-logo.png"
@@ -16,22 +17,22 @@ const CardLayout = styled.div`
   width: 100%;
 `
 const CardsLeft = styled.div`
-  padding: 24px;
+  padding: 24px 36px;
   display: flex;
   flex-direction: column;
   & > div:first-child {
-    margin-bottom: 80px;
+    margin-bottom: 200px;
   }
 `
 const CardsRight = styled.div`
-  padding: 24px;
+  padding: 24px 36px;
   display: flex;
   flex-direction: column;
   margin-top: 200px;
   & > div:first-child {
     height: 318px;
     width: 542px;
-    margin-bottom: 80px;
+    margin-bottom: 200px;
   }
   & > div:nth-child(2) {
     height: 310px;
@@ -68,6 +69,9 @@ const JoinTheTeamImage = styled.div`
     width: 108px;
     background: rgba(196, 196, 196, 0.5);
     margin-bottom: 16px;
+    & > img {
+      width: 100%;
+    }
   }
   & > span {
     white-space: nowrap;
@@ -133,7 +137,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             <JoinTheTeamText>{join.copy}</JoinTheTeamText>
             <JoinTheTeamImage>
               <div>
-                <img src={join.imgSrc} />
+                <img src={mitch} alt="member" />
               </div>
               <span>{`${join.name}, Sandbox developer`}</span>
             </JoinTheTeamImage>
@@ -151,11 +155,11 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         >
           <PharmDContent>
             <a href={spotlight.repoLink}>
-              <img src={github} />
+              <img src={github} alt="github" />
             </a>
             <PharmDText>{spotlight.copy}</PharmDText>
           </PharmDContent>
-          <PharmDPills src={pills} />
+          <PharmDPills src={pills} alt="pills" />
         </Card>
         <Card
           color={SB_ORANGE}
@@ -169,11 +173,41 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             <OasisText>{oasis.copy1}</OasisText>
             <OasisText>{oasis.copy2}</OasisText>
           </OasisContent>
-          <OasisLogo src={tree} />
+          <OasisLogo src={tree} alt="tree" />
         </Card>
       </CardsRight>
     </CardLayout>
   )
+}
+
+Info.propTypes = {
+  collaborate: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
+    linkSrc: PropTypes.string.isRequired,
+    copy: PropTypes.string.isRequired,
+  }),
+  join: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
+    linkSrc: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    copy: PropTypes.string.isRequired,
+  }),
+  spotlight: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
+    linkSrc: PropTypes.string.isRequired,
+    repoLink: PropTypes.string.isRequired,
+    copy: PropTypes.string.isRequired,
+  }),
+  oasis: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
+    linkSrc: PropTypes.string.isRequired,
+    copy1: PropTypes.string.isRequired,
+    copy2: PropTypes.string.isRequired,
+  }),
 }
 
 export default Info
