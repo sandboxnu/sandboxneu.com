@@ -109,6 +109,7 @@ const OasisLogo = styled.img`
   position: absolute;
   top: 95px;
   left: -20px;
+  z-index: -1;
 `
 
 const Info = ({ collaborate, join, spotlight, oasis }) => {
