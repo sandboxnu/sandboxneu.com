@@ -15,6 +15,10 @@ const CardLayout = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const CardsLeft = styled.div`
   padding: 24px 36px;
@@ -23,20 +27,42 @@ const CardsLeft = styled.div`
   & > div:first-child {
     margin-bottom: 200px;
   }
+  @media only screen and (max-width: 1200px) {
+    & > div:first-child {
+      margin-bottom: 80px;
+    }
+    & > div:nth-child(2) {
+      width: 586px;
+    }
+  }
 `
 const CardsRight = styled.div`
   padding: 24px 36px;
   display: flex;
   flex-direction: column;
   margin-top: 200px;
+
   & > div:first-child {
     height: 318px;
     width: 542px;
     margin-bottom: 200px;
   }
+
   & > div:nth-child(2) {
     height: 310px;
   }
+
+  @media only screen and (max-width: 1200px) {
+    margin-top: 32px;
+
+    & > div:first-child {
+      margin-bottom: 80px;
+      width: 586px;
+    }
+
+    & > div:nth-child(2) {
+      width: 586px;
+    }
 `
 const WorkWithUs = styled.div`
   font-family: Open Sans;
