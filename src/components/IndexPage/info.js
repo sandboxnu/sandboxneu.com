@@ -33,6 +33,8 @@ const CardsLeft = styled.div`
     }
     & > div:nth-child(2) {
       width: 586px;
+      position: relative;
+      top: 396px;
     }
   }
 `
@@ -58,6 +60,8 @@ const CardsRight = styled.div`
     & > div:first-child {
       margin-bottom: 80px;
       width: 586px;
+      position: relative;
+      bottom: 333px;
     }
 
     & > div:nth-child(2) {
