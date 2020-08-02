@@ -6,8 +6,11 @@ import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
 
 import { SB_ORANGE } from "@colors"
-import banner from "images/sandbox-banner-shadow.svg"
-import Section from "styles/components/Section"
+import Marketing from "components/IndexPage/marketing"
+
+import EmailSubscription from "../emailSubscription"
+
+import { SB_SALMON_RGBA } from "@colors"
 
 const fadeIn = keyframes`
   0% {
@@ -40,37 +43,77 @@ const fadeInSlideUp = keyframes`
   }
 `
 
+const Title = styled.h1`
+  opacity: 1;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 2.5em;
+  font-style: italic;
+  @media (min-width: 1000px) {
+    font-size: 3.5em;
+  }
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0 0 7px #111;
+  animation: ${fadeInSlideUp} 1.75s;
+`
+
 const Subtitle = styled.h1`
   opacity: 1;
-  padding: 1.2em 0 2.8em;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1em;
   @media (min-width: 1000px) {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 0 7px #111;
   animation: ${fadeInSlideUp} 1.75s;
+`
+
+const EmailText = styled.h1`
+  opacity: 1;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.5em;
+  font-style: italic;
+  @media (min-width: 1000px) {
+    font-size: 2em;
+  }
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0 0 7px #111;
+`
+
+const EmailContainer = styled.div`
+  animation: ${fadeInSlideUp} 1.75s;
+`
+
+const SectionContent = styled.section`
+  max-width: 600px;
+  @media (min-width: 1000px) {
+    max-width: 800px;
+  }
+`
+
+const Section = styled(SectionContent)`
+  margin: 0 100px;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
+  padding: 5em 2em;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
   height: 100vh;
-`
-
-const ImgContainer = styled.object`
-  max-width: 15em;
-  @media (min-width: 1000px) {
-    max-width: 30em;
-  }
-  margin: 0 auto;
-  display: block;
-  padding-top: 8vh;
-  animation: ${fadeInSlideUp} 1.25s;
 `
 
 const StyledFA = styled(FontAwesomeIcon)`
@@ -109,20 +152,23 @@ const Arrow = ({ color, scale }) => {
   )
 }
 
-const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
-
 const Hero = ({ title, background }) => {
   return (
     <StyledBackgroundImage
       fluid={background.childImageSharp.fluid}
       backgroundColor={`#040e18`}
     >
+      {/* <Marketing /> */}
       <Section>
-        <Banner dropShadow />
+        <Title>SANDBOX</Title>
         <Subtitle>{title}</Subtitle>
-        <br />
-        <Arrow color="#fff" scale="3" />
+        <EmailContainer>
+          <br />
+          <EmailText>LEARN MORE</EmailText>
+          <EmailSubscription inputBG={SB_SALMON_RGBA(0.5)} inputColor="#000" />
+        </EmailContainer>
       </Section>
+      <Arrow color="#fff" scale="3" />
     </StyledBackgroundImage>
   )
 }
