@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { SB_Light_ORANGE, SB_LIGHT_YELLOW } from "@colors"
+import { SB_LIGHT_ORANGE, SB_LIGHT_YELLOW } from "@colors"
 
 const Question = styled.span`
   color: #2a426b;
@@ -26,7 +26,7 @@ const StyledAccordion = styled.div`
   width: 100%;
 
   :hover {
-    background-color: ${SB_Light_ORANGE};
+    background-color: ${SB_LIGHT_ORANGE};
   }
 `
 

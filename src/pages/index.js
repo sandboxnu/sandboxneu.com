@@ -9,6 +9,7 @@ import Who from "components/IndexPage/who"
 import SEO from "components/seo"
 import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
+import Info from "components/IndexPage/info"
 import FAQs from "components/faqs"
 import EmailSubscription from "../components/emailSubscription"
 import Banner from "styles/components/Banner"
@@ -23,8 +24,6 @@ const JoinBannerContent = styled.div`
     font-family: Andale Mono, monospace;
     font-size: 15px;
     line-height: 16px;
-    font-weight: normal;
-    font-style: normal;
   }
 `
 const EmailBannerContent = styled.div`
@@ -42,6 +41,7 @@ const IndexPage = ({ data }) => {
       <Banner>
         UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
       </Banner>
+      <Info {...data.infoCards.edges[0].node} />
       <Values {...data.values.edges[0].node} />
       <Banner>
         <EmailBannerContent>
@@ -134,6 +134,39 @@ export const query = graphql`
           faqs {
             question
             answer
+          }
+        }
+      }
+    }
+    infoCards: allInfoCardsJson {
+      edges {
+        node {
+          collaborate {
+            title
+            linkText
+            linkSrc
+            copy
+          }
+          join {
+            title
+            linkText
+            linkSrc
+            name
+            copy
+          }
+          spotlight {
+            title
+            linkText
+            linkSrc
+            repoLink
+            copy
+          }
+          oasis {
+            title
+            linkText
+            linkSrc
+            copy1
+            copy2
           }
         }
       }

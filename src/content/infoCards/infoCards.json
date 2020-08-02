@@ -1,0 +1,29 @@
+{
+  "collaborate":{
+      "title": "WORK WITH US",
+      "linkText":"work with us >",
+      "linkSrc": "mailto:info@sandboxneu.com",
+      "copy": "\"The brilliant and diligent engineers of Sandbox are, without exaggeration, indispensable to my research. I came to them with a challenging problem, and they delivered a solution that is twice as professional as I'd hoped, in half the time I'd expected. To any scientists in need of computational expertise: look no further than Sandbox.\""
+  },
+   "join":{
+      "title": "JOIN THE TEAM",
+      "linkText":"apply here >",
+      "linkSrc": "/apply",
+      "name": "Primsa",
+      "copy": "\"Working on the Cheminformatics and Annotator projects has put the skills I’ve learned in classes into practice. Sandbox has been an amazing experience in teamwork, coding, and communicating with clients-- not to mention fun!\""
+   },
+   "spotlight":{
+      "title": "PHARMD TRACKER",
+      "linkText": "see our current projects >",
+      "linkSrc": "/portfolio",
+      "repoLink": "https://github.com/sandboxnu/pharmd-tracker",
+      "copy": "PharmD tracker is a webapp that will help deans, advisors, and administration track student success and progress across the pharmacy program."
+   },
+   "oasis" : {
+      "title": "OASIS",
+      "linkText": "learn more about oasis >",
+      "linkSrc": "https://oasis.sandboxnu.com/",
+      "copy1": "The Oasis Software Incubator is a 10-week program that is designed to make your project ideas a reality. We know that students have amazing ideas, and we want to be the ones to inspire free-flowing creativity, and incubate these ideas to unleash the power of student developers.",
+      "copy2": "Oasis provides a framework for you to develop your skills and build your own project, either from scratch or from a prototype you already have."
+  }
+}
