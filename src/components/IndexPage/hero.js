@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
@@ -92,23 +93,39 @@ const EmailText = styled.h1`
   text-shadow: 0 0 7px #111;
 `
 
+const IntroductionContainer = styled.div`
+  max-width: 400px;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
 const EmailContainer = styled.div`
   animation: ${fadeInSlideUp} 1.75s;
 `
 
+const MarketingContainer = styled.div`
+  animation: ${fadeInSlideUp} 1.75s;
+  padding-top: 2em;
+`
+
 const SectionContent = styled.section`
-  max-width: 600px;
-  @media (min-width: 1000px) {
-    max-width: 800px;
-  }
+  max-width: 100%;
 `
 
 const Section = styled(SectionContent)`
-  margin: 0 100px;
-  @media (max-width: 600px) {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  justify-content: space-between;
+  padding: 5em 0 5em 2em;
+
+  @media (max-width: 900px) {
+    align-items: center;
+    flex-direction: column;
     margin: 0 auto;
+    padding-right: 2em;
   }
-  padding: 5em 2em;
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
@@ -152,26 +169,56 @@ const Arrow = ({ color, scale }) => {
   )
 }
 
-const Hero = ({ title, background }) => {
-  return (
-    <StyledBackgroundImage
-      fluid={background.childImageSharp.fluid}
-      backgroundColor={`#040e18`}
-    >
-      {/* <Marketing /> */}
-      <Section>
-        <Title>SANDBOX</Title>
-        <Subtitle>{title}</Subtitle>
-        <EmailContainer>
-          <br />
-          <EmailText>LEARN MORE</EmailText>
-          <EmailSubscription inputBG={SB_SALMON_RGBA(0.5)} inputColor="#000" />
-        </EmailContainer>
-      </Section>
-      <Arrow color="#fff" scale="3" />
-    </StyledBackgroundImage>
-  )
-}
+const Hero = ({ title, background }) => (
+  <StaticQuery
+    query={graphql`
+      query Marketing {
+        allMarketingJson {
+          edges {
+            node {
+              event {
+                date
+                time
+                location
+                title
+              }
+              post {
+                title
+                author
+                url
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <StyledBackgroundImage
+        fluid={background.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+      >
+        <Section>
+          <IntroductionContainer>
+            <Title>SANDBOX</Title>
+            <Subtitle>{title}</Subtitle>
+            <EmailContainer>
+              <br />
+              <EmailText>LEARN MORE</EmailText>
+              <EmailSubscription
+                inputBG={SB_SALMON_RGBA(0.5)}
+                inputColor="#000"
+              />
+            </EmailContainer>
+          </IntroductionContainer>
+          <MarketingContainer>
+            <Marketing {...data.allMarketingJson.edges[0].node} />
+          </MarketingContainer>
+        </Section>
+        <Arrow color="#fff" scale="3" />
+      </StyledBackgroundImage>
+    )}
+  />
+)
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
