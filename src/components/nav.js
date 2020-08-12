@@ -8,9 +8,6 @@ import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
-
 const WrapperDiv = styled.nav`
   width: 100%;
   height: 100%;
@@ -130,12 +127,38 @@ const Button = styled(Link)`
   }
 `
 
-const StyledMobileOnlyIcon = styled(FontAwesomeIcon)`
+const ToggleMobileSidebarIcon = styled.span`
+  position: absolute;
+  width: 2em;
+  height: 0.25em;
+  border-radius: 4px;
+  background-color: green;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2em;
+    height: 0.25em;
+    border-radius: 4px;
+    background-color: green;
+    bottom: 0.64em;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2em;
+    height: 0.25em;
+    border-radius: 4px;
+    background-color: green;
+    top: 0.65em;
+  }
+`
+
+const ToggleMobileSidebarContainer = styled.div`
   display: inline;
   position: absolute;
-  right: 25px;
-  color: ${props => props.color};
-
+  right: 56px;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -168,17 +191,6 @@ const Nav = ({ page, pages }) => {
     }
   }, [])
 
-  function burgerButton() {
-    return (
-      <StyledMobileOnlyIcon
-        icon={sideOpen ? faTimes : faBars}
-        onClick={handleBurgerClick}
-        size={"2x"}
-        color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
-      />
-    )
-  }
-
   return (
     <WrapperDiv isOpen={sideOpen}>
       <SideContainer isOpen={sideOpen}>
@@ -204,7 +216,9 @@ const Nav = ({ page, pages }) => {
             to="/"
             hoverAnimation
           />
-          {burgerButton()}
+          <ToggleMobileSidebarContainer>
+            <ToggleMobileSidebarIcon onClick={handleBurgerClick} />
+          </ToggleMobileSidebarContainer>
           <ButtonContainer>
             {pages.map(p => (
               <Button
