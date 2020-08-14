@@ -2,26 +2,24 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import addToMailchimp from "gatsby-plugin-mailchimp"
-import {
-  SB_SALMON,
-  SB_LIGHT_SALMON,
-  SB_SALMON_RGBA,
-  SB_NAVY_RGBA,
-  lightenDarkenColor,
-} from "@colors"
+import { SB_SALMON, SB_NAVY_RGBA, lightenDarkenColor } from "@colors"
 
-const Form = styled.form``
+const Form = styled.form`
+  display: flex;
+`
 const InputField = styled.input`
     color: ${props => props.inputColor} !important;
     display: inline-block;
-    border: 3px solid ${SB_SALMON};
-    background-color: ${props => props.inputBG} !important;
+    box-shadow: 0 3px 10px 0 #aaa;
+    border: 3px solid #fff;
+    border-radius: 30px 0 0 30px;
     width: 500px;
     padding: 5px 10px;
+    text-decoration: underline;
     font-family: Andale Mono, monospace;
 
     &::placeholder {
-        color: ${props => props.inputColor};
+        color: #B6B6B6;
     }
 
     &:focus {
@@ -35,14 +33,15 @@ const Submit = styled.button`
   background-color: ${SB_SALMON};
   border: 3px solid ${SB_SALMON};
   border-left: none;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  border-radius: 0 30px 30px 0;
+  padding: 3.7px 10px 4.3px 10px;
   font-style: italic;
   transition: background 0.2s ease-out;
   font-size: 18px;
 
   &:hover {
     background-color: ${lightenDarkenColor(SB_SALMON, 30)};
+    cursor: pointer;
   }
 
   &:focus {
