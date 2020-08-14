@@ -132,7 +132,14 @@ const ToggleMobileSidebarIcon = styled.span`
   width: 2em;
   height: 0.25em;
   border-radius: 4px;
-  background-color: green;
+  background-color: white;
+  ${props =>
+    props.isOpen &&
+    css`
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: rotate(45deg);
+    `}
   &::before {
     content: "";
     display: block;
@@ -140,8 +147,15 @@ const ToggleMobileSidebarIcon = styled.span`
     width: 2em;
     height: 0.25em;
     border-radius: 4px;
-    background-color: green;
-    bottom: 0.64em;
+    background-color: white;
+    top: -0.64em;
+    transition: top 75ms ease 0.12s, opacity 75ms ease;
+    ${props =>
+      props.isOpen &&
+      css`
+        top: 0;
+        transition: top 75ms ease, opacity 75ms ease 0.12s;
+      `}
   }
   &::after {
     content: "";
@@ -150,8 +164,18 @@ const ToggleMobileSidebarIcon = styled.span`
     width: 2em;
     height: 0.25em;
     border-radius: 4px;
-    background-color: green;
-    top: 0.65em;
+    background-color: white;
+    bottom: -0.65em;
+    transition: bottom 75ms ease 0.12s,
+      transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    ${props =>
+      props.isOpen &&
+      css`
+        bottom: 0;
+        transition: bottom 75ms ease,
+          transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        transform: rotate(-90deg);
+      `}
   }
 `
 
@@ -217,7 +241,10 @@ const Nav = ({ page, pages }) => {
             hoverAnimation
           />
           <ToggleMobileSidebarContainer>
-            <ToggleMobileSidebarIcon onClick={handleBurgerClick} />
+            <ToggleMobileSidebarIcon
+              onClick={handleBurgerClick}
+              isOpen={sideOpen}
+            />
           </ToggleMobileSidebarContainer>
           <ButtonContainer>
             {pages.map(p => (
