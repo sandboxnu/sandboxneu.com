@@ -204,10 +204,7 @@ const Hero = ({ title, background }) => (
             <EmailContainer>
               <br />
               <EmailText>LEARN MORE</EmailText>
-              <EmailSubscription
-                inputBG={SB_SALMON_RGBA(0.5)}
-                inputColor="#000"
-              />
+              <EmailSubscription />
             </EmailContainer>
           </IntroductionContainer>
           <MarketingContainer>

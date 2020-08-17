@@ -6,16 +6,17 @@ import { SB_SALMON, SB_NAVY_RGBA, lightenDarkenColor } from "@colors"
 
 const Form = styled.form`
   display: flex;
+  flex-direction: column;
 `
 const InputField = styled.input`
-    color: ${props => props.inputColor} !important;
+    color: #000;
+    text-decoration: none;
     display: inline-block;
     box-shadow: 0 3px 10px 0 #aaa;
     border: 3px solid #fff;
     border-radius: 30px 0 0 30px;
     width: 500px;
     padding: 5px 10px;
-    text-decoration: underline;
     font-family: Andale Mono, monospace;
 
     &::placeholder {
@@ -53,6 +54,10 @@ const Submit = styled.button`
   }
 `
 
+const Main = styled.div`
+  display: flex;
+`
+
 const Response = styled.span`
   display: block;
   background-color: ${SB_NAVY_RGBA(0.8)};
@@ -68,7 +73,7 @@ const Response = styled.span`
   }
 `
 
-const EmailSubscription = ({ inputBG, inputColor }) => {
+const EmailSubscription = () => {
   const [email, setEmail] = useState("")
   const [result, setResult] = useState("")
 
@@ -85,17 +90,17 @@ const EmailSubscription = ({ inputBG, inputColor }) => {
 
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
-      <InputField
-        type="text"
-        id="mail"
-        name="email"
-        onChange={handleEmailChange}
-        placeholder="example@mail.com"
-        inputBG={inputBG}
-        inputColor={inputColor}
-        required
-      />
-      <Submit type="submit">subscribe</Submit>
+      <Main>
+        <InputField
+          type="text"
+          id="mail"
+          name="email"
+          onChange={handleEmailChange}
+          placeholder="example@mail.com"
+          required
+        />
+        <Submit type="submit">subscribe</Submit>
+      </Main>
       {result && <Response dangerouslySetInnerHTML={{ __html: result.msg }} />}
     </Form>
   )
