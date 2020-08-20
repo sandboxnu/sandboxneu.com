@@ -10,12 +10,13 @@ import {
   faGithub,
   faSlack,
 } from "@fortawesome/free-brands-svg-icons"
-
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   SB_NAVY,
   SB_ORANGE,
-  SB_NAVY_RGBA,
+  SB_SALMON,
   SB_LIGHT_GREY,
+  SB_SALMON_RGBA,
   lightenDarkenColor,
 } from "@colors"
 import banner from "images/sandbox-banner-blue.svg"
@@ -27,6 +28,11 @@ const GrayBackground = styled.div`
 
 const Navigate = styled.div`
   color: ${SB_NAVY};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 15px;
 `
 
 const Header = styled.span`
@@ -34,11 +40,13 @@ const Header = styled.span`
 `
 
 const Contact = styled.div`
-  padding-left: 1em;
   color: ${SB_NAVY};
-
-  @media (min-width: 750px) {
-    padding-left: 4em;
+  padding-left: 0;
+  justify-content: center;
+  display: flex;
+  height: 25px;
+  @media (min-width: 1000px) {
+    justify-content: flex-end;
   }
 `
 
@@ -46,29 +54,35 @@ const FlexSection = styled(Section)`
   padding-top: 50px;
   padding-bottom: 70px;
   display: flex;
-  justify-content: center;
-
-  @media (min-width: 750px) {
-    justify-content: space-between;
-  }
+  flex-direction: row;
+  justify-content: space-evenly;
 `
 const FooterInfo = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 750px) {
+    float: right;
+  }
 `
 
 const SocialSection = styled.div`
   padding-top: 10px;
   display: flex;
+  :last-child:after {
+    margin-right: 0;
+  }
 `
 
 const SocialLogo = styled(FontAwesomeIcon)`
   color: ${props => props.color};
-  max-width: 14px;
+  max-width: 20px;
   transition: color 0.3s;
+  font-size: 20px;
 
   &:hover {
-    color: ${SB_ORANGE};
+    color: ${SB_NAVY};
   }
 `
 
@@ -89,12 +103,21 @@ const StyledSocial = styled.div`
 
 const StyledLink = styled.a`
   display: block;
-  padding-top: 10px;
+  padding-top: ${props => (props.isMailIcon ? "0" : "10px")};
   text-decoration: none;
-  color: ${SB_NAVY};
+  color: #bbbdc0;
   transition: color 0.3s;
+  padding-right: 5px;
   &:hover {
-    color: ${SB_ORANGE};
+    color: ${SB_NAVY};
+  }
+  :after {
+    content: ${props => (props.isMailIcon ? '""' : '" |"')};
+    padding-left: 5px;
+    color: #bbbdc0;
+  }
+  :last-child:after {
+    content: "";
   }
 `
 
@@ -106,21 +129,27 @@ const MailingListWrapper = styled.div`
     padding-left: 64px;
 
     * > input {
-      border: 3px solid ${SB_NAVY};
+      border: none;
       font-size: 12px;
       width: 300px;
+      box-shadow: none;
     }
 
+    * > span {
+      background-color: ${SB_SALMON_RGBA(0.8)};
+    }
     * > button {
-      background-color: ${SB_NAVY};
-      border: 3px solid ${SB_NAVY};
+      background-color: ${SB_SALMON};
+      border: 3px solid ${SB_SALMON};
       border-left: none;
       font-size: 14px;
       padding-top: 2px;
       padding-bottom: 5px;
 
       &:hover {
-        background-color: ${lightenDarkenColor(SB_NAVY, 30)};
+        background-color: ${lightenDarkenColor(SB_SALMON, 30)};
+        border: 3px solid ${lightenDarkenColor(SB_SALMON, 30)};
+        border-left: none;
       }
     }
 
@@ -133,8 +162,10 @@ const MailingListWrapper = styled.div`
 
 const MailingListHeader = styled(Header)`
   padding-bottom: 10px;
+  padding-top: 10px;
   display: block;
   color: ${SB_NAVY};
+  font-size: 16px;
 `
 
 const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
@@ -143,19 +174,49 @@ const SocialInfo = ({ info, icon }) => {
   return (
     <StyledSocial>
       <a href={info.url}>
-        <SocialLogo icon={icon} color={SB_NAVY} />
+        <SocialLogo icon={icon} color={"#bbbdc0"} />
       </a>
     </StyledSocial>
   )
 }
 
-const InfoLink = ({ dest, text }) => {
-  return <StyledLink href={dest}>{text}</StyledLink>
+const InfoLink = props => {
+  return (
+    <StyledLink href={props.dest} isMailIcon={props.isMailIcon}>
+      {props.children}
+    </StyledLink>
+  )
 }
 
-const Zeit = styled.div`
+const HostedBy = styled.div`
+  background-color: #c4c4c4;
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: Andale Mono, monospace;
+  font-size: 14px;
+  width: fit-content;
+  margin: 0 auto;
   margin-top: 20px;
+  text-align: center;
+  display: inline-flex;
+
+  @media (min-width: 1000px) {
+    margin-right: 15px;
+  }
 `
+
+const Vercel = styled.a`
+  color: white;
+  font-family: Andale Mono, monospace;
+  font-size: 14px;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    color: ${SB_NAVY};
+  }
+`
+const Info = styled.div``
 
 const Footer = ({
   pages,
@@ -169,36 +230,39 @@ const Footer = ({
   <footer>
     <GrayBackground>
       <FlexSection>
-        <FooterLogo />
-        <FooterInfo>
-          <Navigate>
-            <Header>NAVIGATE</Header>
-            <InfoLink dest="/" text="home" />
-            <InfoLink dest="/about" text="about" />
-            <InfoLink dest="/portfolio" text="portfolio" />
-            <InfoLink dest="/apply" text="apply" />
-            <InfoLink dest="/team" text="team" />
-          </Navigate>
+        <MailingListWrapper>
+          <MailingListHeader>Subscribe to Our Newsletter</MailingListHeader>
+          <EmailSubscription inputBG={SB_LIGHT_GREY} inputColor={SB_NAVY} />
+        </MailingListWrapper>
+        <Info>
           <Contact>
-            <Header>CONTACT</Header>
-            <InfoLink dest={`mailto:${email}`} text="info@sandboxneu.com" />
             <SocialSection>
+              <InfoLink dest={`mailto:${email}`} isMailIcon={true}>
+                <SocialInfo info={email} icon={faEnvelope} />
+              </InfoLink>
               <SocialInfo info={facebook} icon={faFacebookF} />
               <SocialInfo info={linkedin} icon={faLinkedin} />
               <SocialInfo info={instagram} icon={faInstagram} />
               <SocialInfo info={github} icon={faGithub} />
               <SocialInfo info={slack} icon={faSlack} />
             </SocialSection>
-            <Zeit>
-              Hosted by{" "}
-              <a href="https://vercel.com?utm_source=sandbox">Vercel</a>
-            </Zeit>
           </Contact>
-          <MailingListWrapper>
-            <MailingListHeader>SUBSCRIBE TO OUR MAILING LIST</MailingListHeader>
-            <EmailSubscription inputBG={SB_LIGHT_GREY} inputColor={SB_NAVY} />
-          </MailingListWrapper>
-        </FooterInfo>
+          <FooterInfo>
+            <Navigate>
+              <InfoLink dest="/">home</InfoLink>
+              <InfoLink dest="/about">about</InfoLink>
+              <InfoLink dest="/portfolio">portfolio</InfoLink>
+              <InfoLink dest="/apply">apply</InfoLink>
+              <InfoLink dest="/team">team</InfoLink>
+            </Navigate>
+            <HostedBy>
+              Sandbox &copy; 2020 hosted by&nbsp;
+              <Vercel href="https://vercel.com?utm_source=sandbox">
+                Vercel
+              </Vercel>
+            </HostedBy>
+          </FooterInfo>
+        </Info>
       </FlexSection>
     </GrayBackground>
   </footer>

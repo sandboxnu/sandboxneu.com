@@ -23,9 +23,6 @@ const JoinBannerContent = styled.div`
     line-height: 16px;
   }
 `
-const EmailBannerContent = styled.div`
-  //TO-DO: Styles when email component added
-`
 
 const IndexPage = ({ data }) => {
   return (
@@ -38,11 +35,6 @@ const IndexPage = ({ data }) => {
       </Banner>
       <Info {...data.infoCards.edges[0].node} />
       <Values {...data.values.edges[0].node} />
-      <Banner>
-        <EmailBannerContent>
-          <span>DID WE PIQUE YOUR INTEREST?</span>
-        </EmailBannerContent>
-      </Banner>
       <FAQs {...data.faqs.edges[0].node} />
       <Banner>
         <JoinBannerContent>
