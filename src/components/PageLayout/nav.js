@@ -108,7 +108,7 @@ const SideButton = styled(Link)`
 const Button = styled(Link)`
   letter-spacing: 0.15em;
   line-height: inherit;
-  font-family: ${accentFont};
+  font-family: Andale Mono;
   text-transform: lowercase;
   text-decoration: none;
   font-weight: 500;
