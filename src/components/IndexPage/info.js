@@ -8,7 +8,15 @@ import pills from "images/pharmd-pills.svg"
 import github from "images/github.svg"
 import tree from "images/oasis-logo.png"
 
-import { SB_ORANGE, SB_SALMON } from "@colors"
+import {
+  SB_ORANGE,
+  SB_SALMON,
+  SB_LIGHT_SALMON,
+  SB_LIGHT_ORANGE,
+  SB_LIGHT_SALMON_RGBA,
+  SB_LIGHT_ORANGE_RGBA,
+  lightenDarkenColor,
+} from "@colors"
 
 const CardLayout = styled.div`
   padding: 8vh 10vw;
@@ -143,11 +151,15 @@ const OasisLogo = styled.img`
 `
 
 const Info = ({ collaborate, join, spotlight, oasis }) => {
+  const lightOrangeHover = "#fff0d4"
+  const lightSalmonHover = "#fee6e3"
   return (
     <CardLayout>
       <CardsLeft>
         <Card
           color={SB_SALMON}
+          backgroundColor={SB_LIGHT_SALMON}
+          backgroundColorHover={lightSalmonHover}
           linkSrc={collaborate.linkSrc}
           linkText={collaborate.linkText}
           title={collaborate.title}
@@ -158,6 +170,8 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         </Card>
         <Card
           color={SB_SALMON}
+          backgroundColor={SB_LIGHT_SALMON}
+          backgroundColorHover={lightSalmonHover}
           linkSrc={join.linkSrc}
           linkText={join.linkText}
           title={join.title}
@@ -178,6 +192,8 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
       <CardsRight>
         <Card
           color={SB_ORANGE}
+          backgroundColor={SB_LIGHT_ORANGE}
+          backgroundColorHover={lightOrangeHover}
           linkSrc={spotlight.linkSrc}
           linkText={spotlight.linkText}
           title={spotlight.title}
@@ -194,6 +210,8 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         </Card>
         <Card
           color={SB_ORANGE}
+          backgroundColor={SB_LIGHT_ORANGE}
+          backgroundColorHover={lightOrangeHover}
           linkSrc={oasis.linkSrc}
           linkText={oasis.linkText}
           title={oasis.title}
