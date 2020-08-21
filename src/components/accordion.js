@@ -5,13 +5,13 @@ import { SB_LIGHT_ORANGE, SB_ORANGE, SB_NAVY } from "@colors"
 const Question = styled.span`
   color: ${SB_NAVY};
   font-family: Andale Mono;
-  font-size: 20px;
+  font-size: 1.2em;
 `
 
 const Answer = styled.span`
   color: ${SB_NAVY};
   font-family: Open Sans;
-  font-size: 17px;
+  font-size: 1.2em;
   line-height: 1.5;
   font-family: Andale Mono;
   margin-right: 10px;
@@ -22,7 +22,6 @@ const StyledAccordion = styled.div`
   border: solid 1px #fff;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 15px;
   text-align: left;
   padding: 18px;
   width: 100%;
@@ -38,10 +37,11 @@ const StyledAccordion = styled.div`
   &:after {
     color: ${SB_ORANGE};
     content: "<";
-    font-size: 32px;
+    font-size: 2.5em;
     font-weight: 700;
     transform: ${props => (props.display ? "rotate(-90deg)" : "none")};
     transition: 0.2s linear all;
+    margin-left: 5px;
   }
 `
 
