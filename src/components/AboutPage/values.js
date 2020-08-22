@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Section from "styles/components/Section"
+import Card from "components/AboutPage/card"
 
 import { SB_NAVY, SB_ORANGE } from "@colors"
 
@@ -47,6 +48,27 @@ const Wrapper = styled.div`
   }
 `
 
+const ValuesContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 100px 0 0 0;
+
+  > div {
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    > div {
+      &:not(:last-child) {
+        margin-right: unset;
+        margin-bottom: 2em;
+      }
+    }
+  }
+`
+
 const Values = ({ header, principles }) => {
   return (
     <Section>
@@ -60,6 +82,11 @@ const Values = ({ header, principles }) => {
           <SpecialText>best leverage computation</SpecialText>.
         </Text>
       </Wrapper>
+      <ValuesContainer>
+        {principles.map(p => {
+          return <Card title={p.title} body={p.body} />
+        })}
+      </ValuesContainer>
     </Section>
   )
 }
