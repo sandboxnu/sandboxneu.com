@@ -53,14 +53,14 @@ const SideContainer = styled.div`
   width: 100%;
   position: fixed;
   background-color: rgb(255, 255, 255, 0.5);
-  transition: width 0.15s ease-in-out;
+  transition: width 0.1s ease-in;
   top: 0;
   right: 0;
   ${props =>
     !props.isOpen &&
     css`
       width: 0%;
-      transition: width 0.15s ease-in-out;
+      transition: width 0.1s ease-in;
       top: 0;
       right: 0;
     `}
@@ -79,7 +79,7 @@ const SideNavBar = styled.div`
   height: 100%;
   max-width: 100vw;
   margin: 0 0 0 12em;
-  transition: max-width 0.4s;
+  transition: max-width linear 0.3s;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -88,7 +88,7 @@ const SideNavBar = styled.div`
     !props.isOpen &&
     css`
       max-width: 0;
-      transition: max-width 0.4s;
+      transition: max-width linear 0.3s;
     `}
 `
 
