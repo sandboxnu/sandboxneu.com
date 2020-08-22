@@ -21,7 +21,6 @@ const Title = styled.span`
   background: white;
   left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
   right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
-  padding: 0 10px;
   width: ${({ isSpotlight }) => isSpotlight && `min-content`};
   max-width: 80%;
 `

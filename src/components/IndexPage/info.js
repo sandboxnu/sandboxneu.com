@@ -29,15 +29,22 @@ const CardLayout = styled.div`
   }
 `
 const CardsLeft = styled.div`
-  padding: 24px 36px;
+  padding: 24px 50px;
   display: flex;
   flex-direction: column;
   & > div:first-child {
-    margin-bottom: 200px;
+    height: 300px;
+    width: 530px;
+    margin-bottom: 120px;
+  }
+  & > div:nth-child(2) {
+    height: 300px;
+    width: 530px;
   }
   @media only screen and (max-width: 1200px) {
     & > div:first-child {
-      margin-bottom: 80px;
+      margin-bottom: 10px;
+      min-width: 586px;
     }
     & > div:nth-child(2) {
       width: 586px;
@@ -47,19 +54,18 @@ const CardsLeft = styled.div`
   }
 `
 const CardsRight = styled.div`
-  padding: 24px 36px;
+  padding: 24px 50px;
   display: flex;
   flex-direction: column;
-  margin-top: 200px;
 
   & > div:first-child {
-    height: 318px;
-    width: 542px;
-    margin-bottom: 200px;
+    height: 300px;
+    width: 530px;
+    margin-bottom: 120px;
   }
 
   & > div:nth-child(2) {
-    height: 310px;
+    height: 300px;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -86,7 +92,7 @@ const WorkWithUs = styled.div`
 `
 const JoinTheTeam = styled.div`
   display: flex;
-  margin: 40px 22px 22px;
+  margin: 40px 22px 22px 10px;
   width: fit-content;
 `
 const JoinTheTeamText = styled.div`
@@ -120,7 +126,7 @@ const JoinTheTeamImage = styled.div`
 
 const PharmDPills = styled.img`
   position: absolute;
-  right: -15%;
+  right: -10%;
   bottom: 8%;
 `
 
@@ -169,6 +175,26 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           <WorkWithUs>{collaborate.copy}</WorkWithUs>
         </Card>
         <Card
+          color={SB_ORANGE}
+          backgroundColor={SB_LIGHT_ORANGE}
+          backgroundColorHover={lightOrangeHover}
+          linkSrc={spotlight.linkSrc}
+          linkText={spotlight.linkText}
+          title={spotlight.title}
+          titleAlign={"right"}
+          isSpotlight={true}
+        >
+          <PharmDContent>
+            <a href={spotlight.repoLink}>
+              <img src={github} alt="github" />
+            </a>
+            <PharmDText>{spotlight.copy}</PharmDText>
+          </PharmDContent>
+          <PharmDPills src={pills} alt="pills" />
+        </Card>
+      </CardsLeft>
+      <CardsRight>
+        <Card
           color={SB_SALMON}
           backgroundColor={SB_LIGHT_SALMON}
           backgroundColorHover={lightSalmonHover}
@@ -187,26 +213,6 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
               <span>{`${join.name}, Sandbox developer`}</span>
             </JoinTheTeamImage>
           </JoinTheTeam>
-        </Card>
-      </CardsLeft>
-      <CardsRight>
-        <Card
-          color={SB_ORANGE}
-          backgroundColor={SB_LIGHT_ORANGE}
-          backgroundColorHover={lightOrangeHover}
-          linkSrc={spotlight.linkSrc}
-          linkText={spotlight.linkText}
-          title={spotlight.title}
-          titleAlign={"right"}
-          isSpotlight={true}
-        >
-          <PharmDContent>
-            <a href={spotlight.repoLink}>
-              <img src={github} alt="github" />
-            </a>
-            <PharmDText>{spotlight.copy}</PharmDText>
-          </PharmDContent>
-          <PharmDPills src={pills} alt="pills" />
         </Card>
         <Card
           color={SB_ORANGE}

@@ -35,7 +35,6 @@ const IndexPage = ({ data }) => {
       </Banner>
       <Info {...data.infoCards.edges[0].node} />
       <Values {...data.values.edges[0].node} />
-      <FAQs {...data.faqs.edges[0].node} />
       <Banner>
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
