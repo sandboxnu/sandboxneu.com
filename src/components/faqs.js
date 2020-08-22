@@ -8,7 +8,7 @@ import Accordion from "./accordion"
 
 const Title = styled.div`
   color: ${SB_NAVY};
-  font-family: Brandon;
+  font-family: Montserrat;
   font-weight: 600;
   font-size: 50px;
   font-style: italic;
@@ -20,7 +20,7 @@ const Title = styled.div`
 const FAQs = ({ faqs }) => {
   return (
     <Section>
-      <Title>FAQ</Title>
+      <Title>FAQs</Title>
       {faqs.map(f => {
         return <Accordion question={f.question} answer={f.answer} />
       })}

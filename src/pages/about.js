@@ -3,10 +3,12 @@ import { graphql } from "gatsby"
 
 import Layout from "components/PageLayout/layout"
 import FAQs from "components/faqs"
+import Values from "components/AboutPage/values"
 
 const AboutPage = ({ data }) => {
   return (
     <Layout page="about">
+      <Values {...data.values.edges[0].node} />
       <FAQs {...data.faqs.edges[0].node} />
     </Layout>
   )
@@ -20,6 +22,17 @@ export const query = graphql`
           faqs {
             question
             answer
+          }
+        }
+      }
+    }
+    values: allValuesJson {
+      edges {
+        node {
+          header
+          principles {
+            title
+            body
           }
         }
       }
