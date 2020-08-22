@@ -13,7 +13,6 @@ const Answer = styled.span`
   font-family: Open Sans;
   font-size: 1.2em;
   line-height: 1.5;
-  font-family: Andale Mono;
   margin-right: 10px;
 `
 
