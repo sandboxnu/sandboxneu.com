@@ -75,10 +75,10 @@ const Values = ({ header, principles }) => {
       <Wrapper>
         <Title>{header}</Title>
         <Text>
-          Sandbox is Northeastern's{" "}
+          Sandbox is Northeastern's&nbsp;
           <SpecialText>student-led software consultancy</SpecialText> building
           software for Northeastern clients. We work closely with clients across
-          northeastern to help them{" "}
+          northeastern to help them&nbsp;
           <SpecialText>best leverage computation</SpecialText>.
         </Text>
       </Wrapper>
