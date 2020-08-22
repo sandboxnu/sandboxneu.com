@@ -53,10 +53,16 @@ const SideContainer = styled.div`
   width: 100%;
   position: fixed;
   background-color: rgb(255, 255, 255, 0.5);
+  transition: width 0.15s ease-in-out;
+  top: 0;
+  right: 0;
   ${props =>
     !props.isOpen &&
     css`
       width: 0%;
+      transition: width 0.15s ease-in-out;
+      top: 0;
+      right: 0;
     `}
 `
 
@@ -65,9 +71,15 @@ const SideNavBar = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: ${SB_NAVY};
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 200;
-  margin: 0 0 0 12em;
   height: 100%;
+  max-width: 100vw;
+  margin: 0 0 0 12em;
+  transition: max-width 0.4s;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -75,7 +87,8 @@ const SideNavBar = styled.div`
   ${props =>
     !props.isOpen &&
     css`
-      visibility: hidden;
+      max-width: 0;
+      transition: max-width 0.4s;
     `}
 `
 
@@ -89,6 +102,13 @@ const SideButtonContainer = styled.div`
   height: 100%;
   width: 80%;
   background-color: ${SB_NAVY};
+  transition: visibility 0.2s ease-in-out 0.2s;
+  ${props =>
+    !props.isOpen &&
+    css`
+      visibility: hidden;
+      transition: visibility 0.1s ease-in-out;
+    `}
 `
 
 const SideButton = styled(Link)`
@@ -219,7 +239,7 @@ const Nav = ({ page, pages }) => {
     <WrapperDiv isOpen={sideOpen}>
       <SideContainer isOpen={sideOpen}>
         <SideNavBar isOpen={sideOpen}>
-          <SideButtonContainer>
+          <SideButtonContainer isOpen={sideOpen}>
             {pages.map(p => (
               <SideButton to={p.route} key={p.name}>
                 {p.name}
