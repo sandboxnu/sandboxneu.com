@@ -44,12 +44,18 @@ const Link = styled.a`
   font-size: 20px;
   line-height: 21px;
   color: ${({ color }) => color};
-  background: white;
-  bottom: -10px;
+  background: ${({ backgroundColor }) => backgroundColor};
+  bottom: -28px;
   right: 0px;
-  padding: 0 10px;
+  padding: 6px 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  border 15px solid white;
+  transition: background .2s ease-out;
+
   &:hover {
     cursor: pointer;
+    background: ${({ backgroundColorHover }) => backgroundColorHover};
   }
 `
 
@@ -61,6 +67,8 @@ const Card = ({
   linkSrc,
   color,
   isSpotlight,
+  backgroundColor,
+  backgroundColorHover,
 }) => {
   return (
     <Container color={color}>
@@ -71,7 +79,12 @@ const Card = ({
         {title}
       </Title>
       {linkSrc && linkText && (
-        <Link href={linkSrc} color={color}>
+        <Link
+          href={linkSrc}
+          color={color}
+          backgroundColor={backgroundColor}
+          backgroundColorHover={backgroundColorHover}
+        >
           {linkText}
         </Link>
       )}

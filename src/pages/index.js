@@ -34,7 +34,6 @@ const IndexPage = ({ data }) => {
         UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
       </Banner>
       <Info {...data.infoCards.edges[0].node} />
-      <Values {...data.values.edges[0].node} />
       <Banner>
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
@@ -85,17 +84,6 @@ export const query = graphql`
           p1
           title2
           p2
-        }
-      }
-    }
-    values: allValuesJson {
-      edges {
-        node {
-          title
-          principles {
-            title
-            body
-          }
         }
       }
     }

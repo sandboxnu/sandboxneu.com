@@ -8,6 +8,7 @@ const Header = styled.h2`
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: ${SB_SALMON};
+  font-family: Montserrat;
 `
 
 const HeaderLine = styled(Header)`
