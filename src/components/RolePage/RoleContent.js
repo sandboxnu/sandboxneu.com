@@ -138,6 +138,7 @@ const RoleContent = ({
   image,
   isOpen,
   openDate,
+  mailLink,
 }) => {
   return (
     <>
@@ -175,7 +176,7 @@ const RoleContent = ({
             </div>
           </ApplicationClosedMessage>
           <ApplyButtonWrapper>
-            <Button href={formLink}>{isOpen ? "Apply" : "Sign Up"}</Button>
+            <Button href={mailLink}>{"Sign Up"}</Button>
           </ApplyButtonWrapper>
         </>
       )}

@@ -100,9 +100,7 @@ const Position = ({ fields, frontmatter }) => (
   <BlueFontSection>
     <HeadingContainer>
       <Header>{frontmatter.role}</Header>
-      <Button to={fields.slug}>
-        {frontmatter.isOpen ? "Apply" : `opens ${frontmatter.openDate}`}
-      </Button>
+      {frontmatter.isOpen && <Button to={fields.slug}>Apply</Button>}
     </HeadingContainer>
     <Description>
       {frontmatter.description}

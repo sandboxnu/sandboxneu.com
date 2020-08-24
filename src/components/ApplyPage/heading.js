@@ -108,26 +108,28 @@ const PaddedDiv = styled.div`
   padding-bottom: 48px;
 `
 
-const Heading = ({ title, subtitle, applicationStatus }) => (
+const Heading = ({ title, subtitle, applicationStatus, isBannerVisible }) => (
   <PaddedDiv>
     <BlueFontSection>
       <Header>{title}</Header>
       <Subtitle>{subtitle}</Subtitle>
     </BlueFontSection>
-    <AppStatusDiv>
-      <AppStatus>{applicationStatus}</AppStatus>
-      <Button
-        onClick={() => {
-          const ref = document.getElementById("open-positions")
-          ref.scrollIntoView(true)
+    {isBannerVisible && (
+      <AppStatusDiv>
+        <AppStatus>{applicationStatus}</AppStatus>
+        <Button
+          onClick={() => {
+            const ref = document.getElementById("open-positions")
+            ref.scrollIntoView(true)
 
-          const scrollHeight = window.scrollY - 110
-          window.scrollTo({ top: scrollHeight, behavior: "smooth" })
-        }}
-      >
-        Apply
-      </Button>
-    </AppStatusDiv>
+            const scrollHeight = window.scrollY - 110
+            window.scrollTo({ top: scrollHeight, behavior: "smooth" })
+          }}
+        >
+          Apply
+        </Button>
+      </AppStatusDiv>
+    )}
   </PaddedDiv>
 )
 

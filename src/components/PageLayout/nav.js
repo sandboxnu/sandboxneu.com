@@ -9,9 +9,6 @@ import { accentFont } from "@global"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
-
 const WrapperDiv = styled.nav`
   width: 100%;
   height: 100%;
@@ -57,10 +54,16 @@ const SideContainer = styled.div`
   width: 100%;
   position: fixed;
   background-color: rgb(255, 255, 255, 0.5);
+  transition: height 0.2s ease-in;
+  top: 0;
+  right: 0;
   ${props =>
     !props.isOpen &&
     css`
-      width: 0%;
+      height: 0%;
+      transition: height 0.2s ease-in;
+      top: 0;
+      right: 0;
     `}
 `
 
@@ -69,9 +72,15 @@ const SideNavBar = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: ${SB_NAVY};
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 200;
+  height: 50%;
+  width: 100%;
   margin: 0 0 0 12em;
-  height: 100%;
+  transition: height linear 0.3s;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -79,7 +88,8 @@ const SideNavBar = styled.div`
   ${props =>
     !props.isOpen &&
     css`
-      visibility: hidden;
+      height: 0;
+      transition: height linear 0.3s;
     `}
 `
 
@@ -88,11 +98,17 @@ const SideButtonContainer = styled.div`
   align-items: center;
   flex-direction: column;
   align: center;
-  padding: 50% 0%;
-  margin: 2em;
   height: 100%;
-  width: 80%;
+  padding-top: 60px;
+  width: 100%;
   background-color: ${SB_NAVY};
+  transition: visibility 0.2s ease-in-out 0.2s;
+  ${props =>
+    !props.isOpen &&
+    css`
+      visibility: hidden;
+      transition: visibility 0.1s ease-in-out;
+    `}
 `
 
 const SideButton = styled(Link)`
@@ -132,12 +148,71 @@ const Button = styled(Link)`
   }
 `
 
-const StyledMobileOnlyIcon = styled(FontAwesomeIcon)`
+const ToggleMobileSidebarIcon = styled.span`
+  position: absolute;
+  width: 2em;
+  height: 0.25em;
+  border-radius: 4px;
+  ${props =>
+    `
+      background-color: ${props.color};
+    `}
+  ${props =>
+    props.isOpen &&
+    css`
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: rotate(45deg);
+    `}
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2em;
+    height: 0.25em;
+    border-radius: 4px;
+    ${props =>
+      `
+        background-color: ${props.color};
+      `}
+    top: -0.64em;
+    transition: top 75ms ease 0.12s, opacity 75ms ease;
+    ${props =>
+      props.isOpen &&
+      css`
+        top: 0;
+        transition: top 75ms ease, opacity 75ms ease 0.12s;
+      `}
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2em;
+    height: 0.25em;
+    border-radius: 4px;
+    ${props =>
+      `
+        background-color: ${props.color};
+      `}
+    bottom: -0.65em;
+    transition: bottom 75ms ease 0.12s,
+      transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    ${props =>
+      props.isOpen &&
+      css`
+        bottom: 0;
+        transition: bottom 75ms ease,
+          transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        transform: rotate(-90deg);
+      `}
+  }
+`
+
+const ToggleMobileSidebarContainer = styled.div`
   display: inline;
   position: absolute;
-  right: 25px;
-  color: ${props => props.color};
-
+  right: 56px;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -170,22 +245,11 @@ const Nav = ({ page, pages }) => {
     }
   }, [])
 
-  function burgerButton() {
-    return (
-      <StyledMobileOnlyIcon
-        icon={sideOpen ? faTimes : faBars}
-        onClick={handleBurgerClick}
-        size={"2x"}
-        color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
-      />
-    )
-  }
-
   return (
     <WrapperDiv isOpen={sideOpen}>
       <SideContainer isOpen={sideOpen}>
         <SideNavBar isOpen={sideOpen}>
-          <SideButtonContainer>
+          <SideButtonContainer isOpen={sideOpen}>
             {pages.map(p => (
               <SideButton to={p.route} key={p.name}>
                 {p.name}
@@ -206,7 +270,13 @@ const Nav = ({ page, pages }) => {
             to="/"
             hoverAnimation
           />
-          {burgerButton()}
+          <ToggleMobileSidebarContainer>
+            <ToggleMobileSidebarIcon
+              color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
+              onClick={handleBurgerClick}
+              isOpen={sideOpen}
+            />
+          </ToggleMobileSidebarContainer>
           <ButtonContainer>
             {pages.map(p => (
               <Button

@@ -98,6 +98,7 @@ const RolePage = ({ data, pageContext }) => {
           image={currentRoleData.frontmatter.quoteImage}
           isOpen={currentRoleData.frontmatter.isOpen}
           openDate={currentRoleData.frontmatter.openDate}
+          mailLink={currentRoleData.frontmatter.mailLink}
         />
       </BlueFontSection>
     </Layout>
@@ -113,6 +114,7 @@ export const pageQuery = graphql`
           frontmatter {
             qualities
             formLink
+            mailLink
             role
             isOpen
             openDate
