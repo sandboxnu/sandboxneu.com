@@ -76,7 +76,7 @@ const SideNavBar = styled.div`
   right: 0;
   bottom: 0;
   z-index: 200;
-  height: 100px;
+  height: 50%;
   width: 100%;
   margin: 0 0 0 12em;
   transition: height linear 0.3s;
@@ -97,6 +97,7 @@ const SideButtonContainer = styled.div`
   align-items: center;
   flex-direction: column;
   align: center;
+  height: 100%;
   padding-top: 60px;
   width: 100%;
   background-color: ${SB_NAVY};
