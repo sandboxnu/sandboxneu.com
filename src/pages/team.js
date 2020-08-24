@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import { SB_NAVY } from "@colors"
-import Layout from "components/layout"
+import Layout from "components/PageLayout/layout"
 import SEO from "components/seo"
-import TeamPhotos from "components/teamPhotos"
+import TeamPhotos from "components/TeamPage/teamPhotos"
 import Section from "styles/components/Section"
 
 const BlueFontSection = styled(Section)`

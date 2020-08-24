@@ -1,0 +1,104 @@
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+
+const Container = styled.div`
+  border: 3px solid;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  border-color: ${({ color }) => color};
+  padding: 25px;
+`
+const Title = styled.span`
+  color: ${({ color }) => color};
+  position: absolute;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 50px;
+  top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
+  background: white;
+  left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
+  right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
+  width: ${({ isSpotlight }) => isSpotlight && `min-content`};
+  max-width: 80%;
+`
+
+const SpotlightText = styled.span`
+  color: ${({ color }) => color};
+  font-family: Andale Mono;
+  font-size: 20px;
+  right: 5%;
+  top: -13px;
+  padding: 0 10px;
+  background: white;
+  position: absolute;
+`
+
+const Link = styled.a`
+  position: absolute;
+  font-family: Andale Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 21px;
+  color: ${({ color }) => color};
+  background: ${({ backgroundColor }) => backgroundColor};
+  bottom: -28px;
+  right: 0px;
+  padding: 6px 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  border 15px solid white;
+  transition: background .2s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background: ${({ backgroundColorHover }) => backgroundColorHover};
+  }
+`
+
+const Card = ({
+  children,
+  title,
+  titleAlign,
+  linkText,
+  linkSrc,
+  color,
+  isSpotlight,
+  backgroundColor,
+  backgroundColorHover,
+}) => {
+  return (
+    <Container color={color}>
+      {isSpotlight && (
+        <SpotlightText color={color}>project spotlight</SpotlightText>
+      )}
+      <Title color={color} isSpotlight={isSpotlight} titleAlign={titleAlign}>
+        {title}
+      </Title>
+      {linkSrc && linkText && (
+        <Link
+          href={linkSrc}
+          color={color}
+          backgroundColor={backgroundColor}
+          backgroundColorHover={backgroundColorHover}
+        >
+          {linkText}
+        </Link>
+      )}
+      {children}
+    </Container>
+  )
+}
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleAlign: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
+  linkSrc: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  isSpotlight: PropTypes.bool.isRequired,
+}
+export default Card

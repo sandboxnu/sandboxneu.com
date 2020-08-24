@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import BackgroundImage from "gatsby-background-image"
@@ -6,8 +7,11 @@ import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
 
 import { SB_ORANGE } from "@colors"
-import banner from "images/sandbox-banner-shadow.svg"
-import Section from "styles/components/Section"
+import Marketing from "components/IndexPage/marketing"
+
+import EmailSubscription from "../emailSubscription"
+
+import { SB_SALMON_RGBA } from "@colors"
 
 const fadeIn = keyframes`
   0% {
@@ -40,37 +44,93 @@ const fadeInSlideUp = keyframes`
   }
 `
 
+const Title = styled.h1`
+  opacity: 1;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 2.5em;
+  font-style: italic;
+  @media (min-width: 1000px) {
+    font-size: 3.5em;
+  }
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0 0 7px #111;
+  animation: ${fadeInSlideUp} 1.75s;
+`
+
 const Subtitle = styled.h1`
   opacity: 1;
-  padding: 1.2em 0 2.8em;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1em;
   @media (min-width: 1000px) {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 0 7px #111;
   animation: ${fadeInSlideUp} 1.75s;
+`
+
+const EmailText = styled.h1`
+  opacity: 1;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.5em;
+  font-style: italic;
+  @media (min-width: 1000px) {
+    font-size: 2em;
+  }
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 0 0 7px #111;
+`
+
+const IntroductionContainer = styled.div`
+  max-width: 400px;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
+const EmailContainer = styled.div`
+  animation: ${fadeInSlideUp} 1.75s;
+`
+
+const MarketingContainer = styled.div`
+  animation: ${fadeInSlideUp} 1.75s;
+  padding-top: 2em;
+`
+
+const SectionContent = styled.section`
+  max-width: 100%;
+`
+
+const Section = styled(SectionContent)`
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  justify-content: space-between;
+  padding: 5em 0 5em 2em;
+
+  @media (max-width: 900px) {
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-right: 2em;
+  }
 `
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
   height: 100vh;
-`
-
-const ImgContainer = styled.object`
-  max-width: 15em;
-  @media (min-width: 1000px) {
-    max-width: 30em;
-  }
-  margin: 0 auto;
-  display: block;
-  padding-top: 8vh;
-  animation: ${fadeInSlideUp} 1.25s;
 `
 
 const StyledFA = styled(FontAwesomeIcon)`
@@ -109,23 +169,53 @@ const Arrow = ({ color, scale }) => {
   )
 }
 
-const Banner = () => <ImgContainer data={banner}>Banner</ImgContainer>
-
-const Hero = ({ title, background }) => {
-  return (
-    <StyledBackgroundImage
-      fluid={background.childImageSharp.fluid}
-      backgroundColor={`#040e18`}
-    >
-      <Section>
-        <Banner dropShadow />
-        <Subtitle>{title}</Subtitle>
-        <br />
+const Hero = ({ title, background }) => (
+  <StaticQuery
+    query={graphql`
+      query Marketing {
+        allMarketingJson {
+          edges {
+            node {
+              event {
+                date
+                time
+                location
+                title
+              }
+              post {
+                title
+                author
+                url
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <StyledBackgroundImage
+        fluid={background.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+      >
+        <Section>
+          <IntroductionContainer>
+            <Title>SANDBOX</Title>
+            <Subtitle>{title}</Subtitle>
+            <EmailContainer>
+              <br />
+              <EmailText>LEARN MORE</EmailText>
+              <EmailSubscription />
+            </EmailContainer>
+          </IntroductionContainer>
+          <MarketingContainer>
+            <Marketing {...data.allMarketingJson.edges[0].node} />
+          </MarketingContainer>
+        </Section>
         <Arrow color="#fff" scale="3" />
-      </Section>
-    </StyledBackgroundImage>
-  )
-}
+      </StyledBackgroundImage>
+    )}
+  />
+)
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,

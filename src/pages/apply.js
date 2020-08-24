@@ -7,7 +7,7 @@ import Values from "../components/ApplyPage/values"
 import Showcase from "../components/ApplyPage/showcase"
 import Position from "../components/ApplyPage/position"
 import Heading from "../components/ApplyPage/heading"
-import Layout from "components/layout"
+import Layout from "../components/PageLayout/layout"
 import SEO from "components/seo"
 
 const Header = styled.h1`
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    values: allMissionJson {
+    values: allValuesJson {
       edges {
         node {
           title

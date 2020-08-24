@@ -1,0 +1,18 @@
+{
+  "title": "Our Core Values",
+  "header": "About",
+  "principles": [
+    {
+      "title": "Be Kind",
+      "body": "We see kindness as the first step in building an inclusive, supportive, and productive culture. We believe in giving kind and constructive feedback and don't tolerate brilliant jerks."
+    },
+    {
+      "title": "Learn Together",
+      "body": "We aim to grow as developers by seeking technically challenging and interesting projects. We pair program frequently and stop to teach one another new things, even if it slows us down."
+    },
+    {
+      "title": "Make an Impact",
+      "body": "We build projects that make a real impact on our clients and their work. With a pragmatic attitude towards software development, we're able to deliver solutions that are put into use."
+    }
+  ]
+}
