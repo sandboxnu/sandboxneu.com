@@ -53,14 +53,14 @@ const SideContainer = styled.div`
   width: 100%;
   position: fixed;
   background-color: rgb(255, 255, 255, 0.5);
-  transition: width 0.1s ease-in;
+  transition: height 0.2s ease-in;
   top: 0;
   right: 0;
   ${props =>
     !props.isOpen &&
     css`
-      width: 0%;
-      transition: width 0.1s ease-in;
+      height: 0%;
+      transition: height 0.2s ease-in;
       top: 0;
       right: 0;
     `}
@@ -76,10 +76,10 @@ const SideNavBar = styled.div`
   right: 0;
   bottom: 0;
   z-index: 200;
-  height: 100%;
-  max-width: 100vw;
+  height: 100px;
+  width: 100%;
   margin: 0 0 0 12em;
-  transition: max-width linear 0.3s;
+  transition: height linear 0.3s;
   @media (min-width: 600px) {
     visibility: hidden;
   }
@@ -87,8 +87,8 @@ const SideNavBar = styled.div`
   ${props =>
     !props.isOpen &&
     css`
-      max-width: 0;
-      transition: max-width linear 0.3s;
+      height: 0;
+      transition: height linear 0.3s;
     `}
 `
 
@@ -97,10 +97,8 @@ const SideButtonContainer = styled.div`
   align-items: center;
   flex-direction: column;
   align: center;
-  padding: 50% 0%;
-  margin: 2em;
-  height: 100%;
-  width: 80%;
+  padding-top: 60px;
+  width: 100%;
   background-color: ${SB_NAVY};
   transition: visibility 0.2s ease-in-out 0.2s;
   ${props =>
@@ -152,7 +150,10 @@ const ToggleMobileSidebarIcon = styled.span`
   width: 2em;
   height: 0.25em;
   border-radius: 4px;
-  background-color: white;
+  ${props =>
+    `
+      background-color: ${props.color};
+    `}
   ${props =>
     props.isOpen &&
     css`
@@ -167,7 +168,10 @@ const ToggleMobileSidebarIcon = styled.span`
     width: 2em;
     height: 0.25em;
     border-radius: 4px;
-    background-color: white;
+    ${props =>
+      `
+        background-color: ${props.color};
+      `}
     top: -0.64em;
     transition: top 75ms ease 0.12s, opacity 75ms ease;
     ${props =>
@@ -184,7 +188,10 @@ const ToggleMobileSidebarIcon = styled.span`
     width: 2em;
     height: 0.25em;
     border-radius: 4px;
-    background-color: white;
+    ${props =>
+      `
+        background-color: ${props.color};
+      `}
     bottom: -0.65em;
     transition: bottom 75ms ease 0.12s,
       transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -262,6 +269,7 @@ const Nav = ({ page, pages }) => {
           />
           <ToggleMobileSidebarContainer>
             <ToggleMobileSidebarIcon
+              color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
               onClick={handleBurgerClick}
               isOpen={sideOpen}
             />
