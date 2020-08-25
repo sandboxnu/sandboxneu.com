@@ -4,11 +4,13 @@ import { graphql } from "gatsby"
 import Layout from "components/PageLayout/layout"
 import FAQs from "components/faqs"
 import Values from "components/AboutPage/values"
+import GetInvolved from "components/AboutPage/getInvolved"
 
 const AboutPage = ({ data }) => {
   return (
     <Layout page="about">
       <Values {...data.values.edges[0].node} />
+      <GetInvolved {...data.getInvolved.edges[0].node} />
       <FAQs {...data.faqs.edges[0].node} />
     </Layout>
   )
@@ -33,6 +35,19 @@ export const query = graphql`
           principles {
             title
             body
+          }
+        }
+      }
+    }
+    getInvolved: allGetInvolvedCardsJson {
+      edges {
+        node {
+          header
+          info {
+            title
+            body
+            action
+            conclusion
           }
         }
       }
