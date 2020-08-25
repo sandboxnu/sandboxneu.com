@@ -45,8 +45,11 @@ export const query = graphql`
           header
           info {
             title
+            linkText
+            linkSrc
             body
             action
+            actionSrc
             conclusion
           }
         }
