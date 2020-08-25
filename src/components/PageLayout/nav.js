@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { useAmplitudeLogEvent } from "utils/amplitude"
 
-import { SB_NAVY, SB_ORANGE_RGBA } from "@colors"
+import { SB_NAVY, SB_ORANGE_RGBA, SB_SALMON } from "@colors"
 import { accentFont } from "@global"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
@@ -129,12 +129,14 @@ const Button = styled(Link)`
   text-decoration: none;
   font-weight: 500;
   border-bottom: 2px solid ${SB_ORANGE_RGBA(0)};
-  color: ${SB_NAVY};
+  ${props =>
+    `
+      color: ${props.selectColor};
+    `}
   transition: color 0.3s, text-shadow 0.3s, border-bottom 0.3s;
   ${props =>
     props.isWhite &&
     css`
-      color: #fff;
       text-shadow: 0 0 5px #000;
     `}
   &:hover {
@@ -282,6 +284,13 @@ const Nav = ({ page, pages }) => {
               <Button
                 to={p.route}
                 isWhite={atTop && page === "index"}
+                selectColor={
+                  atTop && page === "index"
+                    ? "#fff"
+                    : page === p.name.toLowerCase()
+                    ? SB_SALMON
+                    : SB_NAVY
+                }
                 key={p.name}
               >
                 {p.name}
