@@ -77,7 +77,7 @@ const SideNavBar = styled.div`
   right: 0;
   bottom: 0;
   z-index: 200;
-  height: 50%;
+  height: 80%;
   width: 100%;
   margin: 0 0 0 12em;
   transition: height linear 0.3s;
