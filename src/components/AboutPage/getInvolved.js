@@ -23,7 +23,7 @@ const Title = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding: 5em 150px 0 150px;
+  padding: 0 150px 0 150px;
   @media (max-width: 1000px) {
     padding: 0;
   }
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: -3em 5em 0 5em;
+  margin: -3em 5em 5em 5em;
 
   // mobile styling
   @media (max-width: 600px) {
