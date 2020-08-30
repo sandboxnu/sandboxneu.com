@@ -44,6 +44,10 @@ const QuoteContainer = styled.span`
     margin-top: 0;
     top: 13em;
   }
+
+  @media (max-width: 600px) {
+    visibility: hidden;
+  }
 `
 
 const Text = styled.span`
@@ -91,34 +95,20 @@ const ReferenceTitle = styled.span`
 `
 
 const AboutPage = ({ data }) => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const resizeListener = () => {
-      setScreenWidth(window.innerWidth)
-    }
-    // set resize listener
-    window.addEventListener("resize", resizeListener)
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener)
-    }
-  }, [])
-
   return (
     <Layout page="about">
       <Values {...data.values.edges[0].node} />
       <GetInvolved {...data.getInvolved.edges[0].node} />
       <Banner>
-        {screenWidth > 600 && <QuoteContainer>“</QuoteContainer>}
+        <QuoteContainer>“</QuoteContainer>
         <TextContainer>
           <Text>
-            {screenWidth <= 600 && `“`}The brilliant and diligent engineers of
-            Sandbox are, without exaggeration,{" "}
+            The brilliant and diligent engineers of Sandbox are, without
+            exaggeration,{" "}
             <SpecialText>indispensable to my research</SpecialText>. I came to
             them with a challenging problem, and they delivered a solution that
             is <SpecialText>twice as professional as I’d hoped</SpecialText>, in
-            half the time I’d expected.”
+            half the time I’d expected.
           </Text>
           <Reference>
             <ReferenceName>Dr. Melnikoff Researcher</ReferenceName>
