@@ -6,7 +6,7 @@ const Banner = styled.div`
   font-style: italic;
   font-weight: bold;
   display: flex;
-  height: 93px;
+  min-height: 93px;
   font-size: 25px;
   line-height: 30px;
   text-align: center;
