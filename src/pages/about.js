@@ -22,12 +22,14 @@ const JoinBannerContent = styled.div`
 `
 
 const TextContainer = styled.div`
-  padding: 1em 5em;
+  margin: 0 5em;
   text-align: left;
+  padding: 1em 5em;
   z-index: 5;
 
   @media (max-width: 600px) {
     line-height: 22px;
+    margin: 0;
     padding: 30px 50px;
   }
 `
