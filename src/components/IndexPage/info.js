@@ -22,97 +22,62 @@ const CardLayout = styled.div`
   padding: 8vh 10vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
 
   @media only screen and (max-width: 1000px) {
     padding: 8vh 0;
 `
 const CardsTop = styled.div`
-  padding: 24px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 120px;
 
-  & > div:first-child {
+  > div {
     height: 300px;
     width: 530px;
-    margin-bottom: 120px;
+    :first-child {
+      margin-right: 50px;
+    }
   }
-  & > div:nth-child(2) {
-    height: 300px;
-    width: 530px;
-  }
-  @media (min-width: 1200px) {
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
     padding: 0;
+
+    > div {
+      :first-child {
+        margin-right: 0;
+        margin-bottom: 120px;
+      }
+    }
   }
-
-  // @media only screen and (max-width: 1200px) {
-  //   & > div:first-child {
-  //     margin-bottom: 10px;
-  //     min-width: 586px;
-  //   }
-  //   & > div:nth-child(2) {
-  //     width: 586px;
-  //     position: relative;
-  //     top: 396px;
-  //   }
-  // }
-
-  // @media only screen and (max-width: 700px) {
-  //   padding: 24px 0;
-  //   & > div:first-child {
-  //     height: fit-content;
-  //     width: 100vw;
-  //     min-width: unset;
-  //   }
-  //   & > div:nth-child(2) {
-  //     height: fit-content;
-  //     width: 100vw;
-  //     min-width: unset;
-  //   }
-  // }
 `
 const CardsBot = styled.div`
-  padding: 24px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 
-  & > div:first-child {
+  > div {
     height: 300px;
     width: 530px;
-    margin-bottom: 120px;
-  }
-
-  & > div:nth-child(2) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    margin-top: 32px;
-
-    & > div:first-child {
-      margin-bottom: 80px;
-      width: 586px;
-      position: relative;
-      bottom: 333px;
-    }
-
-    & > div:nth-child(2) {
-      width: 586px;
+    :first-child {
+      margin-right: 50px;
     }
   }
 
-  @media only screen and (max-width: 700px) {
-    padding: 24px 0;
-    & > div:first-child {
-      height: fit-content;
-      width: 100vw;
-    }
-    & > div:nth-child(2) {
-      height: fit-content;
-      width: 100vw;
+  @media (max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+    > div {
+      :first-child {
+        margin-right: 0;
+        margin-bottom: 120px;
+      }
     }
   }
 `
@@ -253,8 +218,8 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           </JoinTheTeam>
         </Card>
       </CardsTop>
-      {/* <CardsBot>
-      <Card
+      <CardsBot>
+        <Card
           color={SB_ORANGE}
           backgroundColor={SB_LIGHT_ORANGE}
           backgroundColorHover={lightOrangeHover}
@@ -288,7 +253,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           </OasisContent>
           <OasisLogo src={tree} alt="tree" />
         </Card>
-      </CardsBot> */}
+      </CardsBot>
     </CardLayout>
   )
 }
