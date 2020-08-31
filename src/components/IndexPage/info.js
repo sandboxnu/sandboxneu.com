@@ -52,6 +52,17 @@ const CardsLeft = styled.div`
       top: 396px;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    & > div:first-child {
+      height: fit-content;
+      width: 100vw;
+    }
+    & > div:nth-child(2) {
+      height: fit-content;
+      width: 100vw;
+    }
+  }
 `
 const CardsRight = styled.div`
   padding: 24px 50px;
@@ -81,26 +92,36 @@ const CardsRight = styled.div`
     & > div:nth-child(2) {
       width: 586px;
     }
+  }
 `
 const WorkWithUs = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
   display: inline-block;
-  margin: 70px 20px 60px 20px;
-  width: 490px;
+  margin: 70px 20px 60px 10px;
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
 `
 const JoinTheTeam = styled.div`
   display: flex;
   margin: 40px 22px 22px 10px;
-  width: fit-content;
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
 `
 const JoinTheTeamText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
   margin-right: 24px;
-  width: 325px;
 `
 const JoinTheTeamImage = styled.div`
   display: flex;
@@ -122,18 +143,30 @@ const JoinTheTeamImage = styled.div`
     font-family: Open Sans;
     font-size: 10px;
   }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const PharmDPills = styled.img`
   position: absolute;
   right: -10%;
   bottom: 8%;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const PharmDContent = styled.div`
   width: 230px;
   position: relative;
   top: 100px;
+
+  @media only screen and (max-width: 700px) {
+    position: unset;
+  }
 `
 const PharmDText = styled.div`
   font-family: Open Sans;
@@ -144,7 +177,6 @@ const OasisText = styled.p`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
-  width: 488px;
 `
 const OasisContent = styled.div`
   margin-top: 30px;
@@ -154,6 +186,10 @@ const OasisLogo = styled.img`
   top: 95px;
   left: -20px;
   z-index: -1;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const Info = ({ collaborate, join, spotlight, oasis }) => {
