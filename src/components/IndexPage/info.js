@@ -54,13 +54,16 @@ const CardsLeft = styled.div`
   }
 
   @media only screen and (max-width: 700px) {
+    padding: 24px 0;
     & > div:first-child {
       height: fit-content;
       width: 100vw;
+      min-width: unset;
     }
     & > div:nth-child(2) {
       height: fit-content;
       width: 100vw;
+      min-width: unset;
     }
   }
 `
@@ -91,6 +94,18 @@ const CardsRight = styled.div`
 
     & > div:nth-child(2) {
       width: 586px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 24px 0;
+    & > div:first-child {
+      height: fit-content;
+      width: 100vw;
+    }
+    & > div:nth-child(2) {
+      height: fit-content;
+      width: 100vw;
     }
   }
 `
