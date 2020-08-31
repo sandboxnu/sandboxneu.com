@@ -21,17 +21,19 @@ import {
 const CardLayout = styled.div`
   padding: 8vh 10vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  @media only screen and (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 8vh 0;
 `
-const CardsLeft = styled.div`
+const CardsTop = styled.div`
   padding: 24px 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+
   & > div:first-child {
     height: 300px;
     width: 530px;
@@ -41,36 +43,41 @@ const CardsLeft = styled.div`
     height: 300px;
     width: 530px;
   }
-  @media only screen and (max-width: 1200px) {
-    & > div:first-child {
-      margin-bottom: 10px;
-      min-width: 586px;
-    }
-    & > div:nth-child(2) {
-      width: 586px;
-      position: relative;
-      top: 396px;
-    }
+  @media (min-width: 1200px) {
+    padding: 0;
   }
 
-  @media only screen and (max-width: 700px) {
-    padding: 24px 0;
-    & > div:first-child {
-      height: fit-content;
-      width: 100vw;
-      min-width: unset;
-    }
-    & > div:nth-child(2) {
-      height: fit-content;
-      width: 100vw;
-      min-width: unset;
-    }
-  }
+  // @media only screen and (max-width: 1200px) {
+  //   & > div:first-child {
+  //     margin-bottom: 10px;
+  //     min-width: 586px;
+  //   }
+  //   & > div:nth-child(2) {
+  //     width: 586px;
+  //     position: relative;
+  //     top: 396px;
+  //   }
+  // }
+
+  // @media only screen and (max-width: 700px) {
+  //   padding: 24px 0;
+  //   & > div:first-child {
+  //     height: fit-content;
+  //     width: 100vw;
+  //     min-width: unset;
+  //   }
+  //   & > div:nth-child(2) {
+  //     height: fit-content;
+  //     width: 100vw;
+  //     min-width: unset;
+  //   }
+  // }
 `
-const CardsRight = styled.div`
+const CardsBot = styled.div`
   padding: 24px 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 
   & > div:first-child {
     height: 300px;
@@ -212,7 +219,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
   const lightSalmonHover = "#fee6e3"
   return (
     <CardLayout>
-      <CardsLeft>
+      <CardsTop>
         <Card
           color={SB_SALMON}
           backgroundColor={SB_LIGHT_SALMON}
@@ -225,26 +232,6 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         >
           <WorkWithUs>{collaborate.copy}</WorkWithUs>
         </Card>
-        <Card
-          color={SB_ORANGE}
-          backgroundColor={SB_LIGHT_ORANGE}
-          backgroundColorHover={lightOrangeHover}
-          linkSrc={spotlight.linkSrc}
-          linkText={spotlight.linkText}
-          title={spotlight.title}
-          titleAlign={"right"}
-          isSpotlight={true}
-        >
-          <PharmDContent>
-            <a href={spotlight.repoLink}>
-              <img src={github} alt="github" />
-            </a>
-            <PharmDText>{spotlight.copy}</PharmDText>
-          </PharmDContent>
-          <PharmDPills src={pills} alt="pills" />
-        </Card>
-      </CardsLeft>
-      <CardsRight>
         <Card
           color={SB_SALMON}
           backgroundColor={SB_LIGHT_SALMON}
@@ -265,6 +252,26 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>
+      </CardsTop>
+      {/* <CardsBot>
+      <Card
+          color={SB_ORANGE}
+          backgroundColor={SB_LIGHT_ORANGE}
+          backgroundColorHover={lightOrangeHover}
+          linkSrc={spotlight.linkSrc}
+          linkText={spotlight.linkText}
+          title={spotlight.title}
+          titleAlign={"right"}
+          isSpotlight={true}
+        >
+          <PharmDContent>
+            <a href={spotlight.repoLink}>
+              <img src={github} alt="github" />
+            </a>
+            <PharmDText>{spotlight.copy}</PharmDText>
+          </PharmDContent>
+          <PharmDPills src={pills} alt="pills" />
+        </Card>
         <Card
           color={SB_ORANGE}
           backgroundColor={SB_LIGHT_ORANGE}
@@ -281,7 +288,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           </OasisContent>
           <OasisLogo src={tree} alt="tree" />
         </Card>
-      </CardsRight>
+      </CardsBot> */}
     </CardLayout>
   )
 }

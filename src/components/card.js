@@ -33,7 +33,6 @@ const Title = styled.span`
     top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
     left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
     right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
-    max-width: 80%;
   }
 `
 
