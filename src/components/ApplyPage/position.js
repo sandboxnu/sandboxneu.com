@@ -47,6 +47,7 @@ const Header = styled.h2`
   margin: 0;
   margin-right: 15px;
   color: ${SB_SALMON};
+  font-family: Montserrat;
 
   @media (max-width: 600px) {
     font-size: 24px;
