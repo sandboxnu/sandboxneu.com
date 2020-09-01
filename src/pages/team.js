@@ -19,6 +19,8 @@ const Header = styled.h1`
   text-align: center;
   font-weight: 600;
   font-size: 2.5em;
+  font-family: Montserrat;
+  margin-bottom: 0;
 
   @media (min-width: 1000px) {
     font-size: 3em;
@@ -29,9 +31,10 @@ const Subtitle = styled.h3`
   text-align: center;
   font-weight: 400;
   line-height: 1.5;
+  font-family: Andale Mono;
 
   @media (min-width: 1000px) {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 `
 
