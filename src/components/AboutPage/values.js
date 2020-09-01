@@ -1,10 +1,31 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import Section from "styles/components/Section"
 import Card from "components/AboutPage/card"
 
 import { SB_NAVY, SB_ORANGE } from "@colors"
+
+const fadeInSlideUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+`
+
+const AboutSection = styled(Section)`
+  min-height: 100vh;
+`
 
 const Title = styled.div`
   color: ${SB_NAVY};
@@ -43,6 +64,7 @@ const SpecialText = styled.span`
 
 const Wrapper = styled.div`
   padding: 5em 150px 0 150px;
+  animation: ${fadeInSlideUp} 1s;
   @media (max-width: 1000px) {
     padding: 5em 0 0 0;
   }
@@ -54,10 +76,25 @@ const ValuesContainer = styled.div`
   margin: 100px 0 0 0;
 
   > div {
+    animation: ${fadeInSlideUp} 1s linear;
+    animation-fill-mode: both;
     &:not(:last-child) {
       margin-right: 2em;
     }
+
+    &:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.9s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.2s;
+    }
   }
+
   @media (max-width: 1000px) {
     flex-direction: column;
     > div {
@@ -71,7 +108,7 @@ const ValuesContainer = styled.div`
 
 const Values = ({ header, principles }) => {
   return (
-    <Section>
+    <AboutSection>
       <Wrapper>
         <Title>{header}</Title>
         <Text>
@@ -87,7 +124,7 @@ const Values = ({ header, principles }) => {
           return <Card title={p.title} body={p.body} />
         })}
       </ValuesContainer>
-    </Section>
+    </AboutSection>
   )
 }
 
