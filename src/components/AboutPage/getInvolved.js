@@ -57,6 +57,9 @@ const InfoContainer = styled.div`
         margin-right: unset;
         margin-bottom: 3em;
       }
+      :last-child {
+        margin-bottom: 3em;
+      }
     }
   }
 `
