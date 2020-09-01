@@ -99,6 +99,10 @@ const SizedLogo = styled.object`
 
 const StyledSocial = styled.div`
   margin-right: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const StyledLink = styled.a`
@@ -112,7 +116,7 @@ const StyledLink = styled.a`
     color: ${SB_NAVY};
   }
   :after {
-    content: ${props => (props.isMailIcon ? '""' : '" |"')};
+    content: " |";
     padding-left: 5px;
     color: #bbbdc0;
   }
@@ -182,9 +186,13 @@ const SocialInfo = ({ info, icon }) => {
 
 const InfoLink = props => {
   return (
-    <StyledLink href={props.dest} isMailIcon={props.isMailIcon}>
-      {props.children}
-    </StyledLink>
+    <>
+      {props.isMailIcon ? (
+        props.children
+      ) : (
+        <StyledLink href={props.dest}>{props.children}</StyledLink>
+      )}
+    </>
   )
 }
 
