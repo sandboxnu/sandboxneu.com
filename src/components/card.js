@@ -3,59 +3,86 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Container = styled.div`
-  border: 3px solid;
   width: fit-content;
   height: fit-content;
-  position: relative;
-  border-color: ${({ color }) => color};
+  background-color: ${({ mobileBackgroundColor }) => mobileBackgroundColor};
   padding: 25px;
+
+  @media (min-width: 700px) {
+    border: 3px solid;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-color: ${({ color }) => color};
+    padding: 25px;
+    background-color: transparent;
+  }
 `
 const Title = styled.span`
   color: ${({ color }) => color};
-  position: absolute;
   font-family: Montserrat;
   font-style: italic;
   font-weight: bold;
   font-size: 50px;
-  top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
-  background: white;
-  left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
-  right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
-  width: ${({ isSpotlight }) => isSpotlight && `min-content`};
-  max-width: 80%;
+  margin-bottom: 10px;
+  display: inline-block;
+
+  @media (min-width: 700px) {
+    position: absolute;
+    background: white;
+    display: block;
+    margin-bottom: 0;
+    width: ${({ isSpotlight }) => isSpotlight && `min-content`};
+    top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
+    left: ${({ titleAlign }) => titleAlign === "left" && `5%`};
+    right: ${({ titleAlign }) => titleAlign === "right" && `5%`};
+  }
 `
 
 const SpotlightText = styled.span`
   color: ${({ color }) => color};
   font-family: Andale Mono;
   font-size: 20px;
-  right: 5%;
-  top: -13px;
   padding: 0 10px;
-  background: white;
-  position: absolute;
+  background: transparent;
+  display: block;
+
+  @media (min-width: 700px) {
+    background: white;
+    position: absolute;
+    right: 5%;
+    top: -13px;
+  }
 `
 
 const Link = styled.a`
-  position: absolute;
   font-family: Andale Mono;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 21px;
-  color: ${({ color }) => color};
-  background: ${({ backgroundColor }) => backgroundColor};
-  bottom: -28px;
-  right: 0px;
+  color: ${({ backgroundColor }) => backgroundColor};
+  background: ${({ color }) => color};
   padding: 6px 14px;
-  border-radius: 25px;
   text-decoration: none;
-  border 15px solid white;
   transition: background .2s ease-out;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
 
   &:hover {
     cursor: pointer;
     background: ${({ backgroundColorHover }) => backgroundColorHover};
+  }
+
+  @media(min-width: 700px) {
+    position: absolute;
+    color: ${({ color }) => color};
+    background: ${({ backgroundColor }) => backgroundColor};
+    border-radius: 25px;
+    border 15px solid white;
+    bottom: -28px;
+    right: 0px;
   }
 `
 
@@ -71,7 +98,7 @@ const Card = ({
   backgroundColorHover,
 }) => {
   return (
-    <Container color={color}>
+    <Container color={color} mobileBackgroundColor={backgroundColor}>
       {isSpotlight && (
         <SpotlightText color={color}>project spotlight</SpotlightText>
       )}

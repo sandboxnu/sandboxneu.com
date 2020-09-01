@@ -21,86 +21,116 @@ import {
 const CardLayout = styled.div`
   padding: 8vh 10vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
-  @media only screen and (max-width: 1200px) {
-    flex-direction: column;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 8vh 0;
+`
+const CardsTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 120px;
+
+  > div {
+    height: 300px;
+    width: 530px;
+    :first-child {
+      margin-right: 50px;
+    }
+  }
+
+  @media (max-width: 1200px) {
     align-items: center;
-  }
-`
-const CardsLeft = styled.div`
-  padding: 24px 50px;
-  display: flex;
-  flex-direction: column;
-  & > div:first-child {
-    height: 300px;
-    width: 530px;
-    margin-bottom: 120px;
-  }
-  & > div:nth-child(2) {
-    height: 300px;
-    width: 530px;
-  }
-  @media only screen and (max-width: 1200px) {
-    & > div:first-child {
-      margin-bottom: 10px;
-      min-width: 586px;
+    flex-direction: column;
+    padding: 0;
+
+    > div {
+      :first-child {
+        margin-right: 0;
+        margin-bottom: 120px;
+      }
     }
-    & > div:nth-child(2) {
-      width: 586px;
-      position: relative;
-      top: 396px;
+  }
+
+  @media (max-width: 700px) {
+    > div {
+      height: fit-content;
+      width: 100vw;
+      padding-top: 45px;
+      padding-bottom: 45px;
     }
   }
 `
-const CardsRight = styled.div`
-  padding: 24px 50px;
+const CardsBot = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 
-  & > div:first-child {
+  > div {
     height: 300px;
     width: 530px;
-    margin-bottom: 120px;
+    :first-child {
+      margin-right: 50px;
+    }
   }
 
-  & > div:nth-child(2) {
-    height: 300px;
+  @media (max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+    > div {
+      :first-child {
+        margin-right: 0;
+        margin-bottom: 120px;
+      }
+    }
   }
 
-  @media only screen and (max-width: 1200px) {
-    margin-top: 32px;
-
-    & > div:first-child {
-      margin-bottom: 80px;
-      width: 586px;
-      position: relative;
-      bottom: 333px;
+  @media (max-width: 700px) {
+    > div {
+      height: fit-content;
+      width: 100vw;
+      padding-top: 45px;
+      padding-bottom: 45px;
     }
-
-    & > div:nth-child(2) {
-      width: 586px;
-    }
+  }
 `
 const WorkWithUs = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
   display: inline-block;
-  margin: 70px 20px 60px 20px;
-  width: 490px;
+  margin: 70px 20px 60px 10px;
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+    border-left: solid 2px ${SB_SALMON};
+    padding-left: 10px;
+  }
 `
 const JoinTheTeam = styled.div`
   display: flex;
   margin: 40px 22px 22px 10px;
-  width: fit-content;
+
+  @media (max-width: 700px) {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+    border-left: solid 2px ${SB_SALMON};
+    padding-left: 10px;
+  }
 `
 const JoinTheTeamText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
   margin-right: 24px;
-  width: 325px;
 `
 const JoinTheTeamImage = styled.div`
   display: flex;
@@ -122,29 +152,51 @@ const JoinTheTeamImage = styled.div`
     font-family: Open Sans;
     font-size: 10px;
   }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const PharmDPills = styled.img`
   position: absolute;
   right: -10%;
   bottom: 8%;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const PharmDContent = styled.div`
   width: 230px;
   position: relative;
   top: 100px;
+
+  @media only screen and (max-width: 700px) {
+    position: unset;
+  }
 `
 const PharmDText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
+
+  @media only screen and (max-width: 700px) {
+    margin-top: 20px;
+  }
 `
+
+const RepoLink = styled.a`
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`
+
 const OasisText = styled.p`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
-  width: 488px;
 `
 const OasisContent = styled.div`
   margin-top: 30px;
@@ -154,6 +206,10 @@ const OasisLogo = styled.img`
   top: 95px;
   left: -20px;
   z-index: -1;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 const Info = ({ collaborate, join, spotlight, oasis }) => {
@@ -161,7 +217,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
   const lightSalmonHover = "#fee6e3"
   return (
     <CardLayout>
-      <CardsLeft>
+      <CardsTop>
         <Card
           color={SB_SALMON}
           backgroundColor={SB_LIGHT_SALMON}
@@ -174,26 +230,6 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
         >
           <WorkWithUs>{collaborate.copy}</WorkWithUs>
         </Card>
-        <Card
-          color={SB_ORANGE}
-          backgroundColor={SB_LIGHT_ORANGE}
-          backgroundColorHover={lightOrangeHover}
-          linkSrc={spotlight.linkSrc}
-          linkText={spotlight.linkText}
-          title={spotlight.title}
-          titleAlign={"right"}
-          isSpotlight={true}
-        >
-          <PharmDContent>
-            <a href={spotlight.repoLink}>
-              <img src={github} alt="github" />
-            </a>
-            <PharmDText>{spotlight.copy}</PharmDText>
-          </PharmDContent>
-          <PharmDPills src={pills} alt="pills" />
-        </Card>
-      </CardsLeft>
-      <CardsRight>
         <Card
           color={SB_SALMON}
           backgroundColor={SB_LIGHT_SALMON}
@@ -214,6 +250,26 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>
+      </CardsTop>
+      <CardsBot>
+        <Card
+          color={SB_ORANGE}
+          backgroundColor={SB_LIGHT_ORANGE}
+          backgroundColorHover={lightOrangeHover}
+          linkSrc={spotlight.linkSrc}
+          linkText={spotlight.linkText}
+          title={spotlight.title}
+          titleAlign={"right"}
+          isSpotlight={true}
+        >
+          <PharmDContent>
+            <RepoLink href={spotlight.repoLink}>
+              <img src={github} alt="github" />
+            </RepoLink>
+            <PharmDText>{spotlight.copy}</PharmDText>
+          </PharmDContent>
+          <PharmDPills src={pills} alt="pills" />
+        </Card>
         <Card
           color={SB_ORANGE}
           backgroundColor={SB_LIGHT_ORANGE}
@@ -230,7 +286,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           </OasisContent>
           <OasisLogo src={tree} alt="tree" />
         </Card>
-      </CardsRight>
+      </CardsBot>
     </CardLayout>
   )
 }
