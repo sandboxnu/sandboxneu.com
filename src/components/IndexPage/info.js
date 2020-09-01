@@ -19,7 +19,7 @@ import {
 } from "@colors"
 
 const CardLayout = styled.div`
-  padding: 8vh 10vw;
+  padding: 12vh 10vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -56,11 +56,16 @@ const CardsTop = styled.div`
   }
 
   @media (max-width: 700px) {
+    margin-bottom: 0;
     > div {
       height: fit-content;
       width: 100vw;
       padding-top: 45px;
       padding-bottom: 45px;
+      margin-bottom: 70px;
+      :first-child {
+        margin-bottom: 70px;
+      }
     }
   }
 `
@@ -96,6 +101,9 @@ const CardsBot = styled.div`
       width: 100vw;
       padding-top: 45px;
       padding-bottom: 45px;
+      :first-child {
+        margin-bottom: 70px;
+      }
     }
   }
 `
