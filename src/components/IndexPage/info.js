@@ -54,6 +54,15 @@ const CardsTop = styled.div`
       }
     }
   }
+
+  @media (max-width: 700px) {
+    > div {
+      height: fit-content;
+      width: 100vw;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
 `
 const CardsBot = styled.div`
   display: flex;
@@ -80,6 +89,15 @@ const CardsBot = styled.div`
       }
     }
   }
+
+  @media (max-width: 700px) {
+    > div {
+      height: fit-content;
+      width: 100vw;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
 `
 const WorkWithUs = styled.div`
   font-family: Open Sans;
@@ -92,6 +110,8 @@ const WorkWithUs = styled.div`
     margin: 0;
     margin-top: 20px;
     margin-left: 5px;
+    border-left: solid 2px ${SB_SALMON};
+    padding-left: 10px;
   }
 `
 const JoinTheTeam = styled.div`
@@ -102,6 +122,8 @@ const JoinTheTeam = styled.div`
     margin: 0;
     margin-top: 20px;
     margin-left: 5px;
+    border-left: solid 2px ${SB_SALMON};
+    padding-left: 10px;
   }
 `
 const JoinTheTeamText = styled.div`
@@ -159,7 +181,18 @@ const PharmDText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
+
+  @media only screen and (max-width: 700px) {
+    margin-top: 20px;
+  }
 `
+
+const RepoLink = styled.a`
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`
+
 const OasisText = styled.p`
   font-family: Open Sans;
   font-size: 15px;
@@ -230,9 +263,9 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           isSpotlight={true}
         >
           <PharmDContent>
-            <a href={spotlight.repoLink}>
+            <RepoLink href={spotlight.repoLink}>
               <img src={github} alt="github" />
-            </a>
+            </RepoLink>
             <PharmDText>{spotlight.copy}</PharmDText>
           </PharmDContent>
           <PharmDPills src={pills} alt="pills" />

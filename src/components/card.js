@@ -24,11 +24,14 @@ const Title = styled.span`
   font-style: italic;
   font-weight: bold;
   font-size: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
 
   @media (min-width: 700px) {
     position: absolute;
     background: white;
     display: block;
+    margin-bottom: 0;
     width: ${({ isSpotlight }) => isSpotlight && `min-content`};
     top: ${({ isSpotlight }) => (isSpotlight ? `10px` : `-30px`)};
     left: ${({ titleAlign }) => titleAlign === "left" && `5%`};

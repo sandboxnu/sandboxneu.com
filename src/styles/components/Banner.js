@@ -17,6 +17,12 @@ const Banner = styled.div`
   & * {
     font-family: inherit;
   }
+
+  @media (max-width: 400px) {
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 `
 
 export default Banner
