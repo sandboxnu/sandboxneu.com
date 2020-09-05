@@ -91,6 +91,10 @@ const ActionLink = styled.a`
   :hover {
     cursor: pointer;
   }
+
+  @media (max-width: 600px) {
+    color: ${SB_SALMON};
+  }
 `
 
 const InfoCard = ({

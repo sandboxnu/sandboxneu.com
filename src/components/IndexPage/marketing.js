@@ -34,12 +34,20 @@ const EventText = styled.span`
   display: inline-block;
 `
 
+const TextTitle = styled(EventText)`
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 const PostLink = styled.a`
   font-family: Open Sans;
-  text-decoration: none;
   font-size: 18px;
   line-height: 25px;
   color: ${SB_ORANGE};
+  text-decoration: none;
 `
 
 const Marketing = ({ event, post }) => {
@@ -51,15 +59,16 @@ const Marketing = ({ event, post }) => {
           <EventText>{`${event.date} | ${event.time} | ${
             event.location
           }`}</EventText>
-          <EventText>{event.title}</EventText>
+          <TextTitle>{event.title}</TextTitle>
         </ContentContainer>
       )}
       {post && (
         <ContentContainer>
           <ContentHeader>ON THE BLOG</ContentHeader>
-          <PostLink href={post.url}>{`${post.title} by ${
-            post.author
-          }`}</PostLink>
+          <PostLink href={post.url}>
+            <TextTitle>{post.title}</TextTitle>
+            {` by ${post.author}`}
+          </PostLink>
         </ContentContainer>
       )}
     </MainMarketingContainer>

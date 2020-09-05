@@ -46,6 +46,7 @@ const ProfileName = styled.span`
   padding: 0.75em 0 0.5em;
   /* same as width of images coming in from GraphQL */
   max-width: 150px;
+  font-family: Open Sans;
 `
 
 const ProfileRole = styled.span`
@@ -134,6 +135,7 @@ const StyledTeamName = styled.h1`
   color: ${SB_SALMON};
   margin-left: 50;
   text-align: center;
+  font-family: Montserrat;
 
   @media (min-width: 1000px) {
     margin-left: 5%;

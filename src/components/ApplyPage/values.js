@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { SB_SALMON, SB_NAVY, SB_ORANGE } from "colors"
+import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
 import { Header } from "styles/components/Header"
 
@@ -9,6 +9,7 @@ const OrangeHeader = styled(Header)`
   font-size: 1.7em;
   font-weight: 500;
   color: ${SB_ORANGE};
+  font-style: normal;
 `
 const BlueParagraph = styled.p`
   color: ${SB_NAVY};
@@ -39,9 +40,10 @@ const Heading = styled.h1`
   font-size: 2em;
   color: ${SB_NAVY};
   text-transform: uppercase;
+  font-family: Montserrat;
 
   @media (min-width: 1000px) {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
     margin-top: 70px;
   }

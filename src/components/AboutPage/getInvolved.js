@@ -6,6 +6,10 @@ import { SB_NAVY } from "@colors"
 
 import InfoCard from "components/AboutPage/infoCard"
 
+const GetInvolvedSection = styled(Section)`
+  padding-top: 0;
+`
+
 const Title = styled.div`
   color: ${SB_NAVY};
   display: flex;
@@ -67,11 +71,11 @@ const InfoContainer = styled.div`
 const GetInvolved = ({ header, info }) => {
   return (
     <>
-      <Section>
+      <GetInvolvedSection>
         <Wrapper>
           <Title>{header}</Title>
         </Wrapper>
-      </Section>
+      </GetInvolvedSection>
       <InfoContainer>
         {info.map(i => {
           return (

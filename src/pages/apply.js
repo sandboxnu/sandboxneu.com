@@ -19,9 +19,10 @@ const Header = styled.h1`
   font-size: 2em;
   color: ${SB_NAVY};
   text-transform: uppercase;
+  font-family: Montserrat;
 
   @media (min-width: 1000px) {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: 70px;
   }
 `
@@ -39,10 +40,10 @@ const ParagraphContainer = styled.div`
 const Container = styled.div`
 margin: 0 auto;
 padding: 0em 1em;
-margin-top: 3em;
 @media (min-width: 1000px) {
   padding: 0em 5em;
   text-align: center:
+  margin-top: 3em;
 }  
 `
 
