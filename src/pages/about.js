@@ -27,6 +27,10 @@ const TextContainer = styled.div`
   padding: 1em 5em;
   z-index: 5;
 
+  @media (max-width: 1000px) {
+    margin: 0;
+  }
+
   @media (max-width: 600px) {
     line-height: 22px;
     margin: 0;
@@ -39,10 +43,11 @@ const QuoteContainer = styled.span`
   font-family: Arial;
   font-size: 180px;
   position: absolute;
-  left: 0.3em;
+  left: 1em;
   margin-top: -0.2em;
 
   @media (max-width: 1000px) {
+    left: 0.3em;
     margin-top: 0;
     top: 13em;
   }
