@@ -15,7 +15,7 @@
    "spotlight":{
       "title": "PHARMD TRACKER",
       "linkText": "see our current projects >",
-      "linkSrc": "/portfolio",
+      "linkSrc": "https://github.com/sandboxnu",
       "repoLink": "https://github.com/sandboxnu/pharmd-tracker",
       "copy": "PharmD tracker is a webapp that will help deans, advisors, and administration track student success and progress across the pharmacy program."
    },

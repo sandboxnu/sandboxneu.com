@@ -259,7 +259,6 @@ const Footer = ({
             <Navigate>
               <InfoLink dest="/">home</InfoLink>
               <InfoLink dest="/about">about</InfoLink>
-              <InfoLink dest="/portfolio">portfolio</InfoLink>
               <InfoLink dest="/apply">apply</InfoLink>
               <InfoLink dest="/team">team</InfoLink>
             </Navigate>
