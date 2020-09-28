@@ -33,6 +33,7 @@ const Navigate = styled.div`
   justify-content: center;
   margin: 0 auto;
   margin-top: 15px;
+  margin-right: 8px;
 `
 
 const Header = styled.span`

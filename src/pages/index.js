@@ -37,7 +37,10 @@ const IndexPage = ({ data }) => {
       <Banner>
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
-          <span>applications open through January 15th</span>
+          <span>
+            subscribe to our newsletter to be notified when application open for
+            spring 2021
+          </span>
         </JoinBannerContent>
       </Banner>
     </Layout>
