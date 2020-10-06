@@ -11,8 +11,6 @@ import Marketing from "components/IndexPage/marketing"
 
 import EmailSubscription from "../emailSubscription"
 
-import { SB_SALMON_RGBA } from "@colors"
-
 const fadeIn = keyframes`
   0% {
     opacity: 0;

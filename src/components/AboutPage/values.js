@@ -64,6 +64,7 @@ const SpecialText = styled.span`
 
 const Wrapper = styled.div`
   padding: 5em 150px 0 150px;
+  margin-top: 4em;
   animation: ${fadeInSlideUp} 1s;
   @media (max-width: 1000px) {
     padding: 5em 0 0 0;

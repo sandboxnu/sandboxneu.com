@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const SectionContent = styled.section`
   max-width: 600px;
   @media (min-width: 1000px) {
-    max-width: 1100px;
+    max-width: 1270px;
   }
 `
 

@@ -13,10 +13,6 @@ module.exports = {
         route: "/about",
       },
       {
-        name: "Portfolio",
-        route: "/portfolio",
-      },
-      {
         name: "Apply",
         route: "/apply",
       },

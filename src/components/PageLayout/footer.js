@@ -33,6 +33,9 @@ const Navigate = styled.div`
   justify-content: center;
   margin: 0 auto;
   margin-top: 15px;
+  @media (min-width: 1000px) {
+    margin-right: 8px;
+  }
 `
 
 const Header = styled.span`
@@ -70,8 +73,12 @@ const FooterInfo = styled.div`
 const SocialSection = styled.div`
   padding-top: 10px;
   display: flex;
+  margin-left: 12px;
   :last-child:after {
     margin-right: 0;
+  }
+  @media (min-width: 1000px) {
+    margin-left: 0;
   }
 `
 
@@ -259,7 +266,6 @@ const Footer = ({
             <Navigate>
               <InfoLink dest="/">home</InfoLink>
               <InfoLink dest="/about">about</InfoLink>
-              <InfoLink dest="/portfolio">portfolio</InfoLink>
               <InfoLink dest="/apply">apply</InfoLink>
               <InfoLink dest="/team">team</InfoLink>
             </Navigate>
