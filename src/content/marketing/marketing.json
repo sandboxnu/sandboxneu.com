@@ -1,5 +1,12 @@
 {
-  "post":{
+  "event": {
+    "date": "",
+    "time": "",
+    "location": "",
+    "title": "",
+    "showEvent": false
+  },
+  "post": {
      "title":"\"Welcome to Sandbox\" Part II",
      "author":"Krish Sharma",
      "url":"https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710"

@@ -53,7 +53,7 @@ const PostLink = styled.a`
 const Marketing = ({ event, post }) => {
   return (
     <MainMarketingContainer>
-      {event && (
+      {event.showEvent && (
         <ContentContainer>
           <ContentHeader>UPCOMING EVENTS</ContentHeader>
           <EventText>{`${event.date} | ${event.time} | ${

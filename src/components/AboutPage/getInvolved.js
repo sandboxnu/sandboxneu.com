@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: -3em 5em 5em 5em;
+  margin: -3em 5em 10em 5em;
 
   // mobile styling
   @media (max-width: 600px) {

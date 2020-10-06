@@ -71,6 +71,7 @@ export const query = graphql`
             time
             location
             title
+            showEvent
           }
           post {
             title
