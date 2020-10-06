@@ -1,11 +1,14 @@
 import styled from "styled-components"
-import { SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_SALMON, SB_LIGHT_SALMON } from "@colors"
 
 const Header = styled.h2`
   font-size: 2.5em;
+  font-style: italic;
+  font-weight: bold;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: ${SB_NAVY};
+  color: ${SB_SALMON};
+  font-family: Montserrat;
 `
 
 const HeaderLine = styled(Header)`
@@ -15,7 +18,7 @@ const HeaderLine = styled(Header)`
   &:after,
   &:before {
     content: "";
-    border-top: 3px solid ${SB_ORANGE};
+    border-top: 3px solid ${SB_LIGHT_SALMON};
   }
 `
 

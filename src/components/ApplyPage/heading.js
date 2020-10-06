@@ -15,6 +15,7 @@ const Header = styled.h1`
   font-size: 2.5em;
   border-radius: 5px;
   margin-bottom: 0.5em;
+  font-family: Montserrat;
 
   @media (min-width: 1000px) {
     font-size: 4em;
@@ -27,9 +28,10 @@ const Subtitle = styled.h3`
   line-height: 1.5;
   margin-bottom: 1em;
   letter-spacing: 0.05em;
+  font-family: Andale Mono;
 
   @media (min-width: 1000px) {
-    font-size: 2em;
+    font-size: 1.2em;
   }
 `
 

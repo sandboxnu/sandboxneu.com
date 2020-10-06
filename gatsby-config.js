@@ -9,6 +9,10 @@ module.exports = {
         route: "/",
       },
       {
+        name: "About",
+        route: "/about",
+      },
+      {
         name: "Apply",
         route: "/apply",
       },
@@ -65,6 +69,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-150918548-1`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://sandboxnu.us3.list-manage.com/subscribe/post?u=3b3ae33f54203ab7a839ae529&amp;id=c2570dd048", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,13 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
-import Builds from "components/IndexPage/builds"
 import Hero from "components/IndexPage/hero"
-import Layout from "components/layout"
-import Mission from "components/IndexPage/mission"
+import Layout from "components/PageLayout/layout"
+import Values from "components/IndexPage/values"
 import Who from "components/IndexPage/who"
 import SEO from "components/seo"
+import Marketing from "components/IndexPage/marketing"
 import Testimonial from "components/IndexPage/testimonial"
+import Info from "components/IndexPage/info"
+import FAQs from "components/faqs"
+import Banner from "styles/components/Banner"
+
+const JoinBannerContent = styled.div`
+  & > div {
+    line-height: 25px;
+  }
+  & > span {
+    font-family: Andale Mono, monospace;
+    font-size: 15px;
+    line-height: 16px;
+  }
+`
 
 const IndexPage = ({ data }) => {
   return (
@@ -15,12 +30,19 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero {...data.hero.edges[0].node} />
       <Who {...data.who.edges[0].node} />
-      <Mission {...data.mission.edges[0].node} />
-      <Builds {...data.builds.edges[0].node} />
-      <Testimonial
-        quote={data.testimonial.edges[0].node.html}
-        {...data.testimonial.edges[0].node.frontmatter}
-      />
+      <Banner>
+        UNLEASH THE POWER OF SOFTWARE FOR RESEARCHERS AND STUDENTS.
+      </Banner>
+      <Info {...data.infoCards.edges[0].node} />
+      <Banner>
+        <JoinBannerContent>
+          <div>JOIN OUR TEAM</div>
+          <span>
+            subscribe to our newsletter to be notified when application open for
+            spring 2021
+          </span>
+        </JoinBannerContent>
+      </Banner>
     </Layout>
   )
 }
@@ -41,6 +63,24 @@ export const query = graphql`
         }
       }
     }
+    marketing: allMarketingJson {
+      edges {
+        node {
+          event {
+            date
+            time
+            location
+            title
+            showEvent
+          }
+          post {
+            title
+            author
+            url
+          }
+        }
+      }
+    }
     who: allWhoJson {
       edges {
         node {
@@ -48,58 +88,6 @@ export const query = graphql`
           p1
           title2
           p2
-          img1 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          img2 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          img3 {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-    mission: allMissionJson {
-      edges {
-        node {
-          title
-          principles {
-            title
-            body
-          }
-        }
-      }
-    }
-    builds: allBuildsJson {
-      edges {
-        node {
-          title
-          projects {
-            title
-            tags
-            image {
-              childImageSharp {
-                fixed(width: 300) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-            description
-            gitLink
-          }
         }
       }
     }
@@ -114,6 +102,49 @@ export const query = graphql`
             author
             email
             form
+          }
+        }
+      }
+    }
+    faqs: allFaqsJson {
+      edges {
+        node {
+          faqs {
+            question
+            answer
+          }
+        }
+      }
+    }
+    infoCards: allInfoCardsJson {
+      edges {
+        node {
+          collaborate {
+            title
+            linkText
+            linkSrc
+            copy
+          }
+          join {
+            title
+            linkText
+            linkSrc
+            name
+            copy
+          }
+          spotlight {
+            title
+            linkText
+            linkSrc
+            repoLink
+            copy
+          }
+          oasis {
+            title
+            linkText
+            linkSrc
+            copy1
+            copy2
           }
         }
       }

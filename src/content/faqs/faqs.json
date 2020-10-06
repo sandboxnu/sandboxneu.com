@@ -1,0 +1,29 @@
+{
+    "faqs": [
+        {
+            "question": "how much previous coding experience do you need to join sandbox?",
+            "answer": "Every level of experience is welcome in Sandbox. In our coding challenges, there will be different application tracks. Depending on your experience, you will be assigned to a track to give you the best opportunity to showcase your ability."
+        },
+        {
+            "question": "if i'm not in sandbox, how can i get involved?",
+            "answer": "If you're looking to get involved to further your software development skills, we'd recommend that you check out Oasis. In addition, we'd encourage you to join the Sandbox Community Slack and follow us on our social media and subscribe to our newsletter to stay up to date on our latest events."
+        },
+        {
+            "question": "when do applications open?",
+            "answer": "Applications for Spring 2021 will open towards the end of the fall semester. Be sure to follow our social media and subscribe to our mailing list to get the latest updates!"
+        },
+        {
+            "question": "what is oasis?",
+            "answer": "Oasis is Northeastern's Software Project Hub. The goal is to provide skills and create a community for any student looking to build a software project. The current Full Stack Series is a workshop series that dives deep into practical topics, such as web development. The Oasis Accelerator gives students the opportunity to see their own projects come to life with the help of experienced mentors."
+        },
+        {
+            "question": "what types of projects does sandbox take on?",
+            "answer": "Sandbox primarily takes on research-based and Northeastern-community based projects. Check out our projects page for examples of one's we've worked on in the past."
+        },
+        {
+            "question": "how often does sandbox take on new projects?",
+            "answer": "Sandbox has space to take on new projects every semester. Some of our projects are ongoing and span multiple semesters, while others are shorter and only last a single semester. If you're interested in working wit us on a project, feel free to contact us!"
+        }
+
+    ]
+}

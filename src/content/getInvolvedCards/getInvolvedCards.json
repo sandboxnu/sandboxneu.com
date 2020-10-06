@@ -1,0 +1,23 @@
+{
+  "header": "Get Involved",
+  "info": [
+    {
+      "title": "For clients",
+      "linkText": "work with us >",
+      "linkSrc": "https://docs.google.com/forms/d/e/1FAIpQLScZTjGN87qboZRWGcbCJ7wCG35Jtg6kLDB-yrCShSO_EUECEg/viewform?usp=pp_url", 
+      "body": "We’re hoping to work with you because we love the challenge of building real products that a client depends on. Whether we’re doing classes, co-op, or personal projects, we rarely get the chance to make the real-world impacts that we can through client work. Additionally, many of our members are interested in experiencing research or are combined majors looking for interdisciplinary experience beyond the classroom.",
+      "action": "",
+      "actionSrc": "",
+      "conclusion": "Our Technical Director will set up a quick meeting and learn more about your needs and how we can help. If we choose to move forward, we’ll sign a contract and commit to working together for a semester or more!"
+    },
+    {
+      "title": "For students",
+      "linkText": "apply >",
+      "linkSrc": "/apply",
+      "body": "Each team on Sandbox works on one project for the semester. A team includes developers, a project lead, and often a UX designer. Working on Sandbox gives great experience! Yay join us! Other copy other copy other copy.",
+      "action": "join our community slack",
+      "actionSrc": "https://join.slack.com/t/sandboxcommunity/shared_invite/zt-f8rhhx05-WZy5aERp6jU0ImF35GaPWw",
+      "conclusion": "Applications open before each semester. After reviewing resumes, we set up interviews."
+    }
+  ]
+}
