@@ -11,6 +11,7 @@ import tree from "images/oasis-logo.png"
 import {
   SB_ORANGE,
   SB_SALMON,
+  SB_NAVY,
   SB_LIGHT_SALMON,
   SB_LIGHT_ORANGE,
   SB_LIGHT_SALMON_RGBA,
@@ -113,6 +114,7 @@ const WorkWithUs = styled.div`
   line-height: 20px;
   display: inline-block;
   margin: 70px 20px 60px 10px;
+  color: ${SB_NAVY};
 
   @media (max-width: 700px) {
     margin: 0;
@@ -139,6 +141,7 @@ const JoinTheTeamText = styled.div`
   font-size: 15px;
   line-height: 20px;
   margin-right: 24px;
+  color: ${SB_NAVY};
 `
 const JoinTheTeamImage = styled.div`
   display: flex;
@@ -189,6 +192,7 @@ const PharmDText = styled.div`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
+  color: ${SB_NAVY};
 
   @media only screen and (max-width: 700px) {
     margin-top: 20px;
@@ -205,6 +209,7 @@ const OasisText = styled.p`
   font-family: Open Sans;
   font-size: 15px;
   line-height: 20px;
+  color: ${SB_NAVY};
 `
 const OasisContent = styled.div`
   margin-top: 30px;

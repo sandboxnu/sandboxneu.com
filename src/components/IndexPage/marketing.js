@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { SB_NAVY_RGBA, SB_ORANGE } from "@colors"
 
 const MainMarketingContainer = styled.div`
-  height: 300px;
+  height: fit-content;
   width: 350px;
   background: ${SB_NAVY_RGBA(0.75)};
   display: inline-block;
