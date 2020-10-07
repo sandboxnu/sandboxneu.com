@@ -78,6 +78,10 @@ export const query = graphql`
             author
             url
           }
+          youtube {
+            title
+            url
+          }
         }
       }
     }

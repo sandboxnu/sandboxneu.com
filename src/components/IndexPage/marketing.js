@@ -50,7 +50,7 @@ const PostLink = styled.a`
   text-decoration: none;
 `
 
-const Marketing = ({ event, post }) => {
+const Marketing = ({ event, post, youtube }) => {
   return (
     <MainMarketingContainer>
       {event.showEvent && (
@@ -60,6 +60,14 @@ const Marketing = ({ event, post }) => {
             event.location
           }`}</EventText>
           <TextTitle>{event.title}</TextTitle>
+        </ContentContainer>
+      )}
+      {youtube && (
+        <ContentContainer>
+          <ContentHeader>ON OUR YOUTUBE</ContentHeader>
+          <PostLink href={youtube.url}>
+            <TextTitle>{youtube.title}</TextTitle>
+          </PostLink>
         </ContentContainer>
       )}
       {post && (
@@ -85,6 +93,10 @@ Marketing.propTypes = {
   post: PropTypes.exact({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }).isRequired,
+  youtube: PropTypes.exact({
+    title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   }).isRequired,
 }
