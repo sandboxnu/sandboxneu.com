@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "title": "SearchNEU",
+            "hasCaseStudy": false,
+            "caseStudyLink": "",
+            "date": "current",
+            "researcher": "Community Project",
+            "projectLead": "Rebekah Johnson",
+            "technologies": "Express,.js, React, Elasticsearch",
+            "developers": "Amiel Monasterial\n Puneet Johal\n Eliza Huang\n Megan Li",
+            "designer": "Diana Steelman"
+        },
+        {
+            "title": "GraduateNU",
+            "hasCaseStudy": false,
+            "caseStudyLink": "",
+            "date": "current",
+            "researcher": "Community Project",
+            "projectLead": "Iman Moreira",
+            "techLead": "Nils Backe",
+            "productManager": "Arun Jeevanantham",
+            "technologies": "Express,.js, React, Elasticsearch",
+            "developers": "Amiel Monasterial\n Puneet Johal\n Eliza Huang\n Megan Li",
+            "designer": "Diana Steelman"
+        }
+    ]
+}
