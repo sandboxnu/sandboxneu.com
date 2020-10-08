@@ -185,6 +185,10 @@ const Hero = ({ title, background }) => (
                 author
                 url
               }
+              youtube {
+                title
+                url
+              }
             }
           }
         }
