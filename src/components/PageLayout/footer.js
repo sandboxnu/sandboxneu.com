@@ -114,7 +114,7 @@ const StyledSocial = styled.div`
 
 const StyledLink = styled.a`
   display: block;
-  padding-top: ${props => (props.isMailIcon ? "0" : "10px")};
+  padding-top: 10px;
   text-decoration: none;
   color: #bbbdc0;
   transition: color 0.3s;
@@ -184,7 +184,7 @@ const FooterLogo = () => <SizedLogo data={banner}>Banner</SizedLogo>
 const SocialInfo = ({ info, icon }) => {
   return (
     <StyledSocial>
-      <a href={info.url}>
+      <a href={info}>
         <SocialLogo icon={icon} color={"#bbbdc0"} />
       </a>
     </StyledSocial>
@@ -192,15 +192,7 @@ const SocialInfo = ({ info, icon }) => {
 }
 
 const InfoLink = props => {
-  return (
-    <>
-      {props.isMailIcon ? (
-        props.children
-      ) : (
-        <StyledLink href={props.dest}>{props.children}</StyledLink>
-      )}
-    </>
-  )
+  return <StyledLink href={props.dest}>{props.children}</StyledLink>
 }
 
 const HostedBy = styled.div`
@@ -252,14 +244,12 @@ const Footer = ({
         <Info>
           <Contact>
             <SocialSection>
-              <InfoLink dest={`mailto:${email}`} isMailIcon={true}>
-                <SocialInfo info={email} icon={faEnvelope} />
-              </InfoLink>
-              <SocialInfo info={facebook} icon={faFacebookF} />
-              <SocialInfo info={linkedin} icon={faLinkedin} />
-              <SocialInfo info={instagram} icon={faInstagram} />
-              <SocialInfo info={github} icon={faGithub} />
-              <SocialInfo info={slack} icon={faSlack} />
+              <SocialInfo info={`mailto:${email}`} icon={faEnvelope} />
+              <SocialInfo info={facebook.url} icon={faFacebookF} />
+              <SocialInfo info={linkedin.url} icon={faLinkedin} />
+              <SocialInfo info={instagram.url} icon={faInstagram} />
+              <SocialInfo info={github.url} icon={faGithub} />
+              <SocialInfo info={slack.url} icon={faSlack} />
             </SocialSection>
           </Contact>
           <FooterInfo>
