@@ -116,7 +116,7 @@ const Values = ({ header, principles }) => {
           Sandbox is Northeastern's&nbsp;
           <SpecialText>student-led software consultancy</SpecialText> building
           software for Northeastern clients. We work closely with clients across
-          northeastern to help them&nbsp;
+          Northeastern to help them&nbsp;
           <SpecialText>best leverage computation</SpecialText>.
         </Text>
       </Wrapper>
