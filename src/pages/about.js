@@ -118,7 +118,7 @@ const AboutPage = ({ data }) => {
             half the time I’d expected.
           </Text>
           <Reference>
-            <ReferenceName>Dr. Melnikoff Researcher</ReferenceName>
+            <ReferenceName>Dr. Melnikoff</ReferenceName>
             <ReferenceTitle>Researcher</ReferenceTitle>
           </Reference>
         </TextContainer>
@@ -128,7 +128,7 @@ const AboutPage = ({ data }) => {
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
           <span>
-            subscribe to our newsletter to be notified when application open for
+            subscribe to our newsletter to be notified when applications open for
             spring 2021
           </span>
         </JoinBannerContent>

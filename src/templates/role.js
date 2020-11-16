@@ -78,7 +78,7 @@ const RolePage = ({ data, pageContext }) => {
       <SEO title="Apply" keywords={[`application`]} />
       <BlueFontSection>
         <BreadcrumbSection>
-          <Breadcrumb to="/apply">apply</Breadcrumb> {selectedRole}
+          <Breadcrumb to="/apply">apply</Breadcrumb> / {selectedRole}
         </BreadcrumbSection>
         <Header>{selectedRole.toUpperCase()}</Header>
         <Subtitle>
