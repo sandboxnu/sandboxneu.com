@@ -8,7 +8,7 @@ qualities:
   - Can commit to 10 hours a week
 formLink: "https://docs.google.com/forms/d/e/1FAIpQLScpjsHFrhKOuHnksjNL1GthhLFZSFS3UIVJ7X_Kw58nv6kPcg/viewform"
 mailLink:  "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
-role: developer
+role: Developer
 description: "We're looking for developers to work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
 isVisible: true
 isOpen: true
