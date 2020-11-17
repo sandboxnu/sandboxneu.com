@@ -13,7 +13,7 @@ description: "We're looking for developers to work on research projects with res
 isVisible: true
 isOpen: true
 openDate: "November 15th 2020"
-closeDate: ""
+closeDate: "November 27th 2020"
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
