@@ -147,13 +147,15 @@ const RoleContent = ({
         <StyledBody dangerouslySetInnerHTML={{ __html: description }} />
         {closeDate && <ItalicText>Application closes {closeDate}</ItalicText>}
       </Wrapper>
-      <Testimonial
-        quote={quote}
-        member={member}
-        title={title}
-        semester={semester}
-        image={image}
-      />
+      {quote && image && (
+        <Testimonial
+          quote={quote}
+          member={member}
+          title={title}
+          semester={semester}
+          image={image}
+        />
+      )}
       <QualitiesHeader>Our Ideal Candidate</QualitiesHeader>
       <QualitiesList qualities={qualities} color={color} />
       {isOpen && (
