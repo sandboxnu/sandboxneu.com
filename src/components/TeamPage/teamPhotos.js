@@ -68,6 +68,9 @@ const ProfileImg = styled(GatsbyImage)`
 
 const ProfileImgWrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4.2px;
 
   @media (min-width: 1000px) {
     &:hover img {
