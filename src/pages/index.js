@@ -55,7 +55,7 @@ export const query = graphql`
           title
           background {
             childImageSharp {
-              gatsbyImageData(width: 300, layout: CONSTRAINED)
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }

@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
+import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
 import PropTypes from "prop-types"
 import styled, { keyframes } from "styled-components"
@@ -195,8 +196,10 @@ const Hero = ({ title, background }) => (
       }
     `}
     render={data => (
+      // we need convertToBgImage because of backwards compatibility with new image query syntax,
+      // see https://www.gatsbyjs.com/plugins/gatsby-background-image/#gatsby-3--gatsby-plugin-image
       <StyledBackgroundImage
-        fluid={background.childImageSharp.gatsbyImageData}
+        {...convertToBgImage(background.childImageSharp.gatsbyImageData)}
         backgroundColor={`#040e18`}
       >
         <Section>
