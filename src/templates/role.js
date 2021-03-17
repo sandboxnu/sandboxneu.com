@@ -66,7 +66,7 @@ const BreadcrumbSection = styled.span`
 const RolePage = ({ data, pageContext }) => {
   const selectedRole = pageContext.role
   const currentRoleData = data.allMarkdownRemark.edges.find(
-    roleData => roleData.node.frontmatter.role === selectedRole
+    (roleData) => roleData.node.frontmatter.role === selectedRole
   ).node
 
   useEffect(() => {
@@ -105,33 +105,39 @@ const RolePage = ({ data, pageContext }) => {
   )
 }
 
-export const pageQuery = graphql`query RoleQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/apply/"}}) {
-    edges {
-      node {
-        html
-        frontmatter {
-          qualities
-          formLink
-          mailLink
-          role
-          isOpen
-          openDate
-          closeDate
-          quote
-          quoteMember
-          quoteMemberTitle
-          quoteMemberSemester
-          quoteImage {
-            childImageSharp {
-              gatsbyImageData(width: 200, height: 200, quality: 90, layout: FIXED)
+export const pageQuery = graphql`
+  query RoleQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            qualities
+            formLink
+            mailLink
+            role
+            isOpen
+            openDate
+            closeDate
+            quote
+            quoteMember
+            quoteMemberTitle
+            quoteMemberSemester
+            quoteImage {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  height: 200
+                  quality: 90
+                  layout: FIXED
+                )
+              }
             }
           }
         }
       }
     }
   }
-}
 `
 
 export default RolePage
