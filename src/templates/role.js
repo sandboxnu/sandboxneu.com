@@ -105,36 +105,33 @@ const RolePage = ({ data, pageContext }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query RoleQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/apply/" } }) {
-      edges {
-        node {
-          html
-          frontmatter {
-            qualities
-            formLink
-            mailLink
-            role
-            isOpen
-            openDate
-            closeDate
-            quote
-            quoteMember
-            quoteMemberTitle
-            quoteMemberSemester
-            quoteImage {
-              childImageSharp {
-                fixed(width: 200, height: 200, quality: 90) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
+export const pageQuery = graphql`query RoleQuery {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/apply/"}}) {
+    edges {
+      node {
+        html
+        frontmatter {
+          qualities
+          formLink
+          mailLink
+          role
+          isOpen
+          openDate
+          closeDate
+          quote
+          quoteMember
+          quoteMemberTitle
+          quoteMemberSemester
+          quoteImage {
+            childImageSharp {
+              gatsbyImageData(width: 200, height: 200, quality: 90, layout: FIXED)
             }
           }
         }
       }
     }
   }
+}
 `
 
 export default RolePage

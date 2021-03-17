@@ -196,7 +196,7 @@ const Hero = ({ title, background }) => (
     `}
     render={data => (
       <StyledBackgroundImage
-        fluid={background.childImageSharp.fluid}
+        fluid={background.childImageSharp.gatsbyImageData}
         backgroundColor={`#040e18`}
       >
         <Section>

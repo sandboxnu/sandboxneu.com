@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 import Section from "styles/components/Section"
@@ -92,7 +92,7 @@ const PictureContainer = styled.div`
     grid-row-end: r1;
   }
 `
-const Picture = styled(Img)``
+const Picture = styled(GatsbyImage)``
 const Info = styled.p`
   display: flex;
   flex-direction: column;
@@ -183,7 +183,7 @@ const SectionLine = styled.span`
 `
 
 const Testimonial = ({ quote, member, title, semester, image }) => {
-  let imageFixed = image.childImageSharp.fixed
+  let imageFixed = image.childImageSharp.gatsbyImageData
   return (
     <Container>
       <Quote>{quote}</Quote>
@@ -205,7 +205,7 @@ Testimonial.propTypes = {
   member: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   semester: PropTypes.string.isRequired,
-  image: PropTypes.instanceOf(Img),
+  image: PropTypes.instanceOf(GatsbyImage),
 }
 
 export default Testimonial

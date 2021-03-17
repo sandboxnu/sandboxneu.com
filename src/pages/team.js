@@ -51,14 +51,11 @@ const TeamPage = ({ data }) => {
   )
 }
 
-export const profileIcon = graphql`
-  fragment profileIcon on File {
-    childImageSharp {
-      fixed(width: 175, height: 175, quality: 90) {
-        ...GatsbyImageSharpFixed
-      }
-    }
+export const profileIcon = graphql`fragment profileIcon on File {
+  childImageSharp {
+    gatsbyImageData(width: 175, height: 175, quality: 90, layout: FIXED)
   }
+}
 `
 
 export const query = graphql`
