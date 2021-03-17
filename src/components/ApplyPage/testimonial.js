@@ -183,13 +183,13 @@ const SectionLine = styled.span`
 `
 
 const Testimonial = ({ quote, member, title, semester, image }) => {
-  let imageFixed = image.childImageSharp.gatsbyImageData
+  let gatsbyImage = image.childImageSharp.gatsbyImageData
   return (
     <Container>
       <Quote>{quote}</Quote>
       <DoubleQuote>“</DoubleQuote>
       <PictureContainer>
-        <Picture fixed={imageFixed} />
+        <Picture image={gatsbyImage} />
       </PictureContainer>
       <Info>
         <Name>{member}</Name>

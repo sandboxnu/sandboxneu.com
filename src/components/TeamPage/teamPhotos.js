@@ -175,7 +175,7 @@ const Profile = ({ member, percent }) => {
         <ProfileImg
           style={{ overflow: "visible" }}
           loading="eager"
-          fixed={member.profileImage.childImageSharp.gatsbyImageData}
+          image={member.profileImage.childImageSharp.gatsbyImageData}
           alt={name}
         />
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
