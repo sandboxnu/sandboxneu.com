@@ -258,6 +258,7 @@ const Footer = ({
               <InfoLink dest="/about">about</InfoLink>
               <InfoLink dest="/apply">apply</InfoLink>
               <InfoLink dest="/team">team</InfoLink>
+              <InfoLink dest="/oasis">oasis</InfoLink>
             </Navigate>
             <HostedBy>
               Sandbox &copy; 2020 hosted by&nbsp;

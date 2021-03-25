@@ -20,6 +20,10 @@ module.exports = {
         name: "Team",
         route: "/team",
       },
+      {
+        name: "Oasis",
+        route: "/oasis",
+      },
     ],
     siteUrl: "https://sandboxneu.com",
     image: "/stairs-down.png", // For embeds
