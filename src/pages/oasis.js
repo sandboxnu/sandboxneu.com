@@ -82,7 +82,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 100px 0 0 0;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 50px;
@@ -101,7 +101,7 @@ const Card = styled.div`
   border-color: ${SB_LIGHT_SALMON};
   padding: 25px;
   margin: 20px;
-  width: 300px;
+  width: 350px;
   min-height: 190px;
 
   @media (max-width: 1000px) {
@@ -110,6 +110,7 @@ const Card = styled.div`
     width: initial;
     height: initial;
     margin: 0;
+    width: 320px;
   }
 `
 const CardTitle = styled.span`
