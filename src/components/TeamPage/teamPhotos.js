@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
@@ -60,7 +60,7 @@ const ProfileRole = styled.span`
   max-width: 150px;
 `
 
-const ProfileImg = styled(Img)`
+const ProfileImg = styled(GatsbyImage)`
   picture img {
     transition: filter ease-in 200ms !important;
   }
@@ -68,6 +68,9 @@ const ProfileImg = styled(Img)`
 
 const ProfileImgWrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4.2px;
 
   @media (min-width: 1000px) {
     &:hover img {
@@ -175,7 +178,7 @@ const Profile = ({ member, percent }) => {
         <ProfileImg
           style={{ overflow: "visible" }}
           loading="eager"
-          fixed={member.profileImage.childImageSharp.fixed}
+          image={member.profileImage.childImageSharp.gatsbyImageData}
           alt={name}
         />
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>

@@ -38,8 +38,8 @@ const IndexPage = ({ data }) => {
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
           <span>
-            subscribe to our newsletter to be notified when applications open for
-            spring 2021
+            subscribe to our newsletter to be notified when applications open
+            for spring 2021
           </span>
         </JoinBannerContent>
       </Banner>
@@ -55,9 +55,7 @@ export const query = graphql`
           title
           background {
             childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
         }

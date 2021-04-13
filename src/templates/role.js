@@ -66,7 +66,7 @@ const BreadcrumbSection = styled.span`
 const RolePage = ({ data, pageContext }) => {
   const selectedRole = pageContext.role
   const currentRoleData = data.allMarkdownRemark.edges.find(
-    roleData => roleData.node.frontmatter.role === selectedRole
+    (roleData) => roleData.node.frontmatter.role === selectedRole
   ).node
 
   useEffect(() => {
@@ -125,9 +125,12 @@ export const pageQuery = graphql`
             quoteMemberSemester
             quoteImage {
               childImageSharp {
-                fixed(width: 200, height: 200, quality: 90) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(
+                  width: 200
+                  height: 200
+                  quality: 90
+                  layout: FIXED
+                )
               }
             }
           }
