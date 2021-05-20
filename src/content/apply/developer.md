@@ -24,6 +24,7 @@ quoteImage: ../team/profileImages/sauharda.png
 Sandbox is Northeastern's student-led software consultancy that aims to unleash the power of student-driven software. Not only do we engineer solutions to accelerate our clients' research, but we also develop in-house tools for the Northeastern community, such as [SearchNEU](https://searchneu.com/NEU) and [Khoury Office Hours](https://info.khouryofficehours.com/).
 
 You'll be part of a growing student organization specializing in software development and with a wealth of opportunities in leadership and project management. You'll join our community of talented and motivated members to make an impact for our clients and the broader Northeastern community.
+
 There will be 2 main rounds in this recruiting process: a take-home challenge and an interview. We will match you to the track that provides the best opportunity to showcase your skillset. We hope you learn and have fun during the recruiting process!
 
 Interested? Apply Now!
