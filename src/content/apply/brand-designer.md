@@ -6,14 +6,14 @@ qualities:
   - Works well in teams
   - Is kind
   - Can commit to 10 hours a week
-formLink: "https://forms.gle/DMfyuEmdzHrM9j776"
-mailLink:  "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
+formLink: "https://forms.gle/GkCAphXgGM3YDmz86"
+mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: Brand Designer
-description: We're looking for brand designers to build out the Sandbox brand and help us launch our latest initiative, Oasis, a software incubator created to help students get hands-on experience building software projects. Oasis is launching this Fall with support and excitement from students, mentors, and Khoury College. 
+description: We're looking for brand designers to build out the Sandbox brand and help us launch our latest initiative, Oasis, a software incubator created to help students get hands-on experience building software projects. Oasis is launching this Fall with support and excitement from students, mentors, and Khoury College.
 isVisible: true
-isOpen: false
-openDate: ""
-closeDate: ""
+isOpen: true
+openDate: "May 21st 2021"
+closeDate: "May 28th 2021"
 quote: "Sandbox is a great place to be a designer because right now the design team is so small…. It’s really awesome as a designer to have that experience of really being in charge and owning your projects."
 quoteMember: "Catherine Titcomb"
 quoteMemberTitle: "Head of Brand"

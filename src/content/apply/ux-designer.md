@@ -7,14 +7,14 @@ qualities:
   - Works well in teams
   - Is kind
   - Can commit to 10 hours a week
-formLink: "https://docs.google.com/forms/d/e/1FAIpQLSeSWaIzao5oHn6haGF6fijegMPW1X7UI7SgtenbtZCjb5CF8A/viewform"
+formLink: "https://forms.gle/GkCAphXgGM3YDmz86"
 mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true
-isOpen: false
-openDate: "December 2nd 2020"
-closeDate: "December 9th 2020"
+isOpen: true
+openDate: "May 21st 2021"
+closeDate: "May 28th 2021"
 quote: "This was my first out-of-classroom experience being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
 quoteMember: "Rebekah Johnson"
 quoteMemberTitle: "UX Designer, SearchNEU"
