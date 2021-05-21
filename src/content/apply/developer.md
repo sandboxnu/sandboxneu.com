@@ -25,7 +25,7 @@ Sandbox is Northeastern's student-led software consultancy that aims to unleash 
 
 You'll be part of a growing student organization specializing in software development and with a wealth of opportunities in leadership and project management. You'll join our community of talented and motivated members to make an impact for our clients and the broader Northeastern community.
 
-There will be 2 main rounds in this recruiting process: a take-home challenge and an interview. We will match you to the track that provides the best opportunity to showcase your skillset. We hope you learn and have fun during the recruiting process!
+There will be two rounds in this recruiting process: a take-home challenge and an interview. We will match you to the track that provides the best opportunity to showcase your skillset. We hope you learn and have fun during the recruiting process!
 
 Interested? Apply Now!
 
