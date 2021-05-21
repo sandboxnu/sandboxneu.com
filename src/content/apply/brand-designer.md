@@ -11,7 +11,7 @@ mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae5
 role: Brand Designer
 description: We're looking for brand designers to build out the Sandbox brand and help us launch our latest initiative, Oasis, a software incubator created to help students get hands-on experience building software projects. Oasis is launching this Fall with support and excitement from students, mentors, and Khoury College.
 isVisible: true
-isOpen: false
+isOpen: true
 openDate: "May 21st 2021"
 closeDate: "May 28th 2021"
 quote: "Sandbox is a great place to be a designer because right now the design team is so small…. It’s really awesome as a designer to have that experience of really being in charge and owning your projects."

@@ -12,7 +12,7 @@ mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae5
 role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true
-isOpen: false
+isOpen: true
 openDate: "May 21st 2021"
 closeDate: "May 28th 2021"
 quote: "This was my first out-of-classroom experience being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
