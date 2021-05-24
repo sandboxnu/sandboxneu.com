@@ -29,4 +29,4 @@ There will be two rounds in this recruiting process: a take-home challenge and a
 
 Interested? Apply Now!
 
-[Learn more about the Sandbox developer experience!](https://medium.com/sandboxnu/welcome-to-sandbox-part-ii-d936401af710)
+[Learn more about the Sandbox developer experience!](https://medium.com/sandboxnu/the-unique-experience-at-sandbox-e141dffe9dd3?source=friends_link&sk=4c316444999abaed4ad59a88e86e0b1c)
