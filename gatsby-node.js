@@ -68,7 +68,7 @@ exports.onCreateWebpackConfig = ({
 }) => {
   /* the following code fixes a bug with amplitude-js
      failing to build */
-  if (stage === "build-html") {
+  if (stage === "build-html"|| stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
