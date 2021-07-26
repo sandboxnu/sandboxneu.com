@@ -38,19 +38,19 @@ const StyledAccordion = styled.div`
     content: "<";
     font-size: 2.5em;
     font-weight: 700;
-    transform: ${props => (props.display ? "rotate(-90deg)" : "none")};
+    transform: ${(props) => (props.display ? "rotate(-90deg)" : "none")};
     transition: 0.2s linear all;
     margin-left: 5px;
   }
 `
 
 const StyledPanel = styled.div`
-  padding: ${props => (props.display ? "15px 18px" : "0 18px")};
+  padding: ${(props) => (props.display ? "15px 18px" : "0 18px")};
   display: block;
   background-color: white;
   overflow: hidden;
   height: auto;
-  max-height: ${props => (props.display ? "500px" : "0")};
+  max-height: ${(props) => (props.display ? "500px" : "0")};
   transition: all 0.2s ease-in-out;
 `
 

@@ -95,7 +95,7 @@ const CardContainer = styled.div`
 
 const Card = styled.div`
   border: 3px solid #fff;
-  width: ${props => (props.width ? `${props.width}` : "fit-content")};
+  width: ${(props) => (props.width ? `${props.width}` : "fit-content")};
   height: fit-content;
   position: relative;
   border-color: ${SB_LIGHT_SALMON};
@@ -122,7 +122,7 @@ const CardTitle = styled.span`
   top: -15px;
   padding: 0 20px;
   position: absolute;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
 `
 
 const BodyText = styled.p`

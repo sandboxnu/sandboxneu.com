@@ -77,13 +77,13 @@ const EmailSubscription = () => {
   const [email, setEmail] = useState("")
   const [result, setResult] = useState("")
 
-  const handleEmailChange = event => {
+  const handleEmailChange = (event) => {
     setEmail(event.currentTarget.value)
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    addToMailchimp(email).then(data => {
+    addToMailchimp(email).then((data) => {
       setResult(data)
     })
   }

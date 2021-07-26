@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Banner from "styles/components/Banner"
 import Section from "styles/components/Section"
-import {Header} from 'styles/components/Header'
+import { Header } from "styles/components/Header"
 
 import { SB_SALMON_RGBA, SB_ORANGE, SB_NAVY } from "@colors"
 
@@ -14,16 +14,15 @@ const BlueFontSection = styled(Section)`
   background-color: ${SB_NAVY};
 `
 
-
 const ClientPage = ({}) => {
-    return (
-      <Layout page="clients">
-        <SEO title="clients" keywords={[`clients`, `researchers`, 'projects']} />
-    <BlueFontSection>
+  return (
+    <Layout page="clients">
+      <SEO title="clients" keywords={[`clients`, `researchers`, "projects"]} />
+      <BlueFontSection>
         <Header>Work With Sandbox</Header>
-    </BlueFontSection>
-      </Layout>
-    )
-  };
+      </BlueFontSection>
+    </Layout>
+  )
+}
 
-  export default ClientPage;
+export default ClientPage

@@ -128,8 +128,8 @@ const AboutPage = ({ data }) => {
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
           <span>
-            subscribe to our newsletter to be notified when applications open for
-            spring 2021
+            subscribe to our newsletter to be notified when applications open
+            for spring 2021
           </span>
         </JoinBannerContent>
       </Banner>

@@ -72,10 +72,10 @@ const SectionLine = styled.span`
 
 const ApplyPage = ({ data }) => {
   const positions = data.positions.edges
-    .map(e => e.node)
-    .filter(node => node.frontmatter.isVisible)
+    .map((e) => e.node)
+    .filter((node) => node.frontmatter.isVisible)
     .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
-    .map(node => <Position {...node} />)
+    .map((node) => <Position {...node} />)
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
