@@ -59,7 +59,7 @@ const Layout = ({ children, page }) => (
         />
         <GlobalStyle />
         <main>{children}</main>
-        <Footer pages={["Home"]} {...data.allFooterJson.edges[0].node} />
+        <Footer pages={data.site.siteMetadata.pages} {...data.allFooterJson.edges[0].node} />
       </div>
     )}
   />
