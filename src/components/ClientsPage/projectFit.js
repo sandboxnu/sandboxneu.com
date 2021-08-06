@@ -1,5 +1,5 @@
 import { SB_INK, SB_SALMON } from "@colors"
-import Button from "components/ClientsPage/Button"
+import Button from "components/ClientsPage/button"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
