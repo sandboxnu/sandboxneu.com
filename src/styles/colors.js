@@ -5,12 +5,14 @@ export const SB_LIGHT_BLUE_RGBA = (a) => `rgba(187, 228, 237, ${a})`
 
 // CURRENT COLORS
 export const SB_NAVY = "#2A426B"
+export const SB_BUTTON_BLUE = "#3B60A0"
 export const SB_ORANGE = "#FEB729"
 export const SB_SALMON = "#FA8072"
 export const SB_LIGHT_NAVY = "#B2B9C4"
 export const SB_LIGHT_ORANGE = "#FFE9C0"
 export const SB_LIGHT_SALMON = "#FED9D5"
 export const SB_LIGHT_GREY = "#EAECF0"
+export const SB_INK = "#1B2432"
 
 export const SB_NAVY_RGBA = (a) => `rgba(42, 66, 107, ${a})`
 export const SB_ORANGE_RGBA = (a) => `rgba(254, 183, 41, ${a})`

@@ -1,0 +1,39 @@
+{
+  "reasonsToWorkWithSandbox": [
+    "No cost for clients",
+    "Work closely with a team of our developers and designers",
+    "A deliverable product in 1-2 semesters"
+  ],
+  "clientApplicationInfo": "Client applications for Fall 2021 are currently closed. If you’d like to work with us starting in Spring 2022, please fill out our application and we’ll be in touch with next steps!",
+  "clientProcessSteps": [
+    {
+      "header": "Apply Online",
+      "body": "After you submit an application, our Head of Project Acquisition and our Technical Director will set up a quick meeting to learn more about your needs and how we can help."
+    },
+    {
+      "header": "Work With Us",
+      "body": "If we decide to move forward, you’ll be assigned a team of developers and designers led by a project lead who will regularly meet with you throughout the semester to ensure the project is on track and aligned with your vision."
+    },
+    {
+      "header": "Spread The Word",
+      "body": "Sandbox is continually retiring completed projects and looking for new ones. We rely heavily on existing connections to help us find new projects and clients every semester, so we hope you’ll help spread the word about what we do!"
+    }
+  ],
+  "projectFitReasons": [
+    {
+      "header": "Your project is a web or mobile application",
+      "body": "Our teams have the most experience with web and mobile applications. However, if you need something else, we’re happy to talk and explore other possibilities!",
+      "buttons": []
+    },
+    {
+      "header": "Your project has a completion time of 1-2 semesters",
+      "body": "Depending on the project, this timeframe can be extended! However, our most successful projects tend to last 1-2 semesters.",
+      "buttons": [{ "name": "View Our Portfolio", "route": "#" }]
+    },
+    {
+      "header": "You are a researcher, graduate student, or organization looking to develop an application that makes an impact!",
+      "body": "",
+      "buttons": []
+    }
+  ]
+}
