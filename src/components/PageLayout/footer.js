@@ -254,11 +254,7 @@ const Footer = ({
           </Contact>
           <FooterInfo>
             <Navigate>
-              <InfoLink dest="/">home</InfoLink>
-              <InfoLink dest="/about">about</InfoLink>
-              <InfoLink dest="/apply">apply</InfoLink>
-              <InfoLink dest="/team">team</InfoLink>
-              <InfoLink dest="/oasis">oasis</InfoLink>
+            {pages.map(p => (  <InfoLink key={p.name} dest={p.route}>{p.name}</InfoLink>))}
             </Navigate>
             <HostedBy>
               Sandbox &copy; 2020 hosted by&nbsp;
