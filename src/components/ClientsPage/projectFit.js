@@ -15,10 +15,17 @@ const ProjectFitSection = styled(Section)`
     max-width: 100vw;
     margin-top: 120px;
   }
+
+  @media (max-width: 600px) {
+    padding: 0em 3em 5em 3em;
+  }
 `
 
 const ProjectFitHeader = styled(Header)`
   letter-spacing: 0.02em;
+  @media (max-width: 600px) {
+    font-size: 2.1em;
+  }
 `
 
 const ProjectFitReasonSection = styled.div`
@@ -71,7 +78,8 @@ const ProjectFit = ({ projectFitReasons }) => {
           <ProjectFitReasonWrapper key={`reason-${index}`}>
             <ProjectFitReasonHeader>{reason.header}</ProjectFitReasonHeader>
             <ProjectFitReasonBody>{reason.body}</ProjectFitReasonBody>
-            {reason.buttons.map((button, bIndex) => (
+            {/* TODO uncomment when portfolio page is ready */}
+            {/* {reason.buttons.map((button, bIndex) => (
               <ProjectFitButtonWrapper>
                 <Button
                   key={`reason-${index}-button-${bIndex}`}
@@ -79,7 +87,7 @@ const ProjectFit = ({ projectFitReasons }) => {
                   route={button.route}
                 ></Button>
               </ProjectFitButtonWrapper>
-            ))}
+            ))} */}
           </ProjectFitReasonWrapper>
         ))}
       </ProjectFitReasonSection>

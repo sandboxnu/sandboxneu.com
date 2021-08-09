@@ -20,6 +20,10 @@ const BlueBackgroundSection = styled.div`
     min-height: 20vh;
     max-width: 100vw;
   }
+
+  @media (max-width: 600px) {
+    padding: 5em 3em;
+  }
 `
 
 const IntroductionContainer = styled.div`
@@ -46,7 +50,7 @@ const ProjectContainer = styled.div`
   @media (max-width: 600px) {
     max-width: 100%;
     width: 100%;
-    padding: 4em 0em 0em 0em;
+    padding: 3em 0em 0em 0em;
   }
 `
 
@@ -73,6 +77,10 @@ const WhitePageHeader = styled(Header)`
   color: white;
   font-size: 4em;
   letter-spacing: 0.02em;
+
+  @media (max-width: 600px) {
+    font-size: 3em;
+  }
 `
 
 const BodyText = styled(Body)`

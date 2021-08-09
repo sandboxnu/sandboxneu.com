@@ -23,6 +23,10 @@ const ClientProcessSection = styled(Section)`
   @media (max-width: 1000px) {
     display: block;
   }
+
+  @media (max-width: 600px) {
+    padding: 0em 2.5em 1em 2.5em;
+  }
 `
 
 const ClientProcessContainerLeft = styled.div`
@@ -51,6 +55,12 @@ const NavyPageHeader = styled(WhitePageHeader)`
   color: ${SB_NAVY};
   font-size: 3.8em;
   margin-bottom: 20px;
+
+  @media (max-width: 600px) {
+    font-size: 2.3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
 `
 
 const ClientApplicationText = styled(Body)`
