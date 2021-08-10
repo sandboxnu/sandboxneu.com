@@ -13,7 +13,7 @@ const BlueBackgroundSection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5em 2em 5em 2em;
+  padding: 5em 3em 5em 4em;
   margin: 0 auto;
 
   @media (min-width: 1000px) {

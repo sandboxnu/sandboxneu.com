@@ -9,7 +9,8 @@ import Section from "styles/components/Section"
 const ProjectFitSection = styled(Section)`
   background-color: white;
   margin: 0 auto;
-  padding: 0em 2em 5em 2em;
+  padding: 0em 4em 5em 4em;
+  max-width: 100%;
 
   @media (min-width: 1000px) {
     max-width: 100vw;

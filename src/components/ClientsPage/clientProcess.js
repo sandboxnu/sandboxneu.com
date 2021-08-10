@@ -14,14 +14,15 @@ const ClientProcessSection = styled(Section)`
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0em 2em 1em 2em;
+  padding: 0em 4em 1em 4em;
 
   @media (min-width: 1000px) {
     max-width: 100vw;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     display: block;
+    max-width: 100%;
   }
 
   @media (max-width: 600px) {
@@ -39,8 +40,8 @@ const ClientProcessContainerLeft = styled.div`
 
 const ClientProcessContainerRight = styled.div`
   z-index: 10;
-  width: 40vw;
-  @media (max-width: 1000px) {
+  width: calc(40vw - 4em);
+  @media (max-width: 1100px) {
     width: 100%;
   }
 `
@@ -79,7 +80,7 @@ const ClientProcessImage = styled.img`
   z-index: -1;
   margin-top: -230px;
   margin-left: 9%;
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `
@@ -88,8 +89,9 @@ const ClientProcessOrderedList = styled.ol`
   counter-reset: client-process-counter;
   list-style: none;
   margin-top: 270px;
+  max-width: 800px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     top: 0px;
     margin-top: 80px;
     padding: 0px;
