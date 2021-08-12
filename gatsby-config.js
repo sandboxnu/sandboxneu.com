@@ -17,6 +17,10 @@ module.exports = {
         route: "/apply",
       },
       {
+        name: "Clients",
+        route: "/clients"
+      },
+      {
         name: "Team",
         route: "/team",
       },

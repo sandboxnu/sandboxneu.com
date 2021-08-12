@@ -21,7 +21,7 @@ const FAQs = ({ faqs }) => {
   return (
     <Section>
       <Title>FAQs</Title>
-      {faqs.map(f => {
+      {faqs.map((f) => {
         return <Accordion question={f.question} answer={f.answer} />
       })}
     </Section>
