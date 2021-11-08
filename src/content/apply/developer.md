@@ -16,7 +16,7 @@ openDate: "November 29th 2021"
 closeDate: ""
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
-quoteMemberTitle: "Previous Operations Director"
+quoteMemberTitle: "Sandbox Operations Director"
 quoteMemberSemester: "Spring 2020"
 quoteImage: ../team/profileImages/sauharda.png
 ---
