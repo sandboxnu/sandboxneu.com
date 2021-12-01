@@ -10,7 +10,7 @@ formLink: "https://forms.gle/GkCAphXgGM3YDmz86"
 mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: Brand Designer
 description: We're looking for brand designers to build out the Sandbox brand and help us launch our latest initiative, Oasis, a software incubator created to help students get hands-on experience building software projects. Oasis is launching this Fall with support and excitement from students, mentors, and Khoury College.
-isVisible: true
+isVisible: false
 isOpen: false
 openDate: ""
 closeDate: ""
