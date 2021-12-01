@@ -8,8 +8,9 @@
       },
       "profileImage": "./profileImages/alex.png",
       "socialMedia": {
-        "email": "takayama.a@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/alexander-takayama-748909a8/"
+        "email": "sharma.kri@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/krish-sharma/",
+        "portfolio": "http://krisharma.github.io"
       }
     },
     {
@@ -32,9 +33,8 @@
       },
       "profileImage": "./profileImages/Crennan.JPG",
       "socialMedia": {
-        "email": "pillay.e@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/epillay/",
-        "portfolio": "https://emilypillay.com/"
+        "email": "crennan.s@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/sophiacrennan/"
       }
     },
     {
@@ -45,9 +45,9 @@
       },
       "profileImage": "./profileImages/Li.JPG",
       "socialMedia": {
-        "email": "pillay.e@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/epillay/",
-        "portfolio": "https://emilypillay.com/"
+        "email": "li.meg@northeastern.edu",
+        "linkedIn": "http://linkedin.com/in/megandouli",
+        "portfolio": "https://megandouli.github.io/"
       }
     },
     {
@@ -56,11 +56,11 @@
         "name": "Eboard",
         "role": "Marketing & Events Director"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/alex-chua.png",
       "socialMedia": {
-        "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "email": "chua.a@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/alexandra-chua-0996791a1/",
+        "portfolio": "http://www.alexandrachua.com"
       }
     },
     {
@@ -71,8 +71,7 @@
       },
       "profileImage": "./profileImages/Floody.JPG",
       "socialMedia": {
-        "email": "xifaras.s@northeastern.edu",
-        "linkedIn": "https://linkedin.com/in/samxifaras"
+        "email": "floody.o@northeastern.edu"
       }
     },
     {
@@ -96,9 +95,9 @@
       },
       "profileImage": "./profileImages/Chong.JPG",
       "socialMedia": {
-        "email": "gridley.f@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/",
-        "portfolio": "https://www.fionagridley.com/"
+        "email": "chong.m@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/megan-chong-/",
+        "portfolio": "http://megan-chong.com"
       }
     },
     {
@@ -109,9 +108,9 @@
       },
       "profileImage": "./profileImages/Steelman.JPG",
       "socialMedia": {
-        "email": "gridley.f@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/fiona-gridley/",
-        "portfolio": "https://www.fionagridley.com/"
+        "email": "steelman.d@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/dianasteelman/",
+        "portfolio": "http://dianasteelman.com"
       }
     },
     {
@@ -122,8 +121,9 @@
       },
       "profileImage": "./profileImages/Cam.JPG",
       "socialMedia": {
-        "email": "sharma.kri@northeastern.edu",
-        "linkedIn": "http://linkedin.com/in/krish-sharma"
+        "email": "cam.k@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/kevin-cam/",
+        "portfolio": "http://kevinsebcam.com"
       }
     },
     {
@@ -134,8 +134,9 @@
       },
       "profileImage": "./profileImages/Kong.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "kong.v@northeastern.edu",
+        "linkedIn": "http://linkedin.com/in/vera-kong/",
+        "portfolio": "http://vkong6019.github.io"
       }
     },
     {
@@ -170,8 +171,9 @@
       },
       "profileImage": "./profileImages/Kong.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "kong.v@northeastern.edu",
+        "linkedIn": "http://linkedin.com/in/vera-kong/",
+        "portfolio": "http://vkong6019.github.io"
       }
     },
     {
@@ -182,8 +184,8 @@
       },
       "profileImage": "./profileImages/Yang.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "yang.bria@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/brianyyang/"
       }
     },
     {
@@ -194,8 +196,7 @@
       },
       "profileImage": "./profileImages/Bhalla.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "bhalla.ne@northeastern.edu"
       }
     },
     {
@@ -206,8 +207,9 @@
       },
       "profileImage": "./profileImages/Danuwidjaja.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "danuwidjaja.n@northeastern.edu",
+        "linkedIn": "https://linkedin.com/in/nicoledanuwidjaja",
+        "portfolio": "https://nicoledanuwidjaja.github.io/about"
       }
     },
     {
@@ -218,8 +220,8 @@
       },
       "profileImage": "./profileImages/Shi.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "shi.ting@northeastern.edu",
+        "linkedIn": "http://www.linkedin.com/in/tingwei-shi"
       }
     },
     {
@@ -230,8 +232,9 @@
       },
       "profileImage": "./profileImages/Chong.JPG",
       "socialMedia": {
-        "email": "liu.i@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/iris-liu-curiously/"
+        "email": "chong.m@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/megan-chong-/",
+        "portfolio": "http://megan-chong.com"
       }
     },
     {
@@ -243,7 +246,8 @@
       "profileImage": "./profileImages/Li.JPG",
       "socialMedia": {
         "email": "li.meg@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/megandouli/"
+        "linkedIn": "http://linkedin.com/in/megandouli",
+        "portfolio": "https://megandouli.github.io/"
       }
     },
     {
@@ -267,7 +271,8 @@
       "profileImage": "./profileImages/Steelman.JPG",
       "socialMedia": {
         "email": "steelman.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/dianasteelman/"
+        "linkedIn": "https://www.linkedin.com/in/dianasteelman/",
+        "portfolio": "http://dianasteelman.com"
       }
     },
     {
@@ -278,8 +283,9 @@
       },
       "profileImage": "./profileImages/Kim.JPG",
       "socialMedia": {
-        "email": "johal.p@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+        "email": "kim.ki@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/kimin-kim/",
+        "portfolio": "https://kim-ki.netlify.app"
       }
     },
     {
@@ -290,8 +296,8 @@
       },
       "profileImage": "./profileImages/Dai.JPG",
       "socialMedia": {
-        "email": "johal.p@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+        "email": "dai.an@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/andrewydai"
       }
     },
     {
@@ -302,8 +308,8 @@
       },
       "profileImage": "./profileImages/Chadha.JPG",
       "socialMedia": {
-        "email": "johal.p@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+        "email": "chadha.g@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/gursimar-chadha-828206206/"
       }
     },
     {
@@ -314,7 +320,7 @@
       },
       "profileImage": "./profileImages/Hankewycz.JPG",
       "socialMedia": {
-        "email": "johal.p@northeastern.edu",
+        "email": "hankewycz.z@northeastern.edu ",
         "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
       }
     },
@@ -425,7 +431,7 @@
         "name": "A-Eye",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/cassie.png",
       "socialMedia": {
         "email": "harbour.c@northeastern.edu",
         "linkedIn": ""
@@ -577,7 +583,7 @@
         "name": "EduLaw",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/dan-cropped.jpg",
       "socialMedia": {
         "email": "krasnonosenkikh.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dankrasno/"
@@ -589,10 +595,11 @@
         "name": "EduLaw",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/daniel.png",
       "socialMedia": {
-        "email": "krasnonosenkikh.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/dankrasno/"
+        "email": "wang.zef@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/",
+        "portfolio": "https://zefeng-wang.com/"
       }
     },
     {
@@ -616,7 +623,8 @@
       "profileImage": "./profileImages/Shen.JPG",
       "socialMedia": {
         "email": "shen.em@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/emily-shen-000/"
+        "linkedIn": "https://www.linkedin.com/in/emily-shen-000/",
+        "portfolio": "https://shenem.myportfolio.com/"
       }
     },
     {
@@ -637,7 +645,7 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Black2.JPG",
+      "profileImage": "./profileImages/aislin.png",
       "socialMedia": {
         "email": "black.a@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/aislin-black-0b6b64180"
@@ -676,7 +684,8 @@
       "profileImage": "./profileImages/Cam.JPG",
       "socialMedia": {
         "email": "cam.k@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
+        "linkedIn": "https://www.linkedin.com/in/kevin-cam/",
+        "portfolio": "http://kevinsebcam.com"
       }
     }
   ]
