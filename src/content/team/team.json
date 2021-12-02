@@ -321,7 +321,8 @@
       "profileImage": "./profileImages/Hankewycz.JPG",
       "socialMedia": {
         "email": "hankewycz.z@northeastern.edu ",
-        "linkedIn": "https://www.linkedin.com/in/puneetjohal/"
+        "linkedIn": "https://www.linkedin.com/in/hankewycz-z/",
+        "portfolio": "https://zacharhankewycz.com/"
       }
     },
     {
@@ -357,8 +358,8 @@
       "profileImage": "./profileImages/CindyLuo.JPG",
       "socialMedia": {
         "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "linkedIn": "https://www.linkedin.com/in/cindy1u0/",
+        "portfolio": "https://cindy1u0.github.io/"
       }
     },
     {
@@ -369,9 +370,8 @@
       },
       "profileImage": "./profileImages/Shah.JPG",
       "socialMedia": {
-        "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "email": "shah.ary@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/aryanshah791/"
       }
     },
     {
@@ -382,9 +382,8 @@
       },
       "profileImage": "./profileImages/Tran.JPG",
       "socialMedia": {
-        "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "email": "tran.duy3@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/duytv3/"
       }
     },
     {
@@ -395,9 +394,8 @@
       },
       "profileImage": "./profileImages/Mu.JPG",
       "socialMedia": {
-        "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "email": "mu.ji@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/jia-mu"
       }
     },
     {
@@ -408,9 +406,9 @@
       },
       "profileImage": "./profileImages/Crennan.JPG",
       "socialMedia": {
-        "email": "luo.xiny@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/cindy-luo-85945b176/",
-        "portfolio": "https://cindy1u0.github.io/#home"
+        "email": "gonora.j@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/JaimeGonora",
+        "portfolio": "www.jaimegonora.com"
       }
     },
     {
@@ -445,8 +443,8 @@
       },
       "profileImage": "./profileImages/Barker.JPG",
       "socialMedia": {
-        "email": "pinheiro.m@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/mpin/"
+        "email": "barker.co@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/connorlbark/"
       }
     },
     {
@@ -457,8 +455,8 @@
       },
       "profileImage": "./profileImages/Duffy.JPG",
       "socialMedia": {
-        "email": "pinheiro.m@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/mpin/"
+        "email": "duffy.jak@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/jake-duffy"
       }
     },
     {
@@ -469,8 +467,8 @@
       },
       "profileImage": "./profileImages/Ciolfi.JPG",
       "socialMedia": {
-        "email": "pinheiro.m@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/mpin/"
+        "email": "ciolfi.j@northeastern.edu",
+        "linkedIn": "http://linkedin.com/in/johnciolfi"
       }
     },
     {
@@ -481,8 +479,8 @@
       },
       "profileImage": "./profileImages/Briggs.JPG",
       "socialMedia": {
-        "email": "pinheiro.m@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/mpin/"
+        "email": "briggs.ow@northeastern.edu",
+        "linkedIn": "http://linkedin.com/in/owanari-briggs-b9871819b"
       }
     },
     {
@@ -493,8 +491,9 @@
       },
       "profileImage": "./profileImages/Crennan.JPG",
       "socialMedia": {
-        "email": "pinheiro.m@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/mpin/"
+        "email": "zeng.lin@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/linda-zengg/",
+        "portfolio": "https://lindazengg.github.io/portfolio/"
       }
     },
     {
@@ -528,8 +527,8 @@
       },
       "profileImage": "./profileImages/Koulopoulos.JPG",
       "socialMedia": {
-        "email": "rosen.j@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/jack-rosen/"      }
+        "email": "anastasioskoulopoulos@gmail.com",
+        "linkedIn": "https://www.linkedin.com/in/koulopoulos/"      }
     },
     {
       "name": "Robert Rosas",
@@ -539,8 +538,9 @@
       },
       "profileImage": "./profileImages/Rosas.JPG",
       "socialMedia": {
-        "email": "rosen.j@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/jack-rosen/"      }
+        "email": "rosas.r@northeastern.edu",
+        "linkedIn": ""
+      }
     },
     {
       "name": "Tanya Kler",
@@ -550,8 +550,10 @@
       },
       "profileImage": "./profileImages/Crennan.JPG",
       "socialMedia": {
-        "email": "rosen.j@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/jack-rosen/"      }
+        "email": "kler.t@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/tanyakler/",
+        "portfolio": "tanyakler.com"
+      }
     },
     {
       "name": "Venkat Pamulapati",
@@ -561,8 +563,8 @@
       },
       "profileImage": "./profileImages/Pamulapati.JPG",
       "socialMedia": {
-        "email": "sorial.n@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/nicole-sorial/"
+        "email": "pamulapati.v@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/venkat-pamulapati"
       }
     },
     {
@@ -573,8 +575,9 @@
       },
       "profileImage": "./profileImages/Connie.JPG",
       "socialMedia": {
-        "email": "krasnonosenkikh.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/dankrasno/"
+        "email": "liu.conn@northeastern.edu",
+        "linkedIn": "",
+        "portfolio": "clue4.github.io"
       }
     },
     {
@@ -583,7 +586,7 @@
         "name": "EduLaw",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/dan-cropped.jpg",
+      "profileImage": "./profileImages/dan-cropped.JPG",
       "socialMedia": {
         "email": "krasnonosenkikh.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dankrasno/"
@@ -659,8 +662,8 @@
       },
       "profileImage": "./profileImages/Chao.JPG",
       "socialMedia": {
-        "email": "cam.k@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
+        "email": "chao.al@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/ally-chao/"
       }
     },
     {
@@ -671,8 +674,8 @@
       },
       "profileImage": "./profileImages/Scott.JPG",
       "socialMedia": {
-        "email": "cam.k@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/kevin-cam/"
+        "email": "scott.di@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/dillon-scott/"
       }
     },
     {
