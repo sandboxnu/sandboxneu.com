@@ -18,7 +18,7 @@ quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperat
 quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
 quoteMemberSemester: "Spring 2020"
-quoteImage: ../team/profileImages/sauharda.png
+quoteImage: ../team/profileImages/pastSemesters/sauharda.png
 ---
 
 Sandbox is Northeastern's student-led software consultancy that aims to unleash the power of student-driven software. Not only do we engineer solutions to accelerate our clients' research, but we also develop in-house tools for the Northeastern community, such as [SearchNEU](https://searchneu.com/NEU) and [Khoury Office Hours](https://info.khouryofficehours.com/).
