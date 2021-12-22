@@ -1,18 +1,19 @@
 ---
 qualities:
   - Can make a 4-hour/week commitment
+  - An undergraduate student that has been on at least 1 co-op
   - Is passionate about helping people learn
   - Is kind and patient
   - Has experience working on independent software projects
   - Works well in Teams. Previous team leadership experience is a plus
-formLink: "https://forms.gle/mV9pVtYR8CEJtRhe9"
+formLink: "https://docs.google.com/forms/d/e/1FAIpQLSeHlSXRD8ua--LNRH7N5SIfFmuzJ5pLztMSdEcqCUQo4ePlZg/viewform?usp=sf_link"
 mailLink:  "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: Oasis Mentor
 description: Looking for a mentorship opportunity? Oasis is a recently-launched program sprung out of Sandbox that helps students new to the field of computer science make their project ideas into a reality. As an Oasis Mentor, you will be a mentor to one or more groups of the Oasis Accelerator program, where students form teams to work on their project ideas throughout 10 weeks.
 isVisible: true
-isOpen: false
-openDate: ""
-closeDate: ""
+isOpen: true
+openDate: "December 15th 2021"
+closeDate: "January 2nd 2022"
 quote: "asdas"
 quoteMember: ""
 quoteMemberTitle: ""
