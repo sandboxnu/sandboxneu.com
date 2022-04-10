@@ -169,7 +169,7 @@
       "profileImage": "./profileImages/AngelaZheng.JPG",
       "socialMedia": {
         "email": "zheng.ang@northeastern.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/angela-zheng-/"
       }
     },
     {
@@ -349,7 +349,7 @@
         "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AlexTak.JPG",
       "socialMedia": {
         "email": "mu.ji@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/jia-mu"
@@ -435,10 +435,10 @@
         "name": "Flow In the Field",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AngelaLin.JPG",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "lin.angel@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/angelalinzm/"
       }
     },
     {
@@ -510,7 +510,7 @@
       "profileImage": "./profileImages/AmaanShahpurwala.JPG",
       "socialMedia": {
         "email": "shahpurwala.a@northeastern.edu",
-        "linkedIn": "",
+        "linkedIn": "https://www.linkedin.com/in/amaans/",
         "portfolio": "http://amaandesigns.me"
       }
     },
@@ -520,7 +520,7 @@
         "name": "EduLaw",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/ChristineCho.JPG",
       "socialMedia": {
         "email": "cho.ch@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/christine-cho-b52b4722b"
@@ -547,8 +547,8 @@
       "profileImage": "./profileImages/Connie.JPG",
       "socialMedia": {
         "email": "liu.conn@northeastern.edu",
-        "linkedIn": "",
-        "portfolio": "clue4.github.io"
+        "linkedIn": "https://www.linkedin.com/in/connie-liu-312094230/",
+        "portfolio": "https://clue4.github.io"
       }
     },
     {
@@ -633,7 +633,7 @@
       "profileImage": "./profileImages/ChristinaLong.JPG",
       "socialMedia": {
         "email": "long.c@northeastern.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/christina-long-a50b77208/"
       }
     },
     {
@@ -642,11 +642,11 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/DilanRoccoPiscatello.JPG",
       "socialMedia": {
         "email": "piscatello.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dilan-piscatello-08a9201a0/",
-        "portfolio": "dilanpiscatello.com"
+        "portfolio": "https://dilanpiscatello.com"
       }
     },
     {
@@ -671,7 +671,7 @@
       "socialMedia": {
         "email": "gonora.j@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/JaimeGonora",
-        "portfolio": "www.jaimegonora.com"
+        "portfolio": "https://www.jaimegonora.com"
       }
     },
     {
