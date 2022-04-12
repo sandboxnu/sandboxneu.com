@@ -11,7 +11,7 @@ mailLink:  "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae
 role: Oasis Mentor
 description: Looking for a mentorship opportunity? Oasis is a recently-launched program sprung out of Sandbox that helps students new to the field of computer science make their project ideas into a reality. As an Oasis Mentor, you will be a mentor to one or more groups of the Oasis Accelerator program, where students form teams to work on their project ideas throughout 10 weeks.
 isVisible: true
-isOpen: true
+isOpen: false
 openDate: "December 15th 2021"
 closeDate: "January 2nd 2022"
 quote: "asdas"

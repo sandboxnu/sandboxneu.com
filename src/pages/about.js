@@ -55,7 +55,7 @@ const AboutPage = ({ data }) => {
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
           <span>
-            Developer applications for Spring 2022 open November 29th 2021
+            Developer applications for Spring 2022 open May 30th 2022
           </span>
         </JoinBannerContent>
       </Banner>

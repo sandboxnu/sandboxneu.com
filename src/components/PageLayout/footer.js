@@ -257,7 +257,7 @@ const Footer = ({
             {pages.map(p => (  <InfoLink key={p.name} dest={p.route}>{p.name}</InfoLink>))}
             </Navigate>
             <HostedBy>
-              Sandbox &copy; 2021 hosted by&nbsp;
+              Sandbox &copy; 2022 hosted by&nbsp;
               <Vercel href="https://vercel.com?utm_source=sandbox">
                 Vercel
               </Vercel>

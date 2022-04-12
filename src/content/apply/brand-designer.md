@@ -27,4 +27,4 @@ As a brand designer, you'll have the choice to work on the Sandbox brand or join
 
 [Meet our Spring 2020 designers and learn more about their Sandbox experience!](https://medium.com/sandboxnu/sandbox-designers-in-their-own-words-127667f6ca6c)
 
-**We are not recruiting new brand designers for spring 2021. Subscribe to our mailing list and check out our social media to hear about when positions become available!**
+**We are not recruiting new brand designers for spring 2022. Subscribe to our mailing list and check out our social media to hear about when positions become available!**

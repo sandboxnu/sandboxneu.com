@@ -12,8 +12,8 @@ role: Developer
 description: "We're looking for developers to work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
 isVisible: true
 isOpen: false
-openDate: "November 29th 2021"
-closeDate: "December 12th 2021"
+openDate: "May 30th 2022"
+closeDate: "June 5th 2022"
 quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
 quoteMember: "Sauharda Rajbhandari"
 quoteMemberTitle: "Sandbox Operations Director"
