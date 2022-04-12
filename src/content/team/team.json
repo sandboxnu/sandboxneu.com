@@ -74,43 +74,6 @@
       }
     },
     {
-      "name": "Venkat Pamulapati",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Project Acquisition"
-      },
-      "profileImage": "./profileImages/Pamulapati.JPG",
-      "socialMedia": {
-        "email": "pamulapati.v@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/venkat-pamulapati"
-      }
-    },
-    {
-      "name": "Tingwei Shi",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Recruiting"
-      },
-      "profileImage": "./profileImages/Kong.JPG",
-      "profileImage": "./profileImages/Shi.JPG",
-      "socialMedia": {
-        "email": "shi.ting@northeastern.edu",
-        "linkedIn": "http://www.linkedin.com/in/tingwei-shi"
-      }
-    },
-    {
-      "name": "Connor Barnes",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/Barnes.JPG",
-      "socialMedia": {
-        "email": "farooq.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/danishfarooq610/"
-      }
-    },
-    {
       "name": "Megan Chong",
       "team": {
         "name": "Head Positions",
@@ -134,6 +97,43 @@
         "email": "steelman.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dianasteelman/",
         "portfolio": "http://dianasteelman.com"
+      }
+    },
+    {
+      "name": "Connor Barnes",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Brand"
+      },
+      "profileImage": "./profileImages/Barnes.JPG",
+      "socialMedia": {
+        "email": "farooq.d@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/danishfarooq610/"
+      }
+    },
+    {
+      "name": "Venkat Pamulapati",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Project Acquisition"
+      },
+      "profileImage": "./profileImages/Pamulapati.JPG",
+      "socialMedia": {
+        "email": "pamulapati.v@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/venkat-pamulapati"
+      }
+    },
+    {
+      "name": "Tingwei Shi",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Recruiting"
+      },
+      "profileImage": "./profileImages/Kong.JPG",
+      "profileImage": "./profileImages/Shi.JPG",
+      "socialMedia": {
+        "email": "shi.ting@northeastern.edu",
+        "linkedIn": "http://www.linkedin.com/in/tingwei-shi"
       }
     },
     {
@@ -166,10 +166,10 @@
         "name": "Khoury Office Hours",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AngelaZheng.JPG",
       "socialMedia": {
         "email": "zheng.ang@northeastern.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/angela-zheng-/"
       }
     },
     {
@@ -226,7 +226,7 @@
         "name": "Khoury Office Hours",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/SumitDe.JPG",
       "socialMedia": {
         "email": "de.su@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/sumit-de-a6a09217b/"
@@ -250,7 +250,7 @@
         "name": "SearchNEU",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AutumnFung.JPG",
       "socialMedia": {
         "email": "fung.a@northeastern.edu",
         "linkedIn": "www.linkedin.com/in/autumnfung",
@@ -312,7 +312,7 @@
         "name": "SearchNEU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/SebastianWittrock.JPG",
       "socialMedia": {
         "email": "wittrock.s@northeastern.com",
         "linkedIn": "https://www.linkedin.com/in/sebastian-wittrock/"
@@ -349,7 +349,7 @@
         "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AlexTak.JPG",
       "socialMedia": {
         "email": "mu.ji@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/jia-mu"
@@ -410,7 +410,7 @@
         "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/BrandonLim.JPG",
       "socialMedia": {
         "email": "limtzezhe.b@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/tze-zhe-brandon-lim-8589081b7/",
@@ -435,10 +435,10 @@
         "name": "Flow In the Field",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AngelaLin.JPG",
       "socialMedia": {
-        "email": "",
-        "linkedIn": ""
+        "email": "lin.angel@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/angelalinzm/"
       }
     },
     {
@@ -483,7 +483,7 @@
         "name": "Flow In the Field",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/ShashankJarmale.JPG",
       "socialMedia": {
         "email": "jarmale.s@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/shashankjarmale/"
@@ -492,7 +492,7 @@
     {
       "name": "Dillon Scott",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Project Lead"
       },
       "profileImage": "./profileImages/Scott.JPG",
@@ -504,23 +504,23 @@
     {
       "name": "Amaan Shahpurwala",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/AmaanShahpurwala.JPG",
       "socialMedia": {
         "email": "shahpurwala.a@northeastern.edu",
-        "linkedIn": "",
+        "linkedIn": "https://www.linkedin.com/in/amaans/",
         "portfolio": "http://amaandesigns.me"
       }
     },
     {
       "name": "Christine Cho",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/ChristineCho.JPG",
       "socialMedia": {
         "email": "cho.ch@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/christine-cho-b52b4722b"
@@ -529,7 +529,7 @@
     {
       "name": "Venkat Pamulapati",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/Pamulapati.JPG",
@@ -541,23 +541,23 @@
     {
       "name": "Connie Liu",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/Connie.JPG",
       "socialMedia": {
         "email": "liu.conn@northeastern.edu",
-        "linkedIn": "",
-        "portfolio": "clue4.github.io"
+        "linkedIn": "https://www.linkedin.com/in/connie-liu-312094230/",
+        "portfolio": "https://clue4.github.io"
       }
     },
     {
       "name": "Devashish Sood",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/DevashishSood.JPG",
       "socialMedia": {
         "email": "sood.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/devashish-sood-72a857114/"
@@ -566,10 +566,10 @@
     {
       "name": "Nicholas Mamisashvili",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/NickMamisashvili.JPG",
       "socialMedia": {
         "email": "mamisashvili.n@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/nicholas-mamisashvili-077463223/"
@@ -618,7 +618,7 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/BlakeHeyman.JPG",
       "socialMedia": {
         "email": "heyman.b@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/blakeheyman/"
@@ -630,10 +630,10 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/ChristinaLong.JPG",
       "socialMedia": {
         "email": "long.c@northeastern.edu",
-        "linkedIn": ""
+        "linkedIn": "https://www.linkedin.com/in/christina-long-a50b77208/"
       }
     },
     {
@@ -642,11 +642,11 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/DilanRoccoPiscatello.JPG",
       "socialMedia": {
         "email": "piscatello.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dilan-piscatello-08a9201a0/",
-        "portfolio": "dilanpiscatello.com"
+        "portfolio": "https://dilanpiscatello.com"
       }
     },
     {
@@ -671,7 +671,7 @@
       "socialMedia": {
         "email": "gonora.j@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/JaimeGonora",
-        "portfolio": "www.jaimegonora.com"
+        "portfolio": "https://www.jaimegonora.com"
       }
     },
     {
@@ -680,7 +680,7 @@
         "name": "Husky Habits",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/SerenaNg.JPG",
       "socialMedia": {
         "email": "ng.se@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/ng-serena/",
@@ -742,7 +742,7 @@
         "name": "Husky Habits",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/MelodyLiu.JPG",
       "socialMedia": {
         "email": "liu.mel@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/melo-liu/"
@@ -754,7 +754,7 @@
         "name": "Husky Habits",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Crennan.JPG",
+      "profileImage": "./profileImages/RossNewman.JPG",
       "socialMedia": {
         "email": "newman.ros@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/ross-newman"
