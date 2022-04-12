@@ -74,43 +74,6 @@
       }
     },
     {
-      "name": "Venkat Pamulapati",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Project Acquisition"
-      },
-      "profileImage": "./profileImages/Pamulapati.JPG",
-      "socialMedia": {
-        "email": "pamulapati.v@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/venkat-pamulapati"
-      }
-    },
-    {
-      "name": "Tingwei Shi",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Recruiting"
-      },
-      "profileImage": "./profileImages/Kong.JPG",
-      "profileImage": "./profileImages/Shi.JPG",
-      "socialMedia": {
-        "email": "shi.ting@northeastern.edu",
-        "linkedIn": "http://www.linkedin.com/in/tingwei-shi"
-      }
-    },
-    {
-      "name": "Connor Barnes",
-      "team": {
-        "name": "Head Positions",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/Barnes.JPG",
-      "socialMedia": {
-        "email": "farooq.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/danishfarooq610/"
-      }
-    },
-    {
       "name": "Megan Chong",
       "team": {
         "name": "Head Positions",
@@ -134,6 +97,43 @@
         "email": "steelman.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dianasteelman/",
         "portfolio": "http://dianasteelman.com"
+      }
+    },
+    {
+      "name": "Connor Barnes",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Brand"
+      },
+      "profileImage": "./profileImages/Barnes.JPG",
+      "socialMedia": {
+        "email": "farooq.d@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/danishfarooq610/"
+      }
+    },
+    {
+      "name": "Venkat Pamulapati",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Project Acquisition"
+      },
+      "profileImage": "./profileImages/Pamulapati.JPG",
+      "socialMedia": {
+        "email": "pamulapati.v@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/venkat-pamulapati"
+      }
+    },
+    {
+      "name": "Tingwei Shi",
+      "team": {
+        "name": "Head Positions",
+        "role": "Head of Recruiting"
+      },
+      "profileImage": "./profileImages/Kong.JPG",
+      "profileImage": "./profileImages/Shi.JPG",
+      "socialMedia": {
+        "email": "shi.ting@northeastern.edu",
+        "linkedIn": "http://www.linkedin.com/in/tingwei-shi"
       }
     },
     {
@@ -492,7 +492,7 @@
     {
       "name": "Dillon Scott",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Project Lead"
       },
       "profileImage": "./profileImages/Scott.JPG",
@@ -504,7 +504,7 @@
     {
       "name": "Amaan Shahpurwala",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Designer"
       },
       "profileImage": "./profileImages/AmaanShahpurwala.JPG",
@@ -517,7 +517,7 @@
     {
       "name": "Christine Cho",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Designer"
       },
       "profileImage": "./profileImages/ChristineCho.JPG",
@@ -529,7 +529,7 @@
     {
       "name": "Venkat Pamulapati",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/Pamulapati.JPG",
@@ -541,7 +541,7 @@
     {
       "name": "Connie Liu",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/Connie.JPG",
@@ -554,7 +554,7 @@
     {
       "name": "Devashish Sood",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/DevashishSood.JPG",
@@ -566,7 +566,7 @@
     {
       "name": "Nicholas Mamisashvili",
       "team": {
-        "name": "EduLaw",
+        "name": "EdLaw",
         "role": "Developer"
       },
       "profileImage": "./profileImages/NickMamisashvili.JPG",
