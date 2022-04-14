@@ -41,7 +41,7 @@
       "name": "Ally Chao",
       "team": {
         "name": "Eboard",
-        "role": "Eboard Liason"
+        "role": "Eboard Liaison"
       },
       "profileImage": "./profileImages/Chao.JPG",
       "socialMedia": {
@@ -331,6 +331,18 @@
       }
     },
     {
+      "name": "Aryan Shah",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Tech Lead"
+      },
+      "profileImage": "./profileImages/Shah.JPG",
+      "socialMedia": {
+        "email": "shah.ary@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/aryanshah791/"
+      }
+    },
+    {
       "name": "Linda Zeng",
       "team": {
         "name": "GraduateNU",
@@ -366,18 +378,6 @@
         "email": "luo.xiny@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/cindy1u0/",
         "portfolio": "https://cindy1u0.github.io/"
-      }
-    },
-    {
-      "name": "Aryan Shah",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/Shah.JPG",
-      "socialMedia": {
-        "email": "shah.ary@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/aryanshah791/"
       }
     },
     {
@@ -662,6 +662,19 @@
       }
     },
     {
+      "name": "Nicole Danuwidjaja",
+      "team": {
+        "name": "Husky Habits",
+        "role": "Tech Lead"
+      },
+      "profileImage": "./profileImages/Danuwidjaja.JPG",
+      "socialMedia": {
+        "email": "danuwidjaja.n@northeastern.edu",
+        "linkedIn": "https://linkedin.com/in/nicoledanuwidjaja",
+        "portfolio": "https://nicoledanuwidjaja.github.io/about"
+      }
+    },
+    {
       "name": "Jaime Gonora",
       "team": {
         "name": "Husky Habits",
@@ -688,23 +701,10 @@
       }
     },
     {
-      "name": "Nicole Danuwidjaja",
-      "team": {
-        "name": "Husky Habits",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/Danuwidjaja.JPG",
-      "socialMedia": {
-        "email": "danuwidjaja.n@northeastern.edu",
-        "linkedIn": "https://linkedin.com/in/nicoledanuwidjaja",
-        "portfolio": "https://nicoledanuwidjaja.github.io/about"
-      }
-    },
-    {
       "name": "Max Pinheiro",
       "team": {
         "name": "Husky Habits",
-        "role": "Project Lead"
+        "role": "Developer"
       },
       "profileImage": "./profileImages/Pinheiro.JPG",
       "socialMedia": {
