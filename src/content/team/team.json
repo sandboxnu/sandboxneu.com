@@ -74,6 +74,19 @@
       }
     },
     {
+      "name": "Daniel Wang",
+      "team": {
+        "name": "Eboard",
+        "role": "Head of Boolin"
+      },
+      "profileImage": "./profileImages/Daniel.png",
+      "socialMedia": {
+        "email": "wang.zef@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/zefeng-daniel-wang/",
+        "portfolio": "https://zefeng-wang.com"
+      }
+    },
+    {
       "name": "Megan Chong",
       "team": {
         "name": "Head Positions",
