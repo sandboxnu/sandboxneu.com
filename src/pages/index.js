@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => {
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
           <span>
-            Developer applications for spring 2022 open May 30th 2022
+            Developer applications for Fall 2022 open on May 30th 2022
           </span>
         </JoinBannerContent>
       </Banner>
