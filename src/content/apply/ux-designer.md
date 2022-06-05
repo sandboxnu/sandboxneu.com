@@ -19,7 +19,7 @@ quote: "This was my first out-of-classroom experience being able to make some re
 quoteMember: "Rebekah Johnson"
 quoteMemberTitle: "UX Designer, SearchNEU"
 quoteMemberSemester: "Spring 2020"
-quoteImage: ../team/profileImages/becca.png
+quoteImage: ../team/profileImages/pastSemesters/becca.png
 ---
 
 Sandbox is Northeastern’s student led software consultancy that aims to unleash the power of student-driven software. Our clients are scientists in a wide range of disciplines, and we build solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as [searchneu.com](https://searchneu.com) and [GraduateNU](https://graduatenu.com) (a tool to help students build a plan of study).
