@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Card from "components/card"
-import fiona from "content/team/profileImages/pastSemesters/fiona.png"
+import robert_rosas from "content/team/profileImages/Rosas.png"
 import pills from "images/pharmd-pills.svg"
 import github from "images/github.svg"
 import tree from "images/oasis-logo.png"
@@ -257,10 +257,10 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
             <JoinTheTeamText>{join.copy}</JoinTheTeamText>
             <JoinTheTeamImage>
               <div>
-                <img src={fiona} alt="member" />
+                <img src={robert_rosas} alt="member" />
               </div>
               <span>{join.name}</span>
-              <span>Sandbox Head of UX Design</span>
+              <span>Developer on EdLaw</span>
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>

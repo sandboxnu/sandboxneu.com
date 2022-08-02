@@ -43,7 +43,7 @@ const BlueParagraph = styled.p`
 
 const Showcase = () => (
   <StyledSection>
-    <BlueParagraph>Check out the work we've done this semester!</BlueParagraph>
+    <BlueParagraph>Check out the work we did Spring 2020!</BlueParagraph>
     <ShowcaseVideo
       width="560"
       height="315"
