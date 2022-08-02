@@ -12,14 +12,14 @@ mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae5
 role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true
-isOpen: true
-openDate: "May 30th 2022"
-closeDate: "June 11th 2022"
-quote: "This was my first out-of-classroom experience being able to make some real stuff beyond the theoretical. And when I say real stuff, I mean getting to see it go from initial ideas to creating the wireframes and prototypes, to the final spec and to production and in use. I think that’s really rewarding and it pushes me to put my best foot forward."
-quoteMember: "Rebekah Johnson"
-quoteMemberTitle: "UX Designer, SearchNEU"
-quoteMemberSemester: "Spring 2020"
-quoteImage: ../team/profileImages/pastSemesters/becca.png
+isOpen: false
+openDate: ""
+closeDate: ""
+quote: "The most tight-knit, supportive community I have ever been part of, but also the most talented yet fun people I've ever met. Genuinely not exaggerated at all, they are some of the MOST talented people I know who know how to enjoy life too."
+quoteMember: "Christine Cho"
+quoteMemberTitle: "Designer on EdLaw"
+quoteMemberSemester: "Spring 2022"
+quoteImage: ../team/profileImages/ChristineCho.png
 ---
 
 Sandbox is Northeastern’s student led software consultancy that aims to unleash the power of student-driven software. Our clients are scientists in a wide range of disciplines, and we build solutions to accelerate their research. We also develop in-house tools for the Northeastern community, such as [searchneu.com](https://searchneu.com) and [GraduateNU](https://graduatenu.com) (a tool to help students build a plan of study).

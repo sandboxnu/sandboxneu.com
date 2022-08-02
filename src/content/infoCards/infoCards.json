@@ -9,8 +9,8 @@
       "title": "JOIN THE TEAM",
       "linkText":"apply here >",
       "linkSrc": "/apply",
-      "name": "Fiona Gridley",
-      "copy": "\"Sandbox is a real world experience building something for real users...It’s closer to what I’ve done on co-op than some of the other design work I’ve done on campus because you’re working with developers, which, for designers, is what you’ll actually be doing in a real job.\""
+      "name": "Robert Rosas",
+      "copy": "\"One of the best experiences I've had in college. Everyone is kind and knowledgeable. Sandbox has not just given me the support I need to learn new technologies and work as a team; it has given me a space where I can discover my voice and my place within the Northeastern community.\""
    },
    "spotlight":{
       "title": "PHARMD TRACKER",
@@ -22,7 +22,7 @@
    "oasis" : {
       "title": "OASIS",
       "linkText": "learn more about oasis >",
-      "linkSrc": "https://oasis.sandboxnu.com/",
+      "linkSrc": "https://oasisneu.com/",
       "copy1": "The Oasis Software Incubator is a 10-week program that is designed to make your project ideas a reality. We know that students have amazing ideas, and we want to be the ones to inspire free-flowing creativity, and incubate these ideas to unleash the power of student developers.",
       "copy2": "Oasis provides a framework for you to develop your skills and build your own project, either from scratch or from a prototype you already have."
   }
