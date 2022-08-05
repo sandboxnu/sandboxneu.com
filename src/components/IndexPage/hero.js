@@ -105,7 +105,7 @@ const EmailContainer = styled.div`
 
 const MarketingContainer = styled.div`
   animation: ${fadeInSlideUp} 1.75s;
-  padding-top: 2em;
+  padding-top: 3em;
 `
 
 const SectionContent = styled.section`

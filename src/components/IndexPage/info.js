@@ -260,7 +260,7 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
                 <img src={robert_rosas} alt="member" />
               </div>
               <span>{join.name}</span>
-              <span>Developer on EdLaw</span>
+              <span>Developer on Flow in the Field</span>
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>
