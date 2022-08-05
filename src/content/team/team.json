@@ -447,7 +447,7 @@
         "name": "Flow In the Field",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/Rosas.JPG",
+      "profileImage": "./profileImages/Rosas.png",
       "socialMedia": {
         "email": "rosas.r@northeastern.edu",
         "linkedIn": ""
@@ -520,7 +520,7 @@
         "name": "EdLaw",
         "role": "Designer"
       },
-      "profileImage": "./profileImages/ChristineCho.JPG",
+      "profileImage": "./profileImages/ChristineCho.png",
       "socialMedia": {
         "email": "cho.ch@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/christine-cho-b52b4722b"
@@ -630,7 +630,7 @@
         "name": "Know Your Options",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/ChristinaLong.JPG",
+      "profileImage": "./profileImages/ChristinaLong.png",
       "socialMedia": {
         "email": "long.c@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/christina-long-a50b77208/"

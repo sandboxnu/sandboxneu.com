@@ -11,14 +11,14 @@ mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae5
 role: Developer
 description: "We're looking for developers to work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
 isVisible: true
-isOpen: true
-openDate: "May 30th 2022"
-closeDate: "June 8th 2022"
-quote: "Sandbox has utterly changed me as a programmer. I am confident, cooperative, and efficient, and have learned more in my first semester here than I ever thought possible from a student organization. I've built things I couldn't have even understood eight months ago, and made lasting friendships along the way."
-quoteMember: "Sauharda Rajbhandari"
-quoteMemberTitle: "Sandbox Operations Director"
-quoteMemberSemester: "Spring 2020"
-quoteImage: ../team/profileImages/pastSemesters/sauharda.png
+isOpen: false
+openDate: ""
+closeDate: ""
+quote: "People are very caring and just great to get along with. Projects are challenging, but the opportunities you get to push yourself and develop features, that seem like a distant idea otherwise, are amazing. For me that was OAuth. Being able to learn authentication and create a system with working Google authentication was a goal of mine for a long time. I was very happy to be able to achieve that goal while also working on a project that benefited the community."
+quoteMember: "Christina Long"
+quoteMemberTitle: "Developer on Know Your Options"
+quoteMemberSemester: "Spring 2022"
+quoteImage: ../team/profileImages/ChristinaLong.png
 ---
 
 Sandbox is Northeastern's student-led software consultancy that aims to unleash the power of student-driven software. Not only do we engineer solutions to accelerate our clients' research, but we also develop in-house tools for the Northeastern community, such as [SearchNEU](https://searchneu.com/NEU) and [Khoury Office Hours](https://info.khouryofficehours.com/).
