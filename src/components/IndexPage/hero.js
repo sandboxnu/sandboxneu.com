@@ -139,10 +139,10 @@ const StyledFA = styled(FontAwesomeIcon)`
   max-width: ${props => props.csssize};
   transition: top 0.3s, color 0.3s;
   animation: ${fadeIn} 2.25s;
-  top: 0px;
+  top: 100px;
   color: ${props => props.color};
   &:hover {
-    top: 10px;
+    top: 105px;
     cursor: pointer;
     color: ${SB_ORANGE};
   }
