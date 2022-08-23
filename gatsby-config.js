@@ -9,21 +9,25 @@ module.exports = {
         route: "/",
       },
       {
-        name: "Students",
-        route: "/students",
+        name: "About",
+        route: "/about",
+      },
+      {
+        name: "Apply",
+        route: "/apply",
       },
       {
         name: "Clients",
         route: "/clients"
       },
       {
-        name: "Projects",
-        route: "/projects",
-      },
-      {
         name: "Team",
         route: "/team",
-      }
+      },
+      {
+        name: "Oasis",
+        route: "/oasis",
+      },
     ],
     siteUrl: "https://sandboxneu.com",
     image: "/stairs-down.png", // For embeds

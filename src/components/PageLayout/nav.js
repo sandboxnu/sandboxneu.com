@@ -4,11 +4,10 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { useAmplitudeLogEvent } from "utils/amplitude"
 
-import { SB_NAVY, SB_NAVY_RGBA, SB_ORANGE_RGBA, SB_SALMON } from "@colors"
+import { SB_NAVY, SB_ORANGE_RGBA, SB_SALMON } from "@colors"
 import { accentFont } from "@global"
 import { SectionContent } from "styles/components/Section"
 import SquareLogo from "./squareLogo"
-import {SB_ORANGE} from "../../styles/colors";
 
 const WrapperDiv = styled.nav`
   width: 100%;
