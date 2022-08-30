@@ -259,13 +259,13 @@ const Nav = ({ page, pages }) => {
         hideBackground={atTop && page === "index"}
       >
         <ContentContainer>
-            <SquareLogo
-                size="3em"
-                color="#fff"
-                dropShadow={atTop && page === "index"}
-                to="/"
-                hoverAnimation
-            />
+          <SquareLogo
+            size="3em"
+            color="#fff"
+            dropShadow={atTop && page === "index"}
+            to="/"
+            hoverAnimation
+          />
           <ToggleMobileSidebarContainer>
             <ToggleMobileSidebarIcon
               color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
@@ -278,6 +278,7 @@ const Nav = ({ page, pages }) => {
               <Button
                 to={p.route}
                 selectColor="#fff"
+                key={p.name}
               >
                 {p.name}
               </Button>
