@@ -212,7 +212,7 @@ const ToggleMobileSidebarContainer = styled.div`
   @media (min-width: 600px) {
     visibility: hidden;
   }
-`
+ `
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)

@@ -16,6 +16,7 @@ import {
   ReferenceName,
   ReferenceTitle,
 } from "components/quote"
+import SEO from "../components/seo";
 
 const JoinBannerContent = styled.div`
   & > div {
@@ -31,6 +32,7 @@ const JoinBannerContent = styled.div`
 const AboutPage = ({ data }) => {
   return (
     <Layout page="about">
+      <SEO title="About" keywords={[`values`, `faq`]} />
       <Values {...data.values.edges[0].node} />
       <GetInvolved {...data.getInvolved.edges[0].node} />
       <Banner>
