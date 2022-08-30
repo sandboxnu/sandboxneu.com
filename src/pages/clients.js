@@ -11,7 +11,7 @@ const ClientPage = ({ data }) => {
   const node = data.clientPage.edges[0].node
   return (
     <Layout page="clients">
-      <SEO title="clients" keywords={[`clients`, `researchers`, "projects"]} />
+      <SEO title="Clients" keywords={[`clients`, `researchers`, "projects"]} />
       <ClientPageIntroduction
         reasonsToWorkWithSandbox={node.reasonsToWorkWithSandbox}
       />

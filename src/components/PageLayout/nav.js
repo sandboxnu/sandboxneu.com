@@ -20,15 +20,9 @@ const Container = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 1);
+  background: ${SB_NAVY};
   transition: background 0.3s, box-shadow 0.3s;
   box-shadow: 0 0 10px rgba(31, 33, 38, 0.5);
-  ${props =>
-    (props.hideBackground || props.isSideOpen) &&
-    css`
-      background: rgba(255, 255, 255, 0);
-      box-shadow: none;
-    `}
 `
 
 const ContentContainer = styled(SectionContent)`
@@ -218,7 +212,7 @@ const ToggleMobileSidebarContainer = styled.div`
   @media (min-width: 600px) {
     visibility: hidden;
   }
-`
+ `
 
 const Nav = ({ page, pages }) => {
   const [atTop, setAtTop] = useState(true)
@@ -265,13 +259,13 @@ const Nav = ({ page, pages }) => {
         hideBackground={atTop && page === "index"}
       >
         <ContentContainer>
-          <SquareLogo
-            size="3em"
-            color={atTop && page === "index" ? "#fff" : SB_NAVY}
-            dropShadow={atTop && page === "index"}
-            to="/"
-            hoverAnimation
-          />
+            <SquareLogo
+                size="3em"
+                color="#fff"
+                dropShadow={atTop && page === "index"}
+                to="/"
+                hoverAnimation
+            />
           <ToggleMobileSidebarContainer>
             <ToggleMobileSidebarIcon
               color={(atTop && page === "index") || sideOpen ? "#fff" : SB_NAVY}
@@ -283,15 +277,7 @@ const Nav = ({ page, pages }) => {
             {pages.map(p => (
               <Button
                 to={p.route}
-                isWhite={atTop && page === "index"}
-                selectColor={
-                  atTop && page === "index"
-                    ? "#fff"
-                    : page === p.name.toLowerCase()
-                    ? SB_SALMON
-                    : SB_NAVY
-                }
-                key={p.name}
+                selectColor="#fff"
               >
                 {p.name}
               </Button>
