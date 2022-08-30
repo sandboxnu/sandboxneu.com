@@ -1,0 +1,107 @@
+[
+    {
+        "title": "GraduateNU",
+        "startSemester": "Fall 2019",
+        "endSemester": "",
+        "active": true,
+        "projectLead": "Aryan Shah",
+        "developers": [
+            "Jia Mu",
+            "Duy Tran"
+        ],
+        "designer": "Linda Zeng",
+        "hasCaseStudy": false,
+        "caseStudyLink": "",
+        "technologies": [
+            "React",
+            "Postgres",
+            "NestJS",
+            "AWS"
+        ],
+        "description": "",
+        "githubLink": "https://github.com/sandboxnu/graduatenu"
+    },
+    {
+        "title": "SearchNEU",
+        "startSemester": "Spring 2019",
+        "endSemester": "",
+        "active": true,
+        "projectLead": "Zachar Hankewycz",
+        "developers": [
+            "Anastasios Koulopoulos",
+            "Sebastian Wittrock",
+            "Gursimar Chadha"
+        ],
+        "designer": "",
+        "hasCaseStudy": false,
+        "caseStudyLink": "",
+        "technologies": [
+            "React",
+            "Postgres",
+            "Elasticsearch",
+            "Express",
+            "AWS",
+            "Terraform"
+        ],
+        "description": "",
+        "githubLink": "https://github.com/sandboxnu/searchneu"
+    },
+    {
+        "title": "Khoury Office Hours",
+        "startSemester": "Summer 2020",
+        "endSemester": "Summer 2022",
+        "active": false,
+        "projectLead": "",
+        "developers": [],
+        "designer": "",
+        "hasCaseStudy": false,
+        "caseStudyLink": "",
+        "technologies": [
+            "React",
+            "Postgres",
+            "NestJS",
+            "PM2",
+            "NextJS"
+        ],
+        "description": "",
+        "githubLink": "https://github.com/sandboxnu/office-hours"
+    },
+    {
+        "title": "Husky Habits",
+        "startSemester": "Spring 2022",
+        "endSemester": "Spring 2022",
+        "active": false,
+        "projectLead": "",
+        "developers": [],
+        "designer": "",
+        "hasCaseStudy": false,
+        "caseStudyLink": "",
+        "technologies": [
+            "React Native",
+            "OAuth",
+            "Express",
+            "MongoDB"
+        ],
+        "description": "",
+        "githubLink": "https://github.com/sandboxnu/huskyhabits-app"
+    },
+    {
+        "title": "Vocab Buddy",
+        "startSemester": "Fall 2020",
+        "endSemester": "Spring 2021",
+        "active": false,
+        "projectLead": "",
+        "developers": [],
+        "designer": "",
+        "hasCaseStudy": false,
+        "caseStudyLink": "",
+        "technologies": [
+            "React Native",
+            "OAuth",
+            "Express",
+            "MongoDB"
+        ],
+        "description": "",
+        "githubLink": "https://github.com/sandboxnu/vocab-buddy"
+    }
+]
