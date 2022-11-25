@@ -11,6 +11,15 @@ import SEO from "components/seo"
 import Recruiting from "../components/ApplyPage/recruiting"
 
 const ApplyPage = ({ data }) => {
+  const {
+    title, 
+    subtitle, 
+    quote, 
+    quoteReference, 
+    applicationStatus, 
+    isBannerVisible
+  } = data.apply.edges[0].node;
+
   const positions = data.positions.edges
     .map((e) => e.node)
     .filter((node) => node.frontmatter.isVisible)
@@ -19,13 +28,15 @@ const ApplyPage = ({ data }) => {
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
-      <ApplyPageIntroduction />
-      <Quote />
+      <ApplyPageIntroduction 
+        title={title} 
+        subtitle={subtitle} 
+        applicationStatus={applicationStatus} 
+        isBannerVisible />
+      <Quote text={quote} reference={quoteReference} />
       <Values {...data.values.edges[0].node} />
       <Positions positions={positions}/>
       <Recruiting />
-      {/* <Header>Semester Highlights</Header> */}
-      {/* <Showcase /> */}
     </Layout>
   )
 }
@@ -37,6 +48,8 @@ export const pageQuery = graphql`
         node {
           title
           subtitle
+          quote
+          quoteReference
           applicationStatus
           isBannerVisible
         }

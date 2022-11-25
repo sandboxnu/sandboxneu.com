@@ -6,6 +6,7 @@ import {
 import React from "react"
 import styled from "styled-components"
 import Banner from "styles/components/Banner"
+import PropTypes from "prop-types"
 
 const QuoteBanner = styled(Banner)`
   background-color: ${SB_SALMON};
@@ -55,20 +56,20 @@ const Reference = styled.div`
   }
 `
 
-const Quote = ({}) => {
+const Quote = ({ text, reference }) => {
   return (
     <QuoteBanner>
       <TextContainer>
-        <Text>
-          "People are very caring and just great to get along with. 
-          Projects are challenging, but the opportunities you get to 
-          push yourself and develop features, that seem like a distant 
-          idea otherwise, are amazing."
-        </Text>
-        <Reference>Christina Long, Developer on Know Your Options</Reference>
+        <Text>{text}</Text>
+        <Reference>{reference}</Reference>
       </TextContainer>
     </QuoteBanner>
   )
+}
+
+Quote.propTypes = {
+  text: PropTypes.string.isRequired,
+  reference: PropTypes.string.isRequired,
 }
 
 export default Quote

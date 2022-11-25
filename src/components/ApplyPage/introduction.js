@@ -4,6 +4,8 @@ import React from "react"
 import styled from "styled-components"
 import Body from "styles/components/Body"
 import { Header } from "styles/components/Header"
+import { SB_ORANGE } from "../../styles/colors"
+import PropTypes from "prop-types"
 
 const BlueBackgroundSection = styled.div`
   background-color: ${SB_NAVY};
@@ -11,7 +13,7 @@ const BlueBackgroundSection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5em 3em 5em 4em;
+  padding: 9em 3em 5em 4em;
   margin: 0 auto;
 
   @media (min-width: 1000px) {
@@ -34,21 +36,21 @@ const IntroductionContainer = styled.div`
 
 const FeatureContainer = styled.div`
   max-width: 60%;
-  padding: 4em 4em 0em 4em;
+  padding: 0em 4em;
   text-align: right;
   @media (max-width: 1400px) {
-    padding: 4em 0em 0em 4em;
+    padding: 0em 0em 0em 4em;
   }
   @media (max-width: 1100px) {
     max-width: 100%;
     width: 100%;
-    padding: 4em 4em 0em 4em;
+    padding: 0em 4em;
   }
 
   @media (max-width: 600px) {
     max-width: 100%;
     width: 100%;
-    padding: 3em 0em 0em 0em;
+    padding: 0;
   }
 `;
 
@@ -77,16 +79,46 @@ const BodyText = styled(Body)`
   color: white;
 `;
 
-const ApplyPageIntroduction = () => {
+const Banner = styled(Body)`
+  border: 1px solid ${SB_ORANGE};
+  color: ${SB_ORANGE};
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  text-align: center;
+
+  font-stretch: expanded;
+  font-style: italic;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 7px 25px;
+  margin-bottom: 1em;
+
+  @media (max-width: 660px) {
+    margin-top: 1em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+  }
+
+  @media (min-width: 1000px) {
+    margin-bottom: 0px;
+  }
+`
+
+const ApplyPageIntroduction = ({ 
+  title, 
+  subtitle, 
+  isBannerVisible, 
+  applicationStatus 
+}) => {
   return (
     <BlueBackgroundSection>
       <IntroductionContainer>
-        <WhitePageHeader>Join the Sandbox Community</WhitePageHeader>
-        <BodyText>
-          As Sandbox continues to grow, we aim to build a diverse and 
-          skilled team of developers with a variety of experiences, 
-          interests, and backgrounds.
-        </BodyText>
+        {isBannerVisible && <Banner>{applicationStatus}</Banner>}
+        <WhitePageHeader>{title}</WhitePageHeader>
+        <BodyText>{subtitle}</BodyText>
       </IntroductionContainer>
       <FeatureContainer>
         <FeaturedImage
@@ -96,6 +128,13 @@ const ApplyPageIntroduction = () => {
       </FeatureContainer>
     </BlueBackgroundSection>
   )
+}
+
+ApplyPageIntroduction.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  isBannerVisible: PropTypes.bool.isRequired,
+  applicationStatus: PropTypes.string.isRequired
 }
 
 export default ApplyPageIntroduction;

@@ -89,7 +89,7 @@ const Positions = ({ positions }) => {
               </BodyText>
               <Button
                 name="Join our community Slack"
-                route="#"
+                route="https://join.slack.com/t/sandboxcommunity/shared_invite/zt-1khg7tjb7-kMtYwrWgNmzQ_hdTg0S1og"
               ></Button>
             </HeaderColumn>
             <ParagraphContainer>{positions}</ParagraphContainer>
