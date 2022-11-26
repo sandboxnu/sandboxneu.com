@@ -12,6 +12,7 @@ const RecruitingProcessSection = styled(Section)`
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  max-width: 100vw;
 
   @media (max-width: 1100px) {
     display: block;
@@ -31,7 +32,6 @@ const RecruitingProcessContainerRight = styled.div`
   z-index: 10;
   width: calc(40vw - 8em);
   margin-top: 12em;
-  max-width: 100vw;
 
   @media (max-width: 1100px) {
     width: 100%;
