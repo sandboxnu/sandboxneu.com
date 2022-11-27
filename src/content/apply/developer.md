@@ -6,12 +6,12 @@ qualities:
   - Is kind
   - Takes on leadership role to help out teammates
   - Can commit to 10 hours a week
-formLink: "https://forms.gle/cnR6hpY5prxCVhW17"
+formLink: "https://forms.gle/TK4Dcc5eqNRaWdct5"
 mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: Developer
 description: "We're looking for developers to work on research projects with researchers and professors as well as community projects for the Northeastern student body. We have frontend, backend, and full stack developers who are passionate about contributing to the community. As Sandbox continues to grow, we’re building a diverse and skilled team of developers with a variety of experiences, interests, and backgrounds to make amazing software with us."
 isVisible: true
-isOpen: false
+isOpen: true
 openDate: ""
 closeDate: ""
 quote: "People are very caring and just great to get along with. Projects are challenging, but the opportunities you get to push yourself and develop features, that seem like a distant idea otherwise, are amazing. For me that was OAuth. Being able to learn authentication and create a system with working Google authentication was a goal of mine for a long time. I was very happy to be able to achieve that goal while also working on a project that benefited the community."

@@ -28,6 +28,8 @@ const BlueBackgroundSection = styled.div`
 
 const IntroductionContainer = styled.div`
   max-width: 40%;
+  padding-bottom: 4rem;
+  
   @media (max-width: 1100px) {
     max-width: 700px;
     width: 100%;
