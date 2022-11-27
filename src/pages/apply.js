@@ -20,11 +20,16 @@ const ApplyPage = ({ data }) => {
     isBannerVisible
   } = data.apply.edges[0].node;
 
-  const positions = data.positions.edges
-    .map((e) => e.node)
-    .filter((node) => node.frontmatter.isVisible)
-    .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
-    .map((node) => <Position {...node} />)
+  const [positions, setPositions] = React.useState();
+
+  React.useEffect(() => {
+    setPositions(data.positions.edges
+      .map((e) => e.node)
+      .filter((node) => node.frontmatter.isVisible)
+      .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
+      .map((node) => <Position {...node} />))
+  }, []);
+
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
