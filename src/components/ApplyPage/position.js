@@ -22,7 +22,7 @@ const PositionSection = styled(Section)`
 `
 
 const Description = styled(Body)`
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   padding-top: 1em;
   font-size: 20px;
   padding-bottom: 2em;
