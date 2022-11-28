@@ -6,7 +6,7 @@ import { OASIS_GREEN, SB_NAVY, SB_ORANGE, lightenDarkenColor } from "@colors"
 import PositionButton from "components/ApplyPage/positionbutton"
 import Section from "styles/components/Section"
 import Body from "styles/components/Body"
-import { SB_SALMON } from "../../styles/colors"
+import { SB_INK, SB_SALMON } from "../../styles/colors"
 
 const PositionSection = styled(Section)`
   display: block;
@@ -56,8 +56,8 @@ const HeadingContainer = styled.div`
 `
 
 const ApplyButton = styled(Link)`
-  background-color: ${SB_ORANGE};
-  transition: background-color 0.3s;
+  border: 1px solid ${SB_ORANGE};
+  transition: opacity 0.3s;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -69,13 +69,13 @@ const ApplyButton = styled(Link)`
   font-style: italic;
   font-size: 1em;
   font-weight: 600;
-  color: white;
+  color: ${SB_ORANGE};
   padding: 7px 25px;
   margin-bottom: 1em;
   margin-left: 2em;
 
   &:hover {
-    background-color: ${lightenDarkenColor(SB_ORANGE, 20)};
+    opacity: 0.5;
   }
 
   @media (max-width: 660px) {
@@ -92,14 +92,15 @@ const ApplyButton = styled(Link)`
 const Position = ({ fields, frontmatter }) => {
   const [background, setBackground] = React.useState(SB_NAVY)
 
+  // this is terrible lol
   React.useEffect(() => {
     const role = frontmatter.role.toLowerCase();
     if (role.includes('developer')) {
       setBackground(SB_NAVY)
-    } else if (role.includes('designer')) {
+    } else if (role.includes('ux designer')) {
       setBackground(SB_SALMON)
-    } else if (role.includes('oasis')) {
-      setBackground(OASIS_GREEN)
+    } else if (role.includes('brand designer')) {
+      setBackground(SB_INK)
     } 
   }, []);
 
@@ -107,14 +108,13 @@ const Position = ({ fields, frontmatter }) => {
     <PositionSection style={{background: background}}>
       <HeadingContainer>
         <Header>{frontmatter.role}</Header>
-        {frontmatter.isOpen && <ApplyButton to={fields.slug}>Apply</ApplyButton>}
       </HeadingContainer>
       <Description>
         {frontmatter.description}
       </Description>
       <PositionButton
         background={background}
-        name="Learn more"
+        name={"Learn more" + (frontmatter.isOpen ? " and apply" : "")}
         route={fields.slug}>
       ></PositionButton>
     </PositionSection>
