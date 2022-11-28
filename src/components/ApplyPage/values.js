@@ -1,15 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
+import { SB_SALMON, SB_NAVY } from "@colors"
 import Section from "styles/components/Section"
 import { Header } from "styles/components/Header"
 
-const OrangeHeader = styled(Header)`
+const SalmonHeader = styled(Header)`
   font-size: 1.7em;
-  font-weight: 500;
-  color: ${SB_ORANGE};
-  font-style: normal;
+  font-weight: 600;
+  color: ${SB_SALMON};
+  font-family: Montserrat;
 `
 const BlueParagraph = styled.p`
   color: ${SB_NAVY};
@@ -34,24 +34,35 @@ const ParagraphContainer = styled.div`
 const Heading = styled.h1`
   font-style: italic;
   font-stretch: expanded;
-  letter-spacing: 0.15em;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 4em;
   color: ${SB_NAVY};
   text-transform: uppercase;
   font-family: Montserrat;
+  margin-top: 70px;
 
-  @media (min-width: 1000px) {
-    font-size: 2.5em;
+  @media (max-width: 600px) {
+    font-size: 3em;
     margin-bottom: 0.5em;
-    margin-top: 70px;
   }
 `
 
 const PadlessSection = styled(Section)`
-  padding-bottom: 0em;
-  padding-top: 0em;
+  padding: 0 4em 0 4em;
+
+  @media (min-width: 1000px) {
+    max-width: 100vw;
+  }
+
+  @media (max-width: 1100px) {
+    display: block;
+    max-width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0em 2.5em 1em 2.5em;
+  }
 `
 
 const Values = ({ title, principles }) => (
@@ -60,7 +71,7 @@ const Values = ({ title, principles }) => (
     <ParagraphContainer>
       {principles.map(p => (
         <div key={p.title}>
-          <OrangeHeader>{p.title}</OrangeHeader>
+          <SalmonHeader>{p.title}</SalmonHeader>
           <BlueParagraph>{p.body}</BlueParagraph>
         </div>
       ))}

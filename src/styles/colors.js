@@ -13,6 +13,7 @@ export const SB_LIGHT_ORANGE = "#FFE9C0"
 export const SB_LIGHT_SALMON = "#FED9D5"
 export const SB_LIGHT_GREY = "#EAECF0"
 export const SB_INK = "#1B2432"
+export const OASIS_GREEN = "#95BDAC"
 
 export const SB_NAVY_RGBA = (a) => `rgba(42, 66, 107, ${a})`
 export const SB_ORANGE_RGBA = (a) => `rgba(254, 183, 41, ${a})`

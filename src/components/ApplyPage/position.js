@@ -1,53 +1,45 @@
 import React from "react"
-import PropTypes from "prop-types"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { SB_SALMON, SB_NAVY, SB_ORANGE, lightenDarkenColor } from "@colors"
+import { OASIS_GREEN, SB_NAVY, SB_ORANGE, lightenDarkenColor } from "@colors"
+import PositionButton from "components/ApplyPage/positionbutton"
 import Section from "styles/components/Section"
 import Body from "styles/components/Body"
+import { SB_INK, SB_SALMON } from "../../styles/colors"
 
-const BlueFontSection = styled(Section)`
-  color: ${SB_NAVY};
+const PositionSection = styled(Section)`
   display: block;
-  font-size: 20px;
-  padding: 1em 2em;
+  padding: 2em;
+  margin-bottom: 60px;
+  margin-right: 0;
+  max-width: 100%;
 
   @media (min-width: 1000px) {
-    height: 15em;
+    margin-bottom: 20px;
+    margin-right: 56px;
   }
 `
+
 const Description = styled(Body)`
+  color: #FFFFFF !important;
   padding-top: 1em;
-  margin-bottom: 1em;
   font-size: 20px;
+  padding-bottom: 2em;
 
   @media (min-width: 1000px) {
-    height: 15em;
-    margin-bottom: 0em;
+    padding-right: 56px;
   }
 `
 
-const ReadMore = styled(Link)`
-  width: fit-content;
-  border-bottom: 2px solid white;
-  color: ${SB_NAVY};
-  display: block;
-  text-decoration: underline;
-  font-weight: 600;
-  margin-top: 0.5em;
-  font-size: 20px;
-`
 const Header = styled.h2`
-  letter-spacing: 0.15em;
-  width: fit-content;
   text-transform: uppercase;
-  font-size: 1.5em;
-  font-weight: 500;
+  font-size: 1.7em;
+  font-weight: 600;
   margin: 0;
-  margin-right: 15px;
-  color: ${SB_SALMON};
+  color: #FFFFFF;
   font-family: Montserrat;
+  font-style: italic;
 
   @media (max-width: 600px) {
     font-size: 24px;
@@ -63,9 +55,9 @@ const HeadingContainer = styled.div`
   }
 `
 
-const Button = styled(Link)`
-  background-color: ${SB_ORANGE};
-  transition: background-color 0.3s;
+const ApplyButton = styled(Link)`
+  border: 1px solid ${SB_ORANGE};
+  transition: opacity 0.3s;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -77,13 +69,13 @@ const Button = styled(Link)`
   font-style: italic;
   font-size: 1em;
   font-weight: 600;
-  color: white;
+  color: ${SB_ORANGE};
   padding: 7px 25px;
   margin-bottom: 1em;
   margin-left: 2em;
 
   &:hover {
-    background-color: ${lightenDarkenColor(SB_ORANGE, 20)};
+    opacity: 0.5;
   }
 
   @media (max-width: 660px) {
@@ -97,17 +89,36 @@ const Button = styled(Link)`
   }
 `
 
-const Position = ({ fields, frontmatter }) => (
-  <BlueFontSection>
-    <HeadingContainer>
-      <Header>{frontmatter.role}</Header>
-      {frontmatter.isOpen && <Button to={fields.slug}>Apply</Button>}
-    </HeadingContainer>
-    <Description>
-      {frontmatter.description}
-      <ReadMore to={fields.slug}> Click here to read more.</ReadMore>
-    </Description>
-  </BlueFontSection>
-)
+const Position = ({ fields, frontmatter }) => {
+  const [background, setBackground] = React.useState(SB_NAVY)
+
+  // this is terrible lol
+  React.useEffect(() => {
+    const role = frontmatter.role.toLowerCase();
+    if (role.includes('developer')) {
+      setBackground(SB_NAVY)
+    } else if (role.includes('ux designer')) {
+      setBackground(SB_SALMON)
+    } else if (role.includes('brand designer')) {
+      setBackground(SB_INK)
+    } 
+  }, []);
+
+  return (
+    <PositionSection style={{background: background}}>
+      <HeadingContainer>
+        <Header>{frontmatter.role}</Header>
+      </HeadingContainer>
+      <Description>
+        {frontmatter.description}
+      </Description>
+      <PositionButton
+        background={background}
+        name={"Learn more" + (frontmatter.isOpen ? " and apply" : "")}
+        route={fields.slug}>
+      ></PositionButton>
+    </PositionSection>
+  )
+}
 
 export default Position

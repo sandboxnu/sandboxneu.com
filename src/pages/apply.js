@@ -1,95 +1,47 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
-import { SB_SALMON, SB_NAVY, SB_ORANGE } from "@colors"
 
-import Values from "../components/ApplyPage/values"
-import Showcase from "../components/ApplyPage/showcase"
+import ApplyPageIntroduction from "../components/ApplyPage/introduction"
+import Positions from "../components/ApplyPage/positions"
 import Position from "../components/ApplyPage/position"
-import Heading from "../components/ApplyPage/heading"
+import Values from "../components/ApplyPage/values"
 import Layout from "../components/PageLayout/layout"
+import Quote from "components/ApplyPage/quote"
 import SEO from "components/seo"
-
-const Header = styled.h1`
-  font-style: italic;
-  font-stretch: expanded;
-  letter-spacing: 0.15em;
-  text-align: center;
-  font-weight: 600;
-  font-size: 2em;
-  color: ${SB_NAVY};
-  text-transform: uppercase;
-  font-family: Montserrat;
-
-  @media (min-width: 1000px) {
-    font-size: 2.5em;
-    margin-top: 70px;
-  }
-`
-
-const ParagraphContainer = styled.div`
-  padding-bottom: 20vh;
-  @media (min-width: 1000px) {
-    grid-auto-flow: column;
-    grid-column-gap: 100px;
-    grid-auto-columns: 1fr;
-    padding-bottom: 5vh;
-  }
-`
-
-const Container = styled.div`
-margin: 0 auto;
-padding: 0em 1em;
-@media (min-width: 1000px) {
-  padding: 0em 5em;
-  text-align: center:
-  margin-top: 3em;
-}  
-`
-
-const SectionLine = styled.span`
-  color: ${SB_ORANGE};
-  border-top: 3px solid;
-  display: block;
-  text-align: center;
-  content: none;
-  width: 500px;
-  margin: 0 auto;
-
-  @media (max-width: 650px) {
-    display: none;
-  }
-
-  @media (min-width: 1000px) {
-    width: 800px;
-  }
-
-  @media (min-width: 1160px) {
-    width: 1000px;
-    min-width: 850px;
-  }
-`
+import Recruiting from "../components/ApplyPage/recruiting"
 
 const ApplyPage = ({ data }) => {
-  const positions = data.positions.edges
-    .map((e) => e.node)
-    .filter((node) => node.frontmatter.isVisible)
-    .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
-    .map((node) => <Position {...node} />)
+  const {
+    title, 
+    subtitle, 
+    quote, 
+    quoteReference, 
+    applicationStatus, 
+    isBannerVisible
+  } = data.apply.edges[0].node;
+
+  const [positions, setPositions] = React.useState();
+
+  React.useEffect(() => {
+    setPositions(data.positions.edges
+      .map((e) => e.node)
+      .filter((node) => node.frontmatter.isVisible)
+      .sort((a, b) => (a.frontmatter.isOpen ? -1 : 1)) // put open positions on top
+      .map((node) => <Position {...node} />))
+  }, []);
+
   return (
     <Layout page="apply">
       <SEO title="Apply" keywords={[`application`]} />
-      <Heading {...data.apply.edges[0].node} />
-      <Container>
-        <SectionLine />
-        <Values {...data.values.edges[0].node} />
-        <SectionLine />
-        <Header>Semester Highlights</Header>
-        <Showcase />
-        <SectionLine />
-        <Header id="open-positions">Positions</Header>
-        <ParagraphContainer>{positions}</ParagraphContainer>
-      </Container>
+      <ApplyPageIntroduction 
+        title={title} 
+        subtitle={subtitle} 
+        applicationStatus={applicationStatus} 
+        isBannerVisible />
+      <Quote text={quote} reference={quoteReference} />
+      <Values {...data.values.edges[0].node} />
+      <Positions positions={positions}/>
+      <Recruiting />
     </Layout>
   )
 }
@@ -101,6 +53,8 @@ export const pageQuery = graphql`
         node {
           title
           subtitle
+          quote
+          quoteReference
           applicationStatus
           isBannerVisible
         }
