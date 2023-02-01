@@ -2,6 +2,7 @@ import json
 import requests
 import os
 from dotenv import load_dotenv
+from collections import Counter
 
 load_dotenv()
 
@@ -45,27 +46,34 @@ def make_empty_person(name, team_name):
         "profileImage": "",
         "socialMedia": {
             "email": "",
-            "linkedIn": ""
+            "linkedIn": "",
+            "portfolio": ""
         }
 
     }
 
 
 members = []
+teams_count = {}
 
 for person in results:
     properties = person["properties"]
-    print(properties["Name"]["title"])
     name = properties["Name"]["title"][0]["plain_text"]
-    print(properties["Team"]["multi_select"])
     teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
     for team in teams:
+        if team not in teams_count:
+            teams_count[team] = 1
+        else:
+            teams_count[team] += 1
         members.append(make_empty_person(name, team))
 
+members.sort(key=lambda member: member["team"]["name"])
+print(f"Succesfully scraped {len(results)} members from Notion.")
+print(f"Added {len(teams_count)} teams.")
+for team in teams_count:
+    print(f"{team} has {teams_count[team]} members.")
 
-script_dir = os.path.dirname(__file__)  # <-- absolute dir the script is in
-output_file_name = "jsonStuff.json"
-abs_file_path = os.path.join(script_dir, output_file_name)
+output_file = "src/content/team/team.json"
 
-with open(abs_file_path, "w") as teamFile:
+with open(output_file, "w") as teamFile:
     json.dump({"members": members}, teamFile, indent=2)
