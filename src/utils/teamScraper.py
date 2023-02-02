@@ -36,7 +36,7 @@ data = response.json()
 results = data["results"]
 
 
-def make_empty_person(name, team_name, role):
+def make_person(name, team_name, role, linkedin, portfolio, email):
     return {
         "name": name,
         "team": {
@@ -45,9 +45,9 @@ def make_empty_person(name, team_name, role):
         },
         "profileImage": "",
         "socialMedia": {
-            "email": "",
-            "linkedIn": "",
-            "portfolio": ""
+            "email": email or "",
+            "linkedIn": linkedin or "",
+            "portfolio": portfolio or ""
         }
 
     }
@@ -87,10 +87,13 @@ for person in results:
     name = properties["Name"]["title"][0]["plain_text"]
     teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
     roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
+    linkedin, portfolio, email = properties["LinkedIn"]["url"], properties["Portfolio"]["url"], properties["Email"]["email"]
+    if linkedin is not None:
+        print(linkedin)
     
     teamToRole = generate_team_mappings(list(roles), list(teams))
     for team, role in teamToRole.items():
-        members.append(make_empty_person(name, team, role))
+        members.append(make_person(name, team, role, linkedin, portfolio, email))
 
 members.sort(key=lambda member: member["team"]["name"])
 
@@ -98,3 +101,8 @@ output_file = "src/content/team/team.json"
 
 with open(output_file, "w") as teamFile:
     json.dump({"members": members}, teamFile, indent=2)
+
+
+resp_file = "resp.json"
+with open(resp_file, "w") as teamFile:
+    json.dump(results, teamFile, indent=2)
