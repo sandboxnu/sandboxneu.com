@@ -36,12 +36,12 @@ data = response.json()
 results = data["results"]
 
 
-def make_empty_person(name, team_name):
+def make_empty_person(name, team_name, role):
     return {
         "name": name,
         "team": {
             "name": team_name,
-            "role": "",
+            "role": role,
         },
         "profileImage": "",
         "socialMedia": {
@@ -53,6 +53,32 @@ def make_empty_person(name, team_name):
     }
 
 
+eboard = set(["Executive Director", "E-Board Liason", "Technical Director",
+             "UX Director", "Marketing Director", "Operations Director"])
+head_ofs = set(["Head of Recruiting", "Head of UX",
+               "Head of Project Acquisition"])
+
+
+def generate_team_mappings(roles, teams):
+    teamToRole = {}
+    for role in roles:
+        print(role)
+        if role in eboard:
+            teamToRole["E-Board"] = role
+        elif role in head_ofs:
+            teamToRole["Head Ofs"] = role
+
+    non_leadership_teams = list(filter(lambda team: team not in set(
+        ["E-Board", "Head Ofs"]), teams))
+    non_leadership_roles = list(filter(lambda role: role not in eboard.union(
+        head_ofs).union(set(["New Member"])), roles))
+    for team in non_leadership_teams:
+        if len(non_leadership_roles) != 0:
+            teamToRole[team] = non_leadership_roles[0]
+
+    return teamToRole
+
+
 members = []
 teams_count = {}
 
@@ -60,18 +86,13 @@ for person in results:
     properties = person["properties"]
     name = properties["Name"]["title"][0]["plain_text"]
     teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
-    for team in teams:
-        if team not in teams_count:
-            teams_count[team] = 1
-        else:
-            teams_count[team] += 1
-        members.append(make_empty_person(name, team))
+    roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
+    
+    teamToRole = generate_team_mappings(list(roles), list(teams))
+    for team, role in teamToRole.items():
+        members.append(make_empty_person(name, team, role))
 
 members.sort(key=lambda member: member["team"]["name"])
-print(f"Succesfully scraped {len(results)} members from Notion.")
-print(f"Added {len(teams_count)} teams.")
-for team in teams_count:
-    print(f"{team} has {teams_count[team]} members.")
 
 output_file = "src/content/team/team.json"
 
