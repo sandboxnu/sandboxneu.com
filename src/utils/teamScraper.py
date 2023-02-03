@@ -43,7 +43,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": "",
+        "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
         "socialMedia": {
             "email": email or "",
             "linkedIn": linkedin or "",
@@ -87,13 +87,15 @@ for person in results:
     name = properties["Name"]["title"][0]["plain_text"]
     teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
     roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
-    linkedin, portfolio, email = properties["LinkedIn"]["url"], properties["Portfolio"]["url"], properties["Email"]["email"]
+    linkedin, portfolio, email = properties["LinkedIn"]["url"], properties[
+        "Portfolio"]["url"], properties["Email"]["email"]
     if linkedin is not None:
         print(linkedin)
-    
+
     teamToRole = generate_team_mappings(list(roles), list(teams))
     for team, role in teamToRole.items():
-        members.append(make_person(name, team, role, linkedin, portfolio, email))
+        members.append(make_person(name, team, role,
+                       linkedin, portfolio, email))
 
 members.sort(key=lambda member: member["team"]["name"])
 
