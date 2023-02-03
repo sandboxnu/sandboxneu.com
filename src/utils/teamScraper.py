@@ -31,12 +31,29 @@ query = {
         ]
     },
 }
-response = requests.post(url, headers=headers, json=query)
-data = response.json()
-results = data["results"]
+eboard = set(["Executive Director", "E-Board Liason", "Technical Director",
+             "UX Director", "Marketing Director", "Operations Director"])
+head_ofs = set(["Head of Recruiting", "Head of UX",
+               "Head of Project Acquisition"])
+output_file = "src/content/team/team.json"
+
+
+
+def get_members_from_notion():
+    response = requests.post(url, headers=headers, json=query)
+    data = response.json()
+    results = data["results"]
+    return results
 
 
 def make_person(name, team_name, role, linkedin, portfolio, email):
+    social_media = {
+        "email": email or None,
+        "linkedIn": linkedin or None,
+        "portfolio": portfolio or None
+    }
+    social_media_filtered = {k: v for k, v in social_media.items() if v is not None}
+
     return {
         "name": name,
         "team": {
@@ -44,25 +61,13 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "role": role,
         },
         "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
-        "socialMedia": {
-            "email": email or "",
-            "linkedIn": linkedin or "",
-            "portfolio": portfolio or ""
-        }
-
+        "socialMedia": social_media_filtered
     }
-
-
-eboard = set(["Executive Director", "E-Board Liason", "Technical Director",
-             "UX Director", "Marketing Director", "Operations Director"])
-head_ofs = set(["Head of Recruiting", "Head of UX",
-               "Head of Project Acquisition"])
 
 
 def generate_team_mappings(roles, teams):
     teamToRole = {}
     for role in roles:
-        print(role)
         if role in eboard:
             teamToRole["E-Board"] = role
         elif role in head_ofs:
@@ -79,32 +84,34 @@ def generate_team_mappings(roles, teams):
     return teamToRole
 
 
-members = []
-teams_count = {}
 
-for person in results:
-    properties = person["properties"]
-    name = properties["Name"]["title"][0]["plain_text"]
-    teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
-    roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
-    linkedin, portfolio, email = properties["LinkedIn"]["url"], properties[
-        "Portfolio"]["url"], properties["Email"]["email"]
-    if linkedin is not None:
-        print(linkedin)
+if __name__ == '__main__':
+    results = get_members_from_notion()
+    members = []
+    teams_count = {}
 
-    teamToRole = generate_team_mappings(list(roles), list(teams))
-    for team, role in teamToRole.items():
-        members.append(make_person(name, team, role,
-                       linkedin, portfolio, email))
+    for person in results:
+        properties = person["properties"]
+        name = properties["Name"]["title"][0]["plain_text"]
+        teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
+        roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
+        linkedin, portfolio, email = properties["LinkedIn"]["url"], properties[
+            "Portfolio"]["url"], properties["Email"]["email"]
 
-members.sort(key=lambda member: member["team"]["name"])
+        teamToRole = generate_team_mappings(list(roles), list(teams))
+        for team, role in teamToRole.items():
+            if team not in teams_count:
+                teams_count[team] = 1
+            else: 
+                teams_count[team] += 1
+            members.append(make_person(name, team, role,
+                        linkedin, portfolio, email))
+    members.sort(key=lambda member: member["team"]["name"])
 
-output_file = "src/content/team/team.json"
+    print(f"Scraped {len(results)} members")
+    print(f"Scraped {len(teams_count)} teams")
+    for team, count in teams_count.items():
+        print(f"{team} has {count} members")
 
-with open(output_file, "w") as teamFile:
-    json.dump({"members": members}, teamFile, indent=2)
-
-
-resp_file = "resp.json"
-with open(resp_file, "w") as teamFile:
-    json.dump(results, teamFile, indent=2)
+    with open(output_file, "w") as teamFile:
+        json.dump({"members": members}, teamFile, indent=2)
