@@ -76,9 +76,11 @@ export const query = graphql`
               name
               role
             }
-            profileImage {
-              ...profileIcon
-            }
+            # TODO: add profileImage back once images have been added to repo
+            # profileImage {
+            #   ...profileIcon
+            # }
+            profileImage
             socialMedia {
               email
               linkedIn

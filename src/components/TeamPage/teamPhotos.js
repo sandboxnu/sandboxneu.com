@@ -25,7 +25,7 @@ const ProfileWrapper = styled.div`
   padding: 1.5em 2.5em;
   flex-basis: 100%;
 
-  animation: ${props => FadeInSlideUp(props.percent, "15px", true)} 1s;
+  animation: ${(props) => FadeInSlideUp(props.percent, "15px", true)} 1s;
 
   @media (min-width: 600px) {
     flex-basis: 50%;
@@ -91,14 +91,14 @@ const ProfileIcon = ({ dest, icon }) => {
 }
 
 const StyledIcon = styled(FontAwesomeIcon)`
-  color: ${props => props.mobileColor};
+  color: ${(props) => props.mobileColor};
   margin: 0.3rem 0.5rem 0rem 0.5rem;
   transition: color 150ms;
 
   font-size: 1rem;
   @media (min-width: 1000px) {
     font-size: 1.5rem;
-    color: ${props => props.color};
+    color: ${(props) => props.color};
 
     &:hover {
       color: ${SB_ORANGE};
@@ -213,7 +213,7 @@ const Section = ({ teamMembers, title, length }) => {
   )
 }
 
-const groupMembers = members => {
+const groupMembers = (members) => {
   const grouped = _.groupBy(members, "team.name")
   return grouped
 }
@@ -222,7 +222,7 @@ const TeamPhotos = ({ members }) => {
   const teams = groupMembers(members)
   return (
     <Wrapper>
-      {Object.keys(teams).map(group => {
+      {Object.keys(teams).map((group) => {
         return (
           <Section
             teamMembers={teams[group]}

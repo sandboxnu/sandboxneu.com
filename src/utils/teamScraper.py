@@ -1,6 +1,7 @@
 import json
 import requests
 import os
+from collections import defaultdict
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,10 +24,15 @@ query = {
 
 eboard_roles = set(["Executive Director", "E-Board Liason", "Technical Director",
                     "UX Director", "Marketing Director", "Operations Director"])
-head_ofs = set(["Head of Recruiting", "Head of UX",
-               "Head of Project Acquisition", "Head-of Community", "Head of DX"])
-# output_file = "src/content/team/team.json"
-output_file = "new_team.json"
+head_of_roles = set(["Head of Recruiting", "Head of UX",
+                     "Head of Project Acquisition", "Head of Community", "Head of DX"])
+team_order = ["E-Board", "Head Ofs", "Brand", "Carpool",
+              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"]
+project_teams = set(["Carpool", "Faculty Activity Tracker", "GraduateNU",
+                    "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"])
+project_team_member_order = {"Project Lead": 0,
+                             "Design Lead": 1, "Designer": 2, "Developer": 3}
+output_file = "src/content/team/new_team.json"
 
 
 def get_current_members_from_notion():
@@ -51,6 +57,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
+        # TODO: add profile image here
         # "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
         "profileImage": "",
         "socialMedia": social_media_filtered
@@ -64,6 +71,9 @@ def generate_team_mappings(roles, teams):
             team_to_role["E-Board"] = role
         elif role in head_of_roles:
             team_to_role["Head Ofs"] = role
+
+        if role == "Marketing Director":
+            team_to_role["Brand"] = role
 
     non_leadership_teams = list(filter(lambda team: team not in set(
         ["E-Board", "Head Ofs"]), teams))
@@ -85,16 +95,25 @@ def get_portfolio(properties):
 
 
 def get_email(properties):
-    rich_text_list = properties.get("Email", {}).get("rich_text", [])
-    if not rich_text_list:
-        return ""
+    return properties.get("Email", {}).get("email", "")
 
-    return rich_text_list[0].get("text", {}).get("content", "")
+
+def get_final_members_list(teams_to_members):
+    members = []
+    for team in team_order:
+        team_member_list = teams_to_members[team]
+        if team in project_teams:
+            team_member_list.sort(
+                key=lambda member: project_team_member_order[member["team"]["role"]]
+            )
+        members.extend(team_member_list)
+    return members
 
 
 if __name__ == '__main__':
     results = get_current_members_from_notion()
     members = []
+    teams_to_members = defaultdict(list)
     teams_count = {}
 
     for person in results:
@@ -115,9 +134,11 @@ if __name__ == '__main__':
                 teams_count[team] = 1
             else:
                 teams_count[team] += 1
-            members.append(make_person(name, team, role,
-                                       linkedin, portfolio, email))
-    members.sort(key=lambda member: member["team"]["name"])
+
+            teams_to_members[team].append(make_person(
+                name, team, role, linkedin, portfolio, email))
+
+    members = get_final_members_list(teams_to_members)
 
     print(f"Scraped {len(results)} members")
     print(f"Scraped {len(teams_count)} teams")
