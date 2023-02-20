@@ -1,0 +1,713 @@
+{
+  "members": [
+    {
+      "name": "Rachel Kim",
+      "team": {
+        "name": "Brand",
+        "role": "Brand Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Jasmin Yu",
+      "team": {
+        "name": "Brand",
+        "role": "Brand Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Eshaan Mehta",
+      "team": {
+        "name": "Carpool",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Jun Wei Huang",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Riddhi Gupta",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Owen Simpson",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/owen-s-simpson/",
+        "portfolio": "https://owensimpson.github.io/"
+      }
+    },
+    {
+      "name": "Luke Jianu",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/lukejianu/"
+      }
+    },
+    {
+      "name": "David O\u2019Brien",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Kate Feder",
+      "team": {
+        "name": "Carpool",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Devashish Sood",
+      "team": {
+        "name": "Carpool",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Tze Zhe Brandon Lim",
+      "team": {
+        "name": "E-Board",
+        "role": "E-Board Liason"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Amanda Lee",
+      "team": {
+        "name": "E-Board",
+        "role": "UX Director"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Serena Ng",
+      "team": {
+        "name": "E-Board",
+        "role": "UX Director"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Shashank Jarmale",
+      "team": {
+        "name": "E-Board",
+        "role": "Operations Director"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/shashankjarmale/"
+      }
+    },
+    {
+      "name": "Dillon Scott",
+      "team": {
+        "name": "E-Board",
+        "role": "Technical Director"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Connie Liu",
+      "team": {
+        "name": "E-Board",
+        "role": "Marketing Director"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Ally Chao",
+      "team": {
+        "name": "E-Board",
+        "role": "Executive Director"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Anna Ji",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Anzhuo Wang",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Ansh Marwa",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Suraj Ramchandran",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Diego Hernandez",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Christine Cho",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Design Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Christina Long",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Max Pinheiro",
+      "team": {
+        "name": "Faculty Activity Tracker",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Dylan Dinio",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/dylan-dinio/"
+      }
+    },
+    {
+      "name": "Nick Mamisashvili",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Jia Mu",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Tze Zhe Brandon Lim",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Luke Taylor",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/luke-felix-taylor/",
+        "portfolio": "https://lukefelixtaylor.com"
+      }
+    },
+    {
+      "name": "Evelyn Wong",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Duy Tran",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Aryan Shah",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/aryshah/"
+      }
+    },
+    {
+      "name": "Angela Zheng",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Trisha Iyer",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Amber Chow",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/amber-chow-5a7238204/"
+      }
+    },
+    {
+      "name": "Michelle Ton",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/michelle-ton/",
+        "portfolio": "yijen.myportfolio.com"
+      }
+    },
+    {
+      "name": "Mathena Chan",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Ha Ngo",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Blake Heyman",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Shashank Jarmale",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/shashankjarmale/"
+      }
+    },
+    {
+      "name": "Robert Rosas",
+      "team": {
+        "name": "HappyEastie",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Luke Taylor",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Recruiting"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/luke-felix-taylor/",
+        "portfolio": "https://lukefelixtaylor.com"
+      }
+    },
+    {
+      "name": "Vanessa Peng",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of UX"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Devashish Sood",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Recruiting"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Iris Zhang",
+      "team": {
+        "name": "MFA",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Kaiyang Zheng",
+      "team": {
+        "name": "MFA",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Elvin Cheng",
+      "team": {
+        "name": "MFA",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Angela Weigl",
+      "team": {
+        "name": "MFA",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Helen Miao",
+      "team": {
+        "name": "MFA",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Daisy Kucharski",
+      "team": {
+        "name": "MFA",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Isabelle Papa",
+      "team": {
+        "name": "MFA",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Owanari Michael Briggs",
+      "team": {
+        "name": "MFA",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Dylan Cerenov",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/dylancerenov/"
+      }
+    },
+    {
+      "name": "Solomon Rashidzada",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Nathan Harvey",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Raveesh Mehta",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Chan Mi Oh",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Josh Wang",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Melody Liu",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Allison Grant",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Dylan Pham",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/dylan-pham/"
+      }
+    },
+    {
+      "name": "Elliot Goodman",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "www.linkedin.com/in/elliotwygoodman"
+      }
+    },
+    {
+      "name": "Dewi Kalis",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Kobe Zheng",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Jason Cheung",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Ross Newman",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Simar Chadha",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Pranav Phadke",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "linkedIn": "https://www.linkedin.com/in/pranav-phadke/"
+      }
+    },
+    {
+      "name": "Samuel Lyon",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {
+        "portfolio": "soulware.us"
+      }
+    },
+    {
+      "name": "Vanessa Peng",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Designer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Lucas Dunker",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Sebastian Wittrock",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Zachar Hankewycz",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Project Lead"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    },
+    {
+      "name": "Ally Chao",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "",
+      "socialMedia": {}
+    }
+  ]
+}

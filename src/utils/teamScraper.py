@@ -2,7 +2,6 @@ import json
 import requests
 import os
 from dotenv import load_dotenv
-from collections import Counter
 
 load_dotenv()
 
@@ -15,31 +14,22 @@ headers = {
 }
 query = {
     "filter": {
-        "and": [
-            {
-                "property": "Status",
-                "select": {
-                    "equals": "Current Member",
-                }
-            },
-            {
-                "property": "Team",
-                "multi_select": {
-                    "does_not_contain": "Hiatus"
-                }
-            }
-        ]
-    },
+        "property": "Status",
+        "select": {
+            "equals": "Current Member"
+        }
+    }
 }
-eboard = set(["Executive Director", "E-Board Liason", "Technical Director",
+# output_file = "src/content/team/team.json"
+output_file = "new_team.json"
+
+eboard_roles = set(["Executive Director", "E-Board Liason", "Technical Director",
              "UX Director", "Marketing Director", "Operations Director"])
-head_ofs = set(["Head of Recruiting", "Head of UX",
+head_of_roles = set(["Head of Recruiting", "Head of UX",
                "Head of Project Acquisition"])
-output_file = "src/content/team/team.json"
 
 
-
-def get_members_from_notion():
+def get_current_members_from_notion():
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
     results = data["results"]
@@ -52,7 +42,8 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
         "linkedIn": linkedin or None,
         "portfolio": portfolio or None
     }
-    social_media_filtered = {k: v for k, v in social_media.items() if v is not None}
+    social_media_filtered = {k: v for k,
+                             v in social_media.items() if v is not None}
 
     return {
         "name": name,
@@ -60,52 +51,72 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
+        # "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
+        "profileImage": "",
         "socialMedia": social_media_filtered
     }
 
 
 def generate_team_mappings(roles, teams):
-    teamToRole = {}
+    team_to_role = {}
     for role in roles:
-        if role in eboard:
-            teamToRole["E-Board"] = role
-        elif role in head_ofs:
-            teamToRole["Head Ofs"] = role
+        if role in eboard_roles:
+            team_to_role["E-Board"] = role
+        elif role in head_of_roles:
+            team_to_role["Head Ofs"] = role
 
     non_leadership_teams = list(filter(lambda team: team not in set(
         ["E-Board", "Head Ofs"]), teams))
-    non_leadership_roles = list(filter(lambda role: role not in eboard.union(
-        head_ofs).union(set(["New Member"])), roles))
+    non_leadership_roles = list(filter(lambda role: role not in eboard_roles.union(
+        head_of_roles).union(set(["New Member"])), roles))
     for team in non_leadership_teams:
         if len(non_leadership_roles) != 0:
-            teamToRole[team] = non_leadership_roles[0]
+            team_to_role[team] = non_leadership_roles[0]
 
-    return teamToRole
+    return team_to_role
 
+
+def get_linkedin(properties):
+    return properties.get("LinkedIn", {}).get("url", "")
+
+
+def get_portfolio(properties):
+    return properties.get("Portfolio or Personal Website", {}).get("url", "")
+
+
+def get_email(properties):
+    rich_text_list = properties.get("Email", {}).get("rich_text", [])
+    if not rich_text_list:
+        return ""
+
+    return rich_text_list[0].get("text", {}).get("content", "")
 
 
 if __name__ == '__main__':
-    results = get_members_from_notion()
+    results = get_current_members_from_notion()
     members = []
     teams_count = {}
 
     for person in results:
         properties = person["properties"]
         name = properties["Name"]["title"][0]["plain_text"]
-        teams = map(lambda team: team["name"], properties["Team"]["multi_select"])
-        roles = map(lambda role: role["name"], properties["Role"]["multi_select"])
-        linkedin, portfolio, email = properties["LinkedIn"]["url"], properties[
-            "Portfolio"]["url"], properties["Email"]["email"]
+        teams = map(lambda team: team["name"],
+                    properties["Team"]["multi_select"])
+        roles = map(lambda role: role["name"],
+                    properties["Role"]["multi_select"])
 
-        teamToRole = generate_team_mappings(list(roles), list(teams))
-        for team, role in teamToRole.items():
+        linkedin = get_linkedin(properties)
+        portfolio = get_portfolio(properties)
+        email = get_email(properties)
+
+        team_to_role = generate_team_mappings(list(roles), list(teams))
+        for team, role in team_to_role.items():
             if team not in teams_count:
                 teams_count[team] = 1
-            else: 
+            else:
                 teams_count[team] += 1
             members.append(make_person(name, team, role,
-                        linkedin, portfolio, email))
+                                       linkedin, portfolio, email))
     members.sort(key=lambda member: member["team"]["name"])
 
     print(f"Scraped {len(results)} members")
