@@ -34,7 +34,7 @@ query = {
 eboard = set(["Executive Director", "E-Board Liason", "Technical Director",
              "UX Director", "Marketing Director", "Operations Director"])
 head_ofs = set(["Head of Recruiting", "Head of UX",
-               "Head of Project Acquisition"])
+               "Head of Project Acquisition", "Head-of Community", "Head of DX"])
 output_file = "src/content/team/team.json"
 
 
