@@ -1,5 +1,6 @@
 import json
 import requests
+import shutil
 import os
 from collections import defaultdict
 from dotenv import load_dotenv
@@ -57,7 +58,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        # TODO: add profile image here
+        # TODO: add profile image here (naming convention is currently <name>.jpeg)
         # "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
         "profileImage": "",
         "socialMedia": social_media_filtered
@@ -96,6 +97,20 @@ def get_portfolio(properties):
 
 def get_email(properties):
     return properties.get("Email", {}).get("email", "")
+
+
+def download_member_headshot(person, name):
+    files = person.get("properties", {}).get(
+        "Profile Pic", {}).get("files", [])
+    if not files:
+        return
+
+    # TODO: point this to the member images directory when done testing
+    image_name = "src/utils/" + name + ".jpeg"
+    signed_s3_url = files[0]["file"]["url"]
+    response = requests.get(signed_s3_url, stream=True)
+    with open(image_name, 'wb') as out_file:
+        shutil.copyfileobj(response.raw, out_file)
 
 
 def get_final_members_list(teams_to_members):
@@ -137,6 +152,8 @@ if __name__ == '__main__':
 
             teams_to_members[team].append(make_person(
                 name, team, role, linkedin, portfolio, email))
+
+        download_member_headshot(person, name)
 
     members = get_final_members_list(teams_to_members)
 
