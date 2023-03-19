@@ -76,11 +76,9 @@ export const query = graphql`
               name
               role
             }
-            profileImage # TODO
-            # profileImage {
-            #   ...profileIcon
-            # }
-            profileImage
+            profileImage {
+              ...profileIcon
+            }
             socialMedia {
               email
               linkedIn

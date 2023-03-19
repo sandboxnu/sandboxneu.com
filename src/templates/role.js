@@ -123,6 +123,7 @@ export const pageQuery = graphql`
             quoteMember
             quoteMemberTitle
             quoteMemberSemester
+            # quoteImage # TODO
             quoteImage {
               childImageSharp {
                 gatsbyImageData(

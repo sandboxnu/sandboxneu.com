@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Card from "components/card"
-import robert_rosas from "content/team/profileImages/SP23/Robert Rosas.jpeg"
+import robert_rosas from "content/team/profileImages/SP23/Robert Rosas.png"
 import pills from "images/pharmd-pills.svg"
 import github from "images/github.svg"
 import tree from "images/oasis-logo.png"

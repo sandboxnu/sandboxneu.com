@@ -5,6 +5,7 @@ import shutil
 import os
 from collections import defaultdict
 from dotenv import load_dotenv
+from PIL import Image
 
 load_dotenv()
 
@@ -24,17 +25,20 @@ query = {
     }
 }
 
-eboard_roles = set(["Executive Director", "E-Board Liason", "Technical Director",
-                    "UX Director", "Marketing Director", "Operations Director"])
+eboard_roles = set(["Executive Director", "E-Board Liaison", "Technical Director",
+                    "UX Director", "Marketing & Events Director", "Operations Director"])
+eboard_roles_order = {"Executive Director": 0, "UX Director": 1, "Marketing & Events Director": 2, "Operations Director": 3, "Technical Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of UX",
                      "Head of Project Acquisition", "Head of Community", "Head of DX"])
-team_order = ["E-Board", "Head Ofs", "Brand", "Carpool",
-              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"]
+head_of_roles_order = {"Head of Recruiting": 0, "Head of DX": 1, "Head of UX": 2}
+brand_roles_order = {"Marketing & Events Director": 0, "Brand Designer": 1}
 project_teams = set(["Carpool", "Faculty Activity Tracker", "GraduateNU",
                     "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"])
 project_team_member_order = {"Project Lead": 0,
                              "Design Lead": 1, "Designer": 2, "Developer": 3}
-output_file = "../content/team/new_team.json"
+team_order = ["E-Board", "Head Ofs", "Brand", "Carpool",
+              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"]
+output_file = "../content/team/team.json"
 
 
 def get_current_members_from_notion():
@@ -60,7 +64,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": f"./profileImages/SP23/{name}.jpeg",
+        "profileImage": f"./profileImages/SP23/{name}.png",
         "socialMedia": social_media_filtered
     }
 
@@ -73,7 +77,7 @@ def generate_team_mappings(roles, teams):
         elif role in head_of_roles:
             team_to_role["Head Ofs"] = role
 
-        if role == "Marketing Director":
+        if role == "Marketing & Events Director":
             team_to_role["Brand"] = role
 
     non_leadership_teams = list(filter(lambda team: team not in set(
@@ -107,7 +111,7 @@ def download_member_headshot(person, name):
         return
 
     print(f"Downloading member headshot for {name}")
-    image_name = "../content/team/profileImages/SP23/" + name + ".jpeg"
+    image_name = "../content/team/profileImages/SP23/" + name + ".png"
     signed_s3_url = files[0]["file"]["url"]
     response = requests.get(signed_s3_url, stream=True)
     with open(image_name, 'wb') as out_file:
@@ -121,6 +125,18 @@ def get_final_members_list(teams_to_members):
         if team in project_teams:
             team_member_list.sort(
                 key=lambda member: project_team_member_order[member["team"]["role"]]
+            )
+        elif team == "E-Board":
+            team_member_list.sort(
+                key=lambda member: eboard_roles_order[member["team"]["role"]]
+            ) 
+        elif team == "Head Ofs":
+            team_member_list.sort(
+                key=lambda member: head_of_roles_order[member["team"]["role"]]
+            )
+        elif team == "Brand":
+            team_member_list.sort(
+                key=lambda member: brand_roles_order[member["team"]["role"]]
             )
         members.extend(team_member_list)
     return members

@@ -175,12 +175,14 @@ const Profile = ({ member, percent }) => {
   return (
     <ProfileWrapper percent={percent}>
       <ProfileImgWrapper>
-        <ProfileImg
-          style={{ overflow: "visible" }}
-          loading="eager"
-          image={member.profileImage.childImageSharp.gatsbyImageData}
-          alt={name}
-        />
+        {member.profileImage && (
+          <ProfileImg
+            style={{ overflow: "visible" }}
+            loading="eager"
+            image={member.profileImage.childImageSharp.gatsbyImageData}
+            alt={name}
+          />
+        )}
         <IconWrapper className="iconWrapper web">{iconContent}</IconWrapper>
       </ProfileImgWrapper>
       <ProfileName>{name}</ProfileName>
