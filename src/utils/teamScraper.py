@@ -5,7 +5,6 @@ import shutil
 import os
 from collections import defaultdict
 from dotenv import load_dotenv
-from PIL import Image
 
 load_dotenv()
 
@@ -25,12 +24,14 @@ query = {
     }
 }
 
-eboard_roles = set(["Executive Director", "E-Board Liaison", "Technical Director",
-                    "UX Director", "Marketing & Events Director", "Operations Director"])
-eboard_roles_order = {"Executive Director": 0, "UX Director": 1, "Marketing & Events Director": 2, "Operations Director": 3, "Technical Director": 4, "E-Board Liaison": 5}
-head_of_roles = set(["Head of Recruiting", "Head of UX",
-                     "Head of Project Acquisition", "Head of Community", "Head of DX"])
-head_of_roles_order = {"Head of Recruiting": 0, "Head of DX": 1, "Head of UX": 2}
+eboard_roles = set(["Executive Director", "Technical Director", "UX Director",
+                    "Operations Director", "Marketing & Events Director", "E-Board Liaison"])
+eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "UX Director": 2,
+                      "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
+head_of_roles = set(["Head of Recruiting", "Head of DX", "Head of UX",
+                     "Head of Project Acquisition", "Head of Community"])
+head_of_roles_order = {"Head of Recruiting": 0, "Head of DX": 1, "Head of UX": 2,
+                       "Head of Project Acquisition": 3, "Head of Community": 4}
 brand_roles_order = {"Marketing & Events Director": 0, "Brand Designer": 1}
 project_teams = set(["Carpool", "Faculty Activity Tracker", "GraduateNU",
                     "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"])

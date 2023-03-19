@@ -13,6 +13,18 @@
       }
     },
     {
+      "name": "Dillon Scott",
+      "team": {
+        "name": "E-Board",
+        "role": "Technical Director"
+      },
+      "profileImage": "./profileImages/SP23/Dillon Scott.png",
+      "socialMedia": {
+        "email": "scott.di@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/dillon-scott/"
+      }
+    },
+    {
       "name": "Amanda Lee",
       "team": {
         "name": "E-Board",
@@ -39,18 +51,6 @@
       }
     },
     {
-      "name": "Connie Liu",
-      "team": {
-        "name": "E-Board",
-        "role": "Marketing & Events Director"
-      },
-      "profileImage": "./profileImages/SP23/Connie Liu.png",
-      "socialMedia": {
-        "email": "liu.conn@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/connie-liu-312094230/"
-      }
-    },
-    {
       "name": "Shashank Jarmale",
       "team": {
         "name": "E-Board",
@@ -63,15 +63,15 @@
       }
     },
     {
-      "name": "Dillon Scott",
+      "name": "Connie Liu",
       "team": {
         "name": "E-Board",
-        "role": "Technical Director"
+        "role": "Marketing & Events Director"
       },
-      "profileImage": "./profileImages/SP23/Dillon Scott.png",
+      "profileImage": "./profileImages/SP23/Connie Liu.png",
       "socialMedia": {
-        "email": "scott.di@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/dillon-scott/"
+        "email": "liu.conn@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/connie-liu-312094230/"
       }
     },
     {
@@ -135,6 +135,42 @@
         "email": "peng.v@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/vanessa-peng/",
         "portfolio": "vanessapeng.com"
+      }
+    },
+    {
+      "name": "Lucas Dunker",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Project Acquisition"
+      },
+      "profileImage": "./profileImages/SP23/Lucas Dunker.png",
+      "socialMedia": {
+        "email": "dunker.l@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/lucasdunker/"
+      }
+    },
+    {
+      "name": "Jia Mu",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Community"
+      },
+      "profileImage": "./profileImages/SP23/Jia Mu.png",
+      "socialMedia": {
+        "email": "mu.ji@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/jia-mu/"
+      }
+    },
+    {
+      "name": "Owanari Michael Briggs",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Community"
+      },
+      "profileImage": "./profileImages/SP23/Owanari Michael Briggs.png",
+      "socialMedia": {
+        "email": "briggs.ow@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/owanari-briggs-b9871819b/"
       }
     },
     {
