@@ -1,3 +1,4 @@
+import time
 import json
 import requests
 import shutil
@@ -33,10 +34,11 @@ project_teams = set(["Carpool", "Faculty Activity Tracker", "GraduateNU",
                     "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"])
 project_team_member_order = {"Project Lead": 0,
                              "Design Lead": 1, "Designer": 2, "Developer": 3}
-output_file = "src/content/team/new_team.json"
+output_file = "../content/team/new_team.json"
 
 
 def get_current_members_from_notion():
+    print("Retrieving current members from Notion Club Directory")
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
     results = data["results"]
@@ -58,9 +60,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        # TODO: add profile image here (naming convention is currently <name>.jpeg)
-        # "profileImage": "" if email is None else './profileImages/' + ''.join([name.capitalize() for name in email[0: email.index('@')].split('.')]) + ".jpg",
-        "profileImage": "",
+        "profileImage": f"./profileImages/SP23/{name}.jpeg",
         "socialMedia": social_media_filtered
     }
 
@@ -103,10 +103,11 @@ def download_member_headshot(person, name):
     files = person.get("properties", {}).get(
         "Profile Pic", {}).get("files", [])
     if not files:
+        print(f"No member headshot found for {name}")
         return
 
-    # TODO: point this to the member images directory when done testing
-    image_name = "src/utils/" + name + ".jpeg"
+    print(f"Downloading member headshot for {name}")
+    image_name = "../content/team/profileImages/SP23/" + name + ".jpeg"
     signed_s3_url = files[0]["file"]["url"]
     response = requests.get(signed_s3_url, stream=True)
     with open(image_name, 'wb') as out_file:
@@ -126,6 +127,8 @@ def get_final_members_list(teams_to_members):
 
 
 if __name__ == '__main__':
+    start_time = time.time()
+
     results = get_current_members_from_notion()
     members = []
     teams_to_members = defaultdict(list)
@@ -134,6 +137,7 @@ if __name__ == '__main__':
     for person in results:
         properties = person["properties"]
         name = properties["Name"]["title"][0]["plain_text"]
+        print(f"Processing {name}")
         teams = map(lambda team: team["name"],
                     properties["Team"]["multi_select"])
         roles = map(lambda role: role["name"],
@@ -164,3 +168,6 @@ if __name__ == '__main__':
 
     with open(output_file, "w") as teamFile:
         json.dump({"members": members}, teamFile, indent=2)
+
+    end_time = time.time()
+    print(f"Script took {end_time - start_time} seconds to run")

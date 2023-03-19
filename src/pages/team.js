@@ -76,7 +76,7 @@ export const query = graphql`
               name
               role
             }
-            # TODO: add profileImage back once images have been added to repo
+            profileImage # TODO
             # profileImage {
             #   ...profileIcon
             # }
