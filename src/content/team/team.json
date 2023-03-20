@@ -727,6 +727,18 @@
       }
     },
     {
+      "name": "Ross Newman",
+      "team": {
+        "name": "ScoutTrek",
+        "role": "Technical Lead"
+      },
+      "profileImage": "./profileImages/SP23/Ross Newman.png",
+      "socialMedia": {
+        "email": "newman.ros@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/ross-newman/"
+      }
+    },
+    {
       "name": "Allison Grant",
       "team": {
         "name": "ScoutTrek",
@@ -797,18 +809,6 @@
       "socialMedia": {
         "email": "cheung.jaso@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/jason-cheung-0429/"
-      }
-    },
-    {
-      "name": "Ross Newman",
-      "team": {
-        "name": "ScoutTrek",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP23/Ross Newman.png",
-      "socialMedia": {
-        "email": "newman.ros@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/ross-newman/"
       }
     },
     {
@@ -911,6 +911,18 @@
       }
     },
     {
+      "name": "Chan Mi Oh",
+      "team": {
+        "name": "SGA Tooling",
+        "role": "Technical Lead"
+      },
+      "profileImage": "./profileImages/SP23/Chan Mi Oh.png",
+      "socialMedia": {
+        "email": "oh.c@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/chanmioh/"
+      }
+    },
+    {
       "name": "Josh Wang",
       "team": {
         "name": "SGA Tooling",
@@ -968,18 +980,6 @@
       "socialMedia": {
         "email": "mehta.r@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/raveeshmehta/"
-      }
-    },
-    {
-      "name": "Chan Mi Oh",
-      "team": {
-        "name": "SGA Tooling",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP23/Chan Mi Oh.png",
-      "socialMedia": {
-        "email": "oh.c@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/chanmioh/"
       }
     }
   ]
