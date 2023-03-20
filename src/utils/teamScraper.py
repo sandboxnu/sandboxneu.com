@@ -162,6 +162,8 @@ if __name__ == '__main__':
 
         linkedin = get_linkedin(properties)
         portfolio = get_portfolio(properties)
+        if portfolio[0:8] != "https://":
+            portfolio = "https://" + portfolio
         email = get_email(properties)
 
         team_to_role = generate_team_mappings(list(roles), list(teams))
