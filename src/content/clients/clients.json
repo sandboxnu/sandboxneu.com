@@ -2,9 +2,9 @@
   "reasonsToWorkWithSandbox": [
     "No cost for clients",
     "Work closely with a team of our developers and designers",
-    "A deliverable product in 1-2 semesters"
+    "A deliverable product in 2-3 semesters"
   ],
-  "clientApplicationInfo": "Client applications for Spring 2023 are currently closed. If you’d like to work with us starting in Fall 2023, please fill out our application by clicking the 'Apply now' button below and we’ll be in touch with next steps!",
+  "clientApplicationInfo": "Client applications for Fall 2024 are currently open! If you’d like to work with us starting in Fall 2024, please fill out our project proposal by clicking the 'Apply now' button below and we’ll be in touch with next steps!",
   "clientProcessSteps": [
     {
       "header": "Apply Online",
@@ -26,8 +26,8 @@
       "buttons": []
     },
     {
-      "header": "Your project has a completion time of 1-2 semesters",
-      "body": "Depending on the project, this timeframe can be extended! However, our most successful projects tend to last 1-2 semesters.",
+      "header": "Your project has a completion time of 2-3 semesters",
+      "body": "Depending on the project, this timeframe can be extended! However, our most successful projects tend to last 2-3 semesters (with a possible summer semester for pass-off and maintenance).",
       "buttons": [{ "name": "View Our Portfolio", "route": "#" }]
     },
     {
