@@ -87,10 +87,10 @@ const Positions = ({ positions }) => {
                 Our teams consist of developers, a project lead, and often 
                 a UX designer. Here are our current positions.
               </BodyText>
-              <Button
+              {/* <Button
                 name="Join our community Slack"
                 route="https://join.slack.com/t/sandboxcommunity/shared_invite/zt-1khg7tjb7-kMtYwrWgNmzQ_hdTg0S1og"
-              ></Button>
+              ></Button> */}
             </HeaderColumn>
             <ParagraphContainer>{positions}</ParagraphContainer>
           </TwoColumn>
