@@ -13,7 +13,7 @@ description: "We're looking for developers to work on research projects with res
 isVisible: true
 isOpen: true
 openDate: "May 27th 2023"
-closeDate: "June 2nd 2023"
+closeDate: "June 4th 2023"
 quote: "People are very caring and just great to get along with. Projects are challenging, but the opportunities you get to push yourself and develop features, that seem like a distant idea otherwise, are amazing. For me that was OAuth. Being able to learn authentication and create a system with working Google authentication was a goal of mine for a long time. I was very happy to be able to achieve that goal while also working on a project that benefited the community."
 quoteMember: "Christina Long"
 quoteMemberTitle: "Developer on Know Your Options"
