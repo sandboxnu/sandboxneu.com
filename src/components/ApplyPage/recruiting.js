@@ -119,7 +119,7 @@ const Recruiting = () => {
         </BodyText>
         <TracksContainer>
           <Track>
-            <TrackHeader>Catepillar</TrackHeader>
+            <TrackHeader>Caterpillar</TrackHeader>
             <TrackDescription>
               For students who have completed Fundies 1 and maybe Fundies 2, might be 
               taking OOD over the summer, and don’t have an extensive background in CS 
