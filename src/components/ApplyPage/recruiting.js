@@ -119,7 +119,7 @@ const Recruiting = () => {
         </BodyText>
         <TracksContainer>
           <Track>
-            <TrackHeader>Fundies</TrackHeader>
+            <TrackHeader>Caterpillar</TrackHeader>
             <TrackDescription>
               For students who have completed Fundies 1 and maybe Fundies 2, might be 
               taking OOD over the summer, and don’t have an extensive background in CS 
@@ -127,7 +127,7 @@ const Recruiting = () => {
             </TrackDescription>
           </Track>
           <Track>
-            <TrackHeader>Algo/OOD</TrackHeader>
+            <TrackHeader>Chrysalis</TrackHeader>
             <TrackDescription>
               For students who have completed OOD and have either taken or are taking Algo. 
               Students might be applying for their first co-op, just started one, or completed 
@@ -135,7 +135,7 @@ const Recruiting = () => {
             </TrackDescription>
           </Track>
           <Track>
-            <TrackHeader>Web-dev</TrackHeader>
+            <TrackHeader>Butterfly/Moth</TrackHeader>
             <TrackDescription>
               For students who have developed a frontend or backend for a web application, 
               especially those who have experience with it from a co-op or an internship. 

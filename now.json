@@ -31,6 +31,34 @@
       "headers": {
         "Location": "https://medium.com/@dajinchu/how-sandbox-can-help-researchers-b5dbddeecf14"
       }
+    },
+    {
+      "src": "/how-we-recruit",
+      "status": 301,
+      "headers": {
+        "Location": "https://sandboxnu.notion.site/How-Sandbox-Recruits-2ff41c657d79451da91da8c659f50f56"
+      }
+    },
+    {
+      "src": "/apply/developer/form",
+      "status": 301,
+      "headers": {
+        "Location": "https://docs.google.com/forms/d/e/1FAIpQLSe7AieWIDRQg1548A9EsH1l7U7mUBZOeUl4hecZVj4MzzicWg/viewform"
+      }
+    },
+    {
+      "src": "/apply/ux-designer/form",
+      "status": 301,
+      "headers": {
+        "Location": "https://docs.google.com/forms/d/e/1FAIpQLSe4aXIwHIBk2VTGOHtJTRIFML834OPKByHMEdLt23-H54yhvA/viewform"
+      }
+    },
+    {
+      "src": "/apply/brand-designer/form",
+      "status": 301,
+      "headers": {
+        "Location": "https://docs.google.com/forms/d/e/1FAIpQLSe4aXIwHIBk2VTGOHtJTRIFML834OPKByHMEdLt23-H54yhvA/viewform"
+      }
     }
   ],
   "alias": ["www.sandboxnu.com"]

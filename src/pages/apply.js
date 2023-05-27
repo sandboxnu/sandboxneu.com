@@ -8,7 +8,7 @@ import Values from "../components/ApplyPage/values"
 import Layout from "../components/PageLayout/layout"
 import Quote from "components/ApplyPage/quote"
 import SEO from "components/seo"
-import Recruiting from "../components/ApplyPage/recruiting"
+import HowSandboxRecruits from "../components/ApplyPage/howSandboxRecruits"
 
 const ApplyPage = ({ data }) => {
   const {
@@ -41,7 +41,7 @@ const ApplyPage = ({ data }) => {
       <Quote text={quote} reference={quoteReference} />
       <Values {...data.values.edges[0].node} />
       <Positions positions={positions}/>
-      <Recruiting />
+      <HowSandboxRecruits />
     </Layout>
   )
 }
