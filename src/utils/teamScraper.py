@@ -28,17 +28,17 @@ eboard_roles = set(["Executive Director", "Technical Director", "UX Director",
                     "Operations Director", "Marketing & Events Director", "E-Board Liaison"])
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "UX Director": 2,
                       "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
-head_of_roles = set(["Head of Recruiting", "Head of DX", "Head of UX",
-                     "Head of Project Acquisition", "Head of Community"])
-head_of_roles_order = {"Head of Recruiting": 0, "Head of DX": 1, "Head of UX": 2,
-                       "Head of Project Acquisition": 3, "Head of Community": 4}
-brand_roles_order = {"Marketing & Events Director": 0, "Brand Designer": 1}
-project_teams = set(["Carpool", "Faculty Activity Tracker", "GraduateNU",
-                    "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"])
+head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
+                     "Head of Project Acquisition", "Head of Community", "Head of Brand"])
+head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
+                       "Head of Project Acquisition": 3, "Head of Community": 4, "Head of Brand": 5}
+brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
+project_teams = set(["Faculty Activity Tracker", "GraduateNU",
+                    "HappyEastie", "MFA", "SearchNEU", "SGA Tooling", "Seitz", "Platform", "Pasta Zaddy Charles"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
-team_order = ["E-Board", "Head Ofs", "Brand", "Carpool",
-              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling"]
+team_order = ["E-Board", "Head Ofs", "Brand",
+              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling", "Platform", "Pasta Zaddy Charles", "Seitz"]
 output_file = "../content/team/team.json"
 
 
@@ -77,10 +77,9 @@ def generate_team_mappings(roles, teams):
             team_to_role["E-Board"] = role
         elif role in head_of_roles:
             team_to_role["Head Ofs"] = role
-
-        if role == "Marketing & Events Director":
+        if role == "Head of Brand":
             team_to_role["Brand"] = role
-
+        
     non_leadership_teams = list(filter(lambda team: team not in set(
         ["E-Board", "Head Ofs"]), teams))
     non_leadership_roles = list(filter(lambda role: role not in eboard_roles.union(
@@ -162,7 +161,7 @@ if __name__ == '__main__':
 
         linkedin = get_linkedin(properties)
         portfolio = get_portfolio(properties)
-        if portfolio[0:8] != "https://":
+        if portfolio and portfolio[0:8] != "https://":
             portfolio = "https://" + portfolio
         email = get_email(properties)
 
