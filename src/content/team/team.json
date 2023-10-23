@@ -39,7 +39,6 @@
     },
     {
       "name": "Amanda Lee",
-<<<<<<< HEAD
       "team": {
         "name": "E-Board",
         "role": "UX Director"
@@ -165,13 +164,10 @@
     },
     {
       "name": "Anzhuo Wang",
-=======
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
       "team": {
-        "name": "E-Board",
-        "role": "UX Director"
+        "name": "Head Ofs",
+        "role": "Head of Project Acquisition"
       },
-<<<<<<< HEAD
       "profileImage": "./profileImages/SP23/Anzhuo Wang.png",
       "socialMedia": {
         "email": "wang.anz@northeastern.edu",
@@ -179,102 +175,6 @@
       }
     },
     {
-=======
-      "profileImage": "./profileImages/SP23/Amanda Lee.png",
-      "socialMedia": {
-        "email": "lee.amand@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/amandayookyunglee/"
-      }
-    },
-    {
-      "name": "Angela Weigl",
-      "team": {
-        "name": "E-Board",
-        "role": "Operations Director"
-      },
-      "profileImage": "./profileImages/SP23/Angela Weigl.png",
-      "socialMedia": {
-        "email": "weigl.a@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/angela-weigl/"
-      }
-    },
-    {
-      "name": "Devashish Sood",
-      "team": {
-        "name": "E-Board",
-        "role": "E-Board Liaison"
-      },
-      "profileImage": "./profileImages/SP23/Devashish Sood.png",
-      "socialMedia": {
-        "email": "sood.d@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/devashishsood9/"
-      }
-    },
-    {
-      "name": "Isabelle Papa",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Recruiting"
-      },
-      "profileImage": "./profileImages/SP23/Isabelle Papa.png",
-      "socialMedia": {
-        "email": "papa.is@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/isabelle-papa/"
-      }
-    },
-    {
-      "name": "Christine Cho",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Recruiting"
-      },
-      "profileImage": "./profileImages/SP23/Christine Cho.png",
-      "socialMedia": {
-        "email": "cho.ch@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/christine-harin-cho/",
-        "portfolio": "https://christine-cho.com"
-      }
-    },
-    {
-      "name": "Alton Banushi",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Developer Experience"
-      },
-      "profileImage": "./profileImages/SP23/Alton Banushi.png",
-      "socialMedia": {
-        "email": "altonbanshi@icloud.com",
-        "linkedIn": "https://www.linkedin.com/in/alton-banushi/",
-        "portfolio": "https://altonbanushi.com"
-      }
-    },
-    {
-      "name": "Duy Tran",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Developer Experience"
-      },
-      "profileImage": "./profileImages/SP23/Duy Tran.png",
-      "socialMedia": {
-        "email": "tran.duy3@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/duytv3/"
-      }
-    },
-    {
-      "name": "Anna Ji",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Designer Experience"
-      },
-      "profileImage": "./profileImages/SP23/Anna Ji.png",
-      "socialMedia": {
-        "email": "ji.a@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/anna-ji/",
-        "portfolio": "https://anna-ji.com"
-      }
-    },
-    {
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
       "name": "Robert Rosas",
       "team": {
         "name": "Head Ofs",
@@ -301,22 +201,6 @@
     {
       "name": "Jess Shang",
       "team": {
-<<<<<<< HEAD
-=======
-        "name": "Head Ofs",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/SP23/Jess Shang.png",
-      "socialMedia": {
-        "email": "jesss.yujie@gmail.com",
-        "linkedIn": "https://www.linkedin.com/in/jessica-shang000/",
-        "portfolio": "https://shangje.myportfolio.com/"
-      }
-    },
-    {
-      "name": "Jess Shang",
-      "team": {
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
         "name": "Brand",
         "role": "Head of Brand"
       },
@@ -341,20 +225,12 @@
       }
     },
     {
-<<<<<<< HEAD
       "name": "Emily Kim",
-=======
-      "name": "Emilly Kim",
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
       "team": {
         "name": "Brand",
         "role": "Brand Designer"
       },
-<<<<<<< HEAD
       "profileImage": "./profileImages/SP23/Emily Kim.png",
-=======
-      "profileImage": "./profileImages/SP23/Emilly Kim.png",
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
       "socialMedia": {
         "email": "kim.emi@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/kim-emi/",
@@ -922,7 +798,6 @@
       }
     },
     {
-<<<<<<< HEAD
       "name": "Dylan Pham",
       "team": {
         "name": "Pasta Zaddy Charles",
@@ -1026,8 +901,6 @@
       }
     },
     {
-=======
->>>>>>> 4fd36a6c04ff768dcea825e46bd42bf8bce9cd9f
       "name": "Christine Cho",
       "team": {
         "name": "Seitz",
