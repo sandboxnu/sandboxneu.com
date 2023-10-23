@@ -29,9 +29,9 @@ eboard_roles = set(["Executive Director", "Technical Director", "UX Director",
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "UX Director": 2,
                       "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                     "Head of Project Acquisition", "Head of Community", "Head of Brand"])
+                      "Head of Brand", "Head of Project Acquisition", "Head of Community"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
-                       "Head of Project Acquisition": 3, "Head of Community": 4, "Head of Brand": 5}
+                       "Head of Brand": 3, "Head of Project Acquisition": 4, "Head of Community": 5}
 brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
 project_teams = set(["Faculty Activity Tracker", "GraduateNU",
                     "HappyEastie", "MFA", "SearchNEU", "SGA Tooling", "Seitz", "Platform", "Pasta Zaddy Charles"])
