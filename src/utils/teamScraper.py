@@ -34,11 +34,11 @@ head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 
                        "Head of Brand": 3, "Head of Project Acquisition": 4, "Head of Community": 5}
 brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
 project_teams = set(["Faculty Activity Tracker", "GraduateNU",
-                    "HappyEastie", "MFA", "SearchNEU", "SGA Tooling", "Seitz", "Platform", "Pasta Zaddy Charles"])
+                    "HappyEastie", "MFA", "SearchNEU", "SGA Tooling", "Brain Game Center", "Platform", "Pasta Zaddy Charles"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
 team_order = ["E-Board", "Head Ofs", "Brand",
-              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling", "Platform", "Pasta Zaddy Charles", "Seitz"]
+              "Faculty Activity Tracker", "GraduateNU", "HappyEastie", "MFA", "ScoutTrek", "SearchNEU", "SGA Tooling", "Platform", "Pasta Zaddy Charles", "Brain Game Center"]
 output_file = "../content/team/team.json"
 
 
