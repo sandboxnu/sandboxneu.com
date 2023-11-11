@@ -903,7 +903,7 @@
     {
       "name": "Christine Cho",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Project Lead"
       },
       "profileImage": "./profileImages/SP23/Christine Cho.png",
@@ -916,7 +916,7 @@
     {
       "name": "Ross Newman",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Technical Lead"
       },
       "profileImage": "./profileImages/SP23/Ross Newman.png",
@@ -928,7 +928,7 @@
     {
       "name": "Allison Grant",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Designer"
       },
       "profileImage": "./profileImages/SP23/Allison Grant.png",
@@ -941,7 +941,7 @@
     {
       "name": "Mathena Chan",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Designer"
       },
       "profileImage": "./profileImages/SP23/Mathena Chan.png",
@@ -954,19 +954,19 @@
     {
       "name": "Gabe Manalang",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Developer"
       },
       "profileImage": "./profileImages/SP23/Gabe Manalang.png",
       "socialMedia": {
         "email": "manalang.g@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/gmanalang/"
+        "linkedIn": "https://www.linkedin.com/in/gabrielmanalang/"
       }
     },
     {
       "name": "Amber Chow",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Developer"
       },
       "profileImage": "./profileImages/SP23/Amber Chow.png",
@@ -978,7 +978,7 @@
     {
       "name": "David O\u2019Brien",
       "team": {
-        "name": "Seitz",
+        "name": "Brain Game Center",
         "role": "Developer"
       },
       "profileImage": "./profileImages/SP23/David O\u2019Brien.png",
