@@ -83,7 +83,7 @@ const SocialSection = styled.div`
 `
 
 const SocialLogo = styled(FontAwesomeIcon)`
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   max-width: 20px;
   transition: color 0.3s;
   font-size: 20px;
@@ -191,7 +191,7 @@ const SocialInfo = ({ info, icon }) => {
   )
 }
 
-const InfoLink = props => {
+const InfoLink = (props) => {
   return <StyledLink href={props.dest}>{props.children}</StyledLink>
 }
 
@@ -254,10 +254,14 @@ const Footer = ({
           </Contact>
           <FooterInfo>
             <Navigate>
-            {pages.map(p => (  <InfoLink key={p.name} dest={p.route}>{p.name}</InfoLink>))}
+              {pages.map((p) => (
+                <InfoLink key={p.name} dest={p.route}>
+                  {p.name}
+                </InfoLink>
+              ))}
             </Navigate>
             <HostedBy>
-              Sandbox &copy; 2022 hosted by&nbsp;
+              Sandbox &copy; 2023 hosted by&nbsp;
               <Vercel href="https://vercel.com?utm_source=sandbox">
                 Vercel
               </Vercel>
