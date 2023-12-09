@@ -22,7 +22,7 @@ const PositionSection = styled(Section)`
 `
 
 const Description = styled(Body)`
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   padding-top: 1em;
   font-size: 20px;
   padding-bottom: 2em;
@@ -37,7 +37,7 @@ const Header = styled.h2`
   font-size: 1.7em;
   font-weight: 600;
   margin: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Montserrat;
   font-style: italic;
 
@@ -94,29 +94,27 @@ const Position = ({ fields, frontmatter }) => {
 
   // this is terrible lol
   React.useEffect(() => {
-    const role = frontmatter.role.toLowerCase();
-    if (role.includes('developer')) {
+    const role = frontmatter.role.toLowerCase()
+    if (role.includes("developer")) {
       setBackground(SB_NAVY)
-    } else if (role.includes('ux designer')) {
+    } else if (role.includes("ux designer")) {
       setBackground(SB_SALMON)
-    } else if (role.includes('brand designer')) {
+    } else if (role.includes("brand designer")) {
       setBackground(SB_INK)
-    } 
-  }, []);
+    }
+  }, [])
 
   return (
-    <PositionSection style={{background: background}}>
+    <PositionSection style={{ background: background }}>
       <HeadingContainer>
         <Header>{frontmatter.role}</Header>
       </HeadingContainer>
-      <Description>
-        {frontmatter.description}
-      </Description>
+      <Description>{frontmatter.description}</Description>
       <PositionButton
         background={background}
         name={"Learn more" + (frontmatter.isOpen ? " and apply" : "")}
-        route={fields.slug}>
-      ></PositionButton>
+        route={fields.slug}
+      />
     </PositionSection>
   )
 }
