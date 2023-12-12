@@ -552,6 +552,18 @@
       }
     },
     {
+      "name": "Sebastian Wittrock",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Technical Lead"
+      },
+      "profileImage": "./profileImages/SP23/Sebastian Wittrock.png",
+      "socialMedia": {
+        "email": "wittrock.s@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/sebastian-wittrock/"
+      }
+    },
+    {
       "name": "Robert Kan",
       "team": {
         "name": "SearchNEU",
@@ -598,18 +610,6 @@
       "socialMedia": {
         "email": "phadke.pr@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/pranav-phadke/"
-      }
-    },
-    {
-      "name": "Sebastian Wittrock",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP23/Sebastian Wittrock.png",
-      "socialMedia": {
-        "email": "wittrock.s@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/sebastian-wittrock/"
       }
     },
     {
@@ -715,7 +715,7 @@
       "name": "Luke Taylor",
       "team": {
         "name": "Platform",
-        "role": "Developer"
+        "role": "Project Lead"
       },
       "profileImage": "./profileImages/SP23/Luke Taylor.png",
       "socialMedia": {
