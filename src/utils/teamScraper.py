@@ -24,9 +24,9 @@ query = {
     }
 }
 
-eboard_roles = set(["Executive Director", "Technical Director", "UX Director",
+eboard_roles = set(["Executive Director", "Technical Director", "Design Director",
                     "Operations Director", "Marketing & Events Director", "E-Board Liaison"])
-eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "UX Director": 2,
+eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
                       "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
                       "Head of Brand", "Head of Project Acquisition", "Head of Community"])
