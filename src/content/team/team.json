@@ -603,6 +603,107 @@
         "email": "obrien.da@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/davidob1/"
       }
+    },
+    {
+      "name": "Josh Wang",
+      "team": {
+        "name": "Cooper",
+        "role": "Project Lead"
+      },
+      "profileImage": "./profileImages/SP23/Josh Wang.png",
+      "socialMedia": {
+        "email": "wang.jos@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/joshwang-p/"
+      }
+    },
+    {
+      "name": "Rishi Kanabar",
+      "team": {
+        "name": "Cooper",
+        "role": "Technical Lead"
+      },
+      "profileImage": "./profileImages/SP23/Rishi Kanabar.png",
+      "socialMedia": {
+        "email": "rishikesh.kanabar@gmail.com",
+        "linkedIn": "https://www.linkedin.com/in/rishikeshnk",
+        "portfolio": "https://kanabar.dev"
+      }
+    },
+    {
+      "name": "Michelle Wu",
+      "team": {
+        "name": "Cooper",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/SP23/Michelle Wu.png",
+      "socialMedia": {
+        "email": "wu.mich@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/michellewu13/",
+        "portfolio": "https://michellexwu.carrd.co/"
+      }
+    },
+    {
+      "name": "Dewi Kalis",
+      "team": {
+        "name": "Cooper",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/SP23/Dewi Kalis.png",
+      "socialMedia": {
+        "email": "kalis.d@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/dewi-kalis-95539a226/",
+        "portfolio": "https://kalisd.myportfolio.com"
+      }
+    },
+    {
+      "name": "Serena Ng",
+      "team": {
+        "name": "Cooper",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/SP23/Serena Ng.png",
+      "socialMedia": {
+        "email": "ng.se@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/ng-serena/",
+        "portfolio": "https://www.serenang.com/"
+      }
+    },
+    {
+      "name": "Cinye Cai",
+      "team": {
+        "name": "Cooper",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/SP23/Cinye Cai.png",
+      "socialMedia": {
+        "email": "cai.ci@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/cinye-cai "
+      }
+    },
+    {
+      "name": "Alton Banushi",
+      "team": {
+        "name": "Cooper",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/SP23/Alton Banushi.png",
+      "socialMedia": {
+        "email": "altonbanshi@icloud.com",
+        "linkedIn": "https://www.linkedin.com/in/alton-banushi/",
+        "portfolio": "https://altonbanushi.com"
+      }
+    },
+    {
+      "name": "Solomon Rashidzada",
+      "team": {
+        "name": "Cooper",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/SP23/Solomon Rashidzada.png",
+      "socialMedia": {
+        "email": "Rashidzada.s@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/solomon-rashidzada-b958a5261/"
+      }
     }
   ]
 }
