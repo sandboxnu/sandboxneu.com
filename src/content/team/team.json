@@ -593,6 +593,18 @@
       }
     },
     {
+      "name": "Solomon Rashidzada",
+      "team": {
+        "name": "Brain Game Center",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/SP23/Solomon Rashidzada.png",
+      "socialMedia": {
+        "email": "Rashidzada.s@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/solomon-rashidzada-b958a5261/"
+      }
+    },
+    {
       "name": "David O\u2019Brien",
       "team": {
         "name": "Brain Game Center",
@@ -652,7 +664,7 @@
       "socialMedia": {
         "email": "kalis.d@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/dewi-kalis-95539a226/",
-        "portfolio": "https://kalisd.myportfolio.com"
+        "portfolio": "https://dewikalis.webflow.io/"
       }
     },
     {
@@ -691,18 +703,6 @@
         "email": "altonbanshi@icloud.com",
         "linkedIn": "https://www.linkedin.com/in/alton-banushi/",
         "portfolio": "https://altonbanushi.com"
-      }
-    },
-    {
-      "name": "Solomon Rashidzada",
-      "team": {
-        "name": "Cooper",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP23/Solomon Rashidzada.png",
-      "socialMedia": {
-        "email": "Rashidzada.s@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/solomon-rashidzada-b958a5261/"
       }
     }
   ]
