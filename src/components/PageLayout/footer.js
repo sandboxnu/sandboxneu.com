@@ -261,7 +261,7 @@ const Footer = ({
               ))}
             </Navigate>
             <HostedBy>
-              Sandbox &copy; 2023 hosted by&nbsp;
+              Sandbox &copy; 2024 hosted by&nbsp;
               <Vercel href="https://vercel.com?utm_source=sandbox">
                 Vercel
               </Vercel>

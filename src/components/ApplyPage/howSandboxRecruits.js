@@ -47,8 +47,14 @@ const HowSandboxRecruits = () => {
     <RecruitingSection>
         <SectionHeader>How we recruit</SectionHeader>
         <Button
-          name={<span>Read our article: <b>How Sandbox Recruits</b>!</span>}
-          route={"/how-we-recruit"}/>
+          name={<span>Read our article: <b>How Sandbox Recruits Developers</b>!</span>}
+          route={"/how-we-recruit-developers"}/>
+      <Button
+        name={<span>Read our article: <b>How Sandbox Recruits UX Designers</b>!</span>}
+        route={"/how-we-recruit-ux-designers"} />
+      <Button
+        name={<span>Read our article: <b>How Sandbox Recruits Brand Designers</b>!</span>}
+        route={"/how-we-recruit-brand-designers"} />
     </RecruitingSection>
   )
 }
