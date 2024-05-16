@@ -15,8 +15,8 @@ role: Brand Designer
 description: We’re looking for brand designers to design branding, promotional material (digital and paper), graphics, and merch while utilizing and expanding upon our current brand guides. As a brand designer in Sandbox, you’ll work with other brand designers, our Head of Brand, and our Events Director to continuously promote Sandbox and improve its public image.
 isVisible: true
 isOpen: true
-openDate: "May 13th 2023"
-closeDate: "May 22nd 2023"
+openDate: "May 13th 2024"
+closeDate: "May 22nd 2024"
 ---
 
 Sandbox is Northeastern’s student led software consultancy that aims to unleash the power of student-driven software. We build solutions to accelerate research for scientists, as well as in-house tools for the Northeastern community, such as [searchneu.com](https://searchneu.com) and [GraduateNU](https://graduatenu.com) (a tool to help students build a plan of study).
