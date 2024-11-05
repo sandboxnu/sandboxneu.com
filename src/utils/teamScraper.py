@@ -25,18 +25,18 @@ query = {
 }
 
 eboard_roles = set(["Executive Director", "Technical Director", "Design Director",
-                    "Operations Director", "Marketing & Events Director", "E-Board Liaison"])
+                    "Operations Director", "Events Director", "E-Board Liaison"])
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
-                      "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
+                      "Operations Director": 3, "Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                      "Head of Brand", "Head of Project Acquisition", "Head of Community"])
+                      "Head of Brand", "Head of Project Acquisition"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
-                       "Head of Brand": 3, "Head of Project Acquisition": 4, "Head of Community": 5}
+                       "Head of Brand": 3, "Head of Project Acquisition": 4}
 brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
-project_teams = set(["GraduateNU","MFA", "SearchNEU", "Brain Game Center", "Platform", "Cooper"])
+project_teams = set(["GraduateNU","MFA Forms", "SearchNEU", "Brain Game Center", "Good Dog Licensing", "Cooper"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
-team_order = ["E-Board", "Head Ofs", "Brand", "GraduateNU", "MFA", "SearchNEU", "Platform", "Brain Game Center", "Cooper"]
+team_order = ["E-Board", "Head Ofs", "Brand", "GraduateNU", "MFA Forms", "SearchNEU", "Good Dog Licensing", "Brain Game Center", "Cooper"]
 output_file = "../content/team/team.json"
 
 
@@ -63,7 +63,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": f"./profileImages/SP23/{name}.png",
+        "profileImage": f"./profileImages/F24/{name}.png",
         "socialMedia": social_media_filtered
     }
 
@@ -109,7 +109,7 @@ def download_member_headshot(person, name):
         return
 
     print(f"Downloading member headshot for {name}")
-    image_name = "../content/team/profileImages/SP23/" + name + ".png"
+    image_name = "../content/team/profileImages/F24/" + name + ".png"
     signed_s3_url = files[0]["file"]["url"]
     response = requests.get(signed_s3_url, stream=True)
     with open(image_name, 'wb') as out_file:
