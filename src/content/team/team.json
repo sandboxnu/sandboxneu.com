@@ -64,6 +64,18 @@
       }
     },
     {
+      "name": "Cinye Cai",
+      "team": {
+        "name": "E-Board",
+        "role": "Events Director"
+      },
+      "profileImage": "./profileImages/F24/Cinye Cai.png",
+      "socialMedia": {
+        "email": "cai.ci@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/cinye-cai "
+      }
+    },
+    {
       "name": "Lucas Dunker",
       "team": {
         "name": "E-Board",
@@ -167,6 +179,18 @@
       }
     },
     {
+      "name": "David O\u2019Brien",
+      "team": {
+        "name": "Head Ofs",
+        "role": "Head of Project Acquisition"
+      },
+      "profileImage": "./profileImages/F24/David O\u2019Brien.png",
+      "socialMedia": {
+        "email": "obrien.da@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/davidob1/"
+      }
+    },
+    {
       "name": "Bryce Buttrey",
       "team": {
         "name": "Brand",
@@ -230,19 +254,6 @@
       }
     },
     {
-      "name": "Connie Lin",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Designer"
-      },
-      "profileImage": "./profileImages/F24/Connie Lin.png",
-      "socialMedia": {
-        "email": "lin.con@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/clin0608/",
-        "portfolio": "https://linky.design/connielin"
-      }
-    },
-    {
       "name": "Amanda Lee",
       "team": {
         "name": "GraduateNU",
@@ -256,15 +267,29 @@
       }
     },
     {
-      "name": "Shireen Kumar",
+      "name": "Connie Lin",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/F24/Connie Lin.png",
+      "socialMedia": {
+        "email": "lin.con@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/clin0608/",
+        "portfolio": "https://linky.design/connielin"
+      }
+    },
+    {
+      "name": "Dennis Wang",
       "team": {
         "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Shireen Kumar.png",
+      "profileImage": "./profileImages/F24/Dennis Wang.png",
       "socialMedia": {
-        "email": "kumar.shire@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/shireen-kumar-387132210/"
+        "email": "wang.yicheng4@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/denniswang812/",
+        "portfolio": "https://denniswang.vercel.app/"
       }
     },
     {
@@ -281,16 +306,15 @@
       }
     },
     {
-      "name": "Dennis Wang",
+      "name": "Shireen Kumar",
       "team": {
         "name": "GraduateNU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Dennis Wang.png",
+      "profileImage": "./profileImages/F24/Shireen Kumar.png",
       "socialMedia": {
-        "email": "wang.yicheng4@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/denniswang812/",
-        "portfolio": "https://denniswang.vercel.app/"
+        "email": "kumar.shire@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/shireen-kumar-387132210/"
       }
     },
     {
@@ -318,18 +342,6 @@
       }
     },
     {
-      "name": "Sophia Ngo",
-      "team": {
-        "name": "MFA Forms",
-        "role": "Designer"
-      },
-      "profileImage": "./profileImages/F24/Sophia Ngo.png",
-      "socialMedia": {
-        "email": "ngo.so@northeastern.edu",
-        "linkedIn": "www.linkedin.com/in/sophia-vananh-ngo"
-      }
-    },
-    {
       "name": "Allison Grant",
       "team": {
         "name": "MFA Forms",
@@ -343,16 +355,27 @@
       }
     },
     {
-      "name": "Lauren Brissette",
+      "name": "Sophia Ngo",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/F24/Sophia Ngo.png",
+      "socialMedia": {
+        "email": "ngo.so@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/sophia-vananh-ngo"
+      }
+    },
+    {
+      "name": "Angela Weigl",
       "team": {
         "name": "MFA Forms",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Lauren Brissette.png",
+      "profileImage": "./profileImages/F24/Angela Weigl.png",
       "socialMedia": {
-        "email": "brissette.l@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/lauren-brissette/",
-        "portfolio": "https://laurenbrissette.github.io/portfolio/"
+        "email": "weigl.a@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/angela-weigl/"
       }
     },
     {
@@ -381,15 +404,16 @@
       }
     },
     {
-      "name": "Angela Weigl",
+      "name": "Lauren Brissette",
       "team": {
         "name": "MFA Forms",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Angela Weigl.png",
+      "profileImage": "./profileImages/F24/Lauren Brissette.png",
       "socialMedia": {
-        "email": "weigl.a@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/angela-weigl/"
+        "email": "brissette.l@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/lauren-brissette/",
+        "portfolio": "https://laurenbrissette.github.io/portfolio/"
       }
     },
     {
@@ -429,6 +453,19 @@
       }
     },
     {
+      "name": "Anzhuo Wang",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Anzhuo Wang.png",
+      "socialMedia": {
+        "email": "wang.anz@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/anzhuo-wang/",
+        "portfolio": "https://anzhuow.vercel.app"
+      }
+    },
+    {
       "name": "Carter Herman",
       "team": {
         "name": "SearchNEU",
@@ -438,18 +475,6 @@
       "socialMedia": {
         "email": "herman.car@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/carter-herman-500726263/"
-      }
-    },
-    {
-      "name": "Nick Pfeiffer",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Nick Pfeiffer.png",
-      "socialMedia": {
-        "email": "pfeiffer.n@northeasten.edu",
-        "linkedIn": "https://www.linkedin.com/in/nickpfeiffer05/"
       }
     },
     {
@@ -466,16 +491,15 @@
       }
     },
     {
-      "name": "Anzhuo Wang",
+      "name": "Nick Pfeiffer",
       "team": {
         "name": "SearchNEU",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Anzhuo Wang.png",
+      "profileImage": "./profileImages/F24/Nick Pfeiffer.png",
       "socialMedia": {
-        "email": "wang.anz@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/anzhuo-wang/",
-        "portfolio": "https://anzhuow.vercel.app"
+        "email": "pfeiffer.n@northeasten.edu",
+        "linkedIn": "https://www.linkedin.com/in/nickpfeiffer05/"
       }
     },
     {
@@ -488,19 +512,6 @@
       "socialMedia": {
         "email": "papa.is@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/isabelle-papa/"
-      }
-    },
-    {
-      "name": "Tristan Phan",
-      "team": {
-        "name": "Good Dog Licensing",
-        "role": "Designer"
-      },
-      "profileImage": "./profileImages/F24/Tristan Phan.png",
-      "socialMedia": {
-        "email": "phan.tri@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/tristan-phan/",
-        "portfolio": "https://phantri.myportfolio.com/"
       }
     },
     {
@@ -517,40 +528,16 @@
       }
     },
     {
-      "name": "Jordan Praissman",
+      "name": "Tristan Phan",
       "team": {
         "name": "Good Dog Licensing",
-        "role": "Developer"
+        "role": "Designer"
       },
-      "profileImage": "./profileImages/F24/Jordan Praissman.png",
+      "profileImage": "./profileImages/F24/Tristan Phan.png",
       "socialMedia": {
-        "email": "praissman.j@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/jordan-praissman/"
-      }
-    },
-    {
-      "name": "Tracy Huang",
-      "team": {
-        "name": "Good Dog Licensing",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Tracy Huang.png",
-      "socialMedia": {
-        "email": "huang.tr@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/huang-tracy/",
-        "portfolio": "https://tracyyh.github.io/PersonalWebsite/"
-      }
-    },
-    {
-      "name": "Sanjana Singhania",
-      "team": {
-        "name": "Good Dog Licensing",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Sanjana Singhania.png",
-      "socialMedia": {
-        "email": "singhania.sa@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/sanjana-singhania"
+        "email": "phan.tri@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/tristan-phan/",
+        "portfolio": "https://phantri.myportfolio.com/"
       }
     },
     {
@@ -567,6 +554,18 @@
       }
     },
     {
+      "name": "Jordan Praissman",
+      "team": {
+        "name": "Good Dog Licensing",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Jordan Praissman.png",
+      "socialMedia": {
+        "email": "praissman.j@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/jordan-praissman/"
+      }
+    },
+    {
       "name": "Owen Simpson",
       "team": {
         "name": "Good Dog Licensing",
@@ -577,6 +576,31 @@
         "email": "simpson.o@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/owen-s-simpson/",
         "portfolio": "https://owens1127.github.io/"
+      }
+    },
+    {
+      "name": "Sanjana Singhania",
+      "team": {
+        "name": "Good Dog Licensing",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Sanjana Singhania.png",
+      "socialMedia": {
+        "email": "singhania.sa@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/sanjana-singhania"
+      }
+    },
+    {
+      "name": "Tracy Huang",
+      "team": {
+        "name": "Good Dog Licensing",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Tracy Huang.png",
+      "socialMedia": {
+        "email": "huang.tr@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/huang-tracy/",
+        "portfolio": "https://tracyyh.github.io/PersonalWebsite/"
       }
     },
     {
@@ -619,6 +643,18 @@
       }
     },
     {
+      "name": "Amber Chow",
+      "team": {
+        "name": "Brain Game Center",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Amber Chow.png",
+      "socialMedia": {
+        "email": "chow.am@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/amber-chow-5a7238204/"
+      }
+    },
+    {
       "name": "Ananya Rath ",
       "team": {
         "name": "Brain Game Center",
@@ -628,6 +664,18 @@
       "socialMedia": {
         "email": "rath.an@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/ananya-rath/"
+      }
+    },
+    {
+      "name": "David O\u2019Brien",
+      "team": {
+        "name": "Brain Game Center",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/David O\u2019Brien.png",
+      "socialMedia": {
+        "email": "obrien.da@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/davidob1/"
       }
     },
     {
@@ -643,18 +691,6 @@
       }
     },
     {
-      "name": "Amber Chow",
-      "team": {
-        "name": "Brain Game Center",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Amber Chow.png",
-      "socialMedia": {
-        "email": "chow.am@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/amber-chow-5a7238204/"
-      }
-    },
-    {
       "name": "Solomon Rashidzada",
       "team": {
         "name": "Brain Game Center",
@@ -664,18 +700,6 @@
       "socialMedia": {
         "email": "Rashidzada.s@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/solomon-rashidzada-b958a5261/"
-      }
-    },
-    {
-      "name": "David O\u2019Brien",
-      "team": {
-        "name": "Brain Game Center",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/David O\u2019Brien.png",
-      "socialMedia": {
-        "email": "obrien.da@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/davidob1/"
       }
     },
     {
@@ -729,16 +753,28 @@
       }
     },
     {
-      "name": "Xiaole Su",
+      "name": "Alton Banushi",
       "team": {
         "name": "Cooper",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Xiaole Su.png",
+      "profileImage": "./profileImages/F24/Alton Banushi.png",
       "socialMedia": {
-        "email": "su.xiaol@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/xiaolesu/",
-        "portfolio": "https://xiaolesu.netlify.app/"
+        "email": "altonbanshi@icloud.com",
+        "linkedIn": "https://www.linkedin.com/in/alton-banushi/",
+        "portfolio": "https://altonbanushi.com"
+      }
+    },
+    {
+      "name": "Cinye Cai",
+      "team": {
+        "name": "Cooper",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Cinye Cai.png",
+      "socialMedia": {
+        "email": "cai.ci@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/cinye-cai "
       }
     },
     {
@@ -755,28 +791,16 @@
       }
     },
     {
-      "name": "Cinye Cai",
+      "name": "Xiaole Su",
       "team": {
         "name": "Cooper",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Cinye Cai.png",
+      "profileImage": "./profileImages/F24/Xiaole Su.png",
       "socialMedia": {
-        "email": "cai.ci@northeastern.edu",
-        "linkedIn": "www.linkedin.com/in/cinye-cai "
-      }
-    },
-    {
-      "name": "Alton Banushi",
-      "team": {
-        "name": "Cooper",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Alton Banushi.png",
-      "socialMedia": {
-        "email": "altonbanshi@icloud.com",
-        "linkedIn": "https://www.linkedin.com/in/alton-banushi/",
-        "portfolio": "https://altonbanushi.com"
+        "email": "su.xiaol@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/xiaolesu/",
+        "portfolio": "https://xiaolesu.netlify.app/"
       }
     }
   ]
