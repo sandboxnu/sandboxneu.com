@@ -25,18 +25,19 @@ query = {
 }
 
 eboard_roles = set(["Executive Director", "Technical Director", "Design Director",
-                    "Operations Director", "Marketing & Events Director", "E-Board Liaison"])
+                    "Operations Director", "Events Director", "E-Board Liaison"])
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
-                      "Operations Director": 3, "Marketing & Events Director": 4, "E-Board Liaison": 5}
+                      "Operations Director": 3, "Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                      "Head of Brand", "Head of Project Acquisition", "Head of Community"])
+                     "Head of Brand", "Head of Project Acquisition"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
-                       "Head of Brand": 3, "Head of Project Acquisition": 4, "Head of Community": 5}
+                       "Head of Brand": 3, "Head of Project Acquisition": 4}
 brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
-project_teams = set(["GraduateNU","MFA", "SearchNEU", "Brain Game Center", "Platform", "Cooper"])
+project_teams = set(["GraduateNU", "MFA Forms", "SearchNEU", "Brain Game Center", "Good Dog Licensing", "Cooper"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
-team_order = ["E-Board", "Head Ofs", "Brand", "GraduateNU", "MFA", "SearchNEU", "Platform", "Brain Game Center", "Cooper"]
+team_order = ["E-Board", "Head Ofs", "Brand", "GraduateNU", "MFA Forms", "SearchNEU", "Good Dog Licensing",
+              "Brain Game Center", "Cooper"]
 output_file = "../content/team/team.json"
 
 
@@ -44,8 +45,8 @@ def get_current_members_from_notion():
     print("Retrieving current members from Notion Club Directory")
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
-    results = data["results"]
-    return results
+    member_data = data["results"]
+    return member_data
 
 
 def make_person(name, team_name, role, linkedin, portfolio, email):
@@ -55,7 +56,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
         "portfolio": portfolio or None
     }
     social_media_filtered = {k: v for k,
-                             v in social_media.items() if v is not None}
+                                      v in social_media.items() if v is not None}
 
     return {
         "name": name,
@@ -63,7 +64,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": f"./profileImages/SP23/{name}.png",
+        "profileImage": f"./profileImages/F24/{name}.png",
         "socialMedia": social_media_filtered
     }
 
@@ -77,11 +78,10 @@ def generate_team_mappings(roles, teams):
             team_to_role["Head Ofs"] = role
         if role == "Head of Brand":
             team_to_role["Brand"] = role
-        
-    non_leadership_teams = list(filter(lambda team: team not in set(
-        ["E-Board", "Head Ofs"]), teams))
+
+    non_leadership_teams = list(filter(lambda team: team not in {"E-Board", "Head Ofs"}, teams))
     non_leadership_roles = list(filter(lambda role: role not in eboard_roles.union(
-        head_of_roles).union(set(["New Member"])), roles))
+        head_of_roles).union({"New Member"}), roles))
     for team in non_leadership_teams:
         if len(non_leadership_roles) != 0:
             team_to_role[team] = non_leadership_roles[0]
@@ -108,12 +108,16 @@ def download_member_headshot(person, name):
         print(f"No member headshot found for {name}")
         return
 
+    directory = "../content/team/profileImages/F24/"
+    os.makedirs(directory, exist_ok=True)
+
     print(f"Downloading member headshot for {name}")
-    image_name = "../content/team/profileImages/SP23/" + name + ".png"
+    image_name = directory + name + ".png"
     signed_s3_url = files[0]["file"]["url"]
     response = requests.get(signed_s3_url, stream=True)
     with open(image_name, 'wb') as out_file:
         shutil.copyfileobj(response.raw, out_file)
+    return image_name
 
 
 def get_final_members_list(teams_to_members):
@@ -127,7 +131,7 @@ def get_final_members_list(teams_to_members):
         elif team == "E-Board":
             team_member_list.sort(
                 key=lambda member: eboard_roles_order[member["team"]["role"]]
-            ) 
+            )
         elif team == "Head Ofs":
             team_member_list.sort(
                 key=lambda member: head_of_roles_order[member["team"]["role"]]
