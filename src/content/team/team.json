@@ -205,6 +205,19 @@
       }
     },
     {
+      "name": "Elaine Min",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Project Lead"
+      },
+      "profileImage": "./profileImages/F24/Elaine Min.png",
+      "socialMedia": {
+        "email": "min.e@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/elaine-min-85b170263/",
+        "portfolio": "https://elainemin.com"
+      }
+    },
+    {
       "name": "Kobe Zheng",
       "team": {
         "name": "GraduateNU",
@@ -227,19 +240,6 @@
         "email": "lin.con@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/clin0608/",
         "portfolio": "https://linky.design/connielin"
-      }
-    },
-    {
-      "name": "Elaine Min",
-      "team": {
-        "name": "GraduateNU",
-        "role": "Designer"
-      },
-      "profileImage": "./profileImages/F24/Elaine Min.png",
-      "socialMedia": {
-        "email": "min.e@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/elaine-min-85b170263/",
-        "portfolio": "https://elainemin.com"
       }
     },
     {
@@ -294,16 +294,113 @@
       }
     },
     {
-      "name": "Suraj Ramchandran",
+      "name": "Iris Zhang",
       "team": {
-        "name": "GraduateNU",
+        "name": "MFA Forms",
+        "role": "Project Lead"
+      },
+      "profileImage": "./profileImages/F24/Iris Zhang.png",
+      "socialMedia": {
+        "email": "zhang.iri@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/iris-zhang-02/"
+      }
+    },
+    {
+      "name": "Kaiyang Zheng",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Technical Lead"
+      },
+      "profileImage": "./profileImages/F24/Kaiyang Zheng.png",
+      "socialMedia": {
+        "email": "zheng.kaiy@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/kaiyang-zheng-843290160/"
+      }
+    },
+    {
+      "name": "Sophia Ngo",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/F24/Sophia Ngo.png",
+      "socialMedia": {
+        "email": "ngo.so@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/sophia-vananh-ngo"
+      }
+    },
+    {
+      "name": "Allison Grant",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Designer"
+      },
+      "profileImage": "./profileImages/F24/Allison Grant.png",
+      "socialMedia": {
+        "email": "grant.all@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/allison-grant-a0255b266",
+        "portfolio": "https://grantall.wixsite.com/allison-grant"
+      }
+    },
+    {
+      "name": "Lauren Brissette",
+      "team": {
+        "name": "MFA Forms",
         "role": "Developer"
       },
-      "profileImage": "./profileImages/F24/Suraj Ramchandran.png",
+      "profileImage": "./profileImages/F24/Lauren Brissette.png",
       "socialMedia": {
-        "email": "ramchandran.s@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/surajramchandran/",
-        "portfolio": "https://www.surajramchandran.com/"
+        "email": "brissette.l@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/lauren-brissette/",
+        "portfolio": "https://laurenbrissette.github.io/portfolio/"
+      }
+    },
+    {
+      "name": "Donny Le",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Donny Le.png",
+      "socialMedia": {
+        "email": "le.don@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/donny-le/"
+      }
+    },
+    {
+      "name": "Gayatri Kondabathini",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Gayatri Kondabathini.png",
+      "socialMedia": {
+        "email": "kondabathini.g@northeastern.edu",
+        "linkedIn": "www.linkedin.com/in/gayatri-kondabathini-731b99280",
+        "portfolio": "https://gayatri-k26.github.io/gayatrik.github.io/"
+      }
+    },
+    {
+      "name": "Angela Weigl",
+      "team": {
+        "name": "MFA Forms",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Angela Weigl.png",
+      "socialMedia": {
+        "email": "weigl.a@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/angela-weigl/"
+      }
+    },
+    {
+      "name": "Ananya Patil",
+      "team": {
+        "name": "SearchNEU",
+        "role": "Project Lead"
+      },
+      "profileImage": "./profileImages/F24/Ananya Patil.png",
+      "socialMedia": {
+        "email": "patil.anan@northeastern.edu"
       }
     },
     {
@@ -366,17 +463,6 @@
         "email": "mehall.m@northeastern.edu",
         "linkedIn": "https://www.linkedin.com/in/michael-mehall-4a690a21b/",
         "portfolio": "https://mehallhm.com"
-      }
-    },
-    {
-      "name": "Ananya Patil",
-      "team": {
-        "name": "SearchNEU",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/F24/Ananya Patil.png",
-      "socialMedia": {
-        "email": "patil.anan@northeastern.edu"
       }
     },
     {
