@@ -127,19 +127,6 @@
       }
     },
     {
-      "name": "Owen Simpson",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Developer Experience"
-      },
-      "profileImage": "./profileImages/F24/Owen Simpson.png",
-      "socialMedia": {
-        "email": "simpson.o@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/owen-s-simpson/",
-        "portfolio": "https://owens1127.github.io/"
-      }
-    },
-    {
       "name": "Suraj Ramchandran",
       "team": {
         "name": "Head Ofs",
