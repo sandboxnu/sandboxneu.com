@@ -305,6 +305,19 @@
       }
     },
     {
+      "name": "Suraj Ramchandran",
+      "team": {
+        "name": "GraduateNU",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/F24/Suraj Ramchandran.png",
+      "socialMedia": {
+        "email": "ramchandran.s@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/surajramchandran/",
+        "portfolio": "https://www.surajramchandran.com/"
+      }
+    },
+    {
       "name": "Iris Zhang",
       "team": {
         "name": "MFA Forms",
