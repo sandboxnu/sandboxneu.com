@@ -56,7 +56,7 @@ const AboutPage = ({ data }) => {
       <Banner>
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
-          <span>Applications for Fall 2024 are now closed</span>
+          <span>Applications for Spring 2025 are now open!</span>
         </JoinBannerContent>
       </Banner>
     </Layout>
