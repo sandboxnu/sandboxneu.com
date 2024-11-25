@@ -13,8 +13,8 @@ role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true
 isOpen: true
-openDate: "May 13th 2024"
-closeDate: "My 22nd 2024"
+openDate: "November 29th 2024"
+closeDate: "December 8th 2024"
 quote: "The most tight-knit, supportive community I have ever been part of, but also the most talented yet fun people I've ever met. Genuinely not exaggerated at all, they are some of the MOST talented people I know who know how to enjoy life too."
 quoteMember: "Christine Cho"
 quoteMemberTitle: "Designer on EdLaw"
