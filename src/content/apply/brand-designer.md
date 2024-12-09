@@ -16,7 +16,7 @@ description: We’re looking for brand designers to design branding, promotional
 isVisible: true
 isOpen: true
 openDate: "November 29th 2024"
-closeDate: "December 8th 2024"
+closeDate: "December 11th 2024"
 ---
 
 Sandbox is Northeastern’s student led software consultancy that aims to unleash the power of student-driven software. We build solutions to accelerate research for scientists, as well as in-house tools for the Northeastern community, such as [searchneu.com](https://searchneu.com) and [GraduateNU](https://graduatenu.com) (a tool to help students build a plan of study).
