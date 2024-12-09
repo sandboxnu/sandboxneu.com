@@ -14,7 +14,7 @@ description: We're looking for UX designers to join our project teams and make d
 isVisible: true
 isOpen: true
 openDate: "November 29th 2024"
-closeDate: "December 8th 2024"
+closeDate: "December 11th 2024"
 quote: "The most tight-knit, supportive community I have ever been part of, but also the most talented yet fun people I've ever met. Genuinely not exaggerated at all, they are some of the MOST talented people I know who know how to enjoy life too."
 quoteMember: "Christine Cho"
 quoteMemberTitle: "Designer on EdLaw"
