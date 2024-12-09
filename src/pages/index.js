@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
       <Banner>
         <JoinBannerContent>
           <div>JOIN OUR TEAM</div>
-          <span>Applications for Spring 2025 are now open!</span>
+          <span>Applications for Spring 2025 are now closed</span>
         </JoinBannerContent>
       </Banner>
     </Layout>
