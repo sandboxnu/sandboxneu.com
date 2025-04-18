@@ -9,7 +9,7 @@ qualities:
   - Communicates well
   - Is kind
   - Can commit to 10 hours a week
-formLink: "https://sandbox.fillout.com/F25branddesignerapplication"
+formLink: "https://sandbox.fillout.com/FA25BrandContentApplication"
 mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: Brand Designer
 description: We’re looking for brand designers to design branding, promotional material (digital and paper), graphics, and merch while utilizing and expanding upon our current brand guides. As a brand designer in Sandbox, you’ll work with other brand designers, our Head of Brand, and our Events Director to continuously promote Sandbox and improve its public image.
