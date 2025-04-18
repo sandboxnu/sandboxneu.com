@@ -7,14 +7,14 @@ qualities:
   - Works well in teams
   - Is kind
   - Can commit to 10 hours a week
-formLink: "https://sandbox.fillout.com/SP25uxdesignerapplication"
+formLink: "https://sandbox.fillout.com/FA25UXDesignerApplication"
 mailLink: "https://gmail.us3.list-manage.com/subscribe?u=3b3ae33f54203ab7a839ae529&id=c2570dd048"
 role: UX Designer
 description: We're looking for UX designers to join our project teams and make direct contributions towards building projects for researchers, professors, and the Northeastern student body. They work hand in hand with their teams to design stunning user experiences and deliver real applications to production.
 isVisible: true
 isOpen: true
-openDate: "November 29th 2024"
-closeDate: "December 11th 2024"
+openDate: "April 18th 2025"
+closeDate: "April 28th 2025"
 quote: "The most tight-knit, supportive community I have ever been part of, but also the most talented yet fun people I've ever met. Genuinely not exaggerated at all, they are some of the MOST talented people I know who know how to enjoy life too."
 quoteMember: "Christine Cho"
 quoteMemberTitle: "Designer on EdLaw"
