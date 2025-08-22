@@ -6,7 +6,7 @@ import os
 from collections import defaultdict
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv('.env.development')
 
 database_id = os.environ.get('NOTION_DB_ID')
 url = f"https://api.notion.com/v1/databases/{database_id}/query"
@@ -43,9 +43,20 @@ output_file = "../content/team/team.json"
 
 def get_current_members_from_notion():
     print("Retrieving current members from Notion Club Directory")
+    print(f"Database ID: {database_id}")
+    print(f"Token exists: {'NOTION_TOKEN' in os.environ}")
+    
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
-    member_data = data["results"]
+    
+    print(f"Response status: {response.status_code}")
+    print(f"Response data: {data}")
+    
+    if response.status_code != 200:
+        print(f"API Error: {data}")
+        return []
+    
+    member_data = data.get("results", [])
     return member_data
 
 
@@ -64,7 +75,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": f"./profileImages/F24/{name}.png",
+        "profileImage": f"./profileImages/SP25/{name}.png",
         "socialMedia": social_media_filtered
     }
 
@@ -108,7 +119,7 @@ def download_member_headshot(person, name):
         print(f"No member headshot found for {name}")
         return
 
-    directory = "../content/team/profileImages/F24/"
+    directory = "../content/team/profileImages/SP25/"
     os.makedirs(directory, exist_ok=True)
 
     print(f"Downloading member headshot for {name}")
