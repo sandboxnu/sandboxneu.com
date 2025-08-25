@@ -486,6 +486,32 @@
         "linkedIn": "https://www.linkedin.com/in/michael-mehall-4a690a21b/",
         "portfolio": "https://mehallhm.com"
       }
+    }, 
+    {
+      "name": "Jordan Praissman",
+      "team": {
+        "name": "Good Dog Licensing",
+        "role": "Project Lead"
+      },
+      "profileImage": "./profileImages/SP25/Jordan Praissman.png",
+      "socialMedia": {
+        "email": "praissman.j@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/jordan-praissman/",
+        "portfolio": "https://www.jordanpraissman.com/"
+      }
+    },
+    {
+      "name": "Anzhuo Wang",
+      "team": {
+        "name": "Good Dog Licensing",
+        "role": "Developer"
+      },
+      "profileImage": "./profileImages/SP25/Anzhuo Wang.png",
+      "socialMedia": {
+        "email": "wang.anz@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/anzhuo-wang/",
+        "portfolio": "https://anzhuow.vercel.app"
+      }
     },
     {
       "name": "Victoria Whisnant",
@@ -533,7 +559,8 @@
       "profileImage": "./profileImages/SP25/Gavin Normand.png",
       "socialMedia": {
         "email": "normandgavin@gmail.com",
-        "linkedIn": "https://www.linkedin.com/in/gavin-normand/"
+        "linkedIn": "https://www.linkedin.com/in/gavin-normand/",
+        "portfolio": "https://www.gavinnormand.com/"
       }
     },
     {
@@ -548,32 +575,7 @@
         "linkedIn": "https://www.linkedin.com/in/amoli-patel-3283a0324/"
       }
     },
-    {
-      "name": "Jordan Praissman",
-      "team": {
-        "name": "Good Dog Licensing",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP25/Jordan Praissman.png",
-      "socialMedia": {
-        "email": "praissman.j@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/jordan-praissman/",
-        "portfolio": "https://www.jordanpraissman.com/"
-      }
-    },
-    {
-      "name": "Anzhuo Wang",
-      "team": {
-        "name": "Good Dog Licensing",
-        "role": "Developer"
-      },
-      "profileImage": "./profileImages/SP25/Anzhuo Wang.png",
-      "socialMedia": {
-        "email": "wang.anz@northeastern.edu",
-        "linkedIn": "https://www.linkedin.com/in/anzhuo-wang/",
-        "portfolio": "https://anzhuow.vercel.app"
-      }
-    },
+   
     {
       "name": "Owen Simpson",
       "team": {
