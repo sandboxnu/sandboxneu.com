@@ -5,8 +5,7 @@ import shutil
 import os
 from collections import defaultdict
 from dotenv import load_dotenv
-
-load_dotenv('.env.development')
+load_dotenv()
 
 database_id = os.environ.get('NOTION_DB_ID')
 url = f"https://api.notion.com/v1/databases/{database_id}/query"
@@ -42,20 +41,9 @@ output_file = "../content/team/team.json"
 
 
 def get_current_members_from_notion():
-    print("Retrieving current members from Notion Club Directory")
-    print(f"Database ID: {database_id}")
-    print(f"Token exists: {'NOTION_TOKEN' in os.environ}")
     
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
-    
-    print(f"Response status: {response.status_code}")
-    print(f"Response data: {data}")
-    
-    if response.status_code != 200:
-        print(f"API Error: {data}")
-        return []
-    
     member_data = data.get("results", [])
     return member_data
 
