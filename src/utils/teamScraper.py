@@ -5,7 +5,8 @@ import shutil
 import os
 from collections import defaultdict
 from dotenv import load_dotenv
-load_dotenv()
+
+load_dotenv(".env.development")
 
 database_id = os.environ.get('NOTION_DB_ID')
 url = f"https://api.notion.com/v1/databases/{database_id}/query"
@@ -28,7 +29,7 @@ eboard_roles = set(["Executive Director", "Technical Director", "Design Director
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
                       "Operations Director": 3, "Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                     "Head of Brand", "Head of Project Acquisition"])
+                     "Head of Brand", "Head of Project Acquisition", "Head of Developer Operations"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
                        "Head of Brand": 3, "Head of Project Acquisition": 4}
 brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
