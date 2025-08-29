@@ -29,10 +29,10 @@ eboard_roles = set(["Executive Director", "Technical Director", "Design Director
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
                       "Operations Director": 3, "Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                     "Head of Brand", "Head of Project Acquisition", "Head of Developer Operations"])
+                     "Head of Project Acquisition", "Head of Developer Operations"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
-                       "Head of Brand": 3, "Head of Project Acquisition": 4}
-brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
+                       "Head of Project Acquisition": 3}
+brand_roles_order = {"Head Project Lead": 0, "Brand Design Lead": 1, "Brand Designer": 2}
 project_teams = set(["GraduateNU", "MFA Forms", "SearchNEU", "Brain Game Center", "Good Dog Licensing", "Cooper"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
@@ -76,7 +76,7 @@ def generate_team_mappings(roles, teams):
             team_to_role["E-Board"] = role
         elif role in head_of_roles:
             team_to_role["Head Ofs"] = role
-        if role == "Head of Brand":
+        if role == "Brand Project Lead":
             team_to_role["Brand"] = role
 
     non_leadership_teams = list(filter(lambda team: team not in {"E-Board", "Head Ofs"}, teams))

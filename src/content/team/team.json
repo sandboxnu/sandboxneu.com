@@ -167,19 +167,6 @@
       }
     },
     {
-      "name": "Catherine Gore",
-      "team": {
-        "name": "Head Ofs",
-        "role": "Head of Brand"
-      },
-      "profileImage": "./profileImages/SP25/Catherine Gore.png",
-      "socialMedia": {
-        "email": "gore.c@noprtheastern.edu",
-        "linkedIn": "www.linkedin.com/in/catherine-gore",
-        "portfolio": "https://catherinegore.portfolio.site/"
-      }
-    },
-    {
       "name": "Wesley Tran",
       "team": {
         "name": "Head Ofs",
@@ -195,7 +182,7 @@
       "name": "Catherine Gore",
       "team": {
         "name": "Brand",
-        "role": "Head of Brand"
+        "role": "Brand Project Lead"
       },
       "profileImage": "./profileImages/SP25/Catherine Gore.png",
       "socialMedia": {
