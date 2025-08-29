@@ -32,7 +32,7 @@ head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head
                      "Head of Project Acquisition", "Head of Developer Operations"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
                        "Head of Project Acquisition": 3}
-brand_roles_order = {"Head Project Lead": 0, "Brand Design Lead": 1, "Brand Designer": 2}
+brand_roles_order = {"Brand Project Lead": 0, "Brand Design Lead": 1, "Brand Designer": 2}
 project_teams = set(["GraduateNU", "MFA Forms", "SearchNEU", "Brain Game Center", "Good Dog Licensing", "Cooper"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
