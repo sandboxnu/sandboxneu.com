@@ -6,7 +6,7 @@ import os
 from collections import defaultdict
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(".env.development")
 
 database_id = os.environ.get('NOTION_DB_ID')
 url = f"https://api.notion.com/v1/databases/{database_id}/query"
@@ -29,10 +29,10 @@ eboard_roles = set(["Executive Director", "Technical Director", "Design Director
 eboard_roles_order = {"Executive Director": 0, "Technical Director": 1, "Design Director": 2,
                       "Operations Director": 3, "Events Director": 4, "E-Board Liaison": 5}
 head_of_roles = set(["Head of Recruiting", "Head of Developer Experience", "Head of Designer Experience",
-                     "Head of Brand", "Head of Project Acquisition"])
+                     "Head of Project Acquisition", "Head of Developer Operations"])
 head_of_roles_order = {"Head of Recruiting": 0, "Head of Developer Experience": 1, "Head of Designer Experience": 2,
-                       "Head of Brand": 3, "Head of Project Acquisition": 4}
-brand_roles_order = {"Head of Brand": 0, "Brand Designer": 1}
+                       "Head of Project Acquisition": 3}
+brand_roles_order = {"Brand Project Lead": 0, "Brand Design Lead": 1, "Brand Designer": 2}
 project_teams = set(["GraduateNU", "MFA Forms", "SearchNEU", "Brain Game Center", "Good Dog Licensing", "Cooper"])
 project_team_member_order = {"Project Lead": 0, "Design Lead": 1, "Technical Lead": 2,
                              "Designer": 3, "Developer": 4}
@@ -42,10 +42,10 @@ output_file = "../content/team/team.json"
 
 
 def get_current_members_from_notion():
-    print("Retrieving current members from Notion Club Directory")
+    
     response = requests.post(url, headers=headers, json=query)
     data = response.json()
-    member_data = data["results"]
+    member_data = data.get("results", [])
     return member_data
 
 
@@ -64,7 +64,7 @@ def make_person(name, team_name, role, linkedin, portfolio, email):
             "name": team_name,
             "role": role,
         },
-        "profileImage": f"./profileImages/F24/{name}.png",
+        "profileImage": f"./profileImages/SP25/{name}.png",
         "socialMedia": social_media_filtered
     }
 
@@ -76,7 +76,7 @@ def generate_team_mappings(roles, teams):
             team_to_role["E-Board"] = role
         elif role in head_of_roles:
             team_to_role["Head Ofs"] = role
-        if role == "Head of Brand":
+        if role == "Brand Project Lead":
             team_to_role["Brand"] = role
 
     non_leadership_teams = list(filter(lambda team: team not in {"E-Board", "Head Ofs"}, teams))
@@ -108,7 +108,7 @@ def download_member_headshot(person, name):
         print(f"No member headshot found for {name}")
         return
 
-    directory = "../content/team/profileImages/F24/"
+    directory = "../content/team/profileImages/SP25/"
     os.makedirs(directory, exist_ok=True)
 
     print(f"Downloading member headshot for {name}")

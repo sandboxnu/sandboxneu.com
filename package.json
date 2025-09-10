@@ -55,7 +55,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "now-build": "npm run build",
-    "team-scrape": "python3 src/utils/teamScraper.py"
+    "team-scrape": "python src/utils/teamScraper.py"
   },
   "repository": {
     "type": "git",
