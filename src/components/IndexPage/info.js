@@ -256,11 +256,6 @@ const Info = ({ collaborate, join, spotlight, oasis }) => {
           <JoinTheTeam>
             <JoinTheTeamText>{join.copy}</JoinTheTeamText>
             <JoinTheTeamImage>
-              <div>
-                <img src={robert_rosas} alt="member" />
-              </div>
-              <span>{join.name}</span>
-              <span>Developer on Flow in the Field</span>
             </JoinTheTeamImage>
           </JoinTheTeam>
         </Card>
