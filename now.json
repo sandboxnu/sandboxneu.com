@@ -36,42 +36,42 @@
       "src": "/how-we-recruit-developers",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxnu.notion.site/how-sandbox-recruits-developers-sp26"
+        "Location": "https://www.notion.so/sandboxnu/How-Sandbox-Recruits-Developers-32418273b1f481e28780ecb75b8bbb83"
       }
     },
     {
       "src": "/how-we-recruit-ux-designers",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxnu.notion.site/how-sandbox-recruits-ux-designer-sp26"
+        "Location": "https://www.notion.so/sandboxnu/How-Sandbox-Recruits-UX-Designer-32418273b1f481708fd1f50e3c2cf56a"
       }
     },
     {
       "src": "/how-we-recruit-brand-designers",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxnu.notion.site/how-sandbox-recruits-brand-content-team-sp26"
+        "Location": "https://www.notion.so/sandboxnu/How-Sandbox-Recruits-Brand-Designer-32418273b1f481a4a705c3ad1a288dbb"
       }
     },
     {
       "src": "/apply/developer/form",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxf24.fillout.com/developerapplication"
+        "Location": "https://sandbox.fillout.com/f26developerapplication"
       }
     },
     {
       "src": "/apply/ux-designer/form",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxf24.fillout.com/uxdesignerapplication"
+        "Location": "https://sandbox.fillout.com/f26uxdesignerapplication"
       }
     },
     {
       "src": "/apply/brand-designer/form",
       "status": 301,
       "headers": {
-        "Location": "https://sandboxf24.fillout.com/branddesignerapplication"
+        "Location": "https://sandbox.fillout.com/f26brandapplication"
       }
     }
   ],
