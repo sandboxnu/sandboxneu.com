@@ -101,29 +101,28 @@
       }
     },
     {
-      "name": "Victoria Whisnant",
+      "name": "Bea Luna",
       "team": {
         "name": "Head Ofs",
         "role": "Head of Recruiting"
       },
-      "profileImage": "./profileImages/SP25/Victoria Whisnant.png",
+      "profileImage": "./profileImages/S26/BeaLuna.jpeg",
       "socialMedia": {
-        "email": "whisnant.v@northeastern.edu",
-        "linkedIn": "linkedin.com/in/victoria-whisnant",
-        "portfolio": "https://figmashort.link/abfZwA"
+        "email": "luna.be@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/beatrizlunala/",
+        "portfolio": "https://beatrizlunala.github.io/"
       }
     },
     {
-      "name": "Gavin Normand",
+      "name": "Meggan Shvartsberg",
       "team": {
         "name": "Head Ofs",
         "role": "Head of Recruiting"
       },
-      "profileImage": "./profileImages/SP25/Gavin Normand.png",
+      "profileImage": "./profileImages/SP25/Meggan Shvartsberg.png",
       "socialMedia": {
-        "email": "normandgavin@gmail.com",
-        "linkedIn": "https://www.linkedin.com/in/gavin-normand/",
-        "portfolio": "https://www.gavinnormand.com/"
+        "email": "shvartsberg.m@northeastern.edu",
+        "linkedIn": "https://www.linkedin.com/in/meggan-shvartsberg/"
       }
     },
     {
